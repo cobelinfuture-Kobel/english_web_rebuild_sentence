@@ -8,20 +8,22 @@ class QuestEngine:
         "strong": 1,
     }
 
-    def __init__(self, sentence_bank, learning_engine, quest_size=3):
+    def __init__(self, sentence_bank, learning_engine, quest_size=10):
         self.sentence_bank = sentence_bank
         self.learning_engine = learning_engine
         self.quest_size = quest_size
         self.bank = {item["sentence_id"]: item for item in sentence_bank}
 
     def build_quest(self, user_id, level=None, scenario=None):
-        due_ids = self.learning_engine.get_due_sentence_ids(user_id)
         seen_ids = set(self.learning_engine.get_seen_sentence_ids(user_id))
         filtered_items = self._filter_items(level=level, scenario=scenario)
         bank_ids = [item["sentence_id"] for item in filtered_items]
+        random.shuffle(bank_ids)
+        due_id_set = set(self.learning_engine.get_due_sentence_ids(user_id))
+        due_ids = [sentence_id for sentence_id in bank_ids if sentence_id in due_id_set]
 
         quest = []
-        quest.extend(self._build_items(due_ids, source="due", allowed_ids=set(bank_ids)))
+        quest.extend(self._build_items(due_ids, source="due"))
 
         if len(quest) < self.quest_size:
             new_ids = [sentence_id for sentence_id in bank_ids if sentence_id not in seen_ids]

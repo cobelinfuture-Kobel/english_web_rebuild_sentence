@@ -11,7 +11,7 @@ from engines.sentence_engine import SentenceEngine
 
 
 BASE_DIR = Path(__file__).resolve().parent
-DEFAULT_BANK_PATH = BASE_DIR / "data" / "sample_sentence_bank.json"
+DEFAULT_BANK_PATH = BASE_DIR / "data" / "generated" / "shopping_sentence_bank.json"
 DEFAULT_PROGRESS_PATH = BASE_DIR / "data" / "user_progress.json"
 
 
@@ -26,7 +26,7 @@ def create_app(sentence_bank=None, bank_path=None, progress_path=None, fsi_rng=N
     bank_data = sentence_bank or load_sentence_bank(bank_path or DEFAULT_BANK_PATH)
     learning_engine = LearningEngine(str(progress_path or DEFAULT_PROGRESS_PATH))
     sentence_engine = SentenceEngine(bank_data)
-    quest_engine = QuestEngine(bank_data, learning_engine)
+    quest_engine = QuestEngine(bank_data, learning_engine, quest_size=10)
 
     app.config["sentence_engine"] = sentence_engine
     app.config["learning_engine"] = learning_engine

@@ -118,4 +118,11 @@ def test_adaptive_false_uses_original_quest_behavior(tmp_path):
 
     assert default_response.status_code == 200
     assert explicit_false_response.status_code == 200
-    assert explicit_false_response.get_json() == default_response.get_json()
+    default_items = default_response.get_json()["quest_items"]
+    explicit_false_items = explicit_false_response.get_json()["quest_items"]
+
+    assert {item["sentence_id"] for item in explicit_false_items} == {
+        item["sentence_id"] for item in default_items
+    }
+    assert all(item["source"] != "adaptive" for item in default_items)
+    assert all(item["source"] != "adaptive" for item in explicit_false_items)

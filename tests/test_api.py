@@ -25,6 +25,15 @@ def create_test_client(tmp_path):
     return app.test_client()
 
 
+def create_default_bank_test_client(tmp_path):
+    app = create_app(
+        progress_path=str(tmp_path / "user_progress.json"),
+        fsi_rng=lambda: 0.0,
+    )
+    app.config["TESTING"] = True
+    return app.test_client()
+
+
 def test_health_endpoint_returns_healthy(tmp_path):
     client = create_test_client(tmp_path)
 
@@ -179,6 +188,25 @@ def test_quest_endpoint_filters_by_level_and_scenario(tmp_path):
     items = response.get_json()["quest_items"]
     assert items
     assert all(item["sentence_id"].startswith("A2_TRAVEL_") for item in items)
+
+
+def test_create_app_defaults_to_generated_shopping_bank(tmp_path):
+    client = create_default_bank_test_client(tmp_path)
+
+    response = client.get(
+        "/api/quest",
+        query_string={
+            "user_id": "student_001",
+            "level": "A1",
+            "scenario": "shopping",
+        },
+    )
+
+    assert response.status_code == 200
+    items = response.get_json()["quest_items"]
+    assert items
+    assert len(items) == 10
+    assert all("_SHOPPING_" in item["sentence_id"] for item in items)
 
 
 def test_question_endpoint_returns_question_payload(tmp_path):
