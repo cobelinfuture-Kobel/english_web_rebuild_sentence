@@ -507,8 +507,8 @@
     "function": "ask_payment",
     "variants": {
       "A1": {
-        "example_template": "Can I pay by {payment_method}?",
-        "chunks_template": ["Can I pay by", "{payment_method}", "?"],
+        "example_template": "Can I pay with {payment_method}?",
+        "chunks_template": ["Can I pay with", "{payment_method}", "?"],
         "grammar_focus": ["can_request", "shopping_vocabulary"],
         "slot_constraints": {
           "payment_method": {

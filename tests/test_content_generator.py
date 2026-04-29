@@ -131,21 +131,21 @@ def test_level_coverage_for_each_pattern():
 
 def test_shop_try_only_uses_wearable_objects():
     generator = make_generator(seed=13)
-    slot_bank = generator.slot_bank
-    disallowed = {
-        item["text"]
-        for group in slot_bank.values()
-        for item in group
-        if item.get("wearable") is False
+    wearable_lookup = {
+        item["text"]: item["wearable"]
+        for item in generator.slot_bank["wearable_items"]
     }
 
     sentences = generator.generate_for_pattern("SHOP_TRY", "A1", count=20)
 
     assert sentences
-    assert all(
-        all(text not in sentence["target_sentence"] for text in disallowed)
-        for sentence in sentences
-    )
+    for sentence in sentences:
+        matched_object = next(
+            text
+            for text in sorted(wearable_lookup, key=len, reverse=True)
+            if text in sentence["target_sentence"]
+        )
+        assert wearable_lookup[matched_object] is True
 
 
 def test_shop_price_matches_is_are_with_plurality():
@@ -223,6 +223,20 @@ def test_unsupported_fsi_rule_is_skipped_safely():
     assert [task["task_type"] for task in sentence["fsi_tasks"]] == ["negative"]
 
 
+def test_unique_generation_returns_available_sentences_when_count_exceeds_supply():
+    generator = ContentGenerator(
+        make_unsupported_fsi_bank(),
+        make_small_slot_bank(),
+        rng=random.Random(2),
+        ensure_unique_targets=True,
+    )
+
+    sentences = generator.generate_for_pattern("SHOP_TRY", "A1", count=5)
+
+    assert len(sentences) == 1
+    assert sentences[0]["target_sentence"] == "Can I try on this shirt?"
+
+
 def test_injected_rng_makes_generation_predictable():
     generator_one = make_generator(seed=19)
     generator_two = make_generator(seed=19)
@@ -246,6 +260,19 @@ def test_generate_all_produces_at_least_200_unique_sentences():
     assert len(targets) == len(set(targets))
 
 
+def test_generate_all_supports_30_unique_sentences_per_variant():
+    generator = make_generator(seed=47, ensure_unique_targets=True)
+
+    sentences = generator.generate_all(count_per_variant=30)
+
+    ids = [sentence["sentence_id"] for sentence in sentences]
+    targets = [sentence["target_sentence"] for sentence in sentences]
+
+    assert len(sentences) == 1200
+    assert len(ids) == len(set(ids))
+    assert len(targets) == len(set(targets))
+
+
 def test_each_pattern_has_a2_plus_variant():
     pattern_bank, _ = load_banks()
 
@@ -265,21 +292,21 @@ def test_a2_plus_generated_sentences_are_not_empty():
 
 def test_shop_try_a2_plus_only_uses_wearable_objects():
     generator = make_generator(seed=37)
-    slot_bank = generator.slot_bank
-    disallowed = {
-        item["text"]
-        for group in slot_bank.values()
-        for item in group
-        if item.get("wearable") is False
+    wearable_lookup = {
+        item["text"]: item["wearable"]
+        for item in generator.slot_bank["wearable_items"]
     }
 
     sentences = generator.generate_for_pattern("SHOP_TRY", "A2+", count=20)
 
     assert sentences
-    assert all(
-        all(text not in sentence["target_sentence"] for text in disallowed)
-        for sentence in sentences
-    )
+    for sentence in sentences:
+        matched_object = next(
+            text
+            for text in sorted(wearable_lookup, key=len, reverse=True)
+            if text in sentence["target_sentence"]
+        )
+        assert wearable_lookup[matched_object] is True
 
 
 def test_shop_price_a2_plus_how_much_is_only_uses_singular_objects():
@@ -300,6 +327,17 @@ def test_shop_price_a2_plus_how_much_is_only_uses_singular_objects():
             if text in sentence["target_sentence"]
         )
         assert plural_lookup[matched_object] is False
+
+
+def test_shop_pay_a1_uses_with_for_target_and_fsi_question():
+    generator = make_generator(seed=43)
+
+    sentence = generator.generate_for_pattern("SHOP_PAY", "A1", count=1)[0]
+
+    assert sentence["target_sentence"].startswith("Can I pay with ")
+    assert sentence["chunks"][0] == "Can I pay with"
+    assert sentence["fsi_tasks"][0]["target"].startswith("Can I pay with ")
+    assert sentence["fsi_tasks"][0]["chunks"][0] == "Can I pay with"
 
 
 def test_sentence_ids_are_unique_and_output_loads_into_sentence_engine():

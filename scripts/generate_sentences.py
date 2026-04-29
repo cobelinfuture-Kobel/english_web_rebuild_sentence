@@ -110,11 +110,8 @@ class ContentGenerator:
             for candidate in candidates
             if candidate[1] not in self._used_target_sentences
         ]
-        if len(available) < count:
-            raise ValueError("Unable to generate enough unique target_sentence values for the requested variant")
-
         self.rng.shuffle(available)
-        return available[:count]
+        return available[: min(count, len(available))]
 
     def _build_random_sentence_parts(self, variant):
         slot_values = self._resolve_slot_values(variant["slot_constraints"])
@@ -180,12 +177,12 @@ class ContentGenerator:
     def _build_fsi_tasks(self, pattern_id, variant, slot_values):
         tasks = []
         for rule in variant.get("fsi_rules", []):
-            task = self._build_fsi_task(pattern_id, rule, slot_values)
+            task = self._build_fsi_task(pattern_id, variant, rule, slot_values)
             if task is not None:
                 tasks.append(task)
         return tasks
 
-    def _build_fsi_task(self, pattern_id, rule, slot_values):
+    def _build_fsi_task(self, pattern_id, variant, rule, slot_values):
         obj = slot_values.get("object", "")
         comparison_object = slot_values.get("comparison_object", "")
         adjective = slot_values.get("adjective", "")
@@ -241,10 +238,15 @@ class ContentGenerator:
             }
 
         if pattern_id == "SHOP_PAY" and rule == "question" and payment_method:
+            question_chunks = ["Can I pay by", payment_method, "?"]
+            question_target = f"Can I pay by {payment_method}?"
+            if variant.get("chunks_template", [None])[0] == "Can I pay with":
+                question_chunks = ["Can I pay with", payment_method, "?"]
+                question_target = f"Can I pay with {payment_method}?"
             return {
                 "task_type": "question",
-                "target": f"Can I pay by {payment_method}?",
-                "chunks": ["Can I pay by", payment_method, "?"],
+                "target": question_target,
+                "chunks": question_chunks,
             }
 
         if pattern_id == "SHOP_PRICE" and rule == "substitution":
@@ -279,7 +281,7 @@ def main():
         slot_bank=_load_json(slot_path),
         ensure_unique_targets=True,
     )
-    sentences = generator.generate_all(count_per_variant=5)
+    sentences = generator.generate_all(count_per_variant=30)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as handle:
