@@ -1,0 +1,54 @@
+{
+  "wearable_items": [
+    {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this jacket", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this hat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this dress", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this coat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "the blue one", "plural": false, "wearable": true, "priceable": true},
+    {"text": "these shoes", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these socks", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these gloves", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these pants", "plural": true, "wearable": true, "priceable": true}
+  ],
+  "priceable_single": [
+    {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this red bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this pen", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this notebook", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this jacket", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this hat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this cup", "plural": false, "wearable": false, "priceable": true},
+    {"text": "the blue one", "plural": false, "wearable": true, "priceable": true}
+  ],
+  "priceable_plural": [
+    {"text": "these shoes", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these socks", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these gloves", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these pants", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these notebooks", "plural": true, "wearable": false, "priceable": true},
+    {"text": "these cups", "plural": true, "wearable": false, "priceable": true}
+  ],
+  "store_locations": [
+    {"text": "cashier", "plural": false, "wearable": false, "priceable": false},
+    {"text": "fitting room", "plural": false, "wearable": false, "priceable": false},
+    {"text": "shoe section", "plural": false, "wearable": false, "priceable": false},
+    {"text": "bag section", "plural": false, "wearable": false, "priceable": false},
+    {"text": "customer service desk", "plural": false, "wearable": false, "priceable": false}
+  ],
+  "payment_methods": [
+    {"text": "cash", "plural": false, "wearable": false, "priceable": false},
+    {"text": "credit card", "plural": false, "wearable": false, "priceable": false},
+    {"text": "debit card", "plural": false, "wearable": false, "priceable": false},
+    {"text": "mobile pay", "plural": false, "wearable": false, "priceable": false},
+    {"text": "gift card", "plural": false, "wearable": false, "priceable": false}
+  ],
+  "adjectives": [
+    {"text": "big", "plural": false, "wearable": false, "priceable": false},
+    {"text": "small", "plural": false, "wearable": false, "priceable": false},
+    {"text": "cheap", "plural": false, "wearable": false, "priceable": false},
+    {"text": "expensive", "plural": false, "wearable": false, "priceable": false},
+    {"text": "long", "plural": false, "wearable": false, "priceable": false},
+    {"text": "short", "plural": false, "wearable": false, "priceable": false}
+  ]
+}

@@ -1,0 +1,3992 @@
+[
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WANT_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want this shirt.",
+    "chunks": [
+      "I want",
+      "this shirt"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this shirt.",
+        "chunks": [
+          "I do not want",
+          "this shirt"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this shirt?",
+        "chunks": [
+          "Do you want",
+          "this shirt",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WANT_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want the blue one.",
+    "chunks": [
+      "I want",
+      "the blue one"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want the blue one.",
+        "chunks": [
+          "I do not want",
+          "the blue one"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want the blue one?",
+        "chunks": [
+          "Do you want",
+          "the blue one",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WANT_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want this red bag.",
+    "chunks": [
+      "I want",
+      "this red bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this red bag.",
+        "chunks": [
+          "I do not want",
+          "this red bag"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this red bag?",
+        "chunks": [
+          "Do you want",
+          "this red bag",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WANT_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want this hat.",
+    "chunks": [
+      "I want",
+      "this hat"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this hat.",
+        "chunks": [
+          "I do not want",
+          "this hat"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this hat?",
+        "chunks": [
+          "Do you want",
+          "this hat",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WANT_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want this jacket.",
+    "chunks": [
+      "I want",
+      "this jacket"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this jacket.",
+        "chunks": [
+          "I do not want",
+          "this jacket"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this jacket?",
+        "chunks": [
+          "Do you want",
+          "this jacket",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LIKE_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this notebook.",
+    "chunks": [
+      "I like",
+      "this notebook"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this notebook.",
+        "chunks": [
+          "I do not like",
+          "this notebook"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this notebook?",
+        "chunks": [
+          "Do you like",
+          "this notebook",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LIKE_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like the blue one.",
+    "chunks": [
+      "I like",
+      "the blue one"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like the blue one.",
+        "chunks": [
+          "I do not like",
+          "the blue one"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like the blue one?",
+        "chunks": [
+          "Do you like",
+          "the blue one",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LIKE_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this cup.",
+    "chunks": [
+      "I like",
+      "this cup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this cup.",
+        "chunks": [
+          "I do not like",
+          "this cup"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this cup?",
+        "chunks": [
+          "Do you like",
+          "this cup",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LIKE_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this hat.",
+    "chunks": [
+      "I like",
+      "this hat"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this hat.",
+        "chunks": [
+          "I do not like",
+          "this hat"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this hat?",
+        "chunks": [
+          "Do you like",
+          "this hat",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LIKE_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this pen.",
+    "chunks": [
+      "I like",
+      "this pen"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this pen.",
+        "chunks": [
+          "I do not like",
+          "this pen"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this pen?",
+        "chunks": [
+          "Do you like",
+          "this pen",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PRICE_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is the blue one?",
+    "chunks": [
+      "How much is",
+      "the blue one",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PRICE_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this pen?",
+    "chunks": [
+      "How much is",
+      "this pen",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PRICE_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this cup?",
+    "chunks": [
+      "How much is",
+      "this cup",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PRICE_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this notebook?",
+    "chunks": [
+      "How much is",
+      "this notebook",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PRICE_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this shirt?",
+    "chunks": [
+      "How much is",
+      "this shirt",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_HAVE_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this jacket?",
+    "chunks": [
+      "Do you have",
+      "this jacket",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_HAVE_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this pen?",
+    "chunks": [
+      "Do you have",
+      "this pen",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_HAVE_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this notebook?",
+    "chunks": [
+      "Do you have",
+      "this notebook",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_HAVE_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have the blue one?",
+    "chunks": [
+      "Do you have",
+      "the blue one",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_HAVE_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this cup?",
+    "chunks": [
+      "Do you have",
+      "this cup",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TRY_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on this hat?",
+    "chunks": [
+      "Can I try on",
+      "this hat",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this hat.",
+        "chunks": [
+          "I cannot try on",
+          "this hat"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TRY_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on this dress?",
+    "chunks": [
+      "Can I try on",
+      "this dress",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this dress.",
+        "chunks": [
+          "I cannot try on",
+          "this dress"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TRY_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on these pants?",
+    "chunks": [
+      "Can I try on",
+      "these pants",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on these pants.",
+        "chunks": [
+          "I cannot try on",
+          "these pants"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TRY_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on the blue one?",
+    "chunks": [
+      "Can I try on",
+      "the blue one",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on the blue one.",
+        "chunks": [
+          "I cannot try on",
+          "the blue one"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TRY_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on these shoes?",
+    "chunks": [
+      "Can I try on",
+      "these shoes",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on these shoes.",
+        "chunks": [
+          "I cannot try on",
+          "these shoes"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TOO_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "This is too expensive.",
+    "chunks": [
+      "This is too",
+      "expensive"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TOO_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "This is too big.",
+    "chunks": [
+      "This is too",
+      "big"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TOO_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "This is too small.",
+    "chunks": [
+      "This is too",
+      "small"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TOO_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "This is too short.",
+    "chunks": [
+      "This is too",
+      "short"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TOO_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "This is too long.",
+    "chunks": [
+      "This is too",
+      "long"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TAKE_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this cup.",
+    "chunks": [
+      "I will take",
+      "this cup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this cup.",
+        "chunks": [
+          "I will not take",
+          "this cup"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TAKE_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this red bag.",
+    "chunks": [
+      "I will take",
+      "this red bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this red bag.",
+        "chunks": [
+          "I will not take",
+          "this red bag"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TAKE_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this hat.",
+    "chunks": [
+      "I will take",
+      "this hat"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this hat.",
+        "chunks": [
+          "I will not take",
+          "this hat"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TAKE_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take the blue one.",
+    "chunks": [
+      "I will take",
+      "the blue one"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take the blue one.",
+        "chunks": [
+          "I will not take",
+          "the blue one"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_TAKE_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this notebook.",
+    "chunks": [
+      "I will take",
+      "this notebook"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this notebook.",
+        "chunks": [
+          "I will not take",
+          "this notebook"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WHERE_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where is the bag section?",
+    "chunks": [
+      "Where is the",
+      "bag section",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WHERE_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where is the customer service desk?",
+    "chunks": [
+      "Where is the",
+      "customer service desk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WHERE_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where is the fitting room?",
+    "chunks": [
+      "Where is the",
+      "fitting room",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WHERE_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where is the shoe section?",
+    "chunks": [
+      "Where is the",
+      "shoe section",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_WHERE_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where is the cashier?",
+    "chunks": [
+      "Where is the",
+      "cashier",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PAY_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by mobile pay?",
+    "chunks": [
+      "Can I pay by",
+      "mobile pay",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by mobile pay?",
+        "chunks": [
+          "Can I pay by",
+          "mobile pay",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PAY_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by credit card?",
+    "chunks": [
+      "Can I pay by",
+      "credit card",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by credit card?",
+        "chunks": [
+          "Can I pay by",
+          "credit card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PAY_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by gift card?",
+    "chunks": [
+      "Can I pay by",
+      "gift card",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by gift card?",
+        "chunks": [
+          "Can I pay by",
+          "gift card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PAY_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by debit card?",
+    "chunks": [
+      "Can I pay by",
+      "debit card",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by debit card?",
+        "chunks": [
+          "Can I pay by",
+          "debit card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_PAY_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by cash?",
+    "chunks": [
+      "Can I pay by",
+      "cash",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by cash?",
+        "chunks": [
+          "Can I pay by",
+          "cash",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LOOKING_001",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this cup.",
+    "chunks": [
+      "I am looking for",
+      "this cup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this cup?",
+        "chunks": [
+          "Are you looking for",
+          "this cup",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LOOKING_002",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this red bag.",
+    "chunks": [
+      "I am looking for",
+      "this red bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this red bag?",
+        "chunks": [
+          "Are you looking for",
+          "this red bag",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LOOKING_003",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this notebook.",
+    "chunks": [
+      "I am looking for",
+      "this notebook"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this notebook?",
+        "chunks": [
+          "Are you looking for",
+          "this notebook",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LOOKING_004",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this jacket.",
+    "chunks": [
+      "I am looking for",
+      "this jacket"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this jacket?",
+        "chunks": [
+          "Are you looking for",
+          "this jacket",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1_SHOPPING_SHOP_LOOKING_005",
+    "level": "A1",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this hat.",
+    "chunks": [
+      "I am looking for",
+      "this hat"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this hat?",
+        "chunks": [
+          "Are you looking for",
+          "this hat",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WANT_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want to buy this jacket.",
+    "chunks": [
+      "I want to buy",
+      "this jacket"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this jacket.",
+        "chunks": [
+          "I do not want",
+          "this jacket"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this jacket?",
+        "chunks": [
+          "Do you want",
+          "this jacket",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WANT_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want to buy this pen.",
+    "chunks": [
+      "I want to buy",
+      "this pen"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this pen.",
+        "chunks": [
+          "I do not want",
+          "this pen"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this pen?",
+        "chunks": [
+          "Do you want",
+          "this pen",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WANT_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want to buy these notebooks.",
+    "chunks": [
+      "I want to buy",
+      "these notebooks"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want these notebooks.",
+        "chunks": [
+          "I do not want",
+          "these notebooks"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want these notebooks?",
+        "chunks": [
+          "Do you want",
+          "these notebooks",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WANT_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want to buy this red bag.",
+    "chunks": [
+      "I want to buy",
+      "this red bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this red bag.",
+        "chunks": [
+          "I do not want",
+          "this red bag"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this red bag?",
+        "chunks": [
+          "Do you want",
+          "this red bag",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WANT_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I want to buy the blue one.",
+    "chunks": [
+      "I want to buy",
+      "the blue one"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "demonstratives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want the blue one.",
+        "chunks": [
+          "I do not want",
+          "the blue one"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want the blue one?",
+        "chunks": [
+          "Do you want",
+          "the blue one",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LIKE_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I really like the blue one.",
+    "chunks": [
+      "I really like",
+      "the blue one"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like the blue one.",
+        "chunks": [
+          "I do not like",
+          "the blue one"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like the blue one?",
+        "chunks": [
+          "Do you like",
+          "the blue one",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LIKE_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I really like this shirt.",
+    "chunks": [
+      "I really like",
+      "this shirt"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this shirt.",
+        "chunks": [
+          "I do not like",
+          "this shirt"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this shirt?",
+        "chunks": [
+          "Do you like",
+          "this shirt",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LIKE_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I really like this hat.",
+    "chunks": [
+      "I really like",
+      "this hat"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this hat.",
+        "chunks": [
+          "I do not like",
+          "this hat"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this hat?",
+        "chunks": [
+          "Do you like",
+          "this hat",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LIKE_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I really like this cup.",
+    "chunks": [
+      "I really like",
+      "this cup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this cup.",
+        "chunks": [
+          "I do not like",
+          "this cup"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this cup?",
+        "chunks": [
+          "Do you like",
+          "this cup",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LIKE_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I really like this pen.",
+    "chunks": [
+      "I really like",
+      "this pen"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "shopping_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not like this pen.",
+        "chunks": [
+          "I do not like",
+          "this pen"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you like this pen?",
+        "chunks": [
+          "Do you like",
+          "this pen",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PRICE_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much are these cups?",
+    "chunks": [
+      "How much are",
+      "these cups",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "plural_nouns",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PRICE_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much are these notebooks?",
+    "chunks": [
+      "How much are",
+      "these notebooks",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "plural_nouns",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PRICE_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much are these pants?",
+    "chunks": [
+      "How much are",
+      "these pants",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "plural_nouns",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PRICE_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much are these gloves?",
+    "chunks": [
+      "How much are",
+      "these gloves",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "plural_nouns",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PRICE_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much are these socks?",
+    "chunks": [
+      "How much are",
+      "these socks",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "plural_nouns",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_HAVE_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this red bag in stock?",
+    "chunks": [
+      "Do you have",
+      "this red bag",
+      "in stock",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "question_structure"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_HAVE_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this pen in stock?",
+    "chunks": [
+      "Do you have",
+      "this pen",
+      "in stock",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "question_structure"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_HAVE_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this hat in stock?",
+    "chunks": [
+      "Do you have",
+      "this hat",
+      "in stock",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "question_structure"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_HAVE_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have the blue one in stock?",
+    "chunks": [
+      "Do you have",
+      "the blue one",
+      "in stock",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "question_structure"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_HAVE_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you have this notebook in stock?",
+    "chunks": [
+      "Do you have",
+      "this notebook",
+      "in stock",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "question_structure"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TRY_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on this shirt, please?",
+    "chunks": [
+      "Can I try on",
+      "this shirt",
+      ", please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this shirt.",
+        "chunks": [
+          "I cannot try on",
+          "this shirt"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TRY_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on this hat, please?",
+    "chunks": [
+      "Can I try on",
+      "this hat",
+      ", please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this hat.",
+        "chunks": [
+          "I cannot try on",
+          "this hat"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TRY_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on this dress, please?",
+    "chunks": [
+      "Can I try on",
+      "this dress",
+      ", please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this dress.",
+        "chunks": [
+          "I cannot try on",
+          "this dress"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TRY_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on these socks, please?",
+    "chunks": [
+      "Can I try on",
+      "these socks",
+      ", please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on these socks.",
+        "chunks": [
+          "I cannot try on",
+          "these socks"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TRY_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Can I try on these gloves, please?",
+    "chunks": [
+      "Can I try on",
+      "these gloves",
+      ", please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_actions",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on these gloves.",
+        "chunks": [
+          "I cannot try on",
+          "these gloves"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TOO_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "this cup is too expensive.",
+    "chunks": [
+      "this cup",
+      "is too",
+      "expensive"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "demonstratives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TOO_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "this shirt is too short.",
+    "chunks": [
+      "this shirt",
+      "is too",
+      "short"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "demonstratives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TOO_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "this cup is too big.",
+    "chunks": [
+      "this cup",
+      "is too",
+      "big"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "demonstratives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TOO_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "the blue one is too small.",
+    "chunks": [
+      "the blue one",
+      "is too",
+      "small"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "demonstratives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TOO_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "this pen is too short.",
+    "chunks": [
+      "this pen",
+      "is too",
+      "short"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "demonstratives",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TAKE_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this pen today.",
+    "chunks": [
+      "I will take",
+      "this pen",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this pen.",
+        "chunks": [
+          "I will not take",
+          "this pen"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TAKE_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this cup today.",
+    "chunks": [
+      "I will take",
+      "this cup",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this cup.",
+        "chunks": [
+          "I will not take",
+          "this cup"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TAKE_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this shirt today.",
+    "chunks": [
+      "I will take",
+      "this shirt",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this shirt.",
+        "chunks": [
+          "I will not take",
+          "this shirt"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TAKE_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this red bag today.",
+    "chunks": [
+      "I will take",
+      "this red bag",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this red bag.",
+        "chunks": [
+          "I will not take",
+          "this red bag"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_TAKE_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this hat today.",
+    "chunks": [
+      "I will take",
+      "this hat",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this hat.",
+        "chunks": [
+          "I will not take",
+          "this hat"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WHERE_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find the blue one?",
+    "chunks": [
+      "Where can I find",
+      "the blue one",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WHERE_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this shirt?",
+    "chunks": [
+      "Where can I find",
+      "this shirt",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WHERE_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this notebook?",
+    "chunks": [
+      "Where can I find",
+      "this notebook",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WHERE_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this hat?",
+    "chunks": [
+      "Where can I find",
+      "this hat",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_WHERE_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this cup?",
+    "chunks": [
+      "Where can I find",
+      "this cup",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PAY_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay for this hat by gift card?",
+    "chunks": [
+      "Can I pay for",
+      "this hat",
+      "by",
+      "gift card",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by gift card?",
+        "chunks": [
+          "Can I pay by",
+          "gift card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PAY_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay for this pen by credit card?",
+    "chunks": [
+      "Can I pay for",
+      "this pen",
+      "by",
+      "credit card",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by credit card?",
+        "chunks": [
+          "Can I pay by",
+          "credit card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PAY_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay for this cup by credit card?",
+    "chunks": [
+      "Can I pay for",
+      "this cup",
+      "by",
+      "credit card",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by credit card?",
+        "chunks": [
+          "Can I pay by",
+          "credit card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PAY_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay for this hat by cash?",
+    "chunks": [
+      "Can I pay for",
+      "this hat",
+      "by",
+      "cash",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by cash?",
+        "chunks": [
+          "Can I pay by",
+          "cash",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_PAY_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay for this jacket by debit card?",
+    "chunks": [
+      "Can I pay for",
+      "this jacket",
+      "by",
+      "debit card",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by debit card?",
+        "chunks": [
+          "Can I pay by",
+          "debit card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LOOKING_001",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this pen for school.",
+    "chunks": [
+      "I am looking for",
+      "this pen",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this pen?",
+        "chunks": [
+          "Are you looking for",
+          "this pen",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LOOKING_002",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this jacket for school.",
+    "chunks": [
+      "I am looking for",
+      "this jacket",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this jacket?",
+        "chunks": [
+          "Are you looking for",
+          "this jacket",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LOOKING_003",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for the blue one for school.",
+    "chunks": [
+      "I am looking for",
+      "the blue one",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for the blue one?",
+        "chunks": [
+          "Are you looking for",
+          "the blue one",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LOOKING_004",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this hat for school.",
+    "chunks": [
+      "I am looking for",
+      "this hat",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this hat?",
+        "chunks": [
+          "Are you looking for",
+          "this hat",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A1+_SHOPPING_SHOP_LOOKING_005",
+    "level": "A1+",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this cup for school.",
+    "chunks": [
+      "I am looking for",
+      "this cup",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this cup?",
+        "chunks": [
+          "Are you looking for",
+          "this cup",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WANT_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I would like this jacket today.",
+    "chunks": [
+      "I would like",
+      "this jacket",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this jacket.",
+        "chunks": [
+          "I do not want",
+          "this jacket"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this jacket?",
+        "chunks": [
+          "Do you want",
+          "this jacket",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WANT_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I would like this notebook today.",
+    "chunks": [
+      "I would like",
+      "this notebook",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this notebook.",
+        "chunks": [
+          "I do not want",
+          "this notebook"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this notebook?",
+        "chunks": [
+          "Do you want",
+          "this notebook",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WANT_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I would like this red bag today.",
+    "chunks": [
+      "I would like",
+      "this red bag",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want this red bag.",
+        "chunks": [
+          "I do not want",
+          "this red bag"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want this red bag?",
+        "chunks": [
+          "Do you want",
+          "this red bag",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WANT_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I would like these cups today.",
+    "chunks": [
+      "I would like",
+      "these cups",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want these cups.",
+        "chunks": [
+          "I do not want",
+          "these cups"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want these cups?",
+        "chunks": [
+          "Do you want",
+          "these cups",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WANT_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WANT",
+    "target_sentence": "I would like these pants today.",
+    "chunks": [
+      "I would like",
+      "these pants",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I do not want these pants.",
+        "chunks": [
+          "I do not want",
+          "these pants"
+        ]
+      },
+      {
+        "task_type": "question",
+        "target": "Do you want these pants?",
+        "chunks": [
+          "Do you want",
+          "these pants",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LIKE_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this notebook best.",
+    "chunks": [
+      "I like",
+      "this notebook",
+      "best"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LIKE_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this red bag best.",
+    "chunks": [
+      "I like",
+      "this red bag",
+      "best"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LIKE_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this jacket best.",
+    "chunks": [
+      "I like",
+      "this jacket",
+      "best"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LIKE_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this pen best.",
+    "chunks": [
+      "I like",
+      "this pen",
+      "best"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LIKE_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LIKE",
+    "target_sentence": "I like this cup best.",
+    "chunks": [
+      "I like",
+      "this cup",
+      "best"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PRICE_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this jacket today?",
+    "chunks": [
+      "How much is",
+      "this jacket",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PRICE_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this cup today?",
+    "chunks": [
+      "How much is",
+      "this cup",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PRICE_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this notebook today?",
+    "chunks": [
+      "How much is",
+      "this notebook",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PRICE_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this pen today?",
+    "chunks": [
+      "How much is",
+      "this pen",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PRICE_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PRICE",
+    "target_sentence": "How much is this hat today?",
+    "chunks": [
+      "How much is",
+      "this hat",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_HAVE_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you still have this cup today?",
+    "chunks": [
+      "Do you still have",
+      "this cup",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "adverb_of_frequency"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_HAVE_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you still have this pen today?",
+    "chunks": [
+      "Do you still have",
+      "this pen",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "adverb_of_frequency"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_HAVE_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you still have the blue one today?",
+    "chunks": [
+      "Do you still have",
+      "the blue one",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "adverb_of_frequency"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_HAVE_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you still have this jacket today?",
+    "chunks": [
+      "Do you still have",
+      "this jacket",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "adverb_of_frequency"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_HAVE_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_HAVE",
+    "target_sentence": "Do you still have this hat today?",
+    "chunks": [
+      "Do you still have",
+      "this hat",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "adverb_of_frequency"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TRY_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Could I try on this shirt today?",
+    "chunks": [
+      "Could I try on",
+      "this shirt",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "pronouns_one",
+      "shopping_actions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this shirt.",
+        "chunks": [
+          "I cannot try on",
+          "this shirt"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TRY_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Could I try on this hat today?",
+    "chunks": [
+      "Could I try on",
+      "this hat",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "pronouns_one",
+      "shopping_actions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this hat.",
+        "chunks": [
+          "I cannot try on",
+          "this hat"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TRY_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Could I try on this dress today?",
+    "chunks": [
+      "Could I try on",
+      "this dress",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "pronouns_one",
+      "shopping_actions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this dress.",
+        "chunks": [
+          "I cannot try on",
+          "this dress"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TRY_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Could I try on these pants today?",
+    "chunks": [
+      "Could I try on",
+      "these pants",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "pronouns_one",
+      "shopping_actions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on these pants.",
+        "chunks": [
+          "I cannot try on",
+          "these pants"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TRY_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TRY",
+    "target_sentence": "Could I try on this coat today?",
+    "chunks": [
+      "Could I try on",
+      "this coat",
+      "today",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "pronouns_one",
+      "shopping_actions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I cannot try on this coat.",
+        "chunks": [
+          "I cannot try on",
+          "this coat"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TOO_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "I think this hat is too short.",
+    "chunks": [
+      "I think",
+      "this hat",
+      "is too",
+      "short"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TOO_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "I think this jacket is too short.",
+    "chunks": [
+      "I think",
+      "this jacket",
+      "is too",
+      "short"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TOO_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "I think this red bag is too small.",
+    "chunks": [
+      "I think",
+      "this red bag",
+      "is too",
+      "small"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TOO_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "I think this shirt is too short.",
+    "chunks": [
+      "I think",
+      "this shirt",
+      "is too",
+      "short"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TOO_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TOO",
+    "target_sentence": "I think this cup is too small.",
+    "chunks": [
+      "I think",
+      "this cup",
+      "is too",
+      "small"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "pronouns_one",
+      "shopping_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TAKE_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this jacket for school.",
+    "chunks": [
+      "I will take",
+      "this jacket",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this jacket.",
+        "chunks": [
+          "I will not take",
+          "this jacket"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TAKE_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this red bag for school.",
+    "chunks": [
+      "I will take",
+      "this red bag",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this red bag.",
+        "chunks": [
+          "I will not take",
+          "this red bag"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TAKE_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take the blue one for school.",
+    "chunks": [
+      "I will take",
+      "the blue one",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take the blue one.",
+        "chunks": [
+          "I will not take",
+          "the blue one"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TAKE_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this pen for school.",
+    "chunks": [
+      "I will take",
+      "this pen",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this pen.",
+        "chunks": [
+          "I will not take",
+          "this pen"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_TAKE_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_TAKE",
+    "target_sentence": "I will take this hat for school.",
+    "chunks": [
+      "I will take",
+      "this hat",
+      "for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "future_plan",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "negative",
+        "target": "I will not take this hat.",
+        "chunks": [
+          "I will not take",
+          "this hat"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WHERE_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this shirt in this store?",
+    "chunks": [
+      "Where can I find",
+      "this shirt",
+      "in this store",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WHERE_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this notebook in this store?",
+    "chunks": [
+      "Where can I find",
+      "this notebook",
+      "in this store",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WHERE_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this jacket in this store?",
+    "chunks": [
+      "Where can I find",
+      "this jacket",
+      "in this store",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WHERE_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find the blue one in this store?",
+    "chunks": [
+      "Where can I find",
+      "the blue one",
+      "in this store",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_WHERE_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_WHERE",
+    "target_sentence": "Where can I find this red bag in this store?",
+    "chunks": [
+      "Where can I find",
+      "this red bag",
+      "in this store",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "can_request",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PAY_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by mobile pay at the cashier?",
+    "chunks": [
+      "Can I pay by",
+      "mobile pay",
+      "at the",
+      "cashier",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by mobile pay?",
+        "chunks": [
+          "Can I pay by",
+          "mobile pay",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PAY_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by credit card at the fitting room?",
+    "chunks": [
+      "Can I pay by",
+      "credit card",
+      "at the",
+      "fitting room",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by credit card?",
+        "chunks": [
+          "Can I pay by",
+          "credit card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PAY_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by gift card at the cashier?",
+    "chunks": [
+      "Can I pay by",
+      "gift card",
+      "at the",
+      "cashier",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by gift card?",
+        "chunks": [
+          "Can I pay by",
+          "gift card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PAY_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by mobile pay at the customer service desk?",
+    "chunks": [
+      "Can I pay by",
+      "mobile pay",
+      "at the",
+      "customer service desk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by mobile pay?",
+        "chunks": [
+          "Can I pay by",
+          "mobile pay",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_PAY_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_PAY",
+    "target_sentence": "Can I pay by debit card at the customer service desk?",
+    "chunks": [
+      "Can I pay by",
+      "debit card",
+      "at the",
+      "customer service desk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "shopping_vocabulary",
+      "prepositions"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Can I pay by debit card?",
+        "chunks": [
+          "Can I pay by",
+          "debit card",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LOOKING_001",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this notebook for my sister.",
+    "chunks": [
+      "I am looking for",
+      "this notebook",
+      "for my sister"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "pronouns_one"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this notebook?",
+        "chunks": [
+          "Are you looking for",
+          "this notebook",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LOOKING_002",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this cup for my sister.",
+    "chunks": [
+      "I am looking for",
+      "this cup",
+      "for my sister"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "pronouns_one"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this cup?",
+        "chunks": [
+          "Are you looking for",
+          "this cup",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LOOKING_003",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this shirt for my sister.",
+    "chunks": [
+      "I am looking for",
+      "this shirt",
+      "for my sister"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "pronouns_one"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this shirt?",
+        "chunks": [
+          "Are you looking for",
+          "this shirt",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LOOKING_004",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for the blue one for my sister.",
+    "chunks": [
+      "I am looking for",
+      "the blue one",
+      "for my sister"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "pronouns_one"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for the blue one?",
+        "chunks": [
+          "Are you looking for",
+          "the blue one",
+          "?"
+        ]
+      }
+    ]
+  },
+  {
+    "sentence_id": "A2_SHOPPING_SHOP_LOOKING_005",
+    "level": "A2",
+    "scenario": "shopping",
+    "pattern_id": "SHOP_LOOKING",
+    "target_sentence": "I am looking for this hat for my sister.",
+    "chunks": [
+      "I am looking for",
+      "this hat",
+      "for my sister"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "shopping_vocabulary",
+      "pronouns_one"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": [
+      {
+        "task_type": "question",
+        "target": "Are you looking for this hat?",
+        "chunks": [
+          "Are you looking for",
+          "this hat",
+          "?"
+        ]
+      }
+    ]
+  }
+]

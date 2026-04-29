@@ -1,0 +1,483 @@
+{
+  "SHOP_WANT": {
+    "pattern_id": "SHOP_WANT",
+    "function": "express_wants",
+    "variants": {
+      "A1": {
+        "example_template": "I want {object}.",
+        "chunks_template": ["I want", "{object}"],
+        "grammar_focus": ["present_simple", "demonstratives"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative", "question"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "I want to buy {object}.",
+        "chunks_template": ["I want to buy", "{object}"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary", "demonstratives"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single", "priceable_plural"],
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative", "question"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "I would like {object} today.",
+        "chunks_template": ["I would like", "{object}", "today"],
+        "grammar_focus": ["present_simple", "pronouns_one", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single", "priceable_plural"],
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative", "question"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_LIKE": {
+    "pattern_id": "SHOP_LIKE",
+    "function": "express_likes",
+    "variants": {
+      "A1": {
+        "example_template": "I like {object}.",
+        "chunks_template": ["I like", "{object}"],
+        "grammar_focus": ["like_verb", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative", "question"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "I really like {object}.",
+        "chunks_template": ["I really like", "{object}"],
+        "grammar_focus": ["like_verb", "shopping_vocabulary", "adjectives"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative", "question"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "I like {object} best.",
+        "chunks_template": ["I like", "{object}", "best"],
+        "grammar_focus": ["like_verb", "pronouns_one", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_PRICE": {
+    "pattern_id": "SHOP_PRICE",
+    "function": "ask_price",
+    "variants": {
+      "A1": {
+        "example_template": "How much is {object}?",
+        "chunks_template": ["How much is", "{object}", "?"],
+        "grammar_focus": ["wh_questions", "demonstratives"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["substitution"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "How much are {object}?",
+        "chunks_template": ["How much are", "{object}", "?"],
+        "grammar_focus": ["wh_questions", "plural_nouns", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_plural"],
+            "plural": true,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["substitution"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "How much is {object} today?",
+        "chunks_template": ["How much is", "{object}", "today", "?"],
+        "grammar_focus": ["wh_questions", "pronouns_one", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_HAVE": {
+    "pattern_id": "SHOP_HAVE",
+    "function": "ask_availability",
+    "variants": {
+      "A1": {
+        "example_template": "Do you have {object}?",
+        "chunks_template": ["Do you have", "{object}", "?"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "Do you have {object} in stock?",
+        "chunks_template": ["Do you have", "{object}", "in stock", "?"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary", "question_structure"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "Do you still have {object} today?",
+        "chunks_template": ["Do you still have", "{object}", "today", "?"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary", "adverb_of_frequency"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_TRY": {
+    "pattern_id": "SHOP_TRY",
+    "function": "try_items",
+    "variants": {
+      "A1": {
+        "example_template": "Can I try on {object}?",
+        "chunks_template": ["Can I try on", "{object}", "?"],
+        "grammar_focus": ["can_request", "shopping_actions"],
+        "slot_constraints": {
+          "object": {
+            "category": ["wearable_items"],
+            "wearable": true
+          }
+        },
+        "fsi_rules": ["negative"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "Can I try on {object}, please?",
+        "chunks_template": ["Can I try on", "{object}", ", please", "?"],
+        "grammar_focus": ["can_request", "shopping_actions", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["wearable_items"],
+            "wearable": true,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "Could I try on {object} today?",
+        "chunks_template": ["Could I try on", "{object}", "today", "?"],
+        "grammar_focus": ["can_request", "pronouns_one", "shopping_actions"],
+        "slot_constraints": {
+          "object": {
+            "category": ["wearable_items"],
+            "wearable": true,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative", "question_rebuild"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_TOO": {
+    "pattern_id": "SHOP_TOO",
+    "function": "describe_problem",
+    "variants": {
+      "A1": {
+        "example_template": "This is too {adjective}.",
+        "chunks_template": ["This is too", "{adjective}"],
+        "grammar_focus": ["adjectives", "shopping_vocabulary"],
+        "slot_constraints": {
+          "adjective": {
+            "category": ["adjectives"]
+          }
+        },
+        "fsi_rules": ["substitution"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "{object} is too {adjective}.",
+        "chunks_template": ["{object}", "is too", "{adjective}"],
+        "grammar_focus": ["adjectives", "demonstratives", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          },
+          "adjective": {
+            "category": ["adjectives"]
+          }
+        },
+        "fsi_rules": ["substitution"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "I think {object} is too {adjective}.",
+        "chunks_template": ["I think", "{object}", "is too", "{adjective}"],
+        "grammar_focus": ["adjectives", "pronouns_one", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          },
+          "adjective": {
+            "category": ["adjectives"]
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_TAKE": {
+    "pattern_id": "SHOP_TAKE",
+    "function": "choose_item",
+    "variants": {
+      "A1": {
+        "example_template": "I will take {object}.",
+        "chunks_template": ["I will take", "{object}"],
+        "grammar_focus": ["future_plan", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "I will take {object} today.",
+        "chunks_template": ["I will take", "{object}", "today"],
+        "grammar_focus": ["future_plan", "shopping_vocabulary", "time_expression"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "I will take {object} for school.",
+        "chunks_template": ["I will take", "{object}", "for school"],
+        "grammar_focus": ["future_plan", "shopping_vocabulary", "prepositions"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_WHERE": {
+    "pattern_id": "SHOP_WHERE",
+    "function": "ask_location",
+    "variants": {
+      "A1": {
+        "example_template": "Where is the {location}?",
+        "chunks_template": ["Where is the", "{location}", "?"],
+        "grammar_focus": ["wh_questions", "prepositions"],
+        "slot_constraints": {
+          "location": {
+            "category": ["store_locations"]
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "Where can I find {object}?",
+        "chunks_template": ["Where can I find", "{object}", "?"],
+        "grammar_focus": ["wh_questions", "can_request", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "Where can I find {object} in this store?",
+        "chunks_template": ["Where can I find", "{object}", "in this store", "?"],
+        "grammar_focus": ["wh_questions", "can_request", "prepositions"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_PAY": {
+    "pattern_id": "SHOP_PAY",
+    "function": "ask_payment",
+    "variants": {
+      "A1": {
+        "example_template": "Can I pay by {payment_method}?",
+        "chunks_template": ["Can I pay by", "{payment_method}", "?"],
+        "grammar_focus": ["can_request", "shopping_vocabulary"],
+        "slot_constraints": {
+          "payment_method": {
+            "category": ["payment_methods"]
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "Can I pay for {object} by {payment_method}?",
+        "chunks_template": ["Can I pay for", "{object}", "by", "{payment_method}", "?"],
+        "grammar_focus": ["can_request", "shopping_vocabulary", "prepositions"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          },
+          "payment_method": {
+            "category": ["payment_methods"]
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "Can I pay by {payment_method} at the {location}?",
+        "chunks_template": ["Can I pay by", "{payment_method}", "at the", "{location}", "?"],
+        "grammar_focus": ["can_request", "shopping_vocabulary", "prepositions"],
+        "slot_constraints": {
+          "payment_method": {
+            "category": ["payment_methods"]
+          },
+          "location": {
+            "category": ["store_locations"]
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_LOOKING": {
+    "pattern_id": "SHOP_LOOKING",
+    "function": "say_looking_for",
+    "variants": {
+      "A1": {
+        "example_template": "I am looking for {object}.",
+        "chunks_template": ["I am looking for", "{object}"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 1}
+      },
+      "A1+": {
+        "example_template": "I am looking for {object} for school.",
+        "chunks_template": ["I am looking for", "{object}", "for school"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary", "prepositions"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "I am looking for {object} for my sister.",
+        "chunks_template": ["I am looking for", "{object}", "for my sister"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary", "pronouns_one"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 2}
+      }
+    }
+  }
+}
