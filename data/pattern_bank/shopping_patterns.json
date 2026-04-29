@@ -42,6 +42,22 @@
         },
         "fsi_rules": ["negative", "question"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "I want {object} because it is {adjective}.",
+        "chunks_template": ["I want", "{object}", "because it is", "{adjective}"],
+        "grammar_focus": ["present_simple", "because_so", "adjectives", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single", "priceable_plural"],
+            "priceable": true
+          },
+          "adjective": {
+            "category": ["adjectives"]
+          }
+        },
+        "fsi_rules": ["negative", "question"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -90,6 +106,23 @@
         },
         "fsi_rules": ["question_rebuild"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "I like {object} because it looks {adjective}.",
+        "chunks_template": ["I like", "{object}", "because it looks", "{adjective}"],
+        "grammar_focus": ["like_verb", "because_so", "adjectives", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          },
+          "adjective": {
+            "category": ["adjectives"]
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -138,6 +171,20 @@
         },
         "fsi_rules": ["question_rebuild"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "How much is {object} after the discount?",
+        "chunks_template": ["How much is", "{object}", "after the discount", "?"],
+        "grammar_focus": ["wh_questions", "prepositions", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["substitution"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -186,6 +233,20 @@
         },
         "fsi_rules": ["question_rebuild"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "Do you have {object} in a different color?",
+        "chunks_template": ["Do you have", "{object}", "in a different color", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "adjectives", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -233,6 +294,20 @@
         },
         "fsi_rules": ["negative", "question_rebuild"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "Could I try on {object} before I buy it?",
+        "chunks_template": ["Could I try on", "{object}", "before I buy it", "?"],
+        "grammar_focus": ["can_request", "shopping_actions", "time_expression", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["wearable_items"],
+            "wearable": true,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -285,6 +360,23 @@
         },
         "fsi_rules": ["question_rebuild"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "{object} is too {adjective} for me.",
+        "chunks_template": ["{object}", "is too", "{adjective}", "for me"],
+        "grammar_focus": ["too_enough", "adjectives", "prepositions", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          },
+          "adjective": {
+            "category": ["adjectives"]
+          }
+        },
+        "fsi_rules": ["substitution"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -333,6 +425,20 @@
         },
         "fsi_rules": ["negative"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "I will take {object} because I need it.",
+        "chunks_template": ["I will take", "{object}", "because I need it"],
+        "grammar_focus": ["future_plan", "because_so", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["negative"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -379,6 +485,20 @@
         },
         "fsi_rules": ["question_rebuild"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "Where can I find {object} on this floor?",
+        "chunks_template": ["Where can I find", "{object}", "on this floor", "?"],
+        "grammar_focus": ["wh_questions", "can_request", "prepositions", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question_rebuild"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -429,6 +549,23 @@
         },
         "fsi_rules": ["question"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "Can I pay for {object} with {payment_method}?",
+        "chunks_template": ["Can I pay for", "{object}", "with", "{payment_method}", "?"],
+        "grammar_focus": ["can_request", "prepositions", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          },
+          "payment_method": {
+            "category": ["payment_methods"]
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 2.5}
       }
     }
   },
@@ -477,6 +614,20 @@
         },
         "fsi_rules": ["question"],
         "complexity": {"depth": 2}
+      },
+      "A2+": {
+        "example_template": "I am looking for {object} because it is for my friend.",
+        "chunks_template": ["I am looking for", "{object}", "because it is for my friend"],
+        "grammar_focus": ["present_simple", "because_so", "prepositions", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["priceable_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": ["question"],
+        "complexity": {"depth": 2.5}
       }
     }
   }

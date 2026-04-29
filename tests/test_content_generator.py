@@ -24,7 +24,7 @@ EXPECTED_PATTERNS = {
     "SHOP_PAY",
     "SHOP_LOOKING",
 }
-EXPECTED_LEVELS = {"A1", "A1+", "A2"}
+EXPECTED_LEVELS = {"A1", "A1+", "A2", "A2+"}
 
 
 def load_banks():
@@ -233,7 +233,7 @@ def test_injected_rng_makes_generation_predictable():
     assert sentences_one == sentences_two
 
 
-def test_generate_all_produces_at_least_120_unique_sentences():
+def test_generate_all_produces_at_least_200_unique_sentences():
     generator = make_generator(seed=23, ensure_unique_targets=True)
 
     sentences = generator.generate_all(count_per_variant=5)
@@ -241,9 +241,65 @@ def test_generate_all_produces_at_least_120_unique_sentences():
     ids = [sentence["sentence_id"] for sentence in sentences]
     targets = [sentence["target_sentence"] for sentence in sentences]
 
-    assert len(sentences) >= 120
+    assert len(sentences) >= 200
     assert len(ids) == len(set(ids))
     assert len(targets) == len(set(targets))
+
+
+def test_each_pattern_has_a2_plus_variant():
+    pattern_bank, _ = load_banks()
+
+    assert all("A2+" in pattern_bank[pattern_id]["variants"] for pattern_id in EXPECTED_PATTERNS)
+
+
+def test_a2_plus_generated_sentences_are_not_empty():
+    generator = make_generator(seed=31, ensure_unique_targets=True)
+
+    sentences = []
+    for pattern_id in EXPECTED_PATTERNS:
+        sentences.extend(generator.generate_for_pattern(pattern_id, "A2+", count=5))
+
+    assert sentences
+    assert all(sentence["level"] == "A2+" for sentence in sentences)
+
+
+def test_shop_try_a2_plus_only_uses_wearable_objects():
+    generator = make_generator(seed=37)
+    slot_bank = generator.slot_bank
+    disallowed = {
+        item["text"]
+        for group in slot_bank.values()
+        for item in group
+        if item.get("wearable") is False
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_TRY", "A2+", count=20)
+
+    assert sentences
+    assert all(
+        all(text not in sentence["target_sentence"] for text in disallowed)
+        for sentence in sentences
+    )
+
+
+def test_shop_price_a2_plus_how_much_is_only_uses_singular_objects():
+    generator = make_generator(seed=41)
+    plural_lookup = {}
+    for group_name in ("priceable_single", "priceable_plural"):
+        for item in generator.slot_bank[group_name]:
+            plural_lookup[item["text"]] = item["plural"]
+
+    sentences = generator.generate_for_pattern("SHOP_PRICE", "A2+", count=20)
+
+    assert sentences
+    for sentence in sentences:
+        if "How much is" not in sentence["target_sentence"]:
+            continue
+        matched_object = next(
+            text for text in plural_lookup
+            if text in sentence["target_sentence"]
+        )
+        assert plural_lookup[matched_object] is False
 
 
 def test_sentence_ids_are_unique_and_output_loads_into_sentence_engine():
