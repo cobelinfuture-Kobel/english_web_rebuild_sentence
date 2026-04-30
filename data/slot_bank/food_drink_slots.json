@@ -1,0 +1,234 @@
+{
+  "countable_food_items": [
+    {"text": "a sandwich", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a hamburger", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a cookie", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "an apple", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a banana", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "an egg", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a hot dog", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a taco", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a muffin", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a slice of pizza", "plural": false, "food": true, "drink": false, "countable": true}
+  ],
+  "uncountable_food_items": [
+    {"text": "some rice", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some bread", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some soup", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some salad", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some chicken", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some fish", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some cake", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some ice cream", "plural": false, "food": true, "drink": false, "countable": false}
+  ],
+  "drink_items": [
+    {"text": "some water", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some milk", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some juice", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some apple juice", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some orange juice", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some tea", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some coffee", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some soda", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "some hot chocolate", "plural": false, "food": false, "drink": true, "countable": false}
+  ],
+  "drink_choice_items": [
+    {"text": "Tea or coffee", "plural": false, "food": false, "drink": true},
+    {"text": "Water or soda", "plural": false, "food": false, "drink": true},
+    {"text": "Juice or milk", "plural": false, "food": false, "drink": true},
+    {"text": "Coffee or tea", "plural": false, "food": false, "drink": true}
+  ],
+  "measured_drink_items": [
+    {"text": "a cup of tea", "plural": false, "food": false, "drink": true, "countable": true},
+    {"text": "a cup of coffee", "plural": false, "food": false, "drink": true, "countable": true},
+    {"text": "a cup of hot chocolate", "plural": false, "food": false, "drink": true, "countable": true},
+    {"text": "a glass of water", "plural": false, "food": false, "drink": true, "countable": true},
+    {"text": "a glass of milk", "plural": false, "food": false, "drink": true, "countable": true},
+    {"text": "a glass of juice", "plural": false, "food": false, "drink": true, "countable": true}
+  ],
+  "simple_food_drink_items": [
+    {"text": "pizza", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "rice", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "bread", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "soup", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "salad", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "chicken", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "fish", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "cake", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "cookies", "plural": true, "food": true, "drink": false, "countable": true},
+    {"text": "apples", "plural": true, "food": true, "drink": false, "countable": true},
+    {"text": "bananas", "plural": true, "food": true, "drink": false, "countable": true},
+    {"text": "ice cream", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "water", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "milk", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "juice", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "tea", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "coffee", "plural": false, "food": false, "drink": true, "countable": false},
+    {"text": "soda", "plural": false, "food": false, "drink": true, "countable": false}
+  ],
+  "breakfast_food_items": [
+    {"text": "eggs", "plural": true, "food": true, "drink": false, "countable": true},
+    {"text": "toast", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "cereal", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "a muffin", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a banana", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "some fruit", "plural": false, "food": true, "drink": false, "countable": false}
+  ],
+  "lunch_food_items": [
+    {"text": "a sandwich", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a hamburger", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a salad", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "some rice", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some soup", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "a slice of pizza", "plural": false, "food": true, "drink": false, "countable": true}
+  ],
+  "dinner_food_items": [
+    {"text": "some chicken", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some fish", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some rice", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some soup", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "a salad", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a steak", "plural": false, "food": true, "drink": false, "countable": true}
+  ],
+  "restaurant_request_items": [
+    {"text": "the menu", "plural": false},
+    {"text": "the check", "plural": false},
+    {"text": "some water", "plural": false},
+    {"text": "a napkin", "plural": false},
+    {"text": "a straw", "plural": false},
+    {"text": "a fork", "plural": false},
+    {"text": "a spoon", "plural": false},
+    {"text": "a knife", "plural": false},
+    {"text": "chopsticks", "plural": true}
+  ],
+  "food_state_statements": [
+    {"text": "I am hungry"},
+    {"text": "I am thirsty"},
+    {"text": "I am full"}
+  ],
+  "to_go_items": [
+    {"text": "this sandwich", "plural": false, "food": true, "drink": false},
+    {"text": "this hamburger", "plural": false, "food": true, "drink": false},
+    {"text": "this salad", "plural": false, "food": true, "drink": false},
+    {"text": "this coffee", "plural": false, "food": false, "drink": true},
+    {"text": "this tea", "plural": false, "food": false, "drink": true},
+    {"text": "this soda", "plural": false, "food": false, "drink": true}
+  ],
+  "food_problem_pairs": [
+    {"subject": "This soup", "item": "this soup", "problem": "too salty"},
+    {"subject": "This coffee", "item": "this coffee", "problem": "too hot"},
+    {"subject": "This soda", "item": "this soda", "problem": "too sweet"},
+    {"subject": "This ice cream", "item": "this ice cream", "problem": "too cold"},
+    {"subject": "This sandwich", "item": "this sandwich", "problem": "too dry"},
+    {"subject": "This tea", "item": "this tea", "problem": "too hot"},
+    {"subject": "This juice", "item": "this juice", "problem": "too sweet"},
+    {"subject": "This chicken", "item": "this chicken", "problem": "too spicy"}
+  ],
+  "food_positive_reason_pairs": [
+    {"item": "this salad", "reason": "fresh"},
+    {"item": "this soup", "reason": "warm"},
+    {"item": "this sandwich", "reason": "fresh"},
+    {"item": "this apple", "reason": "sweet"},
+    {"item": "this banana", "reason": "sweet"},
+    {"item": "this chicken", "reason": "delicious"},
+    {"item": "this juice", "reason": "fresh"},
+    {"item": "this tea", "reason": "hot"},
+    {"item": "this water", "reason": "cold"},
+    {"item": "this hamburger", "reason": "good"},
+    {"item": "this salad", "reason": "healthy"},
+    {"item": "this soup", "reason": "healthy"}
+  ],
+  "food_negative_reason_pairs": [
+    {"item": "this soda", "reason": "too sweet"},
+    {"item": "this soup", "reason": "too salty"},
+    {"item": "this coffee", "reason": "too hot"},
+    {"item": "this tea", "reason": "too hot"},
+    {"item": "this sandwich", "reason": "too dry"},
+    {"item": "this chicken", "reason": "too spicy"},
+    {"item": "this hamburger", "reason": "greasy"},
+    {"item": "this sandwich", "reason": "greasy"}
+  ],
+  "substitution_pairs": [
+    {"item_a": "rice", "item_b": "fries"},
+    {"item_a": "salad", "item_b": "fries"},
+    {"item_a": "tea", "item_b": "soda"},
+    {"item_a": "water", "item_b": "soda"},
+    {"item_a": "soup", "item_b": "salad"}
+  ],
+  "allergy_items": [
+    {"text": "peanuts"},
+    {"text": "seafood"},
+    {"text": "milk"},
+    {"text": "eggs"},
+    {"text": "tree nuts"},
+    {"text": "soy"}
+  ],
+  "ingredient_items": [
+    {"text": "peanuts"},
+    {"text": "milk"},
+    {"text": "eggs"},
+    {"text": "seafood"},
+    {"text": "cheese"},
+    {"text": "onions"},
+    {"text": "garlic"},
+    {"text": "meat"}
+  ],
+  "restaurant_problem_pairs": [
+    {"subject": "This chicken", "item": "this chicken", "problem": "is undercooked"},
+    {"subject": "This steak", "item": "this steak", "problem": "is overcooked"},
+    {"subject": "This bread", "item": "this bread", "problem": "is stale"},
+    {"subject": "This soup", "item": "this soup", "problem": "is cold"},
+    {"subject": "My order", "item": "my order", "problem": "is wrong"},
+    {"subject": "This coffee", "item": "this coffee", "problem": "is cold"},
+    {"subject": "This salad", "item": "this salad", "problem": "is not fresh"},
+    {"subject": "This toast", "item": "this toast", "problem": "is burnt"}
+  ],
+  "reservation_party_sizes": [
+    {"text": "two"},
+    {"text": "three"},
+    {"text": "four"},
+    {"text": "five"}
+  ],
+  "recommendation_contexts": [
+    {"text": "lunch"},
+    {"text": "dinner"},
+    {"text": "a light meal"},
+    {"text": "a quick meal"},
+    {"text": "a child"},
+    {"text": "someone who likes spicy food"},
+    {"text": "something light"},
+    {"text": "something sweet"},
+    {"text": "something healthy"}
+  ],
+  "food_location_items": [
+    {"text": "the sugar", "plural": false},
+    {"text": "the salt", "plural": false},
+    {"text": "the napkins", "plural": true},
+    {"text": "the straws", "plural": true},
+    {"text": "the chopsticks", "plural": true}
+  ],
+  "table_item_location_pairs": [
+    {"be": "is", "item": "the salt"},
+    {"be": "is", "item": "the sugar"},
+    {"be": "is", "item": "the pepper"},
+    {"be": "are", "item": "the napkins"},
+    {"be": "are", "item": "the straws"},
+    {"be": "are", "item": "the forks"},
+    {"be": "are", "item": "the spoons"},
+    {"be": "are", "item": "the chopsticks"}
+  ],
+  "snack_food_items": [
+    {"text": "a cookie", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "an apple", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "a banana", "plural": false, "food": true, "drink": false, "countable": true},
+    {"text": "some fruit", "plural": false, "food": true, "drink": false, "countable": false},
+    {"text": "some crackers", "plural": true, "food": true, "drink": false, "countable": true}
+  ],
+  "simple_drink_preference_pairs": [
+    {"item_a": "tea", "item_b": "soda"},
+    {"item_a": "coffee", "item_b": "soda"},
+    {"item_a": "juice", "item_b": "soda"},
+    {"item_a": "tea", "item_b": "coffee"},
+    {"item_a": "water", "item_b": "soda"}
+  ]
+}

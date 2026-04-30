@@ -1,5 +1,6 @@
-import json
+import argparse
 import itertools
+import json
 import random
 from pathlib import Path
 
@@ -39,6 +40,72 @@ COUNT_BY_PATTERN_LEVEL = {
     ("SHOP_WARRANTY", "B1"): 5,
     ("SHOP_QUALITY", "B1"): 10,
     ("SHOP_MATERIAL", "B1"): 10,
+    ("FOOD_WANT_COUNTABLE", "A1"): 10,
+    ("FOOD_WANT_UNCOUNTABLE", "A1"): 15,
+    ("FOOD_CHOICE", "A1"): 4,
+    ("FOOD_MEASURE_WANT", "A1"): 6,
+    ("FOOD_MEASURE_HAVE", "A1"): 6,
+    ("FOOD_LIKE", "A1"): 18,
+    ("FOOD_HAVE", "A1"): 20,
+    ("FOOD_PRICE", "A1"): 10,
+    ("FOOD_STATE", "A1"): 3,
+    ("FOOD_TOO", "A1"): 8,
+    ("FOOD_EAT", "A1+"): 15,
+    ("FOOD_ASK_WANT", "A1+"): 1,
+    ("FOOD_DRINK", "A1+"): 9,
+    ("FOOD_DONT_WANT", "A1+"): 12,
+    ("FOOD_HAVE_POLITE", "A1+"): 20,
+    ("FOOD_HAVE_STOCK", "A1+"): 18,
+    ("FOOD_BREAKFAST", "A1+"): 6,
+    ("FOOD_LUNCH", "A1+"): 6,
+    ("FOOD_DINNER", "A1+"): 6,
+    ("FOOD_SNACK", "A1+"): 5,
+    ("FOOD_TO_GO", "A1+"): 6,
+    ("FOOD_ORDER", "A2"): 20,
+    ("FOOD_REQUEST", "A2"): 8,
+    ("FOOD_ANY_HAVE", "A2"): 15,
+    ("FOOD_TO_GO", "A2"): 6,
+    ("FOOD_NO_ICE", "A2"): 1,
+    ("FOOD_LESS_SUGAR", "A2"): 1,
+    ("FOOD_RESTROOM", "A2"): 1,
+    ("FOOD_WHERE_ITEM", "A2"): 8,
+    ("FOOD_TOO", "A2"): 8,
+    ("FOOD_LIKE_REASON", "A2+"): 10,
+    ("FOOD_WANT_REASON", "A2+"): 10,
+    ("FOOD_NOT_WANT_REASON", "A2+"): 6,
+    ("FOOD_RECOMMEND", "A2+"): 1,
+    ("FOOD_RECOMMEND_CONTEXT", "A2+"): 6,
+    ("FOOD_INGREDIENT", "A2+"): 8,
+    ("FOOD_SUBSTITUTE", "A2+"): 5,
+    ("FOOD_PREFER_MORE", "A2+"): 5,
+    ("FOOD_RESERVATION", "B1"): 4,
+    ("FOOD_TABLE", "B1"): 4,
+    ("FOOD_ORDER_DETAIL", "B1"): 15,
+    ("FOOD_WITHOUT", "B1"): 8,
+    ("FOOD_ALLERGY", "B1"): 6,
+    ("FOOD_INGREDIENT_DETAIL", "B1"): 8,
+    ("FOOD_VEGETARIAN_RECOMMEND", "B1"): 1,
+    ("FOOD_PROBLEM", "B1"): 7,
+    ("FOOD_REPLACEMENT", "B1"): 1,
+    ("FOOD_CHECK", "B1"): 1,
+    ("FOOD_SPLIT_CHECK", "B1"): 1,
+    ("FOOD_PAY_SEPARATELY", "B1"): 1,
+    ("FOOD_TO_GO", "B1"): 1,
+}
+
+SCENARIO_CONFIGS = {
+    "shopping": {
+        "sentence_prefix": "SHOPPING",
+        "pattern_path": Path("data/pattern_bank/shopping_patterns.json"),
+        "slot_path": Path("data/slot_bank/shopping_slots.json"),
+        "output_path": Path("data/generated/shopping_sentence_bank.json"),
+    },
+    "food_drink": {
+        "sentence_prefix": "FOOD_DRINK",
+        "pattern_path": Path("data/pattern_bank/food_drink_patterns.json"),
+        "slot_path": Path("data/slot_bank/food_drink_slots.json"),
+        "output_path": Path("data/generated/food_drink_sentence_bank.json"),
+    },
 }
 
 
@@ -54,11 +121,21 @@ class ContentGenerator:
         "fsi_tasks",
     ]
 
-    def __init__(self, pattern_bank, slot_bank, rng=None, ensure_unique_targets=False):
+    def __init__(
+        self,
+        pattern_bank,
+        slot_bank,
+        rng=None,
+        ensure_unique_targets=False,
+        scenario="shopping",
+        sentence_prefix=None,
+    ):
         self.pattern_bank = pattern_bank
         self.slot_bank = slot_bank
         self.rng = rng or random.Random()
         self.ensure_unique_targets = ensure_unique_targets
+        self.scenario = scenario
+        self.sentence_prefix = sentence_prefix or scenario.upper()
         self._sentence_counters = {}
         self._used_target_sentences = set()
 
@@ -73,9 +150,9 @@ class ContentGenerator:
             chunks = self._render_chunks(variant["chunks_template"], slot_values)
             sentence_index = self._next_sentence_index(pattern_id, level)
             sentence = {
-                "sentence_id": f"{level}_SHOPPING_{pattern_id}_{sentence_index:03d}",
+                "sentence_id": f"{level}_{self.sentence_prefix}_{pattern_id}_{sentence_index:03d}",
                 "level": level,
-                "scenario": "shopping",
+                "scenario": self.scenario,
                 "pattern_id": pattern_id,
                 "target_sentence": target_sentence,
                 "chunks": chunks,
@@ -398,24 +475,47 @@ def _load_json(path):
         return json.load(handle)
 
 
-def main():
-    base_dir = Path(__file__).resolve().parent.parent
-    pattern_path = base_dir / "data" / "pattern_bank" / "shopping_patterns.json"
-    slot_path = base_dir / "data" / "slot_bank" / "shopping_slots.json"
-    output_path = base_dir / "data" / "generated" / "shopping_sentence_bank.json"
-
+def generate_scenario_bank(base_dir, scenario_name):
+    config = SCENARIO_CONFIGS[scenario_name]
+    pattern_path = base_dir / config["pattern_path"]
+    slot_path = base_dir / config["slot_path"]
+    output_path = base_dir / config["output_path"]
     generator = ContentGenerator(
         pattern_bank=_load_json(pattern_path),
         slot_bank=_load_json(slot_path),
         ensure_unique_targets=True,
+        scenario=scenario_name,
+        sentence_prefix=config["sentence_prefix"],
     )
     sentences = generator.generate_all(count_per_variant=DEFAULT_COUNT_PER_VARIANT)
-
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as handle:
         json.dump(sentences, handle, ensure_ascii=False, indent=2)
+    return output_path, len(sentences)
 
-    print(f"Generated {len(sentences)} sentences to {output_path}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate sentence banks for supported scenarios.")
+    parser.add_argument(
+        "--scenario",
+        action="append",
+        choices=sorted(SCENARIO_CONFIGS.keys()),
+        help="Generate one or more specific scenarios. When omitted, only missing banks are generated.",
+    )
+    args = parser.parse_args()
+
+    base_dir = Path(__file__).resolve().parent.parent
+    scenario_names = args.scenario or list(SCENARIO_CONFIGS.keys())
+    missing_only = args.scenario is None
+
+    for scenario_name in scenario_names:
+        output_path = base_dir / SCENARIO_CONFIGS[scenario_name]["output_path"]
+        if missing_only and output_path.exists():
+            print(f"Skipped {scenario_name}: {output_path} already exists")
+            continue
+
+        generated_path, count = generate_scenario_bank(base_dir, scenario_name)
+        print(f"Generated {count} sentences to {generated_path}")
 
 
 if __name__ == "__main__":

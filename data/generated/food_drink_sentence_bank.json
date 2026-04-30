@@ -1,0 +1,7457 @@
+[
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a sandwich.",
+    "chunks": [
+      "I want",
+      "a sandwich"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a banana.",
+    "chunks": [
+      "I want",
+      "a banana"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a hot dog.",
+    "chunks": [
+      "I want",
+      "a hot dog"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a taco.",
+    "chunks": [
+      "I want",
+      "a taco"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a slice of pizza.",
+    "chunks": [
+      "I want",
+      "a slice of pizza"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want an apple.",
+    "chunks": [
+      "I want",
+      "an apple"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_007",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a muffin.",
+    "chunks": [
+      "I want",
+      "a muffin"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_008",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want an egg.",
+    "chunks": [
+      "I want",
+      "an egg"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_009",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a cookie.",
+    "chunks": [
+      "I want",
+      "a cookie"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_010",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "target_sentence": "I want a hamburger.",
+    "chunks": [
+      "I want",
+      "a hamburger"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "countable_nouns"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some soda.",
+    "chunks": [
+      "I want",
+      "some soda"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some salad.",
+    "chunks": [
+      "I want",
+      "some salad"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some fish.",
+    "chunks": [
+      "I want",
+      "some fish"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some apple juice.",
+    "chunks": [
+      "I want",
+      "some apple juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some orange juice.",
+    "chunks": [
+      "I want",
+      "some orange juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some soup.",
+    "chunks": [
+      "I want",
+      "some soup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_007",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some chicken.",
+    "chunks": [
+      "I want",
+      "some chicken"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_008",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some water.",
+    "chunks": [
+      "I want",
+      "some water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_009",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some juice.",
+    "chunks": [
+      "I want",
+      "some juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_010",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some hot chocolate.",
+    "chunks": [
+      "I want",
+      "some hot chocolate"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_011",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some cake.",
+    "chunks": [
+      "I want",
+      "some cake"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_012",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some milk.",
+    "chunks": [
+      "I want",
+      "some milk"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_013",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some tea.",
+    "chunks": [
+      "I want",
+      "some tea"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_014",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some rice.",
+    "chunks": [
+      "I want",
+      "some rice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_WANT_UNCOUNTABLE_015",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "target_sentence": "I want some coffee.",
+    "chunks": [
+      "I want",
+      "some coffee"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_CHOICE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_CHOICE",
+    "target_sentence": "Coffee or tea?",
+    "chunks": [
+      "Coffee or tea",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_CHOICE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_CHOICE",
+    "target_sentence": "Tea or coffee?",
+    "chunks": [
+      "Tea or coffee",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_CHOICE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_CHOICE",
+    "target_sentence": "Water or soda?",
+    "chunks": [
+      "Water or soda",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_CHOICE_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_CHOICE",
+    "target_sentence": "Juice or milk?",
+    "chunks": [
+      "Juice or milk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_WANT_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_WANT",
+    "target_sentence": "I want a cup of tea.",
+    "chunks": [
+      "I want",
+      "a cup of tea"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_WANT_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_WANT",
+    "target_sentence": "I want a glass of juice.",
+    "chunks": [
+      "I want",
+      "a glass of juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_WANT_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_WANT",
+    "target_sentence": "I want a cup of hot chocolate.",
+    "chunks": [
+      "I want",
+      "a cup of hot chocolate"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_WANT_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_WANT",
+    "target_sentence": "I want a glass of water.",
+    "chunks": [
+      "I want",
+      "a glass of water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_WANT_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_WANT",
+    "target_sentence": "I want a glass of milk.",
+    "chunks": [
+      "I want",
+      "a glass of milk"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_WANT_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_WANT",
+    "target_sentence": "I want a cup of coffee.",
+    "chunks": [
+      "I want",
+      "a cup of coffee"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_HAVE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_HAVE",
+    "target_sentence": "Can I have a glass of milk?",
+    "chunks": [
+      "Can I have",
+      "a glass of milk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_HAVE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_HAVE",
+    "target_sentence": "Can I have a cup of tea?",
+    "chunks": [
+      "Can I have",
+      "a cup of tea",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_HAVE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_HAVE",
+    "target_sentence": "Can I have a cup of hot chocolate?",
+    "chunks": [
+      "Can I have",
+      "a cup of hot chocolate",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_HAVE_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_HAVE",
+    "target_sentence": "Can I have a glass of water?",
+    "chunks": [
+      "Can I have",
+      "a glass of water",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_HAVE_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_HAVE",
+    "target_sentence": "Can I have a cup of coffee?",
+    "chunks": [
+      "Can I have",
+      "a cup of coffee",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_MEASURE_HAVE_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_MEASURE_HAVE",
+    "target_sentence": "Can I have a glass of juice?",
+    "chunks": [
+      "Can I have",
+      "a glass of juice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "quantity"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like soup.",
+    "chunks": [
+      "I like",
+      "soup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like pizza.",
+    "chunks": [
+      "I like",
+      "pizza"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like juice.",
+    "chunks": [
+      "I like",
+      "juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like tea.",
+    "chunks": [
+      "I like",
+      "tea"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like coffee.",
+    "chunks": [
+      "I like",
+      "coffee"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like bread.",
+    "chunks": [
+      "I like",
+      "bread"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_007",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like apples.",
+    "chunks": [
+      "I like",
+      "apples"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_008",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like water.",
+    "chunks": [
+      "I like",
+      "water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_009",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like chicken.",
+    "chunks": [
+      "I like",
+      "chicken"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_010",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like soda.",
+    "chunks": [
+      "I like",
+      "soda"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_011",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like fish.",
+    "chunks": [
+      "I like",
+      "fish"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_012",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like rice.",
+    "chunks": [
+      "I like",
+      "rice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_013",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like milk.",
+    "chunks": [
+      "I like",
+      "milk"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_014",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like salad.",
+    "chunks": [
+      "I like",
+      "salad"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_015",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like ice cream.",
+    "chunks": [
+      "I like",
+      "ice cream"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_016",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like cake.",
+    "chunks": [
+      "I like",
+      "cake"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_017",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like bananas.",
+    "chunks": [
+      "I like",
+      "bananas"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_LIKE_018",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE",
+    "target_sentence": "I like cookies.",
+    "chunks": [
+      "I like",
+      "cookies"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some tea?",
+    "chunks": [
+      "Can I have",
+      "some tea",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have an egg?",
+    "chunks": [
+      "Can I have",
+      "an egg",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some orange juice?",
+    "chunks": [
+      "Can I have",
+      "some orange juice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have a cookie?",
+    "chunks": [
+      "Can I have",
+      "a cookie",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some hot chocolate?",
+    "chunks": [
+      "Can I have",
+      "some hot chocolate",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some fish?",
+    "chunks": [
+      "Can I have",
+      "some fish",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_007",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have a hamburger?",
+    "chunks": [
+      "Can I have",
+      "a hamburger",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_008",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have a slice of pizza?",
+    "chunks": [
+      "Can I have",
+      "a slice of pizza",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_009",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have a taco?",
+    "chunks": [
+      "Can I have",
+      "a taco",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_010",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some soup?",
+    "chunks": [
+      "Can I have",
+      "some soup",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_011",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some ice cream?",
+    "chunks": [
+      "Can I have",
+      "some ice cream",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_012",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have a muffin?",
+    "chunks": [
+      "Can I have",
+      "a muffin",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_013",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some cake?",
+    "chunks": [
+      "Can I have",
+      "some cake",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_014",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some rice?",
+    "chunks": [
+      "Can I have",
+      "some rice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_015",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some salad?",
+    "chunks": [
+      "Can I have",
+      "some salad",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_016",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have an apple?",
+    "chunks": [
+      "Can I have",
+      "an apple",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_017",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some chicken?",
+    "chunks": [
+      "Can I have",
+      "some chicken",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_018",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have some apple juice?",
+    "chunks": [
+      "Can I have",
+      "some apple juice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_019",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have a banana?",
+    "chunks": [
+      "Can I have",
+      "a banana",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_HAVE_020",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE",
+    "target_sentence": "Can I have a sandwich?",
+    "chunks": [
+      "Can I have",
+      "a sandwich",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a banana?",
+    "chunks": [
+      "How much is",
+      "a banana",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a muffin?",
+    "chunks": [
+      "How much is",
+      "a muffin",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a hamburger?",
+    "chunks": [
+      "How much is",
+      "a hamburger",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a sandwich?",
+    "chunks": [
+      "How much is",
+      "a sandwich",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a taco?",
+    "chunks": [
+      "How much is",
+      "a taco",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a hot dog?",
+    "chunks": [
+      "How much is",
+      "a hot dog",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_007",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a slice of pizza?",
+    "chunks": [
+      "How much is",
+      "a slice of pizza",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_008",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is an apple?",
+    "chunks": [
+      "How much is",
+      "an apple",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_009",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is an egg?",
+    "chunks": [
+      "How much is",
+      "an egg",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_PRICE_010",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PRICE",
+    "target_sentence": "How much is a cookie?",
+    "chunks": [
+      "How much is",
+      "a cookie",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "price_question",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_STATE_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_STATE",
+    "target_sentence": "I am hungry.",
+    "chunks": [
+      "I am hungry"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_STATE_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_STATE",
+    "target_sentence": "I am thirsty.",
+    "chunks": [
+      "I am thirsty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_STATE_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_STATE",
+    "target_sentence": "I am full.",
+    "chunks": [
+      "I am full"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_001",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This ice cream is too cold.",
+    "chunks": [
+      "This ice cream",
+      "is",
+      "too cold"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_002",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This juice is too sweet.",
+    "chunks": [
+      "This juice",
+      "is",
+      "too sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_003",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This soda is too sweet.",
+    "chunks": [
+      "This soda",
+      "is",
+      "too sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_004",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This coffee is too hot.",
+    "chunks": [
+      "This coffee",
+      "is",
+      "too hot"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_005",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This soup is too salty.",
+    "chunks": [
+      "This soup",
+      "is",
+      "too salty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_006",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This tea is too hot.",
+    "chunks": [
+      "This tea",
+      "is",
+      "too hot"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_007",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This chicken is too spicy.",
+    "chunks": [
+      "This chicken",
+      "is",
+      "too spicy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_FOOD_DRINK_FOOD_TOO_008",
+    "level": "A1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "This sandwich is too dry.",
+    "chunks": [
+      "This sandwich",
+      "is",
+      "too dry"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this soup is too salty.",
+    "chunks": [
+      "I think",
+      "this soup",
+      "is",
+      "too salty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_002",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this sandwich is too dry.",
+    "chunks": [
+      "I think",
+      "this sandwich",
+      "is",
+      "too dry"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_003",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this chicken is too spicy.",
+    "chunks": [
+      "I think",
+      "this chicken",
+      "is",
+      "too spicy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_004",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this ice cream is too cold.",
+    "chunks": [
+      "I think",
+      "this ice cream",
+      "is",
+      "too cold"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_005",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this soda is too sweet.",
+    "chunks": [
+      "I think",
+      "this soda",
+      "is",
+      "too sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_006",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this tea is too hot.",
+    "chunks": [
+      "I think",
+      "this tea",
+      "is",
+      "too hot"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_007",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this juice is too sweet.",
+    "chunks": [
+      "I think",
+      "this juice",
+      "is",
+      "too sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TOO_008",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TOO",
+    "target_sentence": "I think this coffee is too hot.",
+    "chunks": [
+      "I think",
+      "this coffee",
+      "is",
+      "too hot"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TO_GO_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TO_GO",
+    "target_sentence": "Can I get this hamburger to go?",
+    "chunks": [
+      "Can I get",
+      "this hamburger",
+      "to go",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TO_GO_002",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TO_GO",
+    "target_sentence": "Can I get this coffee to go?",
+    "chunks": [
+      "Can I get",
+      "this coffee",
+      "to go",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TO_GO_003",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TO_GO",
+    "target_sentence": "Can I get this salad to go?",
+    "chunks": [
+      "Can I get",
+      "this salad",
+      "to go",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TO_GO_004",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TO_GO",
+    "target_sentence": "Can I get this tea to go?",
+    "chunks": [
+      "Can I get",
+      "this tea",
+      "to go",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TO_GO_005",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TO_GO",
+    "target_sentence": "Can I get this sandwich to go?",
+    "chunks": [
+      "Can I get",
+      "this sandwich",
+      "to go",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_TO_GO_006",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TO_GO",
+    "target_sentence": "Can I get this soda to go?",
+    "chunks": [
+      "Can I get",
+      "this soda",
+      "to go",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like a muffin, please.",
+    "chunks": [
+      "I would like",
+      "a muffin,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_002",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like a slice of pizza, please.",
+    "chunks": [
+      "I would like",
+      "a slice of pizza,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_003",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some tea, please.",
+    "chunks": [
+      "I would like",
+      "some tea,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_004",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some ice cream, please.",
+    "chunks": [
+      "I would like",
+      "some ice cream,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_005",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some water, please.",
+    "chunks": [
+      "I would like",
+      "some water,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_006",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some orange juice, please.",
+    "chunks": [
+      "I would like",
+      "some orange juice,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_007",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like a cookie, please.",
+    "chunks": [
+      "I would like",
+      "a cookie,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_008",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like an egg, please.",
+    "chunks": [
+      "I would like",
+      "an egg,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_009",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some salad, please.",
+    "chunks": [
+      "I would like",
+      "some salad,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_010",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like an apple, please.",
+    "chunks": [
+      "I would like",
+      "an apple,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_011",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some fish, please.",
+    "chunks": [
+      "I would like",
+      "some fish,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_012",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some soup, please.",
+    "chunks": [
+      "I would like",
+      "some soup,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_013",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some hot chocolate, please.",
+    "chunks": [
+      "I would like",
+      "some hot chocolate,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_014",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some cake, please.",
+    "chunks": [
+      "I would like",
+      "some cake,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_015",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some rice, please.",
+    "chunks": [
+      "I would like",
+      "some rice,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_016",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some soda, please.",
+    "chunks": [
+      "I would like",
+      "some soda,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_017",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some milk, please.",
+    "chunks": [
+      "I would like",
+      "some milk,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_018",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like a sandwich, please.",
+    "chunks": [
+      "I would like",
+      "a sandwich,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_019",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like a banana, please.",
+    "chunks": [
+      "I would like",
+      "a banana,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ORDER_020",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER",
+    "target_sentence": "I would like some juice, please.",
+    "chunks": [
+      "I would like",
+      "some juice,",
+      "please",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have a napkin, please?",
+    "chunks": [
+      "Could I have",
+      "a napkin,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_002",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have the menu, please?",
+    "chunks": [
+      "Could I have",
+      "the menu,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_003",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have a straw, please?",
+    "chunks": [
+      "Could I have",
+      "a straw,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_004",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have a knife, please?",
+    "chunks": [
+      "Could I have",
+      "a knife,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_005",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have a spoon, please?",
+    "chunks": [
+      "Could I have",
+      "a spoon,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_006",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have the check, please?",
+    "chunks": [
+      "Could I have",
+      "the check,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_007",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have a fork, please?",
+    "chunks": [
+      "Could I have",
+      "a fork,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_REQUEST_008",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REQUEST",
+    "target_sentence": "Could I have some water, please?",
+    "chunks": [
+      "Could I have",
+      "some water,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any juice?",
+    "chunks": [
+      "Do you have any",
+      "juice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_002",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any ice cream?",
+    "chunks": [
+      "Do you have any",
+      "ice cream",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_003",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any salad?",
+    "chunks": [
+      "Do you have any",
+      "salad",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_004",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any apples?",
+    "chunks": [
+      "Do you have any",
+      "apples",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_005",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any fish?",
+    "chunks": [
+      "Do you have any",
+      "fish",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_006",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any cookies?",
+    "chunks": [
+      "Do you have any",
+      "cookies",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_007",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any bananas?",
+    "chunks": [
+      "Do you have any",
+      "bananas",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_008",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any rice?",
+    "chunks": [
+      "Do you have any",
+      "rice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_009",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any chicken?",
+    "chunks": [
+      "Do you have any",
+      "chicken",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_010",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any soda?",
+    "chunks": [
+      "Do you have any",
+      "soda",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_011",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any pizza?",
+    "chunks": [
+      "Do you have any",
+      "pizza",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_012",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any soup?",
+    "chunks": [
+      "Do you have any",
+      "soup",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_013",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any coffee?",
+    "chunks": [
+      "Do you have any",
+      "coffee",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_014",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any water?",
+    "chunks": [
+      "Do you have any",
+      "water",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_ANY_HAVE_015",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ANY_HAVE",
+    "target_sentence": "Do you have any bread?",
+    "chunks": [
+      "Do you have any",
+      "bread",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_NO_ICE_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_NO_ICE",
+    "target_sentence": "Can I have this with no ice?",
+    "chunks": [
+      "Can I have this with no ice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_LESS_SUGAR_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LESS_SUGAR",
+    "target_sentence": "Can I have this with less sugar?",
+    "chunks": [
+      "Can I have this with less sugar",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "drink_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_RESTROOM_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RESTROOM",
+    "target_sentence": "Where is the restroom?",
+    "chunks": [
+      "Where is the restroom",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_001",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where are the chopsticks?",
+    "chunks": [
+      "Where",
+      "are",
+      "the chopsticks",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_002",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where are the napkins?",
+    "chunks": [
+      "Where",
+      "are",
+      "the napkins",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_003",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where is the salt?",
+    "chunks": [
+      "Where",
+      "is",
+      "the salt",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_004",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where is the sugar?",
+    "chunks": [
+      "Where",
+      "is",
+      "the sugar",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_005",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where are the forks?",
+    "chunks": [
+      "Where",
+      "are",
+      "the forks",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_006",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where are the spoons?",
+    "chunks": [
+      "Where",
+      "are",
+      "the spoons",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_007",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where are the straws?",
+    "chunks": [
+      "Where",
+      "are",
+      "the straws",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_FOOD_DRINK_FOOD_WHERE_ITEM_008",
+    "level": "A2",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "target_sentence": "Where is the pepper?",
+    "chunks": [
+      "Where",
+      "is",
+      "the pepper",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat an apple.",
+    "chunks": [
+      "I want to eat",
+      "an apple"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat a hamburger.",
+    "chunks": [
+      "I want to eat",
+      "a hamburger"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat a hot dog.",
+    "chunks": [
+      "I want to eat",
+      "a hot dog"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat some chicken.",
+    "chunks": [
+      "I want to eat",
+      "some chicken"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat a sandwich.",
+    "chunks": [
+      "I want to eat",
+      "a sandwich"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat some cake.",
+    "chunks": [
+      "I want to eat",
+      "some cake"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_007",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat an egg.",
+    "chunks": [
+      "I want to eat",
+      "an egg"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_008",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat some bread.",
+    "chunks": [
+      "I want to eat",
+      "some bread"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_009",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat a muffin.",
+    "chunks": [
+      "I want to eat",
+      "a muffin"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_010",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat some ice cream.",
+    "chunks": [
+      "I want to eat",
+      "some ice cream"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_011",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat some soup.",
+    "chunks": [
+      "I want to eat",
+      "some soup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_012",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat a slice of pizza.",
+    "chunks": [
+      "I want to eat",
+      "a slice of pizza"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_013",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat some salad.",
+    "chunks": [
+      "I want to eat",
+      "some salad"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_014",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat a cookie.",
+    "chunks": [
+      "I want to eat",
+      "a cookie"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_EAT_015",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_EAT",
+    "target_sentence": "I want to eat a taco.",
+    "chunks": [
+      "I want to eat",
+      "a taco"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_ASK_WANT_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ASK_WANT",
+    "target_sentence": "What do you want?",
+    "chunks": [
+      "What do you want",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_questions",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some apple juice.",
+    "chunks": [
+      "I want to drink",
+      "some apple juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some orange juice.",
+    "chunks": [
+      "I want to drink",
+      "some orange juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some juice.",
+    "chunks": [
+      "I want to drink",
+      "some juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some water.",
+    "chunks": [
+      "I want to drink",
+      "some water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some milk.",
+    "chunks": [
+      "I want to drink",
+      "some milk"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some hot chocolate.",
+    "chunks": [
+      "I want to drink",
+      "some hot chocolate"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_007",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some coffee.",
+    "chunks": [
+      "I want to drink",
+      "some coffee"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_008",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some soda.",
+    "chunks": [
+      "I want to drink",
+      "some soda"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DRINK_009",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DRINK",
+    "target_sentence": "I want to drink some tea.",
+    "chunks": [
+      "I want to drink",
+      "some tea"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want cake.",
+    "chunks": [
+      "I don't want",
+      "cake"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want water.",
+    "chunks": [
+      "I don't want",
+      "water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want soup.",
+    "chunks": [
+      "I don't want",
+      "soup"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want cookies.",
+    "chunks": [
+      "I don't want",
+      "cookies"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want salad.",
+    "chunks": [
+      "I don't want",
+      "salad"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want ice cream.",
+    "chunks": [
+      "I don't want",
+      "ice cream"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_007",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want pizza.",
+    "chunks": [
+      "I don't want",
+      "pizza"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_008",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want coffee.",
+    "chunks": [
+      "I don't want",
+      "coffee"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_009",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want juice.",
+    "chunks": [
+      "I don't want",
+      "juice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_010",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want bananas.",
+    "chunks": [
+      "I don't want",
+      "bananas"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_011",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want milk.",
+    "chunks": [
+      "I don't want",
+      "milk"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DONT_WANT_012",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DONT_WANT",
+    "target_sentence": "I don't want apples.",
+    "chunks": [
+      "I don't want",
+      "apples"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have a cookie, please?",
+    "chunks": [
+      "Can I have",
+      "a cookie,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some bread, please?",
+    "chunks": [
+      "Can I have",
+      "some bread,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some coffee, please?",
+    "chunks": [
+      "Can I have",
+      "some coffee,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have a hamburger, please?",
+    "chunks": [
+      "Can I have",
+      "a hamburger,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have an apple, please?",
+    "chunks": [
+      "Can I have",
+      "an apple,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have a sandwich, please?",
+    "chunks": [
+      "Can I have",
+      "a sandwich,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_007",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have a taco, please?",
+    "chunks": [
+      "Can I have",
+      "a taco,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_008",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some rice, please?",
+    "chunks": [
+      "Can I have",
+      "some rice,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_009",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some fish, please?",
+    "chunks": [
+      "Can I have",
+      "some fish,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_010",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some cake, please?",
+    "chunks": [
+      "Can I have",
+      "some cake,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_011",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some salad, please?",
+    "chunks": [
+      "Can I have",
+      "some salad,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_012",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some soda, please?",
+    "chunks": [
+      "Can I have",
+      "some soda,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_013",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some apple juice, please?",
+    "chunks": [
+      "Can I have",
+      "some apple juice,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_014",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some soup, please?",
+    "chunks": [
+      "Can I have",
+      "some soup,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_015",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some chicken, please?",
+    "chunks": [
+      "Can I have",
+      "some chicken,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_016",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some ice cream, please?",
+    "chunks": [
+      "Can I have",
+      "some ice cream,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_017",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some hot chocolate, please?",
+    "chunks": [
+      "Can I have",
+      "some hot chocolate,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_018",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some orange juice, please?",
+    "chunks": [
+      "Can I have",
+      "some orange juice,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_019",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have a banana, please?",
+    "chunks": [
+      "Can I have",
+      "a banana,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_POLITE_020",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "target_sentence": "Can I have some milk, please?",
+    "chunks": [
+      "Can I have",
+      "some milk,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have ice cream?",
+    "chunks": [
+      "Do you have",
+      "ice cream",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have coffee?",
+    "chunks": [
+      "Do you have",
+      "coffee",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have apples?",
+    "chunks": [
+      "Do you have",
+      "apples",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have fish?",
+    "chunks": [
+      "Do you have",
+      "fish",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have rice?",
+    "chunks": [
+      "Do you have",
+      "rice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have cake?",
+    "chunks": [
+      "Do you have",
+      "cake",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_007",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have soup?",
+    "chunks": [
+      "Do you have",
+      "soup",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_008",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have milk?",
+    "chunks": [
+      "Do you have",
+      "milk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_009",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have juice?",
+    "chunks": [
+      "Do you have",
+      "juice",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_010",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have pizza?",
+    "chunks": [
+      "Do you have",
+      "pizza",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_011",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have bananas?",
+    "chunks": [
+      "Do you have",
+      "bananas",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_012",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have cookies?",
+    "chunks": [
+      "Do you have",
+      "cookies",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_013",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have salad?",
+    "chunks": [
+      "Do you have",
+      "salad",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_014",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have soda?",
+    "chunks": [
+      "Do you have",
+      "soda",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_015",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have water?",
+    "chunks": [
+      "Do you have",
+      "water",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_016",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have chicken?",
+    "chunks": [
+      "Do you have",
+      "chicken",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_017",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have bread?",
+    "chunks": [
+      "Do you have",
+      "bread",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_HAVE_STOCK_018",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "target_sentence": "Do you have tea?",
+    "chunks": [
+      "Do you have",
+      "tea",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_BREAKFAST_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_BREAKFAST",
+    "target_sentence": "I want a muffin for breakfast.",
+    "chunks": [
+      "I want",
+      "a muffin",
+      "for breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_BREAKFAST_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_BREAKFAST",
+    "target_sentence": "I want toast for breakfast.",
+    "chunks": [
+      "I want",
+      "toast",
+      "for breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_BREAKFAST_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_BREAKFAST",
+    "target_sentence": "I want a banana for breakfast.",
+    "chunks": [
+      "I want",
+      "a banana",
+      "for breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_BREAKFAST_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_BREAKFAST",
+    "target_sentence": "I want some fruit for breakfast.",
+    "chunks": [
+      "I want",
+      "some fruit",
+      "for breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_BREAKFAST_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_BREAKFAST",
+    "target_sentence": "I want cereal for breakfast.",
+    "chunks": [
+      "I want",
+      "cereal",
+      "for breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_BREAKFAST_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_BREAKFAST",
+    "target_sentence": "I want eggs for breakfast.",
+    "chunks": [
+      "I want",
+      "eggs",
+      "for breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_LUNCH_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LUNCH",
+    "target_sentence": "I want a sandwich for lunch.",
+    "chunks": [
+      "I want",
+      "a sandwich",
+      "for lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_LUNCH_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LUNCH",
+    "target_sentence": "I want a slice of pizza for lunch.",
+    "chunks": [
+      "I want",
+      "a slice of pizza",
+      "for lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_LUNCH_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LUNCH",
+    "target_sentence": "I want some rice for lunch.",
+    "chunks": [
+      "I want",
+      "some rice",
+      "for lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_LUNCH_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LUNCH",
+    "target_sentence": "I want a salad for lunch.",
+    "chunks": [
+      "I want",
+      "a salad",
+      "for lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_LUNCH_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LUNCH",
+    "target_sentence": "I want a hamburger for lunch.",
+    "chunks": [
+      "I want",
+      "a hamburger",
+      "for lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_LUNCH_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LUNCH",
+    "target_sentence": "I want some soup for lunch.",
+    "chunks": [
+      "I want",
+      "some soup",
+      "for lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DINNER_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DINNER",
+    "target_sentence": "I want some soup for dinner.",
+    "chunks": [
+      "I want",
+      "some soup",
+      "for dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DINNER_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DINNER",
+    "target_sentence": "I want a salad for dinner.",
+    "chunks": [
+      "I want",
+      "a salad",
+      "for dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DINNER_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DINNER",
+    "target_sentence": "I want some rice for dinner.",
+    "chunks": [
+      "I want",
+      "some rice",
+      "for dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DINNER_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DINNER",
+    "target_sentence": "I want some chicken for dinner.",
+    "chunks": [
+      "I want",
+      "some chicken",
+      "for dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DINNER_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DINNER",
+    "target_sentence": "I want a steak for dinner.",
+    "chunks": [
+      "I want",
+      "a steak",
+      "for dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_DINNER_006",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_DINNER",
+    "target_sentence": "I want some fish for dinner.",
+    "chunks": [
+      "I want",
+      "some fish",
+      "for dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_SNACK_001",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SNACK",
+    "target_sentence": "I want an apple for a snack.",
+    "chunks": [
+      "I want",
+      "an apple",
+      "for a snack"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_SNACK_002",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SNACK",
+    "target_sentence": "I want a banana for a snack.",
+    "chunks": [
+      "I want",
+      "a banana",
+      "for a snack"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_SNACK_003",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SNACK",
+    "target_sentence": "I want a cookie for a snack.",
+    "chunks": [
+      "I want",
+      "a cookie",
+      "for a snack"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_SNACK_004",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SNACK",
+    "target_sentence": "I want some fruit for a snack.",
+    "chunks": [
+      "I want",
+      "some fruit",
+      "for a snack"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_FOOD_DRINK_FOOD_SNACK_005",
+    "level": "A1+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SNACK",
+    "target_sentence": "I want some crackers for a snack.",
+    "chunks": [
+      "I want",
+      "some crackers",
+      "for a snack"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "food_vocabulary",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_TO_GO_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TO_GO",
+    "target_sentence": "I'd like this to go.",
+    "chunks": [
+      "I'd like this to go",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_RESERVATION_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RESERVATION",
+    "target_sentence": "I'd like to make a reservation for two.",
+    "chunks": [
+      "I'd like to make a reservation for",
+      "two",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_RESERVATION_002",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RESERVATION",
+    "target_sentence": "I'd like to make a reservation for five.",
+    "chunks": [
+      "I'd like to make a reservation for",
+      "five",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_RESERVATION_003",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RESERVATION",
+    "target_sentence": "I'd like to make a reservation for four.",
+    "chunks": [
+      "I'd like to make a reservation for",
+      "four",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_RESERVATION_004",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RESERVATION",
+    "target_sentence": "I'd like to make a reservation for three.",
+    "chunks": [
+      "I'd like to make a reservation for",
+      "three",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_TABLE_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TABLE",
+    "target_sentence": "Do you have a table for two?",
+    "chunks": [
+      "Do you have a table for",
+      "two",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_TABLE_002",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TABLE",
+    "target_sentence": "Do you have a table for five?",
+    "chunks": [
+      "Do you have a table for",
+      "five",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_TABLE_003",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TABLE",
+    "target_sentence": "Do you have a table for four?",
+    "chunks": [
+      "Do you have a table for",
+      "four",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_TABLE_004",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_TABLE",
+    "target_sentence": "Do you have a table for three?",
+    "chunks": [
+      "Do you have a table for",
+      "three",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order a muffin.",
+    "chunks": [
+      "I'd like to order",
+      "a muffin",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_002",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order some chicken.",
+    "chunks": [
+      "I'd like to order",
+      "some chicken",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_003",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order some fish.",
+    "chunks": [
+      "I'd like to order",
+      "some fish",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_004",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order a sandwich.",
+    "chunks": [
+      "I'd like to order",
+      "a sandwich",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_005",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order some rice.",
+    "chunks": [
+      "I'd like to order",
+      "some rice",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_006",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order a hot dog.",
+    "chunks": [
+      "I'd like to order",
+      "a hot dog",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_007",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order some ice cream.",
+    "chunks": [
+      "I'd like to order",
+      "some ice cream",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_008",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order an egg.",
+    "chunks": [
+      "I'd like to order",
+      "an egg",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_009",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order some salad.",
+    "chunks": [
+      "I'd like to order",
+      "some salad",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_010",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order a banana.",
+    "chunks": [
+      "I'd like to order",
+      "a banana",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_011",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order some bread.",
+    "chunks": [
+      "I'd like to order",
+      "some bread",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_012",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order a taco.",
+    "chunks": [
+      "I'd like to order",
+      "a taco",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_013",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order an apple.",
+    "chunks": [
+      "I'd like to order",
+      "an apple",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_014",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order some soup.",
+    "chunks": [
+      "I'd like to order",
+      "some soup",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ORDER_DETAIL_015",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "target_sentence": "I'd like to order a cookie.",
+    "chunks": [
+      "I'd like to order",
+      "a cookie",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without meat?",
+    "chunks": [
+      "Could I have this without",
+      "meat",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_002",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without milk?",
+    "chunks": [
+      "Could I have this without",
+      "milk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_003",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without seafood?",
+    "chunks": [
+      "Could I have this without",
+      "seafood",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_004",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without garlic?",
+    "chunks": [
+      "Could I have this without",
+      "garlic",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_005",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without eggs?",
+    "chunks": [
+      "Could I have this without",
+      "eggs",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_006",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without onions?",
+    "chunks": [
+      "Could I have this without",
+      "onions",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_007",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without peanuts?",
+    "chunks": [
+      "Could I have this without",
+      "peanuts",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_WITHOUT_008",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WITHOUT",
+    "target_sentence": "Could I have this without cheese?",
+    "chunks": [
+      "Could I have this without",
+      "cheese",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ALLERGY_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ALLERGY",
+    "target_sentence": "I'm allergic to soy.",
+    "chunks": [
+      "I'm allergic to",
+      "soy",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "food_preference",
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ALLERGY_002",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ALLERGY",
+    "target_sentence": "I'm allergic to peanuts.",
+    "chunks": [
+      "I'm allergic to",
+      "peanuts",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "food_preference",
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ALLERGY_003",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ALLERGY",
+    "target_sentence": "I'm allergic to seafood.",
+    "chunks": [
+      "I'm allergic to",
+      "seafood",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "food_preference",
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ALLERGY_004",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ALLERGY",
+    "target_sentence": "I'm allergic to tree nuts.",
+    "chunks": [
+      "I'm allergic to",
+      "tree nuts",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "food_preference",
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ALLERGY_005",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ALLERGY",
+    "target_sentence": "I'm allergic to eggs.",
+    "chunks": [
+      "I'm allergic to",
+      "eggs",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "food_preference",
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_ALLERGY_006",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_ALLERGY",
+    "target_sentence": "I'm allergic to milk.",
+    "chunks": [
+      "I'm allergic to",
+      "milk",
+      "."
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "food_preference",
+      "restaurant_language",
+      "present_simple"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any seafood in it?",
+    "chunks": [
+      "Does this dish have any",
+      "seafood",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_002",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any eggs in it?",
+    "chunks": [
+      "Does this dish have any",
+      "eggs",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_003",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any cheese in it?",
+    "chunks": [
+      "Does this dish have any",
+      "cheese",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_004",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any milk in it?",
+    "chunks": [
+      "Does this dish have any",
+      "milk",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_005",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any peanuts in it?",
+    "chunks": [
+      "Does this dish have any",
+      "peanuts",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_006",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any meat in it?",
+    "chunks": [
+      "Does this dish have any",
+      "meat",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_007",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any garlic in it?",
+    "chunks": [
+      "Does this dish have any",
+      "garlic",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_INGREDIENT_DETAIL_008",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "target_sentence": "Does this dish have any onions in it?",
+    "chunks": [
+      "Does this dish have any",
+      "onions",
+      "in it",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_VEGETARIAN_RECOMMEND_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_VEGETARIAN_RECOMMEND",
+    "target_sentence": "I'm vegetarian. What do you recommend?",
+    "chunks": [
+      "I'm vegetarian",
+      ".",
+      "What do you recommend",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "food_preference",
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PROBLEM_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PROBLEM",
+    "target_sentence": "This toast is burnt.",
+    "chunks": [
+      "This toast",
+      "is burnt"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PROBLEM_002",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PROBLEM",
+    "target_sentence": "This soup is cold.",
+    "chunks": [
+      "This soup",
+      "is cold"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PROBLEM_003",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PROBLEM",
+    "target_sentence": "This chicken is undercooked.",
+    "chunks": [
+      "This chicken",
+      "is undercooked"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PROBLEM_004",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PROBLEM",
+    "target_sentence": "This salad is not fresh.",
+    "chunks": [
+      "This salad",
+      "is not fresh"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PROBLEM_005",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PROBLEM",
+    "target_sentence": "My order is wrong.",
+    "chunks": [
+      "My order",
+      "is wrong"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PROBLEM_006",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PROBLEM",
+    "target_sentence": "This steak is overcooked.",
+    "chunks": [
+      "This steak",
+      "is overcooked"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PROBLEM_007",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PROBLEM",
+    "target_sentence": "This bread is stale.",
+    "chunks": [
+      "This bread",
+      "is stale"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "restaurant_language",
+      "food_vocabulary",
+      "adjectives"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_REPLACEMENT_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_REPLACEMENT",
+    "target_sentence": "Could I get a replacement, please?",
+    "chunks": [
+      "Could I get a replacement,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_CHECK_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_CHECK",
+    "target_sentence": "Could we get the check, please?",
+    "chunks": [
+      "Could we get the check,",
+      "please",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_SPLIT_CHECK_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SPLIT_CHECK",
+    "target_sentence": "Can we split the check?",
+    "chunks": [
+      "Can we split the check",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_FOOD_DRINK_FOOD_PAY_SEPARATELY_001",
+    "level": "B1",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PAY_SEPARATELY",
+    "target_sentence": "Can we pay separately?",
+    "chunks": [
+      "Can we pay separately",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this banana because it is sweet.",
+    "chunks": [
+      "I like",
+      "this banana",
+      "because it is",
+      "sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_002",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this juice because it is fresh.",
+    "chunks": [
+      "I like",
+      "this juice",
+      "because it is",
+      "fresh"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_003",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this salad because it is fresh.",
+    "chunks": [
+      "I like",
+      "this salad",
+      "because it is",
+      "fresh"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_004",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this chicken because it is delicious.",
+    "chunks": [
+      "I like",
+      "this chicken",
+      "because it is",
+      "delicious"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_005",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this apple because it is sweet.",
+    "chunks": [
+      "I like",
+      "this apple",
+      "because it is",
+      "sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_006",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this salad because it is healthy.",
+    "chunks": [
+      "I like",
+      "this salad",
+      "because it is",
+      "healthy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_007",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this water because it is cold.",
+    "chunks": [
+      "I like",
+      "this water",
+      "because it is",
+      "cold"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_008",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this hamburger because it is good.",
+    "chunks": [
+      "I like",
+      "this hamburger",
+      "because it is",
+      "good"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_009",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this tea because it is hot.",
+    "chunks": [
+      "I like",
+      "this tea",
+      "because it is",
+      "hot"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_LIKE_REASON_010",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_LIKE_REASON",
+    "target_sentence": "I like this sandwich because it is fresh.",
+    "chunks": [
+      "I like",
+      "this sandwich",
+      "because it is",
+      "fresh"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this apple because it is sweet.",
+    "chunks": [
+      "I want",
+      "this apple",
+      "because it is",
+      "sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_002",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this chicken because it is delicious.",
+    "chunks": [
+      "I want",
+      "this chicken",
+      "because it is",
+      "delicious"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_003",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this salad because it is healthy.",
+    "chunks": [
+      "I want",
+      "this salad",
+      "because it is",
+      "healthy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_004",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this soup because it is warm.",
+    "chunks": [
+      "I want",
+      "this soup",
+      "because it is",
+      "warm"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_005",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this banana because it is sweet.",
+    "chunks": [
+      "I want",
+      "this banana",
+      "because it is",
+      "sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_006",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this water because it is cold.",
+    "chunks": [
+      "I want",
+      "this water",
+      "because it is",
+      "cold"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_007",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this juice because it is fresh.",
+    "chunks": [
+      "I want",
+      "this juice",
+      "because it is",
+      "fresh"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_008",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this hamburger because it is good.",
+    "chunks": [
+      "I want",
+      "this hamburger",
+      "because it is",
+      "good"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_009",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this soup because it is healthy.",
+    "chunks": [
+      "I want",
+      "this soup",
+      "because it is",
+      "healthy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_WANT_REASON_010",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_WANT_REASON",
+    "target_sentence": "I want this salad because it is fresh.",
+    "chunks": [
+      "I want",
+      "this salad",
+      "because it is",
+      "fresh"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_NOT_WANT_REASON_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_NOT_WANT_REASON",
+    "target_sentence": "I do not want this soda because it is too sweet.",
+    "chunks": [
+      "I do not want",
+      "this soda",
+      "because it is",
+      "too sweet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_NOT_WANT_REASON_002",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_NOT_WANT_REASON",
+    "target_sentence": "I do not want this chicken because it is too spicy.",
+    "chunks": [
+      "I do not want",
+      "this chicken",
+      "because it is",
+      "too spicy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_NOT_WANT_REASON_003",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_NOT_WANT_REASON",
+    "target_sentence": "I do not want this tea because it is too hot.",
+    "chunks": [
+      "I do not want",
+      "this tea",
+      "because it is",
+      "too hot"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_NOT_WANT_REASON_004",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_NOT_WANT_REASON",
+    "target_sentence": "I do not want this coffee because it is too hot.",
+    "chunks": [
+      "I do not want",
+      "this coffee",
+      "because it is",
+      "too hot"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_NOT_WANT_REASON_005",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_NOT_WANT_REASON",
+    "target_sentence": "I do not want this hamburger because it is greasy.",
+    "chunks": [
+      "I do not want",
+      "this hamburger",
+      "because it is",
+      "greasy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_NOT_WANT_REASON_006",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_NOT_WANT_REASON",
+    "target_sentence": "I do not want this soup because it is too salty.",
+    "chunks": [
+      "I do not want",
+      "this soup",
+      "because it is",
+      "too salty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "negation",
+      "because_so",
+      "food_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_RECOMMEND_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RECOMMEND",
+    "target_sentence": "What do you recommend?",
+    "chunks": [
+      "What do you recommend",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_RECOMMEND_CONTEXT_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RECOMMEND_CONTEXT",
+    "target_sentence": "What do you recommend for something sweet?",
+    "chunks": [
+      "What do you recommend for",
+      "something sweet",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_preference"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_RECOMMEND_CONTEXT_002",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RECOMMEND_CONTEXT",
+    "target_sentence": "What do you recommend for a light meal?",
+    "chunks": [
+      "What do you recommend for",
+      "a light meal",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_preference"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_RECOMMEND_CONTEXT_003",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RECOMMEND_CONTEXT",
+    "target_sentence": "What do you recommend for dinner?",
+    "chunks": [
+      "What do you recommend for",
+      "dinner",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_preference"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_RECOMMEND_CONTEXT_004",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RECOMMEND_CONTEXT",
+    "target_sentence": "What do you recommend for someone who likes spicy food?",
+    "chunks": [
+      "What do you recommend for",
+      "someone who likes spicy food",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_preference"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_RECOMMEND_CONTEXT_005",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RECOMMEND_CONTEXT",
+    "target_sentence": "What do you recommend for lunch?",
+    "chunks": [
+      "What do you recommend for",
+      "lunch",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_preference"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_RECOMMEND_CONTEXT_006",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_RECOMMEND_CONTEXT",
+    "target_sentence": "What do you recommend for something healthy?",
+    "chunks": [
+      "What do you recommend for",
+      "something healthy",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "restaurant_language",
+      "food_preference"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have cheese?",
+    "chunks": [
+      "Does this have",
+      "cheese",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_002",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have onions?",
+    "chunks": [
+      "Does this have",
+      "onions",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_003",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have eggs?",
+    "chunks": [
+      "Does this have",
+      "eggs",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_004",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have seafood?",
+    "chunks": [
+      "Does this have",
+      "seafood",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_005",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have garlic?",
+    "chunks": [
+      "Does this have",
+      "garlic",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_006",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have meat?",
+    "chunks": [
+      "Does this have",
+      "meat",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_007",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have milk?",
+    "chunks": [
+      "Does this have",
+      "milk",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_INGREDIENT_008",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_INGREDIENT",
+    "target_sentence": "Does this have peanuts?",
+    "chunks": [
+      "Does this have",
+      "peanuts",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "question_structure",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_SUBSTITUTE_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SUBSTITUTE",
+    "target_sentence": "Can I have tea instead of soda?",
+    "chunks": [
+      "Can I have",
+      "tea",
+      "instead of",
+      "soda",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_SUBSTITUTE_002",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SUBSTITUTE",
+    "target_sentence": "Can I have salad instead of fries?",
+    "chunks": [
+      "Can I have",
+      "salad",
+      "instead of",
+      "fries",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_SUBSTITUTE_003",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SUBSTITUTE",
+    "target_sentence": "Can I have soup instead of salad?",
+    "chunks": [
+      "Can I have",
+      "soup",
+      "instead of",
+      "salad",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_SUBSTITUTE_004",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SUBSTITUTE",
+    "target_sentence": "Can I have rice instead of fries?",
+    "chunks": [
+      "Can I have",
+      "rice",
+      "instead of",
+      "fries",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_SUBSTITUTE_005",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_SUBSTITUTE",
+    "target_sentence": "Can I have water instead of soda?",
+    "chunks": [
+      "Can I have",
+      "water",
+      "instead of",
+      "soda",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "food_vocabulary",
+      "restaurant_language"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_PREFER_MORE_001",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PREFER_MORE",
+    "target_sentence": "I like coffee more than soda.",
+    "chunks": [
+      "I like",
+      "coffee",
+      "more than",
+      "soda"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "comparatives",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_PREFER_MORE_002",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PREFER_MORE",
+    "target_sentence": "I like tea more than soda.",
+    "chunks": [
+      "I like",
+      "tea",
+      "more than",
+      "soda"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "comparatives",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_PREFER_MORE_003",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PREFER_MORE",
+    "target_sentence": "I like water more than soda.",
+    "chunks": [
+      "I like",
+      "water",
+      "more than",
+      "soda"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "comparatives",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_PREFER_MORE_004",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PREFER_MORE",
+    "target_sentence": "I like juice more than soda.",
+    "chunks": [
+      "I like",
+      "juice",
+      "more than",
+      "soda"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "comparatives",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_FOOD_DRINK_FOOD_PREFER_MORE_005",
+    "level": "A2+",
+    "scenario": "food_drink",
+    "pattern_id": "FOOD_PREFER_MORE",
+    "target_sentence": "I like tea more than coffee.",
+    "chunks": [
+      "I like",
+      "tea",
+      "more than",
+      "coffee"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "comparatives",
+      "drink_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  }
+]

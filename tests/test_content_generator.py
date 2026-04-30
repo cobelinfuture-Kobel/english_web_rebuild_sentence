@@ -15,6 +15,8 @@ from scripts.generate_sentences import (
 BASE_DIR = Path(__file__).resolve().parent.parent
 PATTERN_BANK_PATH = BASE_DIR / "data" / "pattern_bank" / "shopping_patterns.json"
 SLOT_BANK_PATH = BASE_DIR / "data" / "slot_bank" / "shopping_slots.json"
+FOOD_PATTERN_BANK_PATH = BASE_DIR / "data" / "pattern_bank" / "food_drink_patterns.json"
+FOOD_SLOT_BANK_PATH = BASE_DIR / "data" / "slot_bank" / "food_drink_slots.json"
 
 EXPECTED_PATTERNS = {
     "SHOP_WANT",
@@ -71,12 +73,69 @@ B1_PATTERNS = {
     "SHOP_QUALITY",
     "SHOP_MATERIAL",
 }
+EXPECTED_FOOD_PATTERNS = {
+    "FOOD_WANT_COUNTABLE",
+    "FOOD_WANT_UNCOUNTABLE",
+    "FOOD_CHOICE",
+    "FOOD_MEASURE_WANT",
+    "FOOD_MEASURE_HAVE",
+    "FOOD_LIKE",
+    "FOOD_HAVE",
+    "FOOD_PRICE",
+    "FOOD_STATE",
+    "FOOD_TOO",
+    "FOOD_EAT",
+    "FOOD_ASK_WANT",
+    "FOOD_DRINK",
+    "FOOD_DONT_WANT",
+    "FOOD_HAVE_POLITE",
+    "FOOD_HAVE_STOCK",
+    "FOOD_BREAKFAST",
+    "FOOD_LUNCH",
+    "FOOD_DINNER",
+    "FOOD_SNACK",
+    "FOOD_TO_GO",
+    "FOOD_ORDER",
+    "FOOD_REQUEST",
+    "FOOD_ANY_HAVE",
+    "FOOD_NO_ICE",
+    "FOOD_LESS_SUGAR",
+    "FOOD_RESTROOM",
+    "FOOD_WHERE_ITEM",
+    "FOOD_LIKE_REASON",
+    "FOOD_WANT_REASON",
+    "FOOD_NOT_WANT_REASON",
+    "FOOD_RECOMMEND",
+    "FOOD_RECOMMEND_CONTEXT",
+    "FOOD_INGREDIENT",
+    "FOOD_SUBSTITUTE",
+    "FOOD_PREFER_MORE",
+    "FOOD_RESERVATION",
+    "FOOD_TABLE",
+    "FOOD_ORDER_DETAIL",
+    "FOOD_WITHOUT",
+    "FOOD_ALLERGY",
+    "FOOD_INGREDIENT_DETAIL",
+    "FOOD_VEGETARIAN_RECOMMEND",
+    "FOOD_PROBLEM",
+    "FOOD_REPLACEMENT",
+    "FOOD_CHECK",
+    "FOOD_SPLIT_CHECK",
+    "FOOD_PAY_SEPARATELY",
+}
 
 
 def load_banks():
     return (
         json.loads(PATTERN_BANK_PATH.read_text(encoding="utf-8")),
         json.loads(SLOT_BANK_PATH.read_text(encoding="utf-8")),
+    )
+
+
+def load_food_banks():
+    return (
+        json.loads(FOOD_PATTERN_BANK_PATH.read_text(encoding="utf-8")),
+        json.loads(FOOD_SLOT_BANK_PATH.read_text(encoding="utf-8")),
     )
 
 
@@ -87,6 +146,18 @@ def make_generator(seed=7, ensure_unique_targets=False):
         slot_bank=slot_bank,
         rng=random.Random(seed),
         ensure_unique_targets=ensure_unique_targets,
+    )
+
+
+def make_food_generator(seed=7, ensure_unique_targets=False):
+    pattern_bank, slot_bank = load_food_banks()
+    return ContentGenerator(
+        pattern_bank=pattern_bank,
+        slot_bank=slot_bank,
+        rng=random.Random(seed),
+        ensure_unique_targets=ensure_unique_targets,
+        scenario="food_drink",
+        sentence_prefix="FOOD_DRINK",
     )
 
 
@@ -677,3 +748,130 @@ def test_sentence_ids_are_unique_and_output_loads_into_sentence_engine():
 
     assert len(ids) == len(set(ids))
     assert payload["sentence_id"] == ids[0]
+
+
+def test_food_generated_sentences_use_food_drink_scenario_and_prefix():
+    generator = make_food_generator(seed=131)
+
+    sentence = generator.generate_for_pattern("FOOD_WANT_COUNTABLE", "A1", count=1)[0]
+
+    assert sentence["scenario"] == "food_drink"
+    assert sentence["sentence_id"].startswith("A1_FOOD_DRINK_FOOD_WANT_COUNTABLE_")
+
+
+def test_food_pattern_coverage_in_generated_bank():
+    generator = make_food_generator(seed=137, ensure_unique_targets=True)
+
+    sentences = generator.generate_all(count_per_variant=5)
+
+    assert {sentence["pattern_id"] for sentence in sentences} == EXPECTED_FOOD_PATTERNS
+
+
+def test_food_generate_all_uses_pattern_specific_counts():
+    generator = make_food_generator(seed=139, ensure_unique_targets=True)
+
+    sentences = generator.generate_all(count_per_variant=DEFAULT_COUNT_PER_VARIANT)
+    counts = {}
+    for sentence in sentences:
+        counts[(sentence["pattern_id"], sentence["level"])] = (
+            counts.get((sentence["pattern_id"], sentence["level"]), 0) + 1
+        )
+
+    assert counts[("FOOD_WANT_COUNTABLE", "A1")] == 10
+    assert counts[("FOOD_WANT_UNCOUNTABLE", "A1")] == 15
+    assert counts[("FOOD_CHOICE", "A1")] == 4
+    assert counts[("FOOD_MEASURE_WANT", "A1")] == 6
+    assert counts[("FOOD_MEASURE_HAVE", "A1")] == 6
+    assert counts[("FOOD_LIKE", "A1")] == 18
+    assert counts[("FOOD_HAVE", "A1")] == 20
+    assert counts[("FOOD_STATE", "A1")] == 3
+    assert counts[("FOOD_TOO", "A1")] == 8
+    assert counts[("FOOD_EAT", "A1+")] == 15
+    assert counts[("FOOD_ASK_WANT", "A1+")] == 1
+    assert counts[("FOOD_DONT_WANT", "A1+")] == 12
+    assert counts[("FOOD_SNACK", "A1+")] == 5
+    assert counts[("FOOD_TO_GO", "A2")] == 6
+    assert counts[("FOOD_WHERE_ITEM", "A2")] == 8
+    assert counts[("FOOD_RECOMMEND", "A2+")] == 1
+    assert counts[("FOOD_SUBSTITUTE", "A2+")] == 5
+    assert counts[("FOOD_PREFER_MORE", "A2+")] == 5
+    assert counts[("FOOD_RESERVATION", "B1")] == 4
+    assert counts[("FOOD_CHECK", "B1")] == 1
+    assert counts[("FOOD_PAY_SEPARATELY", "B1")] == 1
+
+
+def test_food_too_patterns_use_food_problem_pairs():
+    generator = make_food_generator(seed=149, ensure_unique_targets=True)
+    valid_targets_a1 = {
+        f"{item['subject']} is {item['problem']}."
+        for item in generator.slot_bank["food_problem_pairs"]
+    }
+    valid_targets_a2 = {
+        f"I think {item['item']} is {item['problem']}."
+        for item in generator.slot_bank["food_problem_pairs"]
+    }
+
+    a1_sentences = generator.generate_for_pattern("FOOD_TOO", "A1", count=8)
+    a2_sentences = generator.generate_for_pattern("FOOD_TOO", "A2", count=8)
+
+    assert a1_sentences
+    assert a2_sentences
+    assert all(sentence["target_sentence"] in valid_targets_a1 for sentence in a1_sentences)
+    assert all(sentence["target_sentence"] in valid_targets_a2 for sentence in a2_sentences)
+
+
+def test_food_substitute_uses_substitution_pairs():
+    generator = make_food_generator(seed=151, ensure_unique_targets=True)
+    valid_targets = {
+        f"Can I have {item['item_a']} instead of {item['item_b']}?"
+        for item in generator.slot_bank["substitution_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("FOOD_SUBSTITUTE", "A2+", count=5)
+
+    assert sentences
+    assert all(sentence["target_sentence"] in valid_targets for sentence in sentences)
+
+
+def test_food_problem_b1_uses_restaurant_problem_pairs():
+    generator = make_food_generator(seed=157, ensure_unique_targets=True)
+    valid_targets = {
+        f"{item['subject']} {item['problem']}."
+        for item in generator.slot_bank["restaurant_problem_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("FOOD_PROBLEM", "B1", count=7)
+
+    assert sentences
+    assert all(sentence["target_sentence"] in valid_targets for sentence in sentences)
+    assert all(sentence["target_sentence"][0].isupper() for sentence in sentences)
+
+
+def test_food_state_a1_includes_full_statement():
+    generator = make_food_generator(seed=163, ensure_unique_targets=True)
+
+    sentences = generator.generate_for_pattern("FOOD_STATE", "A1", count=3)
+    targets = {sentence["target_sentence"] for sentence in sentences}
+
+    assert "I am full." in targets
+
+
+def test_food_request_a2_can_use_chopsticks():
+    generator = make_food_generator(seed=167, ensure_unique_targets=True)
+
+    sentences = generator.generate_for_pattern("FOOD_REQUEST", "A2", count=20)
+
+    assert any("chopsticks" in sentence["target_sentence"] for sentence in sentences)
+
+
+def test_food_prefer_more_a2_plus_uses_simple_drink_preference_pairs():
+    generator = make_food_generator(seed=173, ensure_unique_targets=True)
+    valid_targets = {
+        f"I like {item['item_a']} more than {item['item_b']}."
+        for item in generator.slot_bank["simple_drink_preference_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("FOOD_PREFER_MORE", "A2+", count=5)
+
+    assert sentences
+    assert all(sentence["target_sentence"] in valid_targets for sentence in sentences)

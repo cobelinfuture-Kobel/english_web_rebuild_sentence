@@ -1,0 +1,857 @@
+{
+  "FOOD_WANT_COUNTABLE": {
+    "pattern_id": "FOOD_WANT_COUNTABLE",
+    "function": "express_food_wants",
+    "variants": {
+      "A1": {
+        "example_template": "I want {item}.",
+        "chunks_template": ["I want", "{item}"],
+        "grammar_focus": ["present_simple", "food_vocabulary", "countable_nouns"],
+        "slot_constraints": {
+          "item": {
+            "category": ["countable_food_items"],
+            "countable": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_WANT_UNCOUNTABLE": {
+    "pattern_id": "FOOD_WANT_UNCOUNTABLE",
+    "function": "express_food_wants",
+    "variants": {
+      "A1": {
+        "example_template": "I want {item}.",
+        "chunks_template": ["I want", "{item}"],
+        "grammar_focus": ["present_simple", "food_vocabulary", "quantity"],
+        "slot_constraints": {
+          "item": {
+            "category": ["uncountable_food_items", "drink_items"],
+            "countable": false
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_CHOICE": {
+    "pattern_id": "FOOD_CHOICE",
+    "function": "offer_simple_choices",
+    "variants": {
+      "A1": {
+        "example_template": "{choice}?",
+        "chunks_template": ["{choice}", "?"],
+        "grammar_focus": ["question_structure", "drink_vocabulary"],
+        "slot_constraints": {
+          "choice": {
+            "category": ["drink_choice_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_MEASURE_WANT": {
+    "pattern_id": "FOOD_MEASURE_WANT",
+    "function": "request_measured_drinks",
+    "variants": {
+      "A1": {
+        "example_template": "I want {item}.",
+        "chunks_template": ["I want", "{item}"],
+        "grammar_focus": ["present_simple", "drink_vocabulary", "quantity"],
+        "slot_constraints": {
+          "item": {
+            "category": ["measured_drink_items"],
+            "drink": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_MEASURE_HAVE": {
+    "pattern_id": "FOOD_MEASURE_HAVE",
+    "function": "request_measured_drinks",
+    "variants": {
+      "A1": {
+        "example_template": "Can I have {item}?",
+        "chunks_template": ["Can I have", "{item}", "?"],
+        "grammar_focus": ["can_request", "drink_vocabulary", "quantity"],
+        "slot_constraints": {
+          "item": {
+            "category": ["measured_drink_items"],
+            "drink": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_LIKE": {
+    "pattern_id": "FOOD_LIKE",
+    "function": "express_food_likes",
+    "variants": {
+      "A1": {
+        "example_template": "I like {item}.",
+        "chunks_template": ["I like", "{item}"],
+        "grammar_focus": ["like_verb", "food_vocabulary", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["simple_food_drink_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_HAVE": {
+    "pattern_id": "FOOD_HAVE",
+    "function": "request_food_or_drink",
+    "variants": {
+      "A1": {
+        "example_template": "Can I have {item}?",
+        "chunks_template": ["Can I have", "{item}", "?"],
+        "grammar_focus": ["can_request", "food_vocabulary", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["countable_food_items", "uncountable_food_items", "drink_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_PRICE": {
+    "pattern_id": "FOOD_PRICE",
+    "function": "ask_food_price",
+    "variants": {
+      "A1": {
+        "example_template": "How much is {item}?",
+        "chunks_template": ["How much is", "{item}", "?"],
+        "grammar_focus": ["wh_questions", "price_question", "food_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["countable_food_items"],
+            "countable": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_STATE": {
+    "pattern_id": "FOOD_STATE",
+    "function": "state_hunger_or_thirst",
+    "variants": {
+      "A1": {
+        "example_template": "{statement}.",
+        "chunks_template": ["{statement}"],
+        "grammar_focus": ["present_simple", "food_vocabulary"],
+        "slot_constraints": {
+          "statement": {
+            "category": ["food_state_statements"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_TOO": {
+    "pattern_id": "FOOD_TOO",
+    "function": "describe_food_problems",
+    "variants": {
+      "A1": {
+        "example_template": "{subject} is {problem}.",
+        "chunks_template": ["{subject}", "is", "{problem}"],
+        "grammar_focus": ["too_enough", "food_vocabulary", "adjectives"],
+        "paired_slot": {
+          "category": "food_problem_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "I think {item} is {problem}.",
+        "chunks_template": ["I think", "{item}", "is", "{problem}"],
+        "grammar_focus": ["too_enough", "food_vocabulary", "adjectives"],
+        "paired_slot": {
+          "category": "food_problem_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_EAT": {
+    "pattern_id": "FOOD_EAT",
+    "function": "express_food_plans",
+    "variants": {
+      "A1+": {
+        "example_template": "I want to eat {item}.",
+        "chunks_template": ["I want to eat", "{item}"],
+        "grammar_focus": ["present_simple", "food_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["countable_food_items", "uncountable_food_items"],
+            "food": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_ASK_WANT": {
+    "pattern_id": "FOOD_ASK_WANT",
+    "function": "ask_preferences",
+    "variants": {
+      "A1+": {
+        "example_template": "What do you want?",
+        "chunks_template": ["What do you want", "?"],
+        "grammar_focus": ["wh_questions", "food_vocabulary"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_DRINK": {
+    "pattern_id": "FOOD_DRINK",
+    "function": "express_drink_plans",
+    "variants": {
+      "A1+": {
+        "example_template": "I want to drink {item}.",
+        "chunks_template": ["I want to drink", "{item}"],
+        "grammar_focus": ["present_simple", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["drink_items"],
+            "drink": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_DONT_WANT": {
+    "pattern_id": "FOOD_DONT_WANT",
+    "function": "reject_food_or_drink",
+    "variants": {
+      "A1+": {
+        "example_template": "I don't want {item}.",
+        "chunks_template": ["I don't want", "{item}"],
+        "grammar_focus": ["negation", "food_vocabulary", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["simple_food_drink_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_HAVE_POLITE": {
+    "pattern_id": "FOOD_HAVE_POLITE",
+    "function": "request_food_politely",
+    "variants": {
+      "A1+": {
+        "example_template": "Can I have {item}, please?",
+        "chunks_template": ["Can I have", "{item},", "please", "?"],
+        "grammar_focus": ["can_request", "food_vocabulary", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["countable_food_items", "uncountable_food_items", "drink_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_HAVE_STOCK": {
+    "pattern_id": "FOOD_HAVE_STOCK",
+    "function": "ask_food_availability",
+    "variants": {
+      "A1+": {
+        "example_template": "Do you have {item}?",
+        "chunks_template": ["Do you have", "{item}", "?"],
+        "grammar_focus": ["question_structure", "food_vocabulary", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["simple_food_drink_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_BREAKFAST": {
+    "pattern_id": "FOOD_BREAKFAST",
+    "function": "meal_preferences",
+    "variants": {
+      "A1+": {
+        "example_template": "I want {item} for breakfast.",
+        "chunks_template": ["I want", "{item}", "for breakfast"],
+        "grammar_focus": ["present_simple", "food_vocabulary", "time_expression"],
+        "slot_constraints": {
+          "item": {
+            "category": ["breakfast_food_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_LUNCH": {
+    "pattern_id": "FOOD_LUNCH",
+    "function": "meal_preferences",
+    "variants": {
+      "A1+": {
+        "example_template": "I want {item} for lunch.",
+        "chunks_template": ["I want", "{item}", "for lunch"],
+        "grammar_focus": ["present_simple", "food_vocabulary", "time_expression"],
+        "slot_constraints": {
+          "item": {
+            "category": ["lunch_food_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_DINNER": {
+    "pattern_id": "FOOD_DINNER",
+    "function": "meal_preferences",
+    "variants": {
+      "A1+": {
+        "example_template": "I want {item} for dinner.",
+        "chunks_template": ["I want", "{item}", "for dinner"],
+        "grammar_focus": ["present_simple", "food_vocabulary", "time_expression"],
+        "slot_constraints": {
+          "item": {
+            "category": ["dinner_food_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_SNACK": {
+    "pattern_id": "FOOD_SNACK",
+    "function": "meal_preferences",
+    "variants": {
+      "A1+": {
+        "example_template": "I want {item} for a snack.",
+        "chunks_template": ["I want", "{item}", "for a snack"],
+        "grammar_focus": ["present_simple", "food_vocabulary", "time_expression"],
+        "slot_constraints": {
+          "item": {
+            "category": ["snack_food_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+  "FOOD_TO_GO": {
+    "pattern_id": "FOOD_TO_GO",
+    "function": "request_takeout",
+    "variants": {
+      "A1+": {
+        "example_template": "Can I get {item} to go?",
+        "chunks_template": ["Can I get", "{item}", "to go", "?"],
+        "grammar_focus": ["can_request", "food_vocabulary", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["to_go_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      },
+      "A2": {
+        "example_template": "Can I get {item} to go?",
+        "chunks_template": ["Can I get", "{item}", "to go", "?"],
+        "grammar_focus": ["can_request", "restaurant_language", "food_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["to_go_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      },
+      "B1": {
+        "example_template": "I'd like this to go.",
+        "chunks_template": ["I'd like this to go", "."],
+        "grammar_focus": ["restaurant_language", "present_simple"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_ORDER": {
+    "pattern_id": "FOOD_ORDER",
+    "function": "place_orders",
+    "variants": {
+      "A2": {
+        "example_template": "I would like {item}, please.",
+        "chunks_template": ["I would like", "{item},", "please", "."],
+        "grammar_focus": ["present_simple", "restaurant_language", "food_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["countable_food_items", "uncountable_food_items", "drink_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_REQUEST": {
+    "pattern_id": "FOOD_REQUEST",
+    "function": "restaurant_requests",
+    "variants": {
+      "A2": {
+        "example_template": "Could I have {item}, please?",
+        "chunks_template": ["Could I have", "{item},", "please", "?"],
+        "grammar_focus": ["can_request", "restaurant_language", "food_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["restaurant_request_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_ANY_HAVE": {
+    "pattern_id": "FOOD_ANY_HAVE",
+    "function": "ask_food_availability",
+    "variants": {
+      "A2": {
+        "example_template": "Do you have any {item}?",
+        "chunks_template": ["Do you have any", "{item}", "?"],
+        "grammar_focus": ["question_structure", "food_vocabulary", "drink_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["simple_food_drink_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_NO_ICE": {
+    "pattern_id": "FOOD_NO_ICE",
+    "function": "customize_drinks",
+    "variants": {
+      "A2": {
+        "example_template": "Can I have this with no ice?",
+        "chunks_template": ["Can I have this with no ice", "?"],
+        "grammar_focus": ["can_request", "drink_vocabulary", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_LESS_SUGAR": {
+    "pattern_id": "FOOD_LESS_SUGAR",
+    "function": "customize_drinks",
+    "variants": {
+      "A2": {
+        "example_template": "Can I have this with less sugar?",
+        "chunks_template": ["Can I have this with less sugar", "?"],
+        "grammar_focus": ["can_request", "drink_vocabulary", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_RESTROOM": {
+    "pattern_id": "FOOD_RESTROOM",
+    "function": "ask_locations",
+    "variants": {
+      "A2": {
+        "example_template": "Where is the restroom?",
+        "chunks_template": ["Where is the restroom", "?"],
+        "grammar_focus": ["wh_questions", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_WHERE_ITEM": {
+    "pattern_id": "FOOD_WHERE_ITEM",
+    "function": "ask_locations",
+    "variants": {
+      "A2": {
+        "example_template": "Where {be} {item}?",
+        "chunks_template": ["Where", "{be}", "{item}", "?"],
+        "grammar_focus": ["wh_questions", "restaurant_language"],
+        "paired_slot": {
+          "category": "table_item_location_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "FOOD_LIKE_REASON": {
+    "pattern_id": "FOOD_LIKE_REASON",
+    "function": "explain_food_preferences",
+    "variants": {
+      "A2+": {
+        "example_template": "I like {item} because it is {reason}.",
+        "chunks_template": ["I like", "{item}", "because it is", "{reason}"],
+        "grammar_focus": ["like_verb", "because_so", "food_vocabulary"],
+        "paired_slot": {
+          "category": "food_positive_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_WANT_REASON": {
+    "pattern_id": "FOOD_WANT_REASON",
+    "function": "explain_food_preferences",
+    "variants": {
+      "A2+": {
+        "example_template": "I want {item} because it is {reason}.",
+        "chunks_template": ["I want", "{item}", "because it is", "{reason}"],
+        "grammar_focus": ["present_simple", "because_so", "food_vocabulary"],
+        "paired_slot": {
+          "category": "food_positive_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_NOT_WANT_REASON": {
+    "pattern_id": "FOOD_NOT_WANT_REASON",
+    "function": "reject_food_politely",
+    "variants": {
+      "A2+": {
+        "example_template": "I do not want {item} because it is {reason}.",
+        "chunks_template": ["I do not want", "{item}", "because it is", "{reason}"],
+        "grammar_focus": ["negation", "because_so", "food_vocabulary"],
+        "paired_slot": {
+          "category": "food_negative_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_RECOMMEND": {
+    "pattern_id": "FOOD_RECOMMEND",
+    "function": "ask_for_recommendations",
+    "variants": {
+      "A2+": {
+        "example_template": "What do you recommend?",
+        "chunks_template": ["What do you recommend", "?"],
+        "grammar_focus": ["question_structure", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_RECOMMEND_CONTEXT": {
+    "pattern_id": "FOOD_RECOMMEND_CONTEXT",
+    "function": "ask_for_recommendations",
+    "variants": {
+      "A2+": {
+        "example_template": "What do you recommend for {context}?",
+        "chunks_template": ["What do you recommend for", "{context}", "?"],
+        "grammar_focus": ["question_structure", "restaurant_language", "food_preference"],
+        "slot_constraints": {
+          "context": {
+            "category": ["recommendation_contexts"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_INGREDIENT": {
+    "pattern_id": "FOOD_INGREDIENT",
+    "function": "ask_about_ingredients",
+    "variants": {
+      "A2+": {
+        "example_template": "Does this have {ingredient}?",
+        "chunks_template": ["Does this have", "{ingredient}", "?"],
+        "grammar_focus": ["question_structure", "food_vocabulary", "restaurant_language"],
+        "slot_constraints": {
+          "ingredient": {
+            "category": ["ingredient_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_SUBSTITUTE": {
+    "pattern_id": "FOOD_SUBSTITUTE",
+    "function": "request_substitutions",
+    "variants": {
+      "A2+": {
+        "example_template": "Can I have {item_a} instead of {item_b}?",
+        "chunks_template": ["Can I have", "{item_a}", "instead of", "{item_b}", "?"],
+        "grammar_focus": ["can_request", "food_vocabulary", "restaurant_language"],
+        "paired_slot": {
+          "category": "substitution_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_PREFER_MORE": {
+    "pattern_id": "FOOD_PREFER_MORE",
+    "function": "compare_preferences",
+    "variants": {
+      "A2+": {
+        "example_template": "I like {item_a} more than {item_b}.",
+        "chunks_template": ["I like", "{item_a}", "more than", "{item_b}"],
+        "grammar_focus": ["like_verb", "comparatives", "drink_vocabulary"],
+        "paired_slot": {
+          "category": "simple_drink_preference_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "FOOD_RESERVATION": {
+    "pattern_id": "FOOD_RESERVATION",
+    "function": "make_reservations",
+    "variants": {
+      "B1": {
+        "example_template": "I'd like to make a reservation for {party_size}.",
+        "chunks_template": ["I'd like to make a reservation for", "{party_size}", "."],
+        "grammar_focus": ["restaurant_language", "present_simple"],
+        "slot_constraints": {
+          "party_size": {
+            "category": ["reservation_party_sizes"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_TABLE": {
+    "pattern_id": "FOOD_TABLE",
+    "function": "request_tables",
+    "variants": {
+      "B1": {
+        "example_template": "Do you have a table for {party_size}?",
+        "chunks_template": ["Do you have a table for", "{party_size}", "?"],
+        "grammar_focus": ["question_structure", "restaurant_language"],
+        "slot_constraints": {
+          "party_size": {
+            "category": ["reservation_party_sizes"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_ORDER_DETAIL": {
+    "pattern_id": "FOOD_ORDER_DETAIL",
+    "function": "place_orders",
+    "variants": {
+      "B1": {
+        "example_template": "I'd like to order {item}.",
+        "chunks_template": ["I'd like to order", "{item}", "."],
+        "grammar_focus": ["restaurant_language", "food_vocabulary", "present_simple"],
+        "slot_constraints": {
+          "item": {
+            "category": ["countable_food_items", "uncountable_food_items"],
+            "food": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_WITHOUT": {
+    "pattern_id": "FOOD_WITHOUT",
+    "function": "customize_orders",
+    "variants": {
+      "B1": {
+        "example_template": "Could I have this without {ingredient}?",
+        "chunks_template": ["Could I have this without", "{ingredient}", "?"],
+        "grammar_focus": ["can_request", "restaurant_language", "food_vocabulary"],
+        "slot_constraints": {
+          "ingredient": {
+            "category": ["ingredient_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_ALLERGY": {
+    "pattern_id": "FOOD_ALLERGY",
+    "function": "state_allergies",
+    "variants": {
+      "B1": {
+        "example_template": "I'm allergic to {allergy}.",
+        "chunks_template": ["I'm allergic to", "{allergy}", "."],
+        "grammar_focus": ["food_preference", "restaurant_language", "present_simple"],
+        "slot_constraints": {
+          "allergy": {
+            "category": ["allergy_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_INGREDIENT_DETAIL": {
+    "pattern_id": "FOOD_INGREDIENT_DETAIL",
+    "function": "ask_about_ingredients",
+    "variants": {
+      "B1": {
+        "example_template": "Does this dish have any {ingredient} in it?",
+        "chunks_template": ["Does this dish have any", "{ingredient}", "in it", "?"],
+        "grammar_focus": ["question_structure", "restaurant_language", "food_vocabulary"],
+        "slot_constraints": {
+          "ingredient": {
+            "category": ["ingredient_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_VEGETARIAN_RECOMMEND": {
+    "pattern_id": "FOOD_VEGETARIAN_RECOMMEND",
+    "function": "state_food_preferences",
+    "variants": {
+      "B1": {
+        "example_template": "I'm vegetarian. What do you recommend?",
+        "chunks_template": ["I'm vegetarian", ".", "What do you recommend", "?"],
+        "grammar_focus": ["food_preference", "question_structure", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_PROBLEM": {
+    "pattern_id": "FOOD_PROBLEM",
+    "function": "describe_restaurant_problems",
+    "variants": {
+      "B1": {
+        "example_template": "{subject} {problem}.",
+        "chunks_template": ["{subject}", "{problem}"],
+        "grammar_focus": ["restaurant_language", "food_vocabulary", "adjectives"],
+        "paired_slot": {
+          "category": "restaurant_problem_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_REPLACEMENT": {
+    "pattern_id": "FOOD_REPLACEMENT",
+    "function": "request_replacements",
+    "variants": {
+      "B1": {
+        "example_template": "Could I get a replacement, please?",
+        "chunks_template": ["Could I get a replacement,", "please", "?"],
+        "grammar_focus": ["can_request", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_CHECK": {
+    "pattern_id": "FOOD_CHECK",
+    "function": "request_check",
+    "variants": {
+      "B1": {
+        "example_template": "Could we get the check, please?",
+        "chunks_template": ["Could we get the check,", "please", "?"],
+        "grammar_focus": ["can_request", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_SPLIT_CHECK": {
+    "pattern_id": "FOOD_SPLIT_CHECK",
+    "function": "request_split_payment",
+    "variants": {
+      "B1": {
+        "example_template": "Can we split the check?",
+        "chunks_template": ["Can we split the check", "?"],
+        "grammar_focus": ["question_structure", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "FOOD_PAY_SEPARATELY": {
+    "pattern_id": "FOOD_PAY_SEPARATELY",
+    "function": "request_split_payment",
+    "variants": {
+      "B1": {
+        "example_template": "Can we pay separately?",
+        "chunks_template": ["Can we pay separately", "?"],
+        "grammar_focus": ["question_structure", "restaurant_language"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  }
+}
