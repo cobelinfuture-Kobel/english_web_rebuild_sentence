@@ -4,6 +4,16 @@ import random
 from pathlib import Path
 
 
+DEFAULT_COUNT_PER_VARIANT = 30
+COUNT_BY_PATTERN_LEVEL = {
+    ("SHOP_TOO", "A1"): 24,
+    ("SHOP_PAY", "A1"): 16,
+    ("SHOP_TOO", "A1+"): 18,
+    ("SHOP_PAY", "A1+"): 16,
+    ("SHOP_LOOKING", "A1+"): 15,
+}
+
+
 class ContentGenerator:
     REQUIRED_FIELDS = [
         "sentence_id",
@@ -58,11 +68,12 @@ class ContentGenerator:
         sentences = []
         for level in levels:
             for pattern_id in pattern_ids:
+                count = COUNT_BY_PATTERN_LEVEL.get((pattern_id, level), count_per_variant)
                 sentences.extend(
                     self.generate_for_pattern(
                         pattern_id=pattern_id,
                         level=level,
-                        count=count_per_variant,
+                        count=count,
                     )
                 )
         return sentences
@@ -92,6 +103,10 @@ class ContentGenerator:
         return current
 
     def _resolve_slot_values(self, slot_constraints):
+        paired_slot_values = self._resolve_paired_slot_values(slot_constraints)
+        if paired_slot_values is not None:
+            return paired_slot_values
+
         slot_values = {}
         for slot_name, constraints in slot_constraints.items():
             candidates = self._filter_slot_candidates(constraints)
@@ -122,6 +137,10 @@ class ContentGenerator:
     def _enumerate_unique_candidates(self, variant):
         slot_constraints = variant["slot_constraints"]
         template = variant.get("example_template", variant.get("template"))
+        paired_candidates = self._enumerate_paired_candidates(slot_constraints, template)
+        if paired_candidates is not None:
+            return paired_candidates
+
         slot_names = list(slot_constraints.keys())
         slot_candidate_lists = []
 
@@ -136,6 +155,52 @@ class ContentGenerator:
             slot_values = {
                 slot_name: item["text"]
                 for slot_name, item in zip(slot_names, combination)
+            }
+            target_sentence = template.format(**slot_values)
+            unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
+
+        return list(unique_candidates.values())
+
+    def _resolve_paired_slot_values(self, slot_constraints):
+        paired_groups = {
+            constraints.get("pair_category")
+            for constraints in slot_constraints.values()
+            if constraints.get("pair_category")
+        }
+        if not paired_groups:
+            return None
+        if len(paired_groups) != 1:
+            raise ValueError(f"Paired slots must share one pair category: {paired_groups}")
+
+        pair_category = paired_groups.pop()
+        pair_items = self.slot_bank.get(pair_category, [])
+        if not pair_items:
+            raise ValueError(f"No paired slot candidates found for {pair_category}")
+
+        return dict(self.rng.choice(pair_items))
+
+    def _enumerate_paired_candidates(self, slot_constraints, template):
+        paired_groups = {
+            constraints.get("pair_category")
+            for constraints in slot_constraints.values()
+            if constraints.get("pair_category")
+        }
+        if not paired_groups:
+            return None
+        if len(paired_groups) != 1:
+            raise ValueError(f"Paired slots must share one pair category: {paired_groups}")
+
+        pair_category = paired_groups.pop()
+        pair_items = self.slot_bank.get(pair_category, [])
+        if not pair_items:
+            raise ValueError(f"No paired slot candidates found for {pair_category}")
+
+        unique_candidates = {}
+        for pair_item in pair_items:
+            slot_values = {
+                slot_name: pair_item[slot_name]
+                for slot_name, constraints in slot_constraints.items()
+                if constraints.get("pair_category") == pair_category
             }
             target_sentence = template.format(**slot_values)
             unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
@@ -281,7 +346,7 @@ def main():
         slot_bank=_load_json(slot_path),
         ensure_unique_targets=True,
     )
-    sentences = generator.generate_all(count_per_variant=30)
+    sentences = generator.generate_all(count_per_variant=DEFAULT_COUNT_PER_VARIANT)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as handle:

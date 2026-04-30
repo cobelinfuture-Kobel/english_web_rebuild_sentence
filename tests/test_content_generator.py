@@ -5,7 +5,11 @@ from pathlib import Path
 import pytest
 
 from engines.sentence_engine import SentenceEngine
-from scripts.generate_sentences import ContentGenerator
+from scripts.generate_sentences import (
+    COUNT_BY_PATTERN_LEVEL,
+    ContentGenerator,
+    DEFAULT_COUNT_PER_VARIANT,
+)
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -263,12 +267,20 @@ def test_generate_all_produces_at_least_200_unique_sentences():
 def test_generate_all_supports_30_unique_sentences_per_variant():
     generator = make_generator(seed=47, ensure_unique_targets=True)
 
-    sentences = generator.generate_all(count_per_variant=30)
+    sentences = generator.generate_all(count_per_variant=DEFAULT_COUNT_PER_VARIANT)
 
     ids = [sentence["sentence_id"] for sentence in sentences]
     targets = [sentence["target_sentence"] for sentence in sentences]
 
-    assert len(sentences) == 1200
+    expected_total = (len(EXPECTED_PATTERNS) * len(EXPECTED_LEVELS) * DEFAULT_COUNT_PER_VARIANT) - (
+        (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_TOO", "A1")])
+        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_PAY", "A1")])
+        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_TOO", "A1+")])
+        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_PAY", "A1+")])
+        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_LOOKING", "A1+")])
+    )
+
+    assert len(sentences) == expected_total
     assert len(ids) == len(set(ids))
     assert len(targets) == len(set(targets))
 
@@ -338,6 +350,63 @@ def test_shop_pay_a1_uses_with_for_target_and_fsi_question():
     assert sentence["chunks"][0] == "Can I pay with"
     assert sentence["fsi_tasks"][0]["target"].startswith("Can I pay with ")
     assert sentence["fsi_tasks"][0]["chunks"][0] == "Can I pay with"
+
+
+def test_generate_all_uses_pattern_level_count_overrides():
+    generator = make_generator(seed=53, ensure_unique_targets=True)
+
+    sentences = generator.generate_all(count_per_variant=DEFAULT_COUNT_PER_VARIANT)
+    counts = {}
+    for sentence in sentences:
+        counts[(sentence["pattern_id"], sentence["level"])] = (
+            counts.get((sentence["pattern_id"], sentence["level"]), 0) + 1
+        )
+
+    assert counts[("SHOP_TOO", "A1")] == 24
+    assert counts[("SHOP_PAY", "A1")] == 16
+    assert counts[("SHOP_TOO", "A1+")] == 18
+    assert counts[("SHOP_PAY", "A1+")] == 16
+    assert counts[("SHOP_LOOKING", "A1+")] == 15
+    assert counts[("SHOP_WANT", "A2")] == DEFAULT_COUNT_PER_VARIANT
+
+
+def test_shop_pay_a1_plus_uses_with_payment_methods_with():
+    generator = make_generator(seed=59)
+
+    sentence = generator.generate_for_pattern("SHOP_PAY", "A1+", count=1)[0]
+
+    assert sentence["target_sentence"].startswith("Can I pay for ")
+    assert " with " in sentence["target_sentence"]
+    assert " by " not in sentence["target_sentence"]
+    assert sentence["chunks"][2] == "with"
+
+
+def test_shop_looking_a1_plus_only_uses_school_items():
+    generator = make_generator(seed=61)
+    school_items = {item["text"] for item in generator.slot_bank["school_items_single"]}
+
+    sentences = generator.generate_for_pattern("SHOP_LOOKING", "A1+", count=15)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"].startswith("I am looking for ")
+        matched_object = next(item for item in school_items if item in sentence["target_sentence"])
+        assert matched_object in school_items
+
+
+def test_shop_too_a1_plus_uses_paired_capitalized_subjects():
+    generator = make_generator(seed=67, ensure_unique_targets=True)
+    valid_targets = {
+        f"{item['subject']} is too {item['adjective']}."
+        for item in generator.slot_bank["too_item_adjective_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_TOO", "A1+", count=18)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"] in valid_targets
+        assert sentence["target_sentence"].startswith("This ")
 
 
 def test_sentence_ids_are_unique_and_output_loads_into_sentence_engine():

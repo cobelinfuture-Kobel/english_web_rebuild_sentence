@@ -328,17 +328,15 @@
         "complexity": {"depth": 1}
       },
       "A1+": {
-        "example_template": "{object} is too {adjective}.",
-        "chunks_template": ["{object}", "is too", "{adjective}"],
+        "example_template": "{subject} is too {adjective}.",
+        "chunks_template": ["{subject}", "is too", "{adjective}"],
         "grammar_focus": ["adjectives", "demonstratives", "shopping_vocabulary"],
         "slot_constraints": {
-          "object": {
-            "category": ["priceable_single"],
-            "plural": false,
-            "priceable": true
+          "subject": {
+            "pair_category": "too_item_adjective_pairs"
           },
           "adjective": {
-            "category": ["adjectives"]
+            "pair_category": "too_item_adjective_pairs"
           }
         },
         "fsi_rules": ["substitution"],
@@ -512,15 +510,15 @@
         "grammar_focus": ["can_request", "shopping_vocabulary"],
         "slot_constraints": {
           "payment_method": {
-            "category": ["payment_methods"]
+            "category": ["payment_methods_with"]
           }
         },
         "fsi_rules": ["question"],
         "complexity": {"depth": 1}
       },
       "A1+": {
-        "example_template": "Can I pay for {object} by {payment_method}?",
-        "chunks_template": ["Can I pay for", "{object}", "by", "{payment_method}", "?"],
+        "example_template": "Can I pay for {object} with {payment_method}?",
+        "chunks_template": ["Can I pay for", "{object}", "with", "{payment_method}", "?"],
         "grammar_focus": ["can_request", "shopping_vocabulary", "prepositions"],
         "slot_constraints": {
           "object": {
@@ -529,7 +527,7 @@
             "priceable": true
           },
           "payment_method": {
-            "category": ["payment_methods"]
+            "category": ["payment_methods_with"]
           }
         },
         "fsi_rules": ["question"],
@@ -593,7 +591,7 @@
         "grammar_focus": ["present_simple", "shopping_vocabulary", "prepositions"],
         "slot_constraints": {
           "object": {
-            "category": ["priceable_single"],
+            "category": ["school_items_single"],
             "plural": false,
             "priceable": true
           }
