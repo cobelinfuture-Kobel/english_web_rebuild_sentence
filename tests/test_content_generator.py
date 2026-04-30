@@ -27,8 +27,50 @@ EXPECTED_PATTERNS = {
     "SHOP_WHERE",
     "SHOP_PAY",
     "SHOP_LOOKING",
+    "SHOP_SIZE_HAVE",
+    "SHOP_SIZE_TRY",
+    "SHOP_SALE",
+    "SHOP_RECEIPT",
+    "SHOP_CHEAPER",
+    "SHOP_CHEAPEST",
+    "SHOP_COMPARE",
+    "SHOP_ANOTHER_COLOR",
+    "SHOP_RECOMMEND",
+    "SHOP_LOOKS_BETTER",
+    "SHOP_RETURN",
+    "SHOP_EXCHANGE_SIZE",
+    "SHOP_REFUND",
+    "SHOP_DAMAGE",
+    "SHOP_DAMAGE_RETURN",
+    "SHOP_RECEIPT_REFUND",
+    "SHOP_WARRANTY",
+    "SHOP_QUALITY",
+    "SHOP_MATERIAL",
 }
-EXPECTED_LEVELS = {"A1", "A1+", "A2", "A2+"}
+CORE_EXPECTED_LEVELS = {"A1", "A1+", "A2", "A2+"}
+CORE_PATTERNS = {
+    "SHOP_WANT",
+    "SHOP_LIKE",
+    "SHOP_PRICE",
+    "SHOP_HAVE",
+    "SHOP_TRY",
+    "SHOP_TOO",
+    "SHOP_TAKE",
+    "SHOP_WHERE",
+    "SHOP_PAY",
+    "SHOP_LOOKING",
+}
+B1_PATTERNS = {
+    "SHOP_RETURN",
+    "SHOP_EXCHANGE_SIZE",
+    "SHOP_REFUND",
+    "SHOP_DAMAGE",
+    "SHOP_DAMAGE_RETURN",
+    "SHOP_RECEIPT_REFUND",
+    "SHOP_WARRANTY",
+    "SHOP_QUALITY",
+    "SHOP_MATERIAL",
+}
 
 
 def load_banks():
@@ -126,11 +168,15 @@ def test_level_coverage_for_each_pattern():
     generator = make_generator(seed=11, ensure_unique_targets=True)
 
     sentences = generator.generate_all(count_per_variant=5)
+    pattern_bank, _ = load_banks()
     by_pattern = {}
     for sentence in sentences:
         by_pattern.setdefault(sentence["pattern_id"], set()).add(sentence["level"])
 
-    assert all(by_pattern[pattern_id] == EXPECTED_LEVELS for pattern_id in EXPECTED_PATTERNS)
+    assert all(
+        by_pattern[pattern_id] == set(pattern_bank[pattern_id]["variants"].keys())
+        for pattern_id in EXPECTED_PATTERNS
+    )
 
 
 def test_shop_try_only_uses_wearable_objects():
@@ -160,7 +206,7 @@ def test_shop_price_matches_is_are_with_plurality():
             plural_lookup[item["text"]] = item["plural"]
 
     sentences = []
-    for level in EXPECTED_LEVELS:
+    for level in generator.pattern_bank["SHOP_PRICE"]["variants"].keys():
         sentences.extend(generator.generate_for_pattern("SHOP_PRICE", level, count=10))
 
     assert sentences
@@ -275,7 +321,7 @@ def test_generate_all_supports_30_unique_sentences_per_variant():
     expected_total = 0
     for pattern_id in EXPECTED_PATTERNS:
         variants = generator.pattern_bank[pattern_id]["variants"]
-        for level in EXPECTED_LEVELS:
+        for level in variants.keys():
             variant = variants[level]
             requested_count = COUNT_BY_PATTERN_LEVEL.get(
                 (pattern_id, level), DEFAULT_COUNT_PER_VARIANT
@@ -291,14 +337,20 @@ def test_generate_all_supports_30_unique_sentences_per_variant():
 def test_each_pattern_has_a2_plus_variant():
     pattern_bank, _ = load_banks()
 
-    assert all("A2+" in pattern_bank[pattern_id]["variants"] for pattern_id in EXPECTED_PATTERNS)
+    assert all("A2+" in pattern_bank[pattern_id]["variants"] for pattern_id in CORE_PATTERNS)
+
+
+def test_b1_patterns_have_b1_variant():
+    pattern_bank, _ = load_banks()
+
+    assert all("B1" in pattern_bank[pattern_id]["variants"] for pattern_id in B1_PATTERNS)
 
 
 def test_a2_plus_generated_sentences_are_not_empty():
     generator = make_generator(seed=31, ensure_unique_targets=True)
 
     sentences = []
-    for pattern_id in EXPECTED_PATTERNS:
+    for pattern_id in CORE_PATTERNS:
         sentences.extend(generator.generate_for_pattern(pattern_id, "A2+", count=5))
 
     assert sentences
@@ -378,6 +430,26 @@ def test_generate_all_uses_pattern_level_count_overrides():
     assert counts[("SHOP_TRY", "A2+")] == 18
     assert counts[("SHOP_TOO", "A2+")] == 18
     assert counts[("SHOP_PAY", "A2+")] == 16
+    assert counts[("SHOP_TAKE", "A2+")] == 15
+    assert counts[("SHOP_SIZE_HAVE", "A2")] == 15
+    assert counts[("SHOP_SIZE_TRY", "A2")] == 5
+    assert counts[("SHOP_SALE", "A2")] == 15
+    assert counts[("SHOP_RECEIPT", "A2")] == 5
+    assert counts[("SHOP_CHEAPER", "A2")] == 1
+    assert counts[("SHOP_CHEAPEST", "A2")] == 1
+    assert counts[("SHOP_COMPARE", "A2+")] == 8
+    assert counts[("SHOP_ANOTHER_COLOR", "A2+")] == 14
+    assert counts[("SHOP_RECOMMEND", "A2+")] == 6
+    assert counts[("SHOP_LOOKS_BETTER", "A2+")] == 1
+    assert counts[("SHOP_RETURN", "B1")] == 12
+    assert counts[("SHOP_EXCHANGE_SIZE", "B1")] == 10
+    assert counts[("SHOP_REFUND", "B1")] == 1
+    assert counts[("SHOP_DAMAGE", "B1")] == 12
+    assert counts[("SHOP_DAMAGE_RETURN", "B1")] == 10
+    assert counts[("SHOP_RECEIPT_REFUND", "B1")] == 1
+    assert counts[("SHOP_WARRANTY", "B1")] == 5
+    assert counts[("SHOP_QUALITY", "B1")] == 10
+    assert counts[("SHOP_MATERIAL", "B1")] == 10
     assert counts[("SHOP_WANT", "A2")] == DEFAULT_COUNT_PER_VARIANT
 
 
@@ -514,6 +586,84 @@ def test_shop_too_a2_plus_uses_capitalized_paired_targets():
     for sentence in sentences:
         assert sentence["target_sentence"] in valid_targets
         assert sentence["target_sentence"].startswith("This ")
+
+
+def test_shop_take_a2_plus_only_uses_needed_items():
+    generator = make_generator(seed=127)
+    needed_items = {item["text"] for item in generator.slot_bank["needed_items_single"]}
+
+    sentences = generator.generate_for_pattern("SHOP_TAKE", "A2+", count=15)
+
+    assert sentences
+    for sentence in sentences:
+        matched_object = next(item for item in needed_items if item in sentence["target_sentence"])
+        assert matched_object in needed_items
+        assert "this card because I need it" not in sentence["target_sentence"]
+        assert "the blue one because I need it" not in sentence["target_sentence"]
+        assert "this toy because I need it" not in sentence["target_sentence"]
+        assert "this gift box because I need it" not in sentence["target_sentence"]
+
+
+def test_shop_size_have_a2_uses_singular_clothing_and_size_options():
+    generator = make_generator(seed=103)
+    clothing_items = {
+        item["text"]
+        for item in generator.slot_bank["clothing_size_items"]
+        if item["plural"] is False
+    }
+    size_options = {item["text"] for item in generator.slot_bank["size_options"]}
+
+    sentences = generator.generate_for_pattern("SHOP_SIZE_HAVE", "A2", count=15)
+
+    assert sentences
+    for sentence in sentences:
+        matched_object = next(item for item in clothing_items if item in sentence["target_sentence"])
+        matched_size = next(size for size in size_options if f" in {size}?" in sentence["target_sentence"])
+        assert matched_object in clothing_items
+        assert matched_size in size_options
+
+
+def test_shop_damage_b1_uses_damaged_item_pairs():
+    generator = make_generator(seed=107, ensure_unique_targets=True)
+    valid_targets = {
+        f"{item['subject']} {item['issue']}."
+        for item in generator.slot_bank["damaged_item_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_DAMAGE", "B1", count=12)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"] in valid_targets
+        assert sentence["target_sentence"][0].isupper()
+
+
+def test_shop_damage_return_b1_uses_damaged_item_pairs():
+    generator = make_generator(seed=109, ensure_unique_targets=True)
+    valid_targets = {
+        f"I'd like to return {item['object']} because it {item['issue']}."
+        for item in generator.slot_bank["damaged_item_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_DAMAGE_RETURN", "B1", count=10)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"] in valid_targets
+
+
+def test_shop_material_b1_uses_material_item_pairs():
+    generator = make_generator(seed=113, ensure_unique_targets=True)
+    valid_targets = {
+        f"Is {item['object']} made of {item['material']}?"
+        for item in generator.slot_bank["material_item_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_MATERIAL", "B1", count=10)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"] in valid_targets
 
 
 def test_sentence_ids_are_unique_and_output_loads_into_sentence_engine():

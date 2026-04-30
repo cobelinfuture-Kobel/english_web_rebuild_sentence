@@ -19,6 +19,26 @@ COUNT_BY_PATTERN_LEVEL = {
     ("SHOP_TRY", "A2+"): 18,
     ("SHOP_TOO", "A2+"): 18,
     ("SHOP_PAY", "A2+"): 16,
+    ("SHOP_TAKE", "A2+"): 15,
+    ("SHOP_SIZE_HAVE", "A2"): 15,
+    ("SHOP_SIZE_TRY", "A2"): 5,
+    ("SHOP_SALE", "A2"): 15,
+    ("SHOP_RECEIPT", "A2"): 5,
+    ("SHOP_CHEAPER", "A2"): 1,
+    ("SHOP_CHEAPEST", "A2"): 1,
+    ("SHOP_COMPARE", "A2+"): 8,
+    ("SHOP_ANOTHER_COLOR", "A2+"): 14,
+    ("SHOP_RECOMMEND", "A2+"): 6,
+    ("SHOP_LOOKS_BETTER", "A2+"): 1,
+    ("SHOP_RETURN", "B1"): 12,
+    ("SHOP_EXCHANGE_SIZE", "B1"): 10,
+    ("SHOP_REFUND", "B1"): 1,
+    ("SHOP_DAMAGE", "B1"): 12,
+    ("SHOP_DAMAGE_RETURN", "B1"): 10,
+    ("SHOP_RECEIPT_REFUND", "B1"): 1,
+    ("SHOP_WARRANTY", "B1"): 5,
+    ("SHOP_QUALITY", "B1"): 10,
+    ("SHOP_MATERIAL", "B1"): 10,
 }
 
 
@@ -76,6 +96,9 @@ class ContentGenerator:
         sentences = []
         for level in levels:
             for pattern_id in pattern_ids:
+                pattern_levels = self.pattern_bank[pattern_id].get("variants", self.pattern_bank[pattern_id]).keys()
+                if level not in pattern_levels:
+                    continue
                 count = COUNT_BY_PATTERN_LEVEL.get((pattern_id, level), count_per_variant)
                 sentences.extend(
                     self.generate_for_pattern(
@@ -219,8 +242,8 @@ class ContentGenerator:
                 )
             else:
                 slot_values.update(pair_item)
-            target_sentence = template.format(**slot_values)
-            unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
+            candidate_key = tuple(sorted(slot_values.items()))
+            unique_candidates.setdefault(candidate_key, (slot_values, None))
 
         return list(unique_candidates.values())
 

@@ -181,6 +181,35 @@
     {"text": "front desk", "plural": false, "wearable": false, "priceable": false},
     {"text": "customer service desk", "plural": false, "wearable": false, "priceable": false}
   ],
+  "store_types": [
+    {"text": "store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "mall", "plural": false, "wearable": false, "priceable": false},
+    {"text": "department store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "drugstore", "plural": false, "wearable": false, "priceable": false},
+    {"text": "pharmacy", "plural": false, "wearable": false, "priceable": false},
+    {"text": "bookstore", "plural": false, "wearable": false, "priceable": false},
+    {"text": "toy store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "clothing store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "shoe store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "gift store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "sports store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "electronics store", "plural": false, "wearable": false, "priceable": false},
+    {"text": "convenience store", "plural": false, "wearable": false, "priceable": false}
+  ],
+  "size_options": [
+    {"text": "small", "plural": false, "wearable": false, "priceable": false},
+    {"text": "medium", "plural": false, "wearable": false, "priceable": false},
+    {"text": "large", "plural": false, "wearable": false, "priceable": false},
+    {"text": "extra small", "plural": false, "wearable": false, "priceable": false},
+    {"text": "extra large", "plural": false, "wearable": false, "priceable": false}
+  ],
+  "size_article_pairs": [
+    {"article": "a", "size": "small"},
+    {"article": "a", "size": "medium"},
+    {"article": "a", "size": "large"},
+    {"article": "an", "size": "extra small"},
+    {"article": "an", "size": "extra large"}
+  ],
   "school_items_single": [
     {"text": "this notebook", "plural": false, "wearable": false, "priceable": true},
     {"text": "this pencil", "plural": false, "wearable": false, "priceable": true},
@@ -197,6 +226,23 @@
     {"text": "this jacket", "plural": false, "wearable": true, "priceable": true},
     {"text": "this sweater", "plural": false, "wearable": true, "priceable": true},
     {"text": "this coat", "plural": false, "wearable": true, "priceable": true}
+  ],
+  "needed_items_single": [
+    {"text": "this notebook", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this pencil", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this pen", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this eraser", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this ruler", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this pencil case", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this school bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this water bottle", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this lunch box", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this T-shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this jacket", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this coat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this sweater", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this bag", "plural": false, "wearable": false, "priceable": true}
   ],
   "singular_wearable_items": [
     {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
@@ -217,6 +263,66 @@
     {"text": "the blue one", "plural": false, "wearable": true, "priceable": true},
     {"text": "the red one", "plural": false, "wearable": true, "priceable": true},
     {"text": "the black one", "plural": false, "wearable": true, "priceable": true}
+  ],
+  "clothing_size_items": [
+    {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this T-shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this jacket", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this coat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this dress", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this skirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this sweater", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this hoodie", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this vest", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this raincoat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this hat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this cap", "plural": false, "wearable": true, "priceable": true},
+    {"text": "these shoes", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these pants", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these jeans", "plural": true, "wearable": true, "priceable": true},
+    {"text": "these shorts", "plural": true, "wearable": true, "priceable": true}
+  ],
+  "discount_items": [
+    {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this T-shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this jacket", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this coat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this dress", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this skirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this sweater", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this black bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this red bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this school bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this watch", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this water bottle", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this lunch box", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this notebook", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this book", "plural": false, "wearable": false, "priceable": true}
+  ],
+  "receipt_payment_phrases": [
+    {"text": "a receipt", "plural": false, "wearable": false, "priceable": false},
+    {"text": "the receipt", "plural": false, "wearable": false, "priceable": false},
+    {"text": "my receipt", "plural": false, "wearable": false, "priceable": false},
+    {"text": "a bag", "plural": false, "wearable": false, "priceable": false},
+    {"text": "a shopping bag", "plural": false, "wearable": false, "priceable": false}
+  ],
+  "returnable_items": [
+    {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this T-shirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this jacket", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this coat", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this dress", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this skirt", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this sweater", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this backpack", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this school bag", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this water bottle", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this lunch box", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this watch", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this phone case", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this toy", "plural": false, "wearable": false, "priceable": true}
   ],
   "colorable_items_single": [
     {"text": "this shirt", "plural": false, "wearable": true, "priceable": true},
@@ -254,6 +360,20 @@
     {"subject": "This pencil case", "object": "this pencil case", "adjective": "small"},
     {"subject": "This T-shirt", "object": "this T-shirt", "adjective": "thin"}
   ],
+  "damaged_item_pairs": [
+    {"subject": "This shirt", "object": "this shirt", "issue": "has a mark"},
+    {"subject": "This dress", "object": "this dress", "issue": "has a stain"},
+    {"subject": "This jacket", "object": "this jacket", "issue": "has a broken zipper"},
+    {"subject": "This bag", "object": "this bag", "issue": "has a broken zipper"},
+    {"subject": "This backpack", "object": "this backpack", "issue": "has a broken zipper"},
+    {"subject": "This water bottle", "object": "this water bottle", "issue": "is leaking"},
+    {"subject": "This lunch box", "object": "this lunch box", "issue": "is cracked"},
+    {"subject": "This watch", "object": "this watch", "issue": "is broken"},
+    {"subject": "This phone case", "object": "this phone case", "issue": "is scratched"},
+    {"subject": "This toy", "object": "this toy", "issue": "is broken"},
+    {"subject": "This notebook", "object": "this notebook", "issue": "has a torn cover"},
+    {"subject": "This umbrella", "object": "this umbrella", "issue": "is broken"}
+  ],
   "positive_reason_pairs": [
     {"object": "this notebook", "reason": "useful"},
     {"object": "this pencil", "reason": "useful"},
@@ -273,6 +393,43 @@
     {"object": "this red bag", "reason": "pretty"},
     {"object": "this watch", "reason": "nice"},
     {"object": "this umbrella", "reason": "useful"}
+  ],
+  "warranty_items": [
+    {"text": "this watch", "plural": false, "wearable": true, "priceable": true},
+    {"text": "this phone case", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this backpack", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this water bottle", "plural": false, "wearable": false, "priceable": true},
+    {"text": "this umbrella", "plural": false, "wearable": false, "priceable": true}
+  ],
+  "recommendation_gift_items": [
+    {"text": "a gift for my brother", "plural": false, "wearable": false, "priceable": false},
+    {"text": "a gift for my sister", "plural": false, "wearable": false, "priceable": false},
+    {"text": "a gift for my friend", "plural": false, "wearable": false, "priceable": false},
+    {"text": "a gift for my teacher", "plural": false, "wearable": false, "priceable": false},
+    {"text": "a birthday gift", "plural": false, "wearable": false, "priceable": false},
+    {"text": "a small gift", "plural": false, "wearable": false, "priceable": false}
+  ],
+  "material_item_pairs": [
+    {"object": "this T-shirt", "material": "cotton"},
+    {"object": "this shirt", "material": "cotton"},
+    {"object": "this sweater", "material": "wool"},
+    {"object": "this jacket", "material": "cotton"},
+    {"object": "this bag", "material": "leather"},
+    {"object": "this black bag", "material": "leather"},
+    {"object": "this red bag", "material": "leather"},
+    {"object": "this water bottle", "material": "plastic"},
+    {"object": "this cup", "material": "plastic"},
+    {"object": "this raincoat", "material": "waterproof material"}
+  ],
+  "comparison_item_pairs": [
+    {"subject_a": "This jacket", "item_a": "this jacket", "item_b": "that jacket", "comparative": "cheaper"},
+    {"subject_a": "This coat", "item_a": "this coat", "item_b": "that coat", "comparative": "more expensive"},
+    {"subject_a": "This bag", "item_a": "this bag", "item_b": "that bag", "comparative": "cheaper"},
+    {"subject_a": "This backpack", "item_a": "this backpack", "item_b": "that backpack", "comparative": "more useful"},
+    {"subject_a": "This T-shirt", "item_a": "this T-shirt", "item_b": "that T-shirt", "comparative": "cheaper"},
+    {"subject_a": "This dress", "item_a": "this dress", "item_b": "that dress", "comparative": "prettier"},
+    {"subject_a": "This school bag", "item_a": "this school bag", "item_b": "that school bag", "comparative": "bigger"},
+    {"subject_a": "This water bottle", "item_a": "this water bottle", "item_b": "that water bottle", "comparative": "lighter"}
   ],
   "positive_look_adjectives": [
     {"text": "nice", "plural": false, "wearable": false, "priceable": false},

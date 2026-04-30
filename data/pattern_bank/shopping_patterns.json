@@ -414,7 +414,7 @@
         "grammar_focus": ["future_plan", "because_so", "shopping_vocabulary"],
         "slot_constraints": {
           "object": {
-            "category": ["priceable_single"],
+            "category": ["needed_items_single"],
             "plural": false,
             "priceable": true
           }
@@ -610,6 +610,344 @@
         },
         "fsi_rules": ["question"],
         "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "SHOP_SIZE_HAVE": {
+    "pattern_id": "SHOP_SIZE_HAVE",
+    "function": "ask_size_availability",
+    "variants": {
+      "A2": {
+        "example_template": "Do you have {object} in {size}?",
+        "chunks_template": ["Do you have", "{object}", "in", "{size}", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["clothing_size_items"],
+            "plural": false,
+            "priceable": true
+          },
+          "size": {
+            "category": ["size_options"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_SIZE_TRY": {
+    "pattern_id": "SHOP_SIZE_TRY",
+    "function": "ask_to_try_size",
+    "variants": {
+      "A2": {
+        "example_template": "Can I try {article} {size} size?",
+        "chunks_template": ["Can I try", "{article}", "{size}", "size", "?"],
+        "grammar_focus": ["can_request", "shopping_actions", "shopping_vocabulary"],
+        "paired_slot": {
+          "category": "size_article_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_SALE": {
+    "pattern_id": "SHOP_SALE",
+    "function": "ask_sale_status",
+    "variants": {
+      "A2": {
+        "example_template": "Is {object} on sale?",
+        "chunks_template": ["Is", "{object}", "on sale", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["discount_items"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_RECEIPT": {
+    "pattern_id": "SHOP_RECEIPT",
+    "function": "ask_for_receipt_or_bag",
+    "variants": {
+      "A2": {
+        "example_template": "Can I get {receipt_item}, please?",
+        "chunks_template": ["Can I get", "{receipt_item}", ", please", "?"],
+        "grammar_focus": ["can_request", "shopping_vocabulary", "question_structure"],
+        "slot_constraints": {
+          "receipt_item": {
+            "category": ["receipt_payment_phrases"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_CHEAPER": {
+    "pattern_id": "SHOP_CHEAPER",
+    "function": "ask_which_is_cheaper",
+    "variants": {
+      "A2": {
+        "example_template": "Which one is cheaper?",
+        "chunks_template": ["Which one", "is", "cheaper", "?"],
+        "grammar_focus": ["comparatives", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_CHEAPEST": {
+    "pattern_id": "SHOP_CHEAPEST",
+    "function": "ask_which_is_cheapest",
+    "variants": {
+      "A2": {
+        "example_template": "Which one is the cheapest?",
+        "chunks_template": ["Which one", "is", "the cheapest", "?"],
+        "grammar_focus": ["comparatives", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+  "SHOP_COMPARE": {
+    "pattern_id": "SHOP_COMPARE",
+    "function": "compare_items",
+    "variants": {
+      "A2+": {
+        "example_template": "{subject_a} is {comparative} than {item_b}.",
+        "chunks_template": ["{subject_a}", "is", "{comparative}", "than", "{item_b}"],
+        "grammar_focus": ["comparatives", "shopping_vocabulary"],
+        "paired_slot": {
+          "category": "comparison_item_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "SHOP_ANOTHER_COLOR": {
+    "pattern_id": "SHOP_ANOTHER_COLOR",
+    "function": "ask_for_another_color",
+    "variants": {
+      "A2+": {
+        "example_template": "Do you have {object} in another color?",
+        "chunks_template": ["Do you have", "{object}", "in another color", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["colorable_items_single"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "SHOP_RECOMMEND": {
+    "pattern_id": "SHOP_RECOMMEND",
+    "function": "ask_for_recommendation",
+    "variants": {
+      "A2+": {
+        "example_template": "What do you recommend for {gift_item}?",
+        "chunks_template": ["What do you recommend for", "{gift_item}", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {
+          "gift_item": {
+            "category": ["recommendation_gift_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "SHOP_LOOKS_BETTER": {
+    "pattern_id": "SHOP_LOOKS_BETTER",
+    "function": "ask_which_looks_better",
+    "variants": {
+      "A2+": {
+        "example_template": "Which one looks better on me?",
+        "chunks_template": ["Which one", "looks better", "on me", "?"],
+        "grammar_focus": ["comparatives", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+  "SHOP_RETURN": {
+    "pattern_id": "SHOP_RETURN",
+    "function": "request_return",
+    "variants": {
+      "B1": {
+        "example_template": "I'd like to return {object}.",
+        "chunks_template": ["I'd like to return", "{object}"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["returnable_items"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_EXCHANGE_SIZE": {
+    "pattern_id": "SHOP_EXCHANGE_SIZE",
+    "function": "request_size_exchange",
+    "variants": {
+      "B1": {
+        "example_template": "I'd like to exchange {object} for {article} {size} size.",
+        "chunks_template": ["I'd like to exchange", "{object}", "for", "{article}", "{size}", "size"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary", "prepositions"],
+        "slot_constraints": {
+          "object": {
+            "category": ["clothing_size_items"],
+            "plural": false,
+            "wearable": true,
+            "priceable": true
+          }
+        },
+        "paired_slot": {
+          "category": "size_article_pairs"
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_REFUND": {
+    "pattern_id": "SHOP_REFUND",
+    "function": "ask_for_refund",
+    "variants": {
+      "B1": {
+        "example_template": "Could I get a refund, please?",
+        "chunks_template": ["Could I get", "a refund", ", please", "?"],
+        "grammar_focus": ["can_request", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_DAMAGE": {
+    "pattern_id": "SHOP_DAMAGE",
+    "function": "describe_damage",
+    "variants": {
+      "B1": {
+        "example_template": "{subject} {issue}.",
+        "chunks_template": ["{subject}", "{issue}"],
+        "grammar_focus": ["present_simple", "shopping_vocabulary"],
+        "paired_slot": {
+          "category": "damaged_item_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_DAMAGE_RETURN": {
+    "pattern_id": "SHOP_DAMAGE_RETURN",
+    "function": "return_damaged_item",
+    "variants": {
+      "B1": {
+        "example_template": "I'd like to return {object} because it {issue}.",
+        "chunks_template": ["I'd like to return", "{object}", "because it", "{issue}"],
+        "grammar_focus": ["because_so", "present_simple", "shopping_vocabulary"],
+        "paired_slot": {
+          "category": "damaged_item_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_RECEIPT_REFUND": {
+    "pattern_id": "SHOP_RECEIPT_REFUND",
+    "function": "ask_about_refund_receipt",
+    "variants": {
+      "B1": {
+        "example_template": "Do I need the receipt for a refund?",
+        "chunks_template": ["Do I need", "the receipt", "for a refund", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_WARRANTY": {
+    "pattern_id": "SHOP_WARRANTY",
+    "function": "ask_about_warranty",
+    "variants": {
+      "B1": {
+        "example_template": "Does {object} come with a warranty?",
+        "chunks_template": ["Does", "{object}", "come with", "a warranty", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["warranty_items"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_QUALITY": {
+    "pattern_id": "SHOP_QUALITY",
+    "function": "ask_about_quality",
+    "variants": {
+      "B1": {
+        "example_template": "Do you think {object} is good quality?",
+        "chunks_template": ["Do you think", "{object}", "is good quality", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["discount_items", "returnable_items"],
+            "plural": false,
+            "priceable": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+  "SHOP_MATERIAL": {
+    "pattern_id": "SHOP_MATERIAL",
+    "function": "ask_about_material",
+    "variants": {
+      "B1": {
+        "example_template": "Is {object} made of {material}?",
+        "chunks_template": ["Is", "{object}", "made of", "{material}", "?"],
+        "grammar_focus": ["present_simple", "question_structure", "shopping_vocabulary"],
+        "paired_slot": {
+          "category": "material_item_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
       }
     }
   }
