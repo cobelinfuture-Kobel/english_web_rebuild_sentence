@@ -272,13 +272,16 @@ def test_generate_all_supports_30_unique_sentences_per_variant():
     ids = [sentence["sentence_id"] for sentence in sentences]
     targets = [sentence["target_sentence"] for sentence in sentences]
 
-    expected_total = (len(EXPECTED_PATTERNS) * len(EXPECTED_LEVELS) * DEFAULT_COUNT_PER_VARIANT) - (
-        (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_TOO", "A1")])
-        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_PAY", "A1")])
-        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_TOO", "A1+")])
-        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_PAY", "A1+")])
-        + (DEFAULT_COUNT_PER_VARIANT - COUNT_BY_PATTERN_LEVEL[("SHOP_LOOKING", "A1+")])
-    )
+    expected_total = 0
+    for pattern_id in EXPECTED_PATTERNS:
+        variants = generator.pattern_bank[pattern_id]["variants"]
+        for level in EXPECTED_LEVELS:
+            variant = variants[level]
+            requested_count = COUNT_BY_PATTERN_LEVEL.get(
+                (pattern_id, level), DEFAULT_COUNT_PER_VARIANT
+            )
+            available_count = len(generator._enumerate_unique_candidates(variant))
+            expected_total += min(requested_count, available_count)
 
     assert len(sentences) == expected_total
     assert len(ids) == len(set(ids))
@@ -367,6 +370,14 @@ def test_generate_all_uses_pattern_level_count_overrides():
     assert counts[("SHOP_TOO", "A1+")] == 18
     assert counts[("SHOP_PAY", "A1+")] == 16
     assert counts[("SHOP_LOOKING", "A1+")] == 15
+    assert counts[("SHOP_TOO", "A2")] == 18
+    assert counts[("SHOP_TAKE", "A2")] == 15
+    assert counts[("SHOP_PAY", "A2")] == 16
+    assert counts[("SHOP_WANT", "A2+")] == 18
+    assert counts[("SHOP_LIKE", "A2+")] == 18
+    assert counts[("SHOP_TRY", "A2+")] == 18
+    assert counts[("SHOP_TOO", "A2+")] == 18
+    assert counts[("SHOP_PAY", "A2+")] == 16
     assert counts[("SHOP_WANT", "A2")] == DEFAULT_COUNT_PER_VARIANT
 
 
@@ -402,6 +413,102 @@ def test_shop_too_a1_plus_uses_paired_capitalized_subjects():
     }
 
     sentences = generator.generate_for_pattern("SHOP_TOO", "A1+", count=18)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"] in valid_targets
+        assert sentence["target_sentence"].startswith("This ")
+
+
+def test_shop_too_a2_uses_paired_object_adjective_combinations():
+    generator = make_generator(seed=71, ensure_unique_targets=True)
+    valid_targets = {
+        f"I think {item['object']} is too {item['adjective']}."
+        for item in generator.slot_bank["too_item_adjective_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_TOO", "A2", count=18)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"] in valid_targets
+
+
+def test_shop_take_a2_only_uses_school_items():
+    generator = make_generator(seed=73)
+    school_items = {item["text"] for item in generator.slot_bank["school_items_single"]}
+
+    sentences = generator.generate_for_pattern("SHOP_TAKE", "A2", count=15)
+
+    assert sentences
+    for sentence in sentences:
+        matched_object = next(item for item in school_items if item in sentence["target_sentence"])
+        assert matched_object in school_items
+
+
+def test_shop_pay_a2_uses_with_and_payment_locations():
+    generator = make_generator(seed=79)
+    payment_locations = {item["text"] for item in generator.slot_bank["payment_locations"]}
+
+    sentences = generator.generate_for_pattern("SHOP_PAY", "A2", count=16)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"].startswith("Can I pay with ")
+        assert "Can I pay by " not in sentence["target_sentence"]
+        matched_location = next(location for location in payment_locations if location in sentence["target_sentence"])
+        assert matched_location in payment_locations
+
+
+def test_shop_want_a2_plus_uses_positive_reason_pairs():
+    generator = make_generator(seed=83, ensure_unique_targets=True)
+    valid_targets = {
+        f"I want {item['object']} because it is {item['reason']}."
+        for item in generator.slot_bank["positive_reason_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_WANT", "A2+", count=18)
+
+    assert sentences
+    for sentence in sentences:
+        assert sentence["target_sentence"] in valid_targets
+        assert "these " not in sentence["target_sentence"]
+
+
+def test_shop_like_a2_plus_uses_positive_look_adjectives():
+    generator = make_generator(seed=89)
+    allowed_adjectives = {item["text"] for item in generator.slot_bank["positive_look_adjectives"]}
+
+    sentences = generator.generate_for_pattern("SHOP_LIKE", "A2+", count=18)
+
+    assert sentences
+    for sentence in sentences:
+        assert " because it looks " in sentence["target_sentence"]
+        adjective = sentence["target_sentence"].rsplit(" ", 1)[-1].rstrip(".")
+        assert adjective in allowed_adjectives
+
+
+def test_shop_try_a2_plus_only_uses_singular_wearable_items():
+    generator = make_generator(seed=97)
+    singular_items = {item["text"] for item in generator.slot_bank["singular_wearable_items"]}
+
+    sentences = generator.generate_for_pattern("SHOP_TRY", "A2+", count=18)
+
+    assert sentences
+    for sentence in sentences:
+        matched_object = next(item for item in singular_items if item in sentence["target_sentence"])
+        assert matched_object in singular_items
+        assert "these " not in sentence["target_sentence"]
+
+
+def test_shop_too_a2_plus_uses_capitalized_paired_targets():
+    generator = make_generator(seed=101, ensure_unique_targets=True)
+    valid_targets = {
+        f"{item['subject']} is too {item['adjective']} for me."
+        for item in generator.slot_bank["too_item_adjective_pairs"]
+    }
+
+    sentences = generator.generate_for_pattern("SHOP_TOO", "A2+", count=18)
 
     assert sentences
     for sentence in sentences:

@@ -11,6 +11,14 @@ COUNT_BY_PATTERN_LEVEL = {
     ("SHOP_TOO", "A1+"): 18,
     ("SHOP_PAY", "A1+"): 16,
     ("SHOP_LOOKING", "A1+"): 15,
+    ("SHOP_TOO", "A2"): 18,
+    ("SHOP_TAKE", "A2"): 15,
+    ("SHOP_PAY", "A2"): 16,
+    ("SHOP_WANT", "A2+"): 18,
+    ("SHOP_LIKE", "A2+"): 18,
+    ("SHOP_TRY", "A2+"): 18,
+    ("SHOP_TOO", "A2+"): 18,
+    ("SHOP_PAY", "A2+"): 16,
 }
 
 
@@ -102,13 +110,12 @@ class ContentGenerator:
         self._sentence_counters[key] = current
         return current
 
-    def _resolve_slot_values(self, slot_constraints):
-        paired_slot_values = self._resolve_paired_slot_values(slot_constraints)
-        if paired_slot_values is not None:
-            return paired_slot_values
-
-        slot_values = {}
+    def _resolve_slot_values(self, variant):
+        slot_constraints = variant.get("slot_constraints", {})
+        slot_values = dict(self._resolve_paired_slot_values(variant))
         for slot_name, constraints in slot_constraints.items():
+            if slot_name in slot_values:
+                continue
             candidates = self._filter_slot_candidates(constraints)
             if not candidates:
                 raise ValueError(f"No slot candidates found for {slot_name}: {constraints}")
@@ -129,20 +136,18 @@ class ContentGenerator:
         return available[: min(count, len(available))]
 
     def _build_random_sentence_parts(self, variant):
-        slot_values = self._resolve_slot_values(variant["slot_constraints"])
+        slot_values = self._resolve_slot_values(variant)
         template = variant.get("example_template", variant.get("template"))
         target_sentence = template.format(**slot_values)
         return slot_values, target_sentence
 
     def _enumerate_unique_candidates(self, variant):
-        slot_constraints = variant["slot_constraints"]
+        slot_constraints = variant.get("slot_constraints", {})
         template = variant.get("example_template", variant.get("template"))
-        paired_candidates = self._enumerate_paired_candidates(slot_constraints, template)
-        if paired_candidates is not None:
-            return paired_candidates
-
-        slot_names = list(slot_constraints.keys())
+        paired_candidates = self._enumerate_paired_candidates(variant, template)
+        slot_names = [slot_name for slot_name in slot_constraints.keys() if not self._slot_is_paired(slot_constraints[slot_name])]
         slot_candidate_lists = []
+        seed_candidates = paired_candidates or [({}, None)]
 
         for slot_name in slot_names:
             candidates = self._filter_slot_candidates(slot_constraints[slot_name])
@@ -151,35 +156,83 @@ class ContentGenerator:
             slot_candidate_lists.append(candidates)
 
         unique_candidates = {}
-        for combination in itertools.product(*slot_candidate_lists):
-            slot_values = {
-                slot_name: item["text"]
-                for slot_name, item in zip(slot_names, combination)
-            }
-            target_sentence = template.format(**slot_values)
-            unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
+        if not slot_candidate_lists:
+            for seed_values, _ in seed_candidates:
+                target_sentence = template.format(**seed_values)
+                unique_candidates.setdefault(target_sentence, (seed_values, target_sentence))
+            return list(unique_candidates.values())
+
+        for seed_values, _ in seed_candidates:
+            for combination in itertools.product(*slot_candidate_lists):
+                slot_values = dict(seed_values)
+                slot_values.update(
+                    {
+                        slot_name: item["text"]
+                        for slot_name, item in zip(slot_names, combination)
+                    }
+                )
+                target_sentence = template.format(**slot_values)
+                unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
 
         return list(unique_candidates.values())
 
-    def _resolve_paired_slot_values(self, slot_constraints):
-        paired_groups = {
-            constraints.get("pair_category")
-            for constraints in slot_constraints.values()
-            if constraints.get("pair_category")
-        }
-        if not paired_groups:
-            return None
-        if len(paired_groups) != 1:
-            raise ValueError(f"Paired slots must share one pair category: {paired_groups}")
+    def _resolve_paired_slot_values(self, variant):
+        pair_category = self._get_pair_category(variant)
+        if pair_category is None:
+            return {}
 
-        pair_category = paired_groups.pop()
         pair_items = self.slot_bank.get(pair_category, [])
         if not pair_items:
             raise ValueError(f"No paired slot candidates found for {pair_category}")
 
         return dict(self.rng.choice(pair_items))
 
-    def _enumerate_paired_candidates(self, slot_constraints, template):
+    def _enumerate_paired_candidates(self, variant, template):
+        pair_category = self._get_pair_category(variant)
+        if pair_category is None:
+            return None
+
+        slot_constraints = variant.get("slot_constraints", {})
+        paired_slot_names = [
+            slot_name
+            for slot_name, constraints in slot_constraints.items()
+            if constraints.get("pair_category") == pair_category
+        ]
+        paired_groups = {
+            constraints.get("pair_category")
+            for constraints in slot_constraints.values()
+            if constraints.get("pair_category")
+        }
+        if paired_groups and paired_groups != {pair_category}:
+            raise ValueError(f"Paired slots must share one pair category: {paired_groups}")
+
+        pair_items = self.slot_bank.get(pair_category, [])
+        if not pair_items:
+            raise ValueError(f"No paired slot candidates found for {pair_category}")
+
+        unique_candidates = {}
+        for pair_item in pair_items:
+            slot_values = {}
+            if paired_slot_names:
+                slot_values.update(
+                    {slot_name: pair_item[slot_name] for slot_name in paired_slot_names}
+                )
+            else:
+                slot_values.update(pair_item)
+            target_sentence = template.format(**slot_values)
+            unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
+
+        return list(unique_candidates.values())
+
+    def _get_pair_category(self, variant):
+        paired_slot = variant.get("paired_slot")
+        if paired_slot:
+            category = paired_slot.get("category")
+            if not category:
+                raise ValueError("paired_slot requires a category")
+            return category
+
+        slot_constraints = variant.get("slot_constraints", {})
         paired_groups = {
             constraints.get("pair_category")
             for constraints in slot_constraints.values()
@@ -189,23 +242,10 @@ class ContentGenerator:
             return None
         if len(paired_groups) != 1:
             raise ValueError(f"Paired slots must share one pair category: {paired_groups}")
+        return paired_groups.pop()
 
-        pair_category = paired_groups.pop()
-        pair_items = self.slot_bank.get(pair_category, [])
-        if not pair_items:
-            raise ValueError(f"No paired slot candidates found for {pair_category}")
-
-        unique_candidates = {}
-        for pair_item in pair_items:
-            slot_values = {
-                slot_name: pair_item[slot_name]
-                for slot_name, constraints in slot_constraints.items()
-                if constraints.get("pair_category") == pair_category
-            }
-            target_sentence = template.format(**slot_values)
-            unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
-
-        return list(unique_candidates.values())
+    def _slot_is_paired(self, constraints):
+        return bool(constraints.get("pair_category"))
 
     def _filter_slot_candidates(self, constraints):
         groups = constraints.get("category", [])
@@ -305,7 +345,7 @@ class ContentGenerator:
         if pattern_id == "SHOP_PAY" and rule == "question" and payment_method:
             question_chunks = ["Can I pay by", payment_method, "?"]
             question_target = f"Can I pay by {payment_method}?"
-            if variant.get("chunks_template", [None])[0] == "Can I pay with":
+            if any("with" in chunk for chunk in variant.get("chunks_template", [])):
                 question_chunks = ["Can I pay with", payment_method, "?"]
                 question_target = f"Can I pay with {payment_method}?"
             return {

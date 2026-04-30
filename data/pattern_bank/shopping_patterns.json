@@ -44,18 +44,13 @@
         "complexity": {"depth": 2}
       },
       "A2+": {
-        "example_template": "I want {object} because it is {adjective}.",
-        "chunks_template": ["I want", "{object}", "because it is", "{adjective}"],
-        "grammar_focus": ["present_simple", "because_so", "adjectives", "shopping_vocabulary"],
-        "slot_constraints": {
-          "object": {
-            "category": ["priceable_single", "priceable_plural"],
-            "priceable": true
-          },
-          "adjective": {
-            "category": ["adjectives"]
-          }
+        "example_template": "I want {object} because it is {reason}.",
+        "chunks_template": ["I want", "{object}", "because it is", "{reason}"],
+        "grammar_focus": ["present_simple", "because_so", "shopping_vocabulary"],
+        "paired_slot": {
+          "category": "positive_reason_pairs"
         },
+        "slot_constraints": {},
         "fsi_rules": ["negative", "question"],
         "complexity": {"depth": 2.5}
       }
@@ -118,7 +113,7 @@
             "priceable": true
           },
           "adjective": {
-            "category": ["adjectives"]
+            "category": ["positive_look_adjectives"]
           }
         },
         "fsi_rules": ["question"],
@@ -240,7 +235,7 @@
         "grammar_focus": ["present_simple", "question_structure", "adjectives", "shopping_vocabulary"],
         "slot_constraints": {
           "object": {
-            "category": ["priceable_single"],
+            "category": ["colorable_items_single"],
             "plural": false,
             "priceable": true
           }
@@ -301,7 +296,8 @@
         "grammar_focus": ["can_request", "shopping_actions", "time_expression", "shopping_vocabulary"],
         "slot_constraints": {
           "object": {
-            "category": ["wearable_items"],
+            "category": ["singular_wearable_items"],
+            "plural": false,
             "wearable": true,
             "priceable": true
           }
@@ -346,33 +342,21 @@
         "example_template": "I think {object} is too {adjective}.",
         "chunks_template": ["I think", "{object}", "is too", "{adjective}"],
         "grammar_focus": ["adjectives", "pronouns_one", "shopping_vocabulary"],
-        "slot_constraints": {
-          "object": {
-            "category": ["priceable_single"],
-            "plural": false,
-            "priceable": true
-          },
-          "adjective": {
-            "category": ["adjectives"]
-          }
+        "paired_slot": {
+          "category": "too_item_adjective_pairs"
         },
+        "slot_constraints": {},
         "fsi_rules": ["question_rebuild"],
         "complexity": {"depth": 2}
       },
       "A2+": {
-        "example_template": "{object} is too {adjective} for me.",
-        "chunks_template": ["{object}", "is too", "{adjective}", "for me"],
+        "example_template": "{subject} is too {adjective} for me.",
+        "chunks_template": ["{subject}", "is too", "{adjective}", "for me"],
         "grammar_focus": ["too_enough", "adjectives", "prepositions", "shopping_vocabulary"],
-        "slot_constraints": {
-          "object": {
-            "category": ["priceable_single"],
-            "plural": false,
-            "priceable": true
-          },
-          "adjective": {
-            "category": ["adjectives"]
-          }
+        "paired_slot": {
+          "category": "too_item_adjective_pairs"
         },
+        "slot_constraints": {},
         "fsi_rules": ["substitution"],
         "complexity": {"depth": 2.5}
       }
@@ -416,7 +400,7 @@
         "grammar_focus": ["future_plan", "shopping_vocabulary", "prepositions"],
         "slot_constraints": {
           "object": {
-            "category": ["priceable_single"],
+            "category": ["school_items_single"],
             "plural": false,
             "priceable": true
           }
@@ -534,15 +518,15 @@
         "complexity": {"depth": 1}
       },
       "A2": {
-        "example_template": "Can I pay by {payment_method} at the {location}?",
-        "chunks_template": ["Can I pay by", "{payment_method}", "at the", "{location}", "?"],
+        "example_template": "Can I pay with {payment_method} at the {location}?",
+        "chunks_template": ["Can I pay with", "{payment_method}", "at the", "{location}", "?"],
         "grammar_focus": ["can_request", "shopping_vocabulary", "prepositions"],
         "slot_constraints": {
           "payment_method": {
-            "category": ["payment_methods"]
+            "category": ["payment_methods_with"]
           },
           "location": {
-            "category": ["store_locations"]
+            "category": ["payment_locations"]
           }
         },
         "fsi_rules": ["question"],
@@ -559,7 +543,7 @@
             "priceable": true
           },
           "payment_method": {
-            "category": ["payment_methods"]
+            "category": ["payment_methods_with"]
           }
         },
         "fsi_rules": ["question"],
