@@ -9,10 +9,27 @@
 </head>
 <body>
     <div id="game-container">
+        <div id="login-view">
+            <div class="launcher-header">
+                <h1>English Mission Control</h1>
+                <p>Enter a username to start and save your progress.</p>
+            </div>
+            <div class="login-panel">
+                <label class="picker-label" for="username-input">Username</label>
+                <input id="username-input" type="text" maxlength="32" autocomplete="username" placeholder="Tom">
+                <button id="login-btn" type="button">Login</button>
+                <p id="login-error" class="error-text" hidden></p>
+            </div>
+        </div>
+
         <div id="launcher-view">
             <div class="launcher-header">
                 <h1>English Mission Control</h1>
                 <p>Choose your level and scenario to start the mission.</p>
+            </div>
+            <div id="user-session-bar" hidden>
+                <span id="user-session-text"></span>
+                <button id="logout-btn" type="button" class="btn-secondary">Switch User</button>
             </div>
 
             <div id="level-picker">

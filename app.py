@@ -8,11 +8,18 @@ from engines.fsi_policy import should_trigger_fsi
 from engines.learning_engine import LearningEngine
 from engines.quest_engine import QuestEngine
 from engines.sentence_engine import SentenceEngine
+from stores.attempts_store import AttemptsStore
+from stores.users_store import UsersStore
 
 
 BASE_DIR = Path(__file__).resolve().parent
-DEFAULT_BANK_PATH = BASE_DIR / "data" / "generated" / "shopping_sentence_bank.json"
+DEFAULT_BANK_PATHS = [
+    BASE_DIR / "data" / "generated" / "shopping_sentence_bank.json",
+    BASE_DIR / "data" / "generated" / "food_drink_sentence_bank.json",
+]
 DEFAULT_PROGRESS_PATH = BASE_DIR / "data" / "user_progress.json"
+DEFAULT_USERS_PATH = BASE_DIR / "data" / "users.json"
+DEFAULT_ATTEMPTS_PATH = BASE_DIR / "data" / "user_sentence_attempts.json"
 
 
 def load_sentence_bank(bank_path):
@@ -20,18 +27,38 @@ def load_sentence_bank(bank_path):
         return json.load(f)
 
 
-def create_app(sentence_bank=None, bank_path=None, progress_path=None, fsi_rng=None):
+def load_default_sentence_bank():
+    bank_data = []
+    for bank_path in DEFAULT_BANK_PATHS:
+        bank_data.extend(load_sentence_bank(bank_path))
+    return bank_data
+
+
+def create_app(
+    sentence_bank=None,
+    bank_path=None,
+    progress_path=None,
+    users_path=None,
+    attempts_path=None,
+    fsi_rng=None,
+):
     app = Flask(__name__)
 
-    bank_data = sentence_bank or load_sentence_bank(bank_path or DEFAULT_BANK_PATH)
+    bank_data = sentence_bank or (
+        load_sentence_bank(bank_path) if bank_path else load_default_sentence_bank()
+    )
     learning_engine = LearningEngine(str(progress_path or DEFAULT_PROGRESS_PATH))
     sentence_engine = SentenceEngine(bank_data)
     quest_engine = QuestEngine(bank_data, learning_engine, quest_size=10)
+    users_store = UsersStore(users_path or DEFAULT_USERS_PATH)
+    attempts_store = AttemptsStore(attempts_path or DEFAULT_ATTEMPTS_PATH, users_store=users_store)
 
     app.config["sentence_engine"] = sentence_engine
     app.config["learning_engine"] = learning_engine
     app.config["quest_engine"] = quest_engine
     app.config["fsi_rng"] = fsi_rng or random.random
+    app.config["users_store"] = users_store
+    app.config["attempts_store"] = attempts_store
 
     @app.route("/api/health", methods=["GET"])
     def health():
@@ -40,6 +67,34 @@ def create_app(sentence_bank=None, bank_path=None, progress_path=None, fsi_rng=N
     @app.route("/", methods=["GET"])
     def index():
         return render_template("index.html")
+
+    @app.route("/api/users/login", methods=["POST"])
+    def login_user():
+        data = request.get_json() or {}
+        username = data.get("username")
+
+        try:
+            user = app.config["users_store"].login(username)
+        except ValueError as exc:
+            return jsonify({"error": str(exc)}), 400
+
+        return jsonify(user)
+
+    @app.route("/api/users/<user_id>", methods=["GET"])
+    def get_user(user_id):
+        user = app.config["users_store"].get_user(user_id)
+        if not user:
+            return jsonify({"error": "User not found"}), 404
+        return jsonify(user)
+
+    @app.route("/api/users/<user_id>/attempts", methods=["GET"])
+    def get_user_attempts(user_id):
+        users_store = app.config["users_store"]
+        if not users_store.user_exists(user_id):
+            return jsonify({"error": "User not found"}), 404
+
+        attempts = app.config["attempts_store"].get_user_attempts(user_id)
+        return jsonify({"attempts": attempts})
 
     @app.route("/api/quest", methods=["GET"])
     def get_quest():
@@ -126,6 +181,25 @@ def create_app(sentence_bank=None, bank_path=None, progress_path=None, fsi_rng=N
                 }
 
         return jsonify(result)
+
+    @app.route("/api/attempts", methods=["POST"])
+    def create_attempt():
+        data = request.get_json() or {}
+
+        try:
+            attempt = app.config["attempts_store"].create_attempt(
+                user_id=data.get("user_id"),
+                sentence_id=data.get("sentence_id"),
+                level=data.get("level"),
+                pattern=data.get("pattern"),
+                user_answer=data.get("user_answer"),
+                correct_answer=data.get("correct_answer"),
+                is_correct=data.get("is_correct"),
+            )
+        except ValueError as exc:
+            return jsonify({"error": str(exc)}), 404
+
+        return jsonify({"success": True, "attempt": attempt})
 
     return app
 

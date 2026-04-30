@@ -67,6 +67,8 @@ class SentenceEngine:
             "shuffled_chunks": shuffled_chunks,
             "translation": data["translation"],
             "audio_hint_text": task_payload["target"],
+            "level": data.get("level"),
+            "pattern_id": data.get("pattern_id"),
         }
 
     def _get_task_payload(self, data, task_type):

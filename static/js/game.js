@@ -5,19 +5,31 @@ let currentQuestionId = null;
 let currentIndex = 0;
 let currentLevel = "A1";
 let currentScenario = null;
-let currentUserId = "student_001";
+let currentUserId = null;
+let currentUsername = "";
+let currentUserRole = "";
 let isSubmitting = false;
 let hintUsed = false;
 let questionResolved = false;
 let currentAudioHintText = "";
+let currentQuestionLevel = "";
+let currentQuestionPattern = "";
+let currentCorrectAnswer = "";
 let questItems = [];
 let sessionGrammar = new Set();
 let sessionMistakes = [];
 
 const MAX_HEARTS = 3;
 
+const loginView = document.getElementById("login-view");
+const usernameInput = document.getElementById("username-input");
+const loginButton = document.getElementById("login-btn");
+const loginError = document.getElementById("login-error");
 const launcherView = document.getElementById("launcher-view");
 const gamePlayArea = document.getElementById("game-play-area");
+const userSessionBar = document.getElementById("user-session-bar");
+const userSessionText = document.getElementById("user-session-text");
+const logoutButton = document.getElementById("logout-btn");
 const levelButtons = Array.from(document.querySelectorAll(".level-chip"));
 const scenarioButtons = Array.from(document.querySelectorAll(".scenario-card"));
 const dropZone = document.getElementById("drop-zone");
@@ -349,6 +361,51 @@ function showError(message) {
     feedback.className = "error-text";
 }
 
+function showLoginError(message) {
+    loginError.innerText = message;
+    loginError.hidden = !message;
+}
+
+function getStoredUser() {
+    const userId = localStorage.getItem("user_id");
+    const username = localStorage.getItem("username");
+    const role = localStorage.getItem("role");
+
+    if (!userId || !username) {
+        return null;
+    }
+
+    return { userId, username, role: role || "student" };
+}
+
+function applyUserSession(user) {
+    currentUserId = user.userId;
+    currentUsername = user.username;
+    currentUserRole = user.role || "student";
+    userSessionText.innerText = `${currentUsername} (${currentUserRole})`;
+    userSessionBar.hidden = false;
+    loginView.hidden = true;
+    launcherView.hidden = false;
+    showLoginError("");
+}
+
+function clearUserSession() {
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("username");
+    localStorage.removeItem("role");
+    currentUserId = null;
+    currentUsername = "";
+    currentUserRole = "";
+    gamePlayArea.hidden = true;
+    launcherView.hidden = true;
+    loginView.hidden = false;
+    userSessionBar.hidden = true;
+    usernameInput.value = "";
+    showLoginError("");
+    feedback.innerText = "";
+    speaker.reset();
+}
+
 function renderHint(item) {
     dropZone.classList.remove("review-mode");
 
@@ -496,6 +553,10 @@ async function startQuest(level, scenario, userId = currentUserId) {
 }
 
 async function initGame(level, scenario, userId = currentUserId) {
+    if (!userId) {
+        clearUserSession();
+        return;
+    }
     currentLevel = level;
     currentScenario = scenario;
     currentUserId = userId;
@@ -523,6 +584,9 @@ async function loadQuestion(item) {
         hintUsed = false;
         questionResolved = false;
         currentAudioHintText = data.audio_hint_text || "";
+        currentQuestionLevel = data.level || currentLevel;
+        currentQuestionPattern = data.pattern_id || "";
+        currentCorrectAnswer = data.audio_hint_text || "";
         if (item.source === "review") {
             scenarioDisplay.innerText = `Review Mode | ${item.task_type}`;
         } else {
@@ -629,6 +693,10 @@ async function submitAnswer() {
     isSubmitting = true;
     submitButton.disabled = true;
     const userChunkIds = Array.from(dropZone.children).map((child) => child.dataset.id);
+    const userAnswer = Array.from(dropZone.children)
+        .map((child) => child.innerText.trim())
+        .filter(Boolean)
+        .join(" ");
     let result = null;
 
     try {
@@ -642,6 +710,23 @@ async function submitAnswer() {
                 hint_used: hintUsed,
             }),
         });
+        try {
+            await fetchJson("/api/attempts", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    user_id: currentUserId,
+                    sentence_id: questItems[currentIndex]?.sentence_id,
+                    level: currentQuestionLevel || currentLevel,
+                    pattern: currentQuestionPattern,
+                    user_answer: userAnswer,
+                    correct_answer: currentCorrectAnswer,
+                    is_correct: result.is_correct,
+                }),
+            });
+        } catch (attemptError) {
+            console.warn("Failed to save attempt", attemptError);
+        }
         await showFeedback(result);
     } catch (error) {
         showError(error.payload?.mistake_type || error.payload?.error || error.message);
@@ -653,6 +738,42 @@ async function submitAnswer() {
 }
 
 submitButton.addEventListener("click", submitAnswer);
+
+loginButton.addEventListener("click", async () => {
+    const username = usernameInput.value.trim();
+    if (!username) {
+        showLoginError("Username is required.");
+        return;
+    }
+
+    loginButton.disabled = true;
+    try {
+        const user = await fetchJson("/api/users/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username }),
+        });
+
+        localStorage.setItem("user_id", user.id);
+        localStorage.setItem("username", user.username);
+        localStorage.setItem("role", user.role);
+        applyUserSession({
+            userId: user.id,
+            username: user.username,
+            role: user.role,
+        });
+    } catch (error) {
+        showLoginError(error.payload?.error || error.message);
+    } finally {
+        loginButton.disabled = false;
+    }
+});
+
+usernameInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        loginButton.click();
+    }
+});
 
 replayVoiceButton.addEventListener("click", () => {
     if (questionResolved) {
@@ -689,6 +810,10 @@ quitButton.addEventListener("click", () => {
     launcherView.hidden = false;
     feedback.innerText = "";
     setSelectedLevel(currentLevel);
+});
+
+logoutButton.addEventListener("click", () => {
+    clearUserSession();
 });
 
 reviewButton.addEventListener("click", async () => {
@@ -748,6 +873,15 @@ if (searchParams.get("demo") === "true") {
     const demoUserId = searchParams.get("user_id") || "demo_user";
     setSelectedLevel(demoLevel);
     initGame(demoLevel, demoScenario, demoUserId);
+} else {
+    launcherView.hidden = true;
+    gamePlayArea.hidden = true;
+    const storedUser = getStoredUser();
+    if (storedUser) {
+        applyUserSession(storedUser);
+    } else {
+        clearUserSession();
+    }
 }
 
 window.initGame = initGame;

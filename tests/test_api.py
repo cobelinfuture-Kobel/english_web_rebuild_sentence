@@ -19,6 +19,8 @@ def create_test_client(tmp_path):
     app = create_app(
         sentence_bank=load_bank_data(),
         progress_path=str(tmp_path / "user_progress.json"),
+        users_path=str(tmp_path / "users.json"),
+        attempts_path=str(tmp_path / "user_sentence_attempts.json"),
         fsi_rng=lambda: 0.0,
     )
     app.config["TESTING"] = True
@@ -28,10 +30,17 @@ def create_test_client(tmp_path):
 def create_default_bank_test_client(tmp_path):
     app = create_app(
         progress_path=str(tmp_path / "user_progress.json"),
+        users_path=str(tmp_path / "users.json"),
+        attempts_path=str(tmp_path / "user_sentence_attempts.json"),
         fsi_rng=lambda: 0.0,
     )
     app.config["TESTING"] = True
     return app.test_client()
+
+
+def read_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def test_health_endpoint_returns_healthy(tmp_path):
@@ -41,6 +50,169 @@ def test_health_endpoint_returns_healthy(tmp_path):
 
     assert response.status_code == 200
     assert response.get_json() == {"status": "healthy", "engines": "ready"}
+
+
+def test_user_login_creates_user_and_json_file(tmp_path):
+    client = create_test_client(tmp_path)
+    users_path = tmp_path / "users.json"
+
+    response = client.post("/api/users/login", json={"username": "Tom"})
+
+    assert response.status_code == 200
+    body = response.get_json()
+    assert body["id"] == "user_001"
+    assert body["username"] == "Tom"
+    assert body["role"] == "student"
+    assert body["last_login"]
+    assert users_path.exists()
+    assert read_json(users_path) == [
+        {
+            "id": "user_001",
+            "username": "Tom",
+            "last_login": body["last_login"],
+            "role": "student",
+            "created_at": body["created_at"],
+        }
+    ]
+
+
+def test_user_login_updates_last_login_for_existing_username(tmp_path):
+    client = create_test_client(tmp_path)
+
+    first_response = client.post("/api/users/login", json={"username": "Tom"})
+    first_body = first_response.get_json()
+
+    second_response = client.post("/api/users/login", json={"username": "Tom"})
+
+    assert second_response.status_code == 200
+    second_body = second_response.get_json()
+    assert second_body["id"] == first_body["id"]
+    assert second_body["username"] == "Tom"
+    assert second_body["role"] == "student"
+    assert second_body["created_at"] == first_body["created_at"]
+    assert second_body["last_login"] >= first_body["last_login"]
+    assert len(read_json(tmp_path / "users.json")) == 1
+
+
+def test_get_user_returns_existing_user(tmp_path):
+    client = create_test_client(tmp_path)
+    created_user = client.post("/api/users/login", json={"username": "Tom"}).get_json()
+
+    response = client.get(f"/api/users/{created_user['id']}")
+
+    assert response.status_code == 200
+    assert response.get_json() == created_user
+
+
+def test_get_user_returns_404_for_missing_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/api/users/user_999")
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
+
+
+def test_create_attempt_persists_attempt_for_existing_user(tmp_path):
+    client = create_test_client(tmp_path)
+    user = client.post("/api/users/login", json={"username": "Tom"}).get_json()
+    attempts_path = tmp_path / "user_sentence_attempts.json"
+
+    response = client.post(
+        "/api/attempts",
+        json={
+            "user_id": user["id"],
+            "sentence_id": "SHOP_PAY_A1_001",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "user_answer": "Can I pay with cash?",
+            "correct_answer": "Can I pay with cash?",
+            "is_correct": True,
+        },
+    )
+
+    assert response.status_code == 200
+    assert response.get_json()["success"] is True
+    assert attempts_path.exists()
+    attempts = read_json(attempts_path)
+    assert attempts == [
+        {
+            "id": "attempt_001",
+            "user_id": user["id"],
+            "sentence_id": "SHOP_PAY_A1_001",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "user_answer": "Can I pay with cash?",
+            "correct_answer": "Can I pay with cash?",
+            "is_correct": True,
+            "created_at": attempts[0]["created_at"],
+        }
+    ]
+
+
+def test_create_attempt_rejects_unknown_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.post(
+        "/api/attempts",
+        json={
+            "user_id": "user_999",
+            "sentence_id": "SHOP_PAY_A1_001",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "user_answer": "Can I pay with cash?",
+            "correct_answer": "Can I pay with cash?",
+            "is_correct": True,
+        },
+    )
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
+
+
+def test_get_user_attempts_returns_descending_created_at(tmp_path):
+    client = create_test_client(tmp_path)
+    user = client.post("/api/users/login", json={"username": "Tom"}).get_json()
+
+    first_attempt = client.post(
+        "/api/attempts",
+        json={
+            "user_id": user["id"],
+            "sentence_id": "SHOP_PAY_A1_001",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "user_answer": "Can I pay with cash?",
+            "correct_answer": "Can I pay with cash?",
+            "is_correct": True,
+        },
+    ).get_json()["attempt"]
+
+    second_attempt = client.post(
+        "/api/attempts",
+        json={
+            "user_id": user["id"],
+            "sentence_id": "SHOP_PAY_A1_002",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "user_answer": "Can I use a card?",
+            "correct_answer": "Can I use a card?",
+            "is_correct": False,
+        },
+    ).get_json()["attempt"]
+
+    response = client.get(f"/api/users/{user['id']}/attempts")
+
+    assert response.status_code == 200
+    assert response.get_json() == {"attempts": [second_attempt, first_attempt]}
+
+
+def test_get_user_attempts_returns_404_for_missing_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/api/users/user_999/attempts")
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
 
 
 def test_index_page_renders_game_shell(tmp_path):
@@ -96,6 +268,19 @@ def test_index_page_renders_scenario_picker(tmp_path):
     assert "Food & Drink" in html
     assert "Shopping" in html
     assert "Travel & Holiday" in html
+
+
+def test_index_page_renders_username_login_view(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="login-view"' in html
+    assert 'id="username-input"' in html
+    assert 'id="login-btn"' in html
+    assert 'id="login-error"' in html
 
 
 def test_index_page_renders_demo_ready_shell(tmp_path):
@@ -207,6 +392,25 @@ def test_create_app_defaults_to_generated_shopping_bank(tmp_path):
     assert items
     assert len(items) == 10
     assert all("_SHOPPING_" in item["sentence_id"] for item in items)
+
+
+def test_create_app_defaults_to_generated_food_drink_bank(tmp_path):
+    client = create_default_bank_test_client(tmp_path)
+
+    response = client.get(
+        "/api/quest",
+        query_string={
+            "user_id": "student_001",
+            "level": "A1",
+            "scenario": "food_drink",
+        },
+    )
+
+    assert response.status_code == 200
+    items = response.get_json()["quest_items"]
+    assert items
+    assert len(items) == 10
+    assert all("_FOOD_" in item["sentence_id"] for item in items)
 
 
 def test_question_endpoint_returns_question_payload(tmp_path):

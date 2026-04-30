@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .env
 data/user_progress.json
+data/users.json
+data/user_sentence_attempts.json
