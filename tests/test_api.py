@@ -569,6 +569,450 @@ def test_get_user_weak_patterns_uses_defaults_for_invalid_query_strings(tmp_path
     }
 
 
+def test_get_user_wrong_attempts_returns_404_for_missing_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/api/users/user_999/wrong-attempts")
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
+
+
+def test_get_user_wrong_attempts_returns_empty_list_without_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    response = client.get(f"/api/users/{user['id']}/wrong-attempts")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 0,
+        "wrong_attempts": [],
+    }
+
+
+def test_get_user_wrong_attempts_only_returns_incorrect_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "SHOP_PAY_A1_001", "A1", "SHOP_PAY", True)
+    wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_002",
+        "A1",
+        "SHOP_TOO",
+        False,
+        user_answer="This bag is too big",
+        correct_answer="This bag is too big.",
+    ).get_json()["attempt"]
+
+    response = client.get(f"/api/users/{user['id']}/wrong-attempts")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 1,
+        "wrong_attempts": [
+            {
+                "id": wrong_attempt["id"],
+                "sentence_id": "SHOP_TOO_A1_002",
+                "level": "A1",
+                "pattern": "SHOP_TOO",
+                "user_answer": "This bag is too big",
+                "correct_answer": "This bag is too big.",
+                "created_at": wrong_attempt["created_at"],
+            }
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_does_not_include_other_users_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client, "Tom")
+    other_user = create_user(client, "Jane")
+
+    own_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_001",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+    create_attempt(client, other_user["id"], "SHOP_PAY_A2_001", "A2", "SHOP_PAY", False)
+
+    response = client.get(f"/api/users/{user['id']}/wrong-attempts")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 1,
+        "wrong_attempts": [
+            {
+                "id": own_wrong_attempt["id"],
+                "sentence_id": own_wrong_attempt["sentence_id"],
+                "level": own_wrong_attempt["level"],
+                "pattern": own_wrong_attempt["pattern"],
+                "user_answer": own_wrong_attempt["user_answer"],
+                "correct_answer": own_wrong_attempt["correct_answer"],
+                "created_at": own_wrong_attempt["created_at"],
+            }
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_returns_descending_created_at(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    first_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_001",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+    second_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_PAY_A2_001",
+        "A2",
+        "SHOP_PAY",
+        False,
+    ).get_json()["attempt"]
+
+    response = client.get(f"/api/users/{user['id']}/wrong-attempts")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 2,
+        "wrong_attempts": [
+            {
+                "id": second_wrong_attempt["id"],
+                "sentence_id": second_wrong_attempt["sentence_id"],
+                "level": second_wrong_attempt["level"],
+                "pattern": second_wrong_attempt["pattern"],
+                "user_answer": second_wrong_attempt["user_answer"],
+                "correct_answer": second_wrong_attempt["correct_answer"],
+                "created_at": second_wrong_attempt["created_at"],
+            },
+            {
+                "id": first_wrong_attempt["id"],
+                "sentence_id": first_wrong_attempt["sentence_id"],
+                "level": first_wrong_attempt["level"],
+                "pattern": first_wrong_attempt["pattern"],
+                "user_answer": first_wrong_attempt["user_answer"],
+                "correct_answer": first_wrong_attempt["correct_answer"],
+                "created_at": first_wrong_attempt["created_at"],
+            },
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_supports_level_filter(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "SHOP_TOO_A1_001", "A1", "SHOP_TOO", False)
+    a2_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_PAY_A2_001",
+        "A2",
+        "SHOP_PAY",
+        False,
+    ).get_json()["attempt"]
+
+    response = client.get(
+        f"/api/users/{user['id']}/wrong-attempts",
+        query_string={"level": "A2"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 1,
+        "wrong_attempts": [
+            {
+                "id": a2_wrong_attempt["id"],
+                "sentence_id": a2_wrong_attempt["sentence_id"],
+                "level": "A2",
+                "pattern": "SHOP_PAY",
+                "user_answer": a2_wrong_attempt["user_answer"],
+                "correct_answer": a2_wrong_attempt["correct_answer"],
+                "created_at": a2_wrong_attempt["created_at"],
+            }
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_supports_pattern_filter(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "SHOP_PAY_A1_001", "A1", "SHOP_PAY", False)
+    pattern_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_002",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+
+    response = client.get(
+        f"/api/users/{user['id']}/wrong-attempts",
+        query_string={"pattern": "SHOP_TOO"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 1,
+        "wrong_attempts": [
+            {
+                "id": pattern_wrong_attempt["id"],
+                "sentence_id": pattern_wrong_attempt["sentence_id"],
+                "level": pattern_wrong_attempt["level"],
+                "pattern": "SHOP_TOO",
+                "user_answer": pattern_wrong_attempt["user_answer"],
+                "correct_answer": pattern_wrong_attempt["correct_answer"],
+                "created_at": pattern_wrong_attempt["created_at"],
+            }
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_supports_level_and_pattern_filters_together(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "SHOP_TOO_A1_001", "A1", "SHOP_TOO", False)
+    create_attempt(client, user["id"], "SHOP_PAY_A2_001", "A2", "SHOP_PAY", False)
+    filtered_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A2_002",
+        "A2",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+
+    response = client.get(
+        f"/api/users/{user['id']}/wrong-attempts",
+        query_string={"level": "A2", "pattern": "SHOP_TOO"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 1,
+        "wrong_attempts": [
+            {
+                "id": filtered_wrong_attempt["id"],
+                "sentence_id": filtered_wrong_attempt["sentence_id"],
+                "level": "A2",
+                "pattern": "SHOP_TOO",
+                "user_answer": filtered_wrong_attempt["user_answer"],
+                "correct_answer": filtered_wrong_attempt["correct_answer"],
+                "created_at": filtered_wrong_attempt["created_at"],
+            }
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_supports_valid_limit(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    first_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_001",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+    second_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_PAY_A1_002",
+        "A1",
+        "SHOP_PAY",
+        False,
+    ).get_json()["attempt"]
+    third_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_WANT_A2_001",
+        "A2",
+        "SHOP_WANT",
+        False,
+    ).get_json()["attempt"]
+
+    response = client.get(
+        f"/api/users/{user['id']}/wrong-attempts",
+        query_string={"limit": "2"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 3,
+        "wrong_attempts": [
+            {
+                "id": third_wrong_attempt["id"],
+                "sentence_id": third_wrong_attempt["sentence_id"],
+                "level": third_wrong_attempt["level"],
+                "pattern": third_wrong_attempt["pattern"],
+                "user_answer": third_wrong_attempt["user_answer"],
+                "correct_answer": third_wrong_attempt["correct_answer"],
+                "created_at": third_wrong_attempt["created_at"],
+            },
+            {
+                "id": second_wrong_attempt["id"],
+                "sentence_id": second_wrong_attempt["sentence_id"],
+                "level": second_wrong_attempt["level"],
+                "pattern": second_wrong_attempt["pattern"],
+                "user_answer": second_wrong_attempt["user_answer"],
+                "correct_answer": second_wrong_attempt["correct_answer"],
+                "created_at": second_wrong_attempt["created_at"],
+            },
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_ignores_invalid_limit_without_crashing(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    first_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_001",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+    second_wrong_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_PAY_A1_002",
+        "A1",
+        "SHOP_PAY",
+        False,
+    ).get_json()["attempt"]
+
+    response = client.get(
+        f"/api/users/{user['id']}/wrong-attempts",
+        query_string={"limit": "oops"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 2,
+        "wrong_attempts": [
+            {
+                "id": second_wrong_attempt["id"],
+                "sentence_id": second_wrong_attempt["sentence_id"],
+                "level": second_wrong_attempt["level"],
+                "pattern": second_wrong_attempt["pattern"],
+                "user_answer": second_wrong_attempt["user_answer"],
+                "correct_answer": second_wrong_attempt["correct_answer"],
+                "created_at": second_wrong_attempt["created_at"],
+            },
+            {
+                "id": first_wrong_attempt["id"],
+                "sentence_id": first_wrong_attempt["sentence_id"],
+                "level": first_wrong_attempt["level"],
+                "pattern": first_wrong_attempt["pattern"],
+                "user_answer": first_wrong_attempt["user_answer"],
+                "correct_answer": first_wrong_attempt["correct_answer"],
+                "created_at": first_wrong_attempt["created_at"],
+            },
+        ],
+    }
+
+
+def test_get_user_wrong_attempts_total_is_count_after_filters_before_limit(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    first_filtered_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_001",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+    second_filtered_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_002",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+    third_filtered_attempt = create_attempt(
+        client,
+        user["id"],
+        "SHOP_TOO_A1_003",
+        "A1",
+        "SHOP_TOO",
+        False,
+    ).get_json()["attempt"]
+    create_attempt(client, user["id"], "SHOP_PAY_A2_001", "A2", "SHOP_PAY", False)
+
+    response = client.get(
+        f"/api/users/{user['id']}/wrong-attempts",
+        query_string={"pattern": "SHOP_TOO", "limit": "2"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_wrong_attempts": 3,
+        "wrong_attempts": [
+            {
+                "id": third_filtered_attempt["id"],
+                "sentence_id": third_filtered_attempt["sentence_id"],
+                "level": third_filtered_attempt["level"],
+                "pattern": third_filtered_attempt["pattern"],
+                "user_answer": third_filtered_attempt["user_answer"],
+                "correct_answer": third_filtered_attempt["correct_answer"],
+                "created_at": third_filtered_attempt["created_at"],
+            },
+            {
+                "id": second_filtered_attempt["id"],
+                "sentence_id": second_filtered_attempt["sentence_id"],
+                "level": second_filtered_attempt["level"],
+                "pattern": second_filtered_attempt["pattern"],
+                "user_answer": second_filtered_attempt["user_answer"],
+                "correct_answer": second_filtered_attempt["correct_answer"],
+                "created_at": second_filtered_attempt["created_at"],
+            },
+        ],
+    }
+
+    returned_attempt = response.get_json()["wrong_attempts"][0]
+    assert set(returned_attempt.keys()) == {
+        "id",
+        "sentence_id",
+        "level",
+        "pattern",
+        "user_answer",
+        "correct_answer",
+        "created_at",
+    }
+    assert "is_correct" not in returned_attempt
+
+
 def test_index_page_renders_game_shell(tmp_path):
     client = create_test_client(tmp_path)
 

@@ -142,6 +142,23 @@ def create_app(
         )
         return jsonify(weak_patterns)
 
+    @app.route("/api/users/<user_id>/wrong-attempts", methods=["GET"])
+    def get_user_wrong_attempts(user_id):
+        users_store = app.config["users_store"]
+        if not users_store.user_exists(user_id):
+            return jsonify({"error": "User not found"}), 404
+
+        level = request.args.get("level")
+        pattern = request.args.get("pattern")
+        limit = parse_int_arg(request.args.get("limit"), default=None, minimum=1)
+        wrong_attempts = app.config["attempts_store"].get_user_wrong_attempts(
+            user_id,
+            level=level,
+            pattern=pattern,
+            limit=limit,
+        )
+        return jsonify(wrong_attempts)
+
     @app.route("/api/quest", methods=["GET"])
     def get_quest():
         user_id = request.args.get("user_id", "default_user")

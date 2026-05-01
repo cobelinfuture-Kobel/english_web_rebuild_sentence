@@ -73,6 +73,32 @@ class AttemptsStore:
             "weak_patterns": weak_patterns,
         }
 
+    def get_user_wrong_attempts(self, user_id, level=None, pattern=None, limit=None):
+        attempts = self.get_user_attempts(user_id)
+        wrong_attempts = [attempt for attempt in attempts if not attempt.get("is_correct")]
+
+        if level is not None:
+            wrong_attempts = [
+                attempt for attempt in wrong_attempts if attempt.get("level") == level
+            ]
+
+        if pattern is not None:
+            wrong_attempts = [
+                attempt for attempt in wrong_attempts if attempt.get("pattern") == pattern
+            ]
+
+        total_wrong_attempts = len(wrong_attempts)
+        if limit is not None:
+            wrong_attempts = wrong_attempts[:limit]
+
+        return {
+            "user_id": user_id,
+            "total_wrong_attempts": total_wrong_attempts,
+            "wrong_attempts": [
+                self._serialize_wrong_attempt(attempt) for attempt in wrong_attempts
+            ],
+        }
+
     def _ensure_file(self):
         self.path.parent.mkdir(parents=True, exist_ok=True)
         if not self.path.exists():
@@ -111,6 +137,17 @@ class AttemptsStore:
         return {
             group_key: self._build_stats(group_attempts)
             for group_key, group_attempts in grouped.items()
+        }
+
+    def _serialize_wrong_attempt(self, attempt):
+        return {
+            "id": attempt.get("id"),
+            "sentence_id": attempt.get("sentence_id"),
+            "level": attempt.get("level"),
+            "pattern": attempt.get("pattern"),
+            "user_answer": attempt.get("user_answer"),
+            "correct_answer": attempt.get("correct_answer"),
+            "created_at": attempt.get("created_at"),
         }
 
     def _next_id(self, attempts):
