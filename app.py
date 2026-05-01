@@ -10,6 +10,7 @@ from engines.quest_engine import QuestEngine
 from engines.sentence_engine import SentenceEngine
 from stores.attempts_store import AttemptsStore
 from stores.coverage_store import CoverageStore
+from stores.recommendation_store import RecommendationStore
 from stores.users_store import UsersStore
 
 
@@ -76,6 +77,7 @@ def create_app(
     users_store = UsersStore(users_path or DEFAULT_USERS_PATH)
     attempts_store = AttemptsStore(attempts_path or DEFAULT_ATTEMPTS_PATH, users_store=users_store)
     coverage_store = CoverageStore(bank_data, attempts_store)
+    recommendation_store = RecommendationStore(bank_data, attempts_store)
 
     app.config["sentence_engine"] = sentence_engine
     app.config["learning_engine"] = learning_engine
@@ -84,6 +86,7 @@ def create_app(
     app.config["users_store"] = users_store
     app.config["attempts_store"] = attempts_store
     app.config["coverage_store"] = coverage_store
+    app.config["recommendation_store"] = recommendation_store
 
     @app.route("/api/health", methods=["GET"])
     def health():
@@ -170,6 +173,23 @@ def create_app(
 
         coverage = app.config["coverage_store"].get_user_coverage(user_id)
         return jsonify(coverage)
+
+    @app.route("/api/users/<user_id>/next-practice", methods=["GET"])
+    def get_user_next_practice(user_id):
+        users_store = app.config["users_store"]
+        if not users_store.user_exists(user_id):
+            return jsonify({"error": "User not found"}), 404
+
+        limit = parse_int_arg(request.args.get("limit"), default=10, minimum=1)
+        level = request.args.get("level")
+        pattern = request.args.get("pattern")
+        recommendation = app.config["recommendation_store"].get_next_practice(
+            user_id,
+            limit=limit,
+            level=level,
+            pattern=pattern,
+        )
+        return jsonify(recommendation)
 
     @app.route("/api/quest", methods=["GET"])
     def get_quest():

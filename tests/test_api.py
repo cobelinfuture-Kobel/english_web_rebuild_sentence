@@ -102,6 +102,10 @@ def create_attempt(
     )
 
 
+def get_next_practice(client, user_id, query_string=None):
+    return client.get(f"/api/users/{user_id}/next-practice", query_string=query_string)
+
+
 def test_health_endpoint_returns_healthy(tmp_path):
     client = create_test_client(tmp_path)
 
@@ -1234,6 +1238,587 @@ def test_get_user_coverage_returns_partial_rate_for_partially_attempted_bank(tmp
     assert response.get_json()["attempted_sentences"] == 2
     assert response.get_json()["not_attempted_sentences"] == 2
     assert response.get_json()["coverage_rate"] == 0.5
+
+
+def test_get_user_next_practice_returns_404_for_missing_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/api/users/user_999/next-practice")
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
+
+
+def test_get_user_next_practice_returns_none_when_sentence_bank_is_empty(tmp_path):
+    client = create_custom_bank_test_client(tmp_path, [])
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "none",
+        "is_exhausted": True,
+        "limit": 10,
+        "filters": {"level": None, "pattern": None},
+        "recommendations": [],
+    }
+
+
+def test_get_user_next_practice_returns_not_attempted_when_user_has_no_attempts(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A2_TOO_001", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "not_attempted",
+        "is_exhausted": False,
+        "limit": 10,
+        "filters": {"level": None, "pattern": None},
+        "recommendations": [
+            {
+                "sentence_id": "A1_PAY_001",
+                "level": "A1",
+                "pattern": "SHOP_PAY",
+                "reason": "not_attempted",
+            },
+            {
+                "sentence_id": "A2_TOO_001",
+                "level": "A2",
+                "pattern": "SHOP_TOO",
+                "reason": "not_attempted",
+            },
+        ],
+    }
+
+
+def test_get_user_next_practice_prefers_unattempted_sentences_in_weak_patterns(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_003", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_004", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_005", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_006", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_TOO_001", "level": "A1", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_002", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_003", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_004", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_005", "A1", "SHOP_PAY", True)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "weak_pattern_not_attempted",
+        "is_exhausted": False,
+        "limit": 10,
+        "filters": {"level": None, "pattern": None},
+        "recommendations": [
+            {
+                "sentence_id": "A1_PAY_006",
+                "level": "A1",
+                "pattern": "SHOP_PAY",
+                "reason": "weak_pattern_not_attempted",
+            }
+        ],
+    }
+
+
+def test_get_user_next_practice_sorts_multiple_weak_patterns_by_accuracy_wrong_attempts_and_pattern(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_BAG_001", "level": "A1", "pattern": "SHOP_BAG"},
+        {"sentence_id": "A1_BAG_002", "level": "A1", "pattern": "SHOP_BAG"},
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_TOO_001", "level": "A1", "pattern": "SHOP_TOO"},
+        {"sentence_id": "A1_TOO_002", "level": "A1", "pattern": "SHOP_TOO"},
+        {"sentence_id": "A1_TOO_003", "level": "A1", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    for sentence_id, is_correct in [
+        ("A1_TOO_001", False),
+        ("A1_TOO_001", False),
+        ("A1_TOO_001", False),
+        ("A1_TOO_002", False),
+        ("A1_TOO_002", True),
+    ]:
+        create_attempt(client, user["id"], sentence_id, "A1", "SHOP_TOO", is_correct)
+
+    for sentence_id, is_correct in [
+        ("A1_BAG_001", False),
+        ("A1_BAG_001", False),
+        ("A1_BAG_001", True),
+        ("A1_BAG_002", True),
+        ("A1_BAG_002", True),
+    ]:
+        create_attempt(client, user["id"], sentence_id, "A1", "SHOP_BAG", is_correct)
+
+    for sentence_id, is_correct in [
+        ("A1_PAY_001", False),
+        ("A1_PAY_001", False),
+        ("A1_PAY_001", True),
+        ("A1_PAY_002", True),
+        ("A1_PAY_002", True),
+    ]:
+        create_attempt(client, user["id"], sentence_id, "A1", "SHOP_PAY", is_correct)
+
+    response = get_next_practice(client, user["id"], {"limit": "4"})
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "weak_pattern_not_attempted",
+        "is_exhausted": False,
+        "limit": 4,
+        "filters": {"level": None, "pattern": None},
+        "recommendations": [
+            {
+                "sentence_id": "A1_TOO_003",
+                "level": "A1",
+                "pattern": "SHOP_TOO",
+                "reason": "weak_pattern_not_attempted",
+            }
+        ],
+    }
+
+
+def test_get_user_next_practice_does_not_fill_weak_pattern_results_with_general_unattempted(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_003", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_004", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_005", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_006", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_TOO_001", "level": "A1", "pattern": "SHOP_TOO"},
+        {"sentence_id": "A1_TOO_002", "level": "A1", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    for sentence_id, is_correct in [
+        ("A1_PAY_001", False),
+        ("A1_PAY_002", False),
+        ("A1_PAY_003", False),
+        ("A1_PAY_004", False),
+        ("A1_PAY_005", True),
+    ]:
+        create_attempt(client, user["id"], sentence_id, "A1", "SHOP_PAY", is_correct)
+
+    response = get_next_practice(client, user["id"], {"limit": "3"})
+
+    assert response.status_code == 200
+    assert response.get_json()["strategy"] == "weak_pattern_not_attempted"
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A1_PAY_006",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "reason": "weak_pattern_not_attempted",
+        }
+    ]
+
+
+def test_get_user_next_practice_falls_back_to_general_unattempted_when_weak_pattern_sentences_are_all_attempted(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_003", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_004", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_005", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_TOO_001", "level": "A1", "pattern": "SHOP_TOO"},
+        {"sentence_id": "A2_TOO_001", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    for sentence_id, is_correct in [
+        ("A1_PAY_001", False),
+        ("A1_PAY_002", False),
+        ("A1_PAY_003", False),
+        ("A1_PAY_004", False),
+        ("A1_PAY_005", True),
+    ]:
+        create_attempt(client, user["id"], sentence_id, "A1", "SHOP_PAY", is_correct)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json()["strategy"] == "not_attempted"
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A1_TOO_001",
+            "level": "A1",
+            "pattern": "SHOP_TOO",
+            "reason": "not_attempted",
+        },
+        {
+            "sentence_id": "A2_TOO_001",
+            "level": "A2",
+            "pattern": "SHOP_TOO",
+            "reason": "not_attempted",
+        },
+    ]
+
+
+def test_get_user_next_practice_falls_back_to_recent_wrong_attempts_when_all_sentences_attempted(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_TOO_001", "level": "A1", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False)
+    latest_wrong = create_attempt(client, user["id"], "A1_TOO_001", "A1", "SHOP_TOO", False).get_json()[
+        "attempt"
+    ]
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "recent_wrong_attempt",
+        "is_exhausted": False,
+        "limit": 10,
+        "filters": {"level": None, "pattern": None},
+        "recommendations": [
+            {
+                "sentence_id": "A1_TOO_001",
+                "level": "A1",
+                "pattern": "SHOP_TOO",
+                "reason": "recent_wrong_attempt",
+            },
+            {
+                "sentence_id": "A1_PAY_001",
+                "level": "A1",
+                "pattern": "SHOP_PAY",
+                "reason": "recent_wrong_attempt",
+            },
+        ],
+    }
+    assert latest_wrong["sentence_id"] == "A1_TOO_001"
+
+
+def test_get_user_next_practice_returns_none_when_all_sentences_attempted_and_no_wrong_attempts(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", True)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "none",
+        "is_exhausted": True,
+        "limit": 10,
+        "filters": {"level": None, "pattern": None},
+        "recommendations": [],
+    }
+
+
+def test_get_user_next_practice_respects_valid_limit(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_A_001", "level": "A1", "pattern": "SHOP_A"},
+        {"sentence_id": "A1_B_001", "level": "A1", "pattern": "SHOP_B"},
+        {"sentence_id": "A2_A_001", "level": "A2", "pattern": "SHOP_A"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"], {"limit": "2"})
+
+    assert response.status_code == 200
+    assert response.get_json()["limit"] == 2
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A1_A_001",
+            "level": "A1",
+            "pattern": "SHOP_A",
+            "reason": "not_attempted",
+        },
+        {
+            "sentence_id": "A1_B_001",
+            "level": "A1",
+            "pattern": "SHOP_B",
+            "reason": "not_attempted",
+        },
+    ]
+
+
+def test_get_user_next_practice_uses_default_limit_when_limit_is_invalid(tmp_path):
+    sentence_bank = [{"sentence_id": f"A1_PAY_{index:03d}", "level": "A1", "pattern": "SHOP_PAY"} for index in range(1, 13)]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"], {"limit": "oops"})
+
+    assert response.status_code == 200
+    assert response.get_json()["limit"] == 10
+    assert len(response.get_json()["recommendations"]) == 10
+
+
+def test_get_user_next_practice_applies_level_filter(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A2_TOO_001", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"], {"level": "A2"})
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "not_attempted",
+        "is_exhausted": False,
+        "limit": 10,
+        "filters": {"level": "A2", "pattern": None},
+        "recommendations": [
+            {
+                "sentence_id": "A2_TOO_001",
+                "level": "A2",
+                "pattern": "SHOP_TOO",
+                "reason": "not_attempted",
+            }
+        ],
+    }
+
+
+def test_get_user_next_practice_applies_pattern_filter(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A2_TOO_001", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"], {"pattern": "SHOP_TOO"})
+
+    assert response.status_code == 200
+    assert response.get_json()["filters"] == {"level": None, "pattern": "SHOP_TOO"}
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A2_TOO_001",
+            "level": "A2",
+            "pattern": "SHOP_TOO",
+            "reason": "not_attempted",
+        }
+    ]
+
+
+def test_get_user_next_practice_applies_level_and_pattern_filters_together(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A2_PAY_001", "level": "A2", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A2_TOO_001", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"], {"level": "A2", "pattern": "SHOP_PAY"})
+
+    assert response.status_code == 200
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A2_PAY_001",
+            "level": "A2",
+            "pattern": "SHOP_PAY",
+            "reason": "not_attempted",
+        }
+    ]
+
+
+def test_get_user_next_practice_filters_take_priority_over_recommendation_logic(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_003", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_004", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_005", "level": "A1", "pattern": "SHOP_PAY"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_002", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_003", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_004", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "A1_PAY_005", "A1", "SHOP_PAY", True)
+
+    response = get_next_practice(client, user["id"], {"level": "A2"})
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "strategy": "none",
+        "is_exhausted": True,
+        "limit": 10,
+        "filters": {"level": "A2", "pattern": None},
+        "recommendations": [],
+    }
+
+
+def test_get_user_next_practice_ignores_other_users_attempts(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client, "Tom")
+    other_user = create_user(client, "Jane")
+
+    create_attempt(client, other_user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False)
+    create_attempt(client, other_user["id"], "A1_PAY_002", "A1", "SHOP_PAY", False)
+    create_attempt(client, other_user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False)
+    create_attempt(client, other_user["id"], "A1_PAY_002", "A1", "SHOP_PAY", False)
+    create_attempt(client, other_user["id"], "A1_PAY_001", "A1", "SHOP_PAY", True)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json()["strategy"] == "not_attempted"
+    assert len(response.get_json()["recommendations"]) == 2
+
+
+def test_get_user_next_practice_counts_multiple_attempts_for_same_sentence_as_attempted_once(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", True)
+    create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json()["strategy"] == "not_attempted"
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A1_PAY_002",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "reason": "not_attempted",
+        }
+    ]
+
+
+def test_get_user_next_practice_returns_only_latest_recent_wrong_attempt_per_sentence(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_TOO_001", "level": "A1", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    first_wrong = create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False).get_json()[
+        "attempt"
+    ]
+    latest_wrong = create_attempt(client, user["id"], "A1_PAY_001", "A1", "SHOP_PAY", False).get_json()[
+        "attempt"
+    ]
+    create_attempt(client, user["id"], "A1_TOO_001", "A1", "SHOP_TOO", False)
+
+    response = get_next_practice(client, user["id"], {"limit": "5"})
+
+    assert response.status_code == 200
+    returned = [item["sentence_id"] for item in response.get_json()["recommendations"]]
+    assert returned.count("A1_PAY_001") == 1
+    assert latest_wrong["id"] != first_wrong["id"]
+
+
+def test_get_user_next_practice_uses_sentence_bank_metadata_instead_of_attempt_metadata(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_PAY_001", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "A1_PAY_002", "level": "A1", "pattern": "SHOP_PAY"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    for sentence_id in ["A1_PAY_001", "A1_PAY_001", "A1_PAY_001", "A1_PAY_002", "A1_PAY_002"]:
+        create_attempt(client, user["id"], sentence_id, "OLD_LEVEL", "OLD_PATTERN", sentence_id == "A1_PAY_002")
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json()["strategy"] == "recent_wrong_attempt"
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A1_PAY_001",
+            "level": "A1",
+            "pattern": "SHOP_PAY",
+            "reason": "recent_wrong_attempt",
+        },
+    ]
+
+
+def test_get_user_next_practice_sorting_is_deterministic(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "A1_B_001", "level": "A1", "pattern": "SHOP_B"},
+        {"sentence_id": "A1_A_002", "level": "A1", "pattern": "SHOP_A"},
+        {"sentence_id": "A1_A_001", "level": "A1", "pattern": "SHOP_A"},
+        {"sentence_id": "A2_A_001", "level": "A2", "pattern": "SHOP_A"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = get_next_practice(client, user["id"])
+
+    assert response.status_code == 200
+    assert response.get_json()["recommendations"] == [
+        {
+            "sentence_id": "A1_A_001",
+            "level": "A1",
+            "pattern": "SHOP_A",
+            "reason": "not_attempted",
+        },
+        {
+            "sentence_id": "A1_A_002",
+            "level": "A1",
+            "pattern": "SHOP_A",
+            "reason": "not_attempted",
+        },
+        {
+            "sentence_id": "A1_B_001",
+            "level": "A1",
+            "pattern": "SHOP_B",
+            "reason": "not_attempted",
+        },
+        {
+            "sentence_id": "A2_A_001",
+            "level": "A2",
+            "pattern": "SHOP_A",
+            "reason": "not_attempted",
+        },
+    ]
 
 
 def test_index_page_renders_game_shell(tmp_path):
