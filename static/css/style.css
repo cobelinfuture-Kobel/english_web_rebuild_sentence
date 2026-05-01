@@ -41,6 +41,49 @@ body {
     border-radius: 14px;
 }
 
+.next-practice-panel {
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    background: #f8f9fa;
+    border-left: 4px solid #1f6feb;
+    border-radius: 12px;
+    font-size: 0.92rem;
+    color: #4b5d73;
+}
+
+.next-practice-title {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #203040;
+}
+
+.next-practice-status {
+    margin: 0 0 10px;
+    color: #35506b;
+}
+
+.next-practice-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.next-practice-list li {
+    margin-bottom: 8px;
+}
+
+.next-practice-main {
+    display: block;
+    color: #35506b;
+}
+
+.next-practice-meta {
+    display: block;
+    margin-top: 2px;
+    color: #6b7c8f;
+    font-size: 0.82rem;
+}
+
 .launcher-header {
     text-align: center;
 }

@@ -1889,6 +1889,36 @@ def test_index_page_renders_username_login_view(tmp_path):
     assert 'id="login-error"' in html
 
 
+def test_index_page_renders_next_practice_panel(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="next-practice-panel"' in html
+
+
+def test_index_page_renders_next_practice_status(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="next-practice-status"' in html
+
+
+def test_index_page_renders_next_practice_list(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="next-practice-list"' in html
+
+
 def test_index_page_renders_demo_ready_shell(tmp_path):
     client = create_test_client(tmp_path)
 

@@ -18,8 +18,20 @@ let currentCorrectAnswer = "";
 let questItems = [];
 let sessionGrammar = new Set();
 let sessionMistakes = [];
+let nextPracticeRequestToken = 0;
 
 const MAX_HEARTS = 3;
+const NEXT_PRACTICE_STRATEGY_LABELS = {
+    weak_pattern_not_attempted: "下一步建議：優先補弱句型的新題。",
+    not_attempted: "下一步建議：先擴充還沒做過的題目。",
+    recent_wrong_attempt: "下一步建議：先回顧最近的錯題。",
+    none: "目前沒有推薦題目。",
+};
+const NEXT_PRACTICE_REASON_LABELS = {
+    weak_pattern_not_attempted: "弱句型補強",
+    not_attempted: "新題探索",
+    recent_wrong_attempt: "最近錯題",
+};
 
 const loginView = document.getElementById("login-view");
 const usernameInput = document.getElementById("username-input");
@@ -70,6 +82,9 @@ const coachStepsOver = document.getElementById("coach-steps-over");
 const mistakeList = document.getElementById("mistake-list");
 const quitButton = document.getElementById("quit-btn");
 const reviewButton = document.getElementById("review-btn");
+const nextPracticePanel = document.getElementById("next-practice-panel");
+const nextPracticeStatus = document.getElementById("next-practice-status");
+const nextPracticeList = document.getElementById("next-practice-list");
 
 const FSI_TEXTS = {
     question: "Nice. Turn it into a question.",
@@ -366,6 +381,82 @@ function showLoginError(message) {
     loginError.hidden = !message;
 }
 
+function clearNextPracticePanel() {
+    nextPracticeStatus.innerText = "";
+    nextPracticeList.innerHTML = "";
+}
+
+function hideNextPracticePanel() {
+    nextPracticePanel.hidden = true;
+}
+
+function showNextPracticePanel() {
+    nextPracticePanel.hidden = false;
+}
+
+async function loadNextPractice() {
+    const storedUserId = localStorage.getItem("user_id");
+    nextPracticeRequestToken += 1;
+    const requestToken = nextPracticeRequestToken;
+
+    if (!storedUserId) {
+        clearNextPracticePanel();
+        hideNextPracticePanel();
+        return;
+    }
+
+    try {
+        const data = await fetchJson(
+            `/api/users/${encodeURIComponent(storedUserId)}/next-practice?limit=5`
+        );
+        if (
+            requestToken !== nextPracticeRequestToken ||
+            localStorage.getItem("user_id") !== storedUserId
+        ) {
+            return;
+        }
+
+        clearNextPracticePanel();
+        showNextPracticePanel();
+        nextPracticeStatus.innerText =
+            NEXT_PRACTICE_STRATEGY_LABELS[data.strategy] || "下一步建議";
+
+        const recommendations = data.recommendations || [];
+        if (!recommendations.length) {
+            nextPracticeStatus.innerText = "目前沒有推薦題目。";
+            return;
+        }
+
+        recommendations.forEach((item) => {
+            const row = document.createElement("li");
+            const main = document.createElement("span");
+            const meta = document.createElement("span");
+            const reasonLabel =
+                NEXT_PRACTICE_REASON_LABELS[item.reason] || item.reason || "建議";
+
+            main.className = "next-practice-main";
+            meta.className = "next-practice-meta";
+            main.innerText = `${item.level} / ${item.pattern} / ${reasonLabel}`;
+            meta.innerText = item.sentence_id;
+            row.appendChild(main);
+            row.appendChild(meta);
+            nextPracticeList.appendChild(row);
+        });
+    } catch (error) {
+        if (
+            requestToken !== nextPracticeRequestToken ||
+            localStorage.getItem("user_id") !== storedUserId
+        ) {
+            return;
+        }
+
+        console.warn("Failed to load next practice recommendations", error);
+        clearNextPracticePanel();
+        showNextPracticePanel();
+        nextPracticeStatus.innerText = "無法載入下一步建議。";
+    }
+}
+
 function getStoredUser() {
     const userId = localStorage.getItem("user_id");
     const username = localStorage.getItem("username");
@@ -390,6 +481,9 @@ function applyUserSession(user) {
 }
 
 function clearUserSession() {
+    nextPracticeRequestToken += 1;
+    clearNextPracticePanel();
+    hideNextPracticePanel();
     localStorage.removeItem("user_id");
     localStorage.removeItem("username");
     localStorage.removeItem("role");
@@ -724,6 +818,7 @@ async function submitAnswer() {
                     is_correct: result.is_correct,
                 }),
             });
+            await loadNextPractice();
         } catch (attemptError) {
             console.warn("Failed to save attempt", attemptError);
         }
@@ -748,6 +843,8 @@ loginButton.addEventListener("click", async () => {
 
     loginButton.disabled = true;
     try {
+        clearNextPracticePanel();
+        hideNextPracticePanel();
         const user = await fetchJson("/api/users/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -762,6 +859,7 @@ loginButton.addEventListener("click", async () => {
             username: user.username,
             role: user.role,
         });
+        await loadNextPractice();
     } catch (error) {
         showLoginError(error.payload?.error || error.message);
     } finally {
@@ -879,6 +977,7 @@ if (searchParams.get("demo") === "true") {
     const storedUser = getStoredUser();
     if (storedUser) {
         applyUserSession(storedUser);
+        loadNextPractice();
     } else {
         clearUserSession();
     }
