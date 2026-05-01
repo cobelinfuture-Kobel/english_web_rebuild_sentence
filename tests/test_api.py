@@ -43,6 +43,34 @@ def read_json(path):
         return json.load(f)
 
 
+def create_user(client, username="Tom"):
+    return client.post("/api/users/login", json={"username": username}).get_json()
+
+
+def create_attempt(
+    client,
+    user_id,
+    sentence_id,
+    level,
+    pattern,
+    is_correct,
+    user_answer="test answer",
+    correct_answer="test answer",
+):
+    return client.post(
+        "/api/attempts",
+        json={
+            "user_id": user_id,
+            "sentence_id": sentence_id,
+            "level": level,
+            "pattern": pattern,
+            "user_answer": user_answer,
+            "correct_answer": correct_answer,
+            "is_correct": is_correct,
+        },
+    )
+
+
 def test_health_endpoint_returns_healthy(tmp_path):
     client = create_test_client(tmp_path)
 
@@ -213,6 +241,332 @@ def test_get_user_attempts_returns_404_for_missing_user(tmp_path):
 
     assert response.status_code == 404
     assert response.get_json() == {"error": "User not found"}
+
+
+def test_get_user_stats_returns_404_for_missing_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/api/users/user_999/stats")
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
+
+
+def test_get_user_stats_returns_zero_stats_without_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    response = client.get(f"/api/users/{user['id']}/stats")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_attempts": 0,
+        "correct_attempts": 0,
+        "wrong_attempts": 0,
+        "accuracy": 0,
+        "by_level": {},
+        "by_pattern": {},
+    }
+
+
+def test_get_user_stats_calculates_summary_level_and_pattern_breakdowns(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "SHOP_PAY_A1_001", "A1", "SHOP_PAY", True)
+    create_attempt(client, user["id"], "SHOP_PAY_A1_002", "A1", "SHOP_PAY", True)
+    create_attempt(client, user["id"], "SHOP_PAY_A1_003", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "SHOP_TOO_A2_001", "A2", "SHOP_TOO", True)
+    create_attempt(client, user["id"], "SHOP_TOO_A2_002", "A2", "SHOP_TOO", False)
+
+    response = client.get(f"/api/users/{user['id']}/stats")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_attempts": 5,
+        "correct_attempts": 3,
+        "wrong_attempts": 2,
+        "accuracy": 0.6,
+        "by_level": {
+            "A1": {
+                "total_attempts": 3,
+                "correct_attempts": 2,
+                "wrong_attempts": 1,
+                "accuracy": 2 / 3,
+            },
+            "A2": {
+                "total_attempts": 2,
+                "correct_attempts": 1,
+                "wrong_attempts": 1,
+                "accuracy": 0.5,
+            },
+        },
+        "by_pattern": {
+            "SHOP_PAY": {
+                "total_attempts": 3,
+                "correct_attempts": 2,
+                "wrong_attempts": 1,
+                "accuracy": 2 / 3,
+            },
+            "SHOP_TOO": {
+                "total_attempts": 2,
+                "correct_attempts": 1,
+                "wrong_attempts": 1,
+                "accuracy": 0.5,
+            },
+        },
+    }
+
+
+def test_get_user_stats_does_not_include_other_users_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client, "Tom")
+    other_user = create_user(client, "Jane")
+
+    create_attempt(client, user["id"], "SHOP_PAY_A1_001", "A1", "SHOP_PAY", True)
+    create_attempt(client, other_user["id"], "SHOP_TOO_A2_001", "A2", "SHOP_TOO", False)
+
+    response = client.get(f"/api/users/{user['id']}/stats")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_attempts": 1,
+        "correct_attempts": 1,
+        "wrong_attempts": 0,
+        "accuracy": 1.0,
+        "by_level": {
+            "A1": {
+                "total_attempts": 1,
+                "correct_attempts": 1,
+                "wrong_attempts": 0,
+                "accuracy": 1.0,
+            }
+        },
+        "by_pattern": {
+            "SHOP_PAY": {
+                "total_attempts": 1,
+                "correct_attempts": 1,
+                "wrong_attempts": 0,
+                "accuracy": 1.0,
+            }
+        },
+    }
+
+
+def test_get_user_weak_patterns_returns_404_for_missing_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/api/users/user_999/weak-patterns")
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
+
+
+def test_get_user_weak_patterns_uses_default_filters(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    for attempt_index in range(5):
+        create_attempt(
+            client,
+            user["id"],
+            f"SHOP_TOO_A2_{attempt_index:03d}",
+            "A2",
+            "SHOP_TOO",
+            attempt_index == 0,
+        )
+
+    for attempt_index in range(5):
+        create_attempt(
+            client,
+            user["id"],
+            f"SHOP_PAY_A1_{attempt_index:03d}",
+            "A1",
+            "SHOP_PAY",
+            attempt_index < 4,
+        )
+
+    response = client.get(f"/api/users/{user['id']}/weak-patterns")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "min_attempts": 5,
+        "threshold": 0.7,
+        "weak_patterns": [
+            {
+                "pattern": "SHOP_TOO",
+                "total_attempts": 5,
+                "correct_attempts": 1,
+                "wrong_attempts": 4,
+                "accuracy": 0.2,
+            }
+        ],
+    }
+
+
+def test_get_user_weak_patterns_accepts_query_string_overrides(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "SHOP_PAY_A1_001", "A1", "SHOP_PAY", True)
+    create_attempt(client, user["id"], "SHOP_PAY_A1_002", "A1", "SHOP_PAY", False)
+    create_attempt(client, user["id"], "SHOP_PAY_A1_003", "A1", "SHOP_PAY", False)
+
+    response = client.get(
+        f"/api/users/{user['id']}/weak-patterns",
+        query_string={"min_attempts": "3", "threshold": "0.8"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "min_attempts": 3,
+        "threshold": 0.8,
+        "weak_patterns": [
+            {
+                "pattern": "SHOP_PAY",
+                "total_attempts": 3,
+                "correct_attempts": 1,
+                "wrong_attempts": 2,
+                "accuracy": 1 / 3,
+            }
+        ],
+    }
+
+
+def test_get_user_weak_patterns_excludes_patterns_with_insufficient_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    for attempt_index in range(4):
+        create_attempt(
+            client,
+            user["id"],
+            f"SHOP_SMALL_A1_{attempt_index:03d}",
+            "A1",
+            "SHOP_SMALL",
+            False,
+        )
+
+    response = client.get(f"/api/users/{user['id']}/weak-patterns")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "min_attempts": 5,
+        "threshold": 0.7,
+        "weak_patterns": [],
+    }
+
+
+def test_get_user_weak_patterns_sorts_by_accuracy_then_wrong_attempts_desc(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    for attempt_index in range(6):
+        create_attempt(
+            client,
+            user["id"],
+            f"SHOP_LOW_A1_{attempt_index:03d}",
+            "A1",
+            "SHOP_LOW",
+            attempt_index == 0,
+        )
+
+    for attempt_index in range(8):
+        create_attempt(
+            client,
+            user["id"],
+            f"SHOP_TIE_A2_{attempt_index:03d}",
+            "A2",
+            "SHOP_TIE",
+            attempt_index < 2,
+        )
+
+    for attempt_index in range(5):
+        create_attempt(
+            client,
+            user["id"],
+            f"SHOP_TIE_SMALL_A2_{attempt_index:03d}",
+            "A2",
+            "SHOP_TIE_SMALL",
+            attempt_index < 1,
+        )
+
+    response = client.get(
+        f"/api/users/{user['id']}/weak-patterns",
+        query_string={"min_attempts": "5", "threshold": "0.8"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "min_attempts": 5,
+        "threshold": 0.8,
+        "weak_patterns": [
+            {
+                "pattern": "SHOP_LOW",
+                "total_attempts": 6,
+                "correct_attempts": 1,
+                "wrong_attempts": 5,
+                "accuracy": 1 / 6,
+            },
+            {
+                "pattern": "SHOP_TIE_SMALL",
+                "total_attempts": 5,
+                "correct_attempts": 1,
+                "wrong_attempts": 4,
+                "accuracy": 0.2,
+            },
+            {
+                "pattern": "SHOP_TIE",
+                "total_attempts": 8,
+                "correct_attempts": 2,
+                "wrong_attempts": 6,
+                "accuracy": 0.25,
+            },
+        ],
+    }
+
+
+def test_get_user_weak_patterns_uses_defaults_for_invalid_query_strings(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    for attempt_index in range(5):
+        create_attempt(
+            client,
+            user["id"],
+            f"SHOP_TOO_A2_{attempt_index:03d}",
+            "A2",
+            "SHOP_TOO",
+            attempt_index == 0,
+        )
+
+    response = client.get(
+        f"/api/users/{user['id']}/weak-patterns",
+        query_string={"min_attempts": "abc", "threshold": "oops"},
+    )
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "min_attempts": 5,
+        "threshold": 0.7,
+        "weak_patterns": [
+            {
+                "pattern": "SHOP_TOO",
+                "total_attempts": 5,
+                "correct_attempts": 1,
+                "wrong_attempts": 4,
+                "accuracy": 0.2,
+            }
+        ],
+    }
 
 
 def test_index_page_renders_game_shell(tmp_path):

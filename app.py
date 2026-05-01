@@ -34,6 +34,28 @@ def load_default_sentence_bank():
     return bank_data
 
 
+def parse_int_arg(value, default, minimum=None):
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError):
+        return default
+    if minimum is not None and parsed < minimum:
+        return default
+    return parsed
+
+
+def parse_float_arg(value, default, minimum=None, maximum=None):
+    try:
+        parsed = float(value)
+    except (TypeError, ValueError):
+        return default
+    if minimum is not None and parsed < minimum:
+        return default
+    if maximum is not None and parsed > maximum:
+        return default
+    return parsed
+
+
 def create_app(
     sentence_bank=None,
     bank_path=None,
@@ -95,6 +117,30 @@ def create_app(
 
         attempts = app.config["attempts_store"].get_user_attempts(user_id)
         return jsonify({"attempts": attempts})
+
+    @app.route("/api/users/<user_id>/stats", methods=["GET"])
+    def get_user_stats(user_id):
+        users_store = app.config["users_store"]
+        if not users_store.user_exists(user_id):
+            return jsonify({"error": "User not found"}), 404
+
+        stats = app.config["attempts_store"].get_user_stats(user_id)
+        return jsonify(stats)
+
+    @app.route("/api/users/<user_id>/weak-patterns", methods=["GET"])
+    def get_user_weak_patterns(user_id):
+        users_store = app.config["users_store"]
+        if not users_store.user_exists(user_id):
+            return jsonify({"error": "User not found"}), 404
+
+        min_attempts = parse_int_arg(request.args.get("min_attempts"), default=5, minimum=0)
+        threshold = parse_float_arg(request.args.get("threshold"), default=0.7, minimum=0, maximum=1)
+        weak_patterns = app.config["attempts_store"].get_user_weak_patterns(
+            user_id,
+            min_attempts=min_attempts,
+            threshold=threshold,
+        )
+        return jsonify(weak_patterns)
 
     @app.route("/api/quest", methods=["GET"])
     def get_quest():
