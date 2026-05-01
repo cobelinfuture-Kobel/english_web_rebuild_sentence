@@ -38,6 +38,37 @@ def create_default_bank_test_client(tmp_path):
     return app.test_client()
 
 
+def create_custom_bank_test_client(tmp_path, sentence_bank):
+    normalized_bank = []
+    for index, sentence in enumerate(sentence_bank, start=1):
+        normalized_bank.append(
+            {
+                "sentence_id": sentence["sentence_id"],
+                "level": sentence.get("level", "A1"),
+                "pattern": sentence.get("pattern", "UNKNOWN"),
+                "scenario": sentence.get("scenario", "shopping"),
+                "target_sentence": sentence.get("target_sentence", f"Sentence {index}."),
+                "chunks": sentence.get(
+                    "chunks",
+                    [
+                        {"chunk_id": f"{sentence['sentence_id']}_chunk_1", "text": f"Sentence {index}."},
+                    ],
+                ),
+                "translation": sentence.get("translation", f"Translation {index}"),
+            }
+        )
+
+    app = create_app(
+        sentence_bank=normalized_bank,
+        progress_path=str(tmp_path / "user_progress.json"),
+        users_path=str(tmp_path / "users.json"),
+        attempts_path=str(tmp_path / "user_sentence_attempts.json"),
+        fsi_rng=lambda: 0.0,
+    )
+    app.config["TESTING"] = True
+    return app.test_client()
+
+
 def read_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -1011,6 +1042,198 @@ def test_get_user_wrong_attempts_total_is_count_after_filters_before_limit(tmp_p
         "created_at",
     }
     assert "is_correct" not in returned_attempt
+
+
+def test_get_user_coverage_returns_404_for_missing_user(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/api/users/user_999/coverage")
+
+    assert response.status_code == 404
+    assert response.get_json() == {"error": "User not found"}
+
+
+def test_get_user_coverage_returns_zero_when_sentence_bank_is_empty(tmp_path):
+    client = create_custom_bank_test_client(tmp_path, [])
+    user = create_user(client)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_sentences": 0,
+        "attempted_sentences": 0,
+        "not_attempted_sentences": 0,
+        "coverage_rate": 0,
+        "by_level": {},
+        "by_pattern": {},
+    }
+
+
+def test_get_user_coverage_returns_zero_without_attempts(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json() == {
+        "user_id": user["id"],
+        "total_sentences": 2,
+        "attempted_sentences": 0,
+        "not_attempted_sentences": 2,
+        "coverage_rate": 0,
+        "by_level": {
+            "A1": {"total": 1, "attempted": 0, "not_attempted": 1, "coverage_rate": 0},
+            "A2": {"total": 1, "attempted": 0, "not_attempted": 1, "coverage_rate": 0},
+        },
+        "by_pattern": {
+            "SHOP_PAY": {"total": 1, "attempted": 0, "not_attempted": 1, "coverage_rate": 0},
+            "SHOP_TOO": {"total": 1, "attempted": 0, "not_attempted": 1, "coverage_rate": 0},
+        },
+    }
+
+
+def test_get_user_coverage_counts_multiple_attempts_for_same_sentence_once(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A1", "pattern": "SHOP_PAY"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "S1", "A1", "SHOP_PAY", True)
+    create_attempt(client, user["id"], "S1", "A1", "SHOP_PAY", False)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json()["attempted_sentences"] == 1
+    assert response.get_json()["not_attempted_sentences"] == 1
+    assert response.get_json()["coverage_rate"] == 0.5
+
+
+def test_get_user_coverage_does_not_mix_other_users_attempts(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client, "Tom")
+    other_user = create_user(client, "Jane")
+
+    create_attempt(client, other_user["id"], "S1", "A1", "SHOP_PAY", True)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json()["attempted_sentences"] == 0
+    assert response.get_json()["coverage_rate"] == 0
+
+
+def test_get_user_coverage_ignores_attempts_for_sentence_ids_not_in_bank(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "MISSING", "A1", "SHOP_PAY", True)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json()["attempted_sentences"] == 0
+    assert response.get_json()["coverage_rate"] == 0
+
+
+def test_get_user_coverage_calculates_by_level_from_sentence_bank_metadata(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A1", "pattern": "SHOP_TOO"},
+        {"sentence_id": "S3", "level": "A2", "pattern": "SHOP_PAY"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "S1", "WRONG_LEVEL", "WRONG_PATTERN", True)
+    create_attempt(client, user["id"], "S3", "WRONG_LEVEL", "WRONG_PATTERN", False)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json()["by_level"] == {
+        "A1": {"total": 2, "attempted": 1, "not_attempted": 1, "coverage_rate": 0.5},
+        "A2": {"total": 1, "attempted": 1, "not_attempted": 0, "coverage_rate": 1.0},
+    }
+
+
+def test_get_user_coverage_calculates_by_pattern_from_sentence_bank_metadata(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A2", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S3", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "S1", "A1", "OLD_PATTERN", True)
+    create_attempt(client, user["id"], "S3", "A2", "OLD_PATTERN", True)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json()["by_pattern"] == {
+        "SHOP_PAY": {"total": 2, "attempted": 1, "not_attempted": 1, "coverage_rate": 0.5},
+        "SHOP_TOO": {"total": 1, "attempted": 1, "not_attempted": 0, "coverage_rate": 1.0},
+    }
+
+
+def test_get_user_coverage_returns_one_when_all_sentences_attempted(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A2", "pattern": "SHOP_TOO"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "S1", "A1", "SHOP_PAY", True)
+    create_attempt(client, user["id"], "S2", "A2", "SHOP_TOO", False)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json()["coverage_rate"] == 1.0
+    assert response.get_json()["attempted_sentences"] == 2
+    assert response.get_json()["not_attempted_sentences"] == 0
+
+
+def test_get_user_coverage_returns_partial_rate_for_partially_attempted_bank(tmp_path):
+    sentence_bank = [
+        {"sentence_id": "S1", "level": "A1", "pattern": "SHOP_PAY"},
+        {"sentence_id": "S2", "level": "A1", "pattern": "SHOP_TOO"},
+        {"sentence_id": "S3", "level": "A2", "pattern": "SHOP_WANT"},
+        {"sentence_id": "S4", "level": "A2", "pattern": "SHOP_WANT"},
+    ]
+    client = create_custom_bank_test_client(tmp_path, sentence_bank)
+    user = create_user(client)
+
+    create_attempt(client, user["id"], "S1", "A1", "SHOP_PAY", True)
+    create_attempt(client, user["id"], "S3", "A2", "SHOP_WANT", True)
+
+    response = client.get(f"/api/users/{user['id']}/coverage")
+
+    assert response.status_code == 200
+    assert response.get_json()["total_sentences"] == 4
+    assert response.get_json()["attempted_sentences"] == 2
+    assert response.get_json()["not_attempted_sentences"] == 2
+    assert response.get_json()["coverage_rate"] == 0.5
 
 
 def test_index_page_renders_game_shell(tmp_path):

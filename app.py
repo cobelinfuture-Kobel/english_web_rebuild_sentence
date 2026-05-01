@@ -9,6 +9,7 @@ from engines.learning_engine import LearningEngine
 from engines.quest_engine import QuestEngine
 from engines.sentence_engine import SentenceEngine
 from stores.attempts_store import AttemptsStore
+from stores.coverage_store import CoverageStore
 from stores.users_store import UsersStore
 
 
@@ -66,14 +67,15 @@ def create_app(
 ):
     app = Flask(__name__)
 
-    bank_data = sentence_bank or (
-        load_sentence_bank(bank_path) if bank_path else load_default_sentence_bank()
-    )
+    bank_data = sentence_bank
+    if bank_data is None:
+        bank_data = load_sentence_bank(bank_path) if bank_path else load_default_sentence_bank()
     learning_engine = LearningEngine(str(progress_path or DEFAULT_PROGRESS_PATH))
     sentence_engine = SentenceEngine(bank_data)
     quest_engine = QuestEngine(bank_data, learning_engine, quest_size=10)
     users_store = UsersStore(users_path or DEFAULT_USERS_PATH)
     attempts_store = AttemptsStore(attempts_path or DEFAULT_ATTEMPTS_PATH, users_store=users_store)
+    coverage_store = CoverageStore(bank_data, attempts_store)
 
     app.config["sentence_engine"] = sentence_engine
     app.config["learning_engine"] = learning_engine
@@ -81,6 +83,7 @@ def create_app(
     app.config["fsi_rng"] = fsi_rng or random.random
     app.config["users_store"] = users_store
     app.config["attempts_store"] = attempts_store
+    app.config["coverage_store"] = coverage_store
 
     @app.route("/api/health", methods=["GET"])
     def health():
@@ -158,6 +161,15 @@ def create_app(
             limit=limit,
         )
         return jsonify(wrong_attempts)
+
+    @app.route("/api/users/<user_id>/coverage", methods=["GET"])
+    def get_user_coverage(user_id):
+        users_store = app.config["users_store"]
+        if not users_store.user_exists(user_id):
+            return jsonify({"error": "User not found"}), 404
+
+        coverage = app.config["coverage_store"].get_user_coverage(user_id)
+        return jsonify(coverage)
 
     @app.route("/api/quest", methods=["GET"])
     def get_quest():

@@ -41,7 +41,14 @@ class AttemptsStore:
 
     def get_user_attempts(self, user_id):
         attempts = [attempt for attempt in self._load() if attempt["user_id"] == user_id]
-        return sorted(attempts, key=lambda item: item["created_at"], reverse=True)
+        return sorted(
+            attempts,
+            key=lambda item: (item.get("created_at", ""), item.get("id", "")),
+            reverse=True,
+        )
+
+    def get_all_attempts(self):
+        return self._load()
 
     def get_user_stats(self, user_id):
         attempts = [attempt for attempt in self._load() if attempt["user_id"] == user_id]
