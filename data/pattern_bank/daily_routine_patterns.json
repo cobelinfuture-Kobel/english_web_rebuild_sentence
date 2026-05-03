@@ -107,7 +107,7 @@
         "grammar_focus": ["want_to", "to_infinitive", "time_expression", "daily_routine_vocabulary"],
         "slot_constraints": {
           "action": {
-            "category": ["routine_actions_to_infinitive"],
+            "category": ["routine_want_actions"],
             "routine_action": true
           }
         },
@@ -207,7 +207,7 @@
         "grammar_focus": ["can_request", "daily_routine_vocabulary"],
         "slot_constraints": {
           "action": {
-            "category": ["routine_actions_to_infinitive"],
+            "category": ["routine_here_actions"],
             "routine_action": true
           }
         },

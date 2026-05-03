@@ -160,6 +160,59 @@
     }
   ],
 
+  "routine_want_actions": [
+    {
+      "text": "go home",
+      "routine_action": true
+    },
+    {
+      "text": "read a book",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "drink water",
+      "routine_action": true,
+      "drink_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "take a shower",
+      "routine_action": true,
+      "hygiene_action": true
+    }
+  ],
+
+  "routine_here_actions": [
+    {
+      "text": "wash my hands",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "do my homework",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "read a book",
+      "routine_action": true,
+      "leisure_action": true
+    }
+  ],
+
   "routine_times_simple": [
     {
       "text": "today",
@@ -435,15 +488,15 @@
       "problem": "am late for school"
     },
     {
-      "subject": "My bag",
+      "subject": "my bag",
       "problem": "is too heavy"
     },
     {
-      "subject": "My homework",
+      "subject": "my homework",
       "problem": "is too hard"
     },
     {
-      "subject": "My room",
+      "subject": "my room",
       "problem": "is too messy"
     }
   ],
