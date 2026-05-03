@@ -1939,6 +1939,14 @@ def test_index_page_renders_summary_coverage(tmp_path):
     assert 'id="summary-coverage"' in html
 
 
+def test_game_js_formats_summary_coverage_with_one_decimal_place():
+    js_path = BASE_DIR / "static" / "js" / "game.js"
+
+    script = js_path.read_text(encoding="utf-8")
+
+    assert "formatPercent(data.coverage_rate ?? 0, 1)" in script
+
+
 def test_index_page_renders_summary_not_attempted(tmp_path):
     client = create_test_client(tmp_path)
 

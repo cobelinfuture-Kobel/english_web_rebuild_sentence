@@ -388,12 +388,12 @@ function showLoginError(message) {
     loginError.hidden = !message;
 }
 
-function formatPercent(value) {
+function formatPercent(value, digits = 0) {
     if (typeof value !== "number" || Number.isNaN(value)) {
         return "--";
     }
 
-    return `${Math.round(value * 100)}%`;
+    return `${(value * 100).toFixed(digits)}%`;
 }
 
 function isLearningSummaryRequestCurrent(userId, requestToken) {
@@ -534,7 +534,7 @@ async function loadCoverageSummary(userId, requestToken = learningSummaryRequest
         return;
     }
 
-    summaryCoverage.innerText = formatPercent(data.coverage_rate ?? 0);
+    summaryCoverage.innerText = formatPercent(data.coverage_rate ?? 0, 1);
     summaryNotAttempted.innerText = String(data.not_attempted_sentences ?? 0);
 }
 
