@@ -17,6 +17,9 @@ PATTERN_BANK_PATH = BASE_DIR / "data" / "pattern_bank" / "shopping_patterns.json
 SLOT_BANK_PATH = BASE_DIR / "data" / "slot_bank" / "shopping_slots.json"
 FOOD_PATTERN_BANK_PATH = BASE_DIR / "data" / "pattern_bank" / "food_drink_patterns.json"
 FOOD_SLOT_BANK_PATH = BASE_DIR / "data" / "slot_bank" / "food_drink_slots.json"
+DAILY_ROUTINE_SENTENCE_BANK_PATH = (
+    BASE_DIR / "data" / "generated" / "daily_routine_sentence_bank.json"
+)
 
 EXPECTED_PATTERNS = {
     "SHOP_WANT",
@@ -123,6 +126,31 @@ EXPECTED_FOOD_PATTERNS = {
     "FOOD_SPLIT_CHECK",
     "FOOD_PAY_SEPARATELY",
 }
+EXPECTED_DAILY_ROUTINE_PHASE4B_PATTERNS = {
+    "ROUTINE_HAVE_ITEM",
+    "ROUTINE_READY",
+    "ROUTINE_SIMPLE_TIME",
+    "ROUTINE_PACK",
+    "ROUTINE_HELP_SIMPLE",
+    "ROUTINE_CHORE_SIMPLE",
+    "ROUTINE_PUT_ON",
+    "ROUTINE_ASK_TIME",
+    "ROUTINE_ASK_WHAT_DO",
+    "ROUTINE_ASK_WHEN_DO",
+    "ROUTINE_READY_FOR",
+    "ROUTINE_LATE_FOR",
+    "ROUTINE_FORGOT",
+    "ROUTINE_PERMISSION",
+    "ROUTINE_HELP_REASON",
+    "ROUTINE_CHORE_REASON",
+    "ROUTINE_REMIND",
+    "ROUTINE_CANNOT_NOW",
+    "ROUTINE_TIME_TAKES",
+    "ROUTINE_SHOULD",
+    "ROUTINE_PARENT_RULE",
+    "ROUTINE_BEFORE_LEAVE",
+    "ROUTINE_AFTER_FINISH",
+}
 
 
 def load_banks():
@@ -137,6 +165,15 @@ def load_food_banks():
         json.loads(FOOD_PATTERN_BANK_PATH.read_text(encoding="utf-8")),
         json.loads(FOOD_SLOT_BANK_PATH.read_text(encoding="utf-8")),
     )
+
+
+def load_daily_routine_sentences():
+    assert DAILY_ROUTINE_SENTENCE_BANK_PATH.exists(), (
+        f"Missing generated file: {DAILY_ROUTINE_SENTENCE_BANK_PATH}"
+    )
+    data = json.loads(DAILY_ROUTINE_SENTENCE_BANK_PATH.read_text(encoding="utf-8"))
+    assert isinstance(data, list)
+    return data
 
 
 def make_generator(seed=7, ensure_unique_targets=False):
@@ -875,3 +912,116 @@ def test_food_prefer_more_a2_plus_uses_simple_drink_preference_pairs():
 
     assert sentences
     assert all(sentence["target_sentence"] in valid_targets for sentence in sentences)
+
+
+def test_daily_routine_phase4b_expected_patterns_exist():
+    sentences = load_daily_routine_sentences()
+    actual_patterns = {
+        sentence["pattern_id"]
+        for sentence in sentences
+        if sentence.get("scenario") == "daily_routine"
+    }
+
+    missing = EXPECTED_DAILY_ROUTINE_PHASE4B_PATTERNS - actual_patterns
+    assert not missing, f"Missing Daily Routine Phase 4B patterns: {sorted(missing)}"
+
+
+def test_daily_routine_ready_pattern_uses_unique_sentence():
+    sentences = load_daily_routine_sentences()
+    ready_sentences = [
+        sentence for sentence in sentences if sentence.get("pattern_id") == "ROUTINE_READY"
+    ]
+
+    assert ready_sentences
+    targets = {sentence["target_sentence"] for sentence in ready_sentences}
+    assert "I am ready now." in targets
+    assert "I am ready." not in targets
+
+
+def test_daily_routine_no_redundant_homework_reason():
+    sentences = load_daily_routine_sentences()
+    targets = {sentence["target_sentence"] for sentence in sentences}
+
+    assert "I need to do my homework because I have homework." not in targets
+    assert "I need to do my homework because it is due tomorrow." in targets
+
+
+def test_daily_routine_weekday_weekend_uses_week_contexts():
+    sentences = load_daily_routine_sentences()
+    weekday_weekend_targets = {
+        sentence["target_sentence"]
+        for sentence in sentences
+        if sentence.get("pattern_id") == "ROUTINE_WEEKDAY_WEEKEND"
+    }
+
+    assert "I listen to music after school." not in weekday_weekend_targets
+    assert "I listen to music on weekends." in weekday_weekend_targets
+
+
+def test_daily_routine_no_bad_permission_pairs():
+    sentences = load_daily_routine_sentences()
+    bad_phrases = [
+        "Can I go to bed after homework",
+        "Can I go to school after dinner",
+        "Can I brush my teeth after school",
+    ]
+
+    for sentence in sentences:
+        target = sentence["target_sentence"]
+        assert not any(bad in target for bad in bad_phrases), target
+
+
+def test_daily_routine_no_general_past_tense_expansion():
+    sentences = load_daily_routine_sentences()
+    bad_phrases = [
+        "Yesterday",
+        "last night",
+        "went to",
+        "got up late",
+        "bought",
+        "cleaned",
+        "ate breakfast yesterday",
+    ]
+
+    for sentence in sentences:
+        target = sentence["target_sentence"]
+        assert not any(bad in target for bad in bad_phrases), target
+
+
+def test_daily_routine_forgot_allowed_as_fixed_expression():
+    sentences = load_daily_routine_sentences()
+    forgot_sentences = [
+        sentence for sentence in sentences if sentence.get("pattern_id") == "ROUTINE_FORGOT"
+    ]
+
+    assert forgot_sentences
+    assert all(
+        sentence["target_sentence"].startswith("I forgot ")
+        for sentence in forgot_sentences
+    )
+
+
+def test_daily_routine_no_third_person_subject_expansion():
+    sentences = load_daily_routine_sentences()
+    bad_starts = [
+        "He ",
+        "She ",
+        "They ",
+        "We ",
+        "My brother ",
+        "My sister ",
+        "My mom ",
+        "My dad ",
+    ]
+
+    for sentence in sentences:
+        target = sentence["target_sentence"]
+        assert not any(target.startswith(start) for start in bad_starts), target
+
+
+def test_daily_routine_phase4b_level_and_count_coverage():
+    sentences = load_daily_routine_sentences()
+    levels = {sentence["level"] for sentence in sentences}
+    assert {"A1", "A1+", "A2", "A2+", "B1"}.issubset(levels)
+
+    assert len(sentences) >= 300
