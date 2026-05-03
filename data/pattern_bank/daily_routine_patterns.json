@@ -87,7 +87,7 @@
         "grammar_focus": ["like_verb", "to_infinitive", "daily_routine_vocabulary"],
         "slot_constraints": {
           "action": {
-            "category": ["routine_actions_to_infinitive"],
+            "category": ["routine_like_actions"],
             "routine_action": true
           }
         },
@@ -147,7 +147,7 @@
         "grammar_focus": ["need_to", "to_infinitive", "daily_routine_vocabulary"],
         "slot_constraints": {
           "action": {
-            "category": ["routine_actions_to_infinitive"],
+            "category": ["routine_need_actions"],
             "routine_action": true
           }
         },
@@ -167,7 +167,7 @@
         "grammar_focus": ["have_to", "to_infinitive", "daily_routine_vocabulary"],
         "slot_constraints": {
           "action": {
-            "category": ["routine_actions_to_infinitive"],
+            "category": ["routine_have_to_actions"],
             "routine_action": true
           }
         },
@@ -187,7 +187,7 @@
         "grammar_focus": ["would_like_to", "to_infinitive", "daily_routine_vocabulary"],
         "slot_constraints": {
           "action": {
-            "category": ["routine_actions_to_infinitive"],
+            "category": ["routine_would_like_actions"],
             "routine_action": true
           }
         },

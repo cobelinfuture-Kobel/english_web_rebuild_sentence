@@ -87,6 +87,49 @@
       "leisure_action": true
     },
     {
+      "text": "pack my bag",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "clean my room",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "chore_action": true
+    },
+    {
+      "text": "make my bed",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "chore_action": true
+    },
+    {
+      "text": "put on my shoes",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "preparation_action": true
+    },
+    {
+      "text": "watch TV",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "leisure_action": true
+    },
+    {
+      "text": "listen to music",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "leisure_action": true
+    },
+    {
+      "text": "help my parents",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "help_action": true
+    },
+    {
       "text": "go to bed",
       "routine_action": true,
       "to_infinitive_ok": true
@@ -155,8 +198,92 @@
       "leisure_action": true
     },
     {
+      "text": "pack my bag",
+      "routine_action": true,
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "clean my room",
+      "routine_action": true,
+      "chore_action": true
+    },
+    {
+      "text": "make my bed",
+      "routine_action": true,
+      "chore_action": true
+    },
+    {
+      "text": "put on my shoes",
+      "routine_action": true,
+      "preparation_action": true
+    },
+    {
+      "text": "watch TV",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "listen to music",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "help my parents",
+      "routine_action": true,
+      "help_action": true
+    },
+    {
       "text": "go to bed",
       "routine_action": true
+    }
+  ],
+
+  "routine_like_actions": [
+    {
+      "text": "read a book",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "drink water",
+      "routine_action": true,
+      "drink_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "eat breakfast",
+      "routine_action": true,
+      "meal_action": true
+    },
+    {
+      "text": "go home",
+      "routine_action": true
+    },
+    {
+      "text": "take a shower",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "watch TV",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "listen to music",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "help my parents",
+      "routine_action": true,
+      "help_action": true
     }
   ],
 
@@ -185,6 +312,158 @@
       "text": "take a shower",
       "routine_action": true,
       "hygiene_action": true
+    },
+    {
+      "text": "watch TV",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "listen to music",
+      "routine_action": true,
+      "leisure_action": true
+    }
+  ],
+
+  "routine_need_actions": [
+    {
+      "text": "wash my hands",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "drink water",
+      "routine_action": true,
+      "drink_action": true
+    },
+    {
+      "text": "do my homework",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "go to bed",
+      "routine_action": true
+    },
+    {
+      "text": "take a shower",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "brush my teeth",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "clean my room",
+      "routine_action": true,
+      "chore_action": true
+    },
+    {
+      "text": "pack my bag",
+      "routine_action": true,
+      "school_age": true,
+      "preparation_action": true
+    }
+  ],
+
+  "routine_have_to_actions": [
+    {
+      "text": "go to school",
+      "routine_action": true,
+      "school_age": true
+    },
+    {
+      "text": "do my homework",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "brush my teeth",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "wash my hands",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "pack my bag",
+      "routine_action": true,
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "go to bed",
+      "routine_action": true
+    },
+    {
+      "text": "clean my room",
+      "routine_action": true,
+      "chore_action": true
+    },
+    {
+      "text": "make my bed",
+      "routine_action": true,
+      "chore_action": true
+    }
+  ],
+
+  "routine_would_like_actions": [
+    {
+      "text": "go home",
+      "routine_action": true
+    },
+    {
+      "text": "read a book",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "take a shower",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "drink water",
+      "routine_action": true,
+      "drink_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "go to bed early",
+      "routine_action": true
+    },
+    {
+      "text": "watch TV",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "listen to music",
+      "routine_action": true,
+      "leisure_action": true
     }
   ],
 
@@ -208,6 +487,16 @@
     },
     {
       "text": "read a book",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "watch TV",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "listen to music",
       "routine_action": true,
       "leisure_action": true
     }
@@ -308,6 +597,34 @@
       "time": "at night"
     },
     {
+      "action": "pack my bag",
+      "time": "before school"
+    },
+    {
+      "action": "clean my room",
+      "time": "after school"
+    },
+    {
+      "action": "make my bed",
+      "time": "in the morning"
+    },
+    {
+      "action": "put on my shoes",
+      "time": "before school"
+    },
+    {
+      "action": "watch TV",
+      "time": "in the evening"
+    },
+    {
+      "action": "listen to music",
+      "time": "in the evening"
+    },
+    {
+      "action": "help my parents",
+      "time": "after school"
+    },
+    {
       "action": "go to bed",
       "time": "at night"
     }
@@ -393,6 +710,30 @@
     {
       "action": "read a book",
       "place": "in my room"
+    },
+    {
+      "action": "pack my bag",
+      "place": "in my room"
+    },
+    {
+      "action": "clean my room",
+      "place": "in my room"
+    },
+    {
+      "action": "make my bed",
+      "place": "in my room"
+    },
+    {
+      "action": "watch TV",
+      "place": "at home"
+    },
+    {
+      "action": "listen to music",
+      "place": "in my room"
+    },
+    {
+      "action": "help my parents",
+      "place": "at home"
     },
     {
       "action": "go to bed",
@@ -529,6 +870,26 @@
     {
       "sentence_start": "I go to school early",
       "reason": "I do not want to be late"
+    },
+    {
+      "sentence_start": "I clean my room",
+      "reason": "it is messy"
+    },
+    {
+      "sentence_start": "I pack my bag before school",
+      "reason": "I need my books"
+    },
+    {
+      "sentence_start": "I help my parents",
+      "reason": "they are busy"
+    },
+    {
+      "sentence_start": "I listen to music",
+      "reason": "I am tired"
+    },
+    {
+      "sentence_start": "I watch TV in the evening",
+      "reason": "I am free"
     }
   ],
 
@@ -552,6 +913,26 @@
     {
       "main_clause": "I take a shower",
       "sequence_phrase": "before I go to bed"
+    },
+    {
+      "main_clause": "I pack my bag",
+      "sequence_phrase": "before I go to school"
+    },
+    {
+      "main_clause": "I put on my shoes",
+      "sequence_phrase": "before I go to school"
+    },
+    {
+      "main_clause": "I clean my room",
+      "sequence_phrase": "after I get home"
+    },
+    {
+      "main_clause": "I watch TV",
+      "sequence_phrase": "after I finish my homework"
+    },
+    {
+      "main_clause": "I listen to music",
+      "sequence_phrase": "after I finish my homework"
     }
   ],
 
@@ -571,6 +952,22 @@
     {
       "thing": "studying English",
       "reason": "it is useful"
+    },
+    {
+      "thing": "watching TV in the evening",
+      "reason": "it is fun"
+    },
+    {
+      "thing": "listening to music",
+      "reason": "it is relaxing"
+    },
+    {
+      "thing": "helping my parents",
+      "reason": "it is important"
+    },
+    {
+      "thing": "cleaning my room",
+      "reason": "it feels good"
     }
   ],
 
@@ -590,6 +987,22 @@
     {
       "action": "wash my hands",
       "reason": "my hands are dirty"
+    },
+    {
+      "action": "pack my bag",
+      "reason": "I have school tomorrow"
+    },
+    {
+      "action": "clean my room",
+      "reason": "it is messy"
+    },
+    {
+      "action": "go to bed early",
+      "reason": "I have school tomorrow"
+    },
+    {
+      "action": "finish my homework",
+      "reason": "it is due tomorrow"
     }
   ],
 
@@ -630,6 +1043,26 @@
       "time": "at six thirty"
     },
     {
+      "action": "eat breakfast",
+      "time": "at seven fifteen"
+    },
+    {
+      "action": "do my homework",
+      "time": "at five"
+    },
+    {
+      "action": "take a shower",
+      "time": "at eight"
+    },
+    {
+      "action": "read a book",
+      "time": "at eight thirty"
+    },
+    {
+      "action": "pack my bag",
+      "time": "at eight forty-five"
+    },
+    {
       "action": "go to bed",
       "time": "at nine"
     }
@@ -660,6 +1093,31 @@
       "frequency": "often",
       "action": "study English",
       "time_context": "after school"
+    },
+    {
+      "frequency": "usually",
+      "action": "pack my bag",
+      "time_context": "before school"
+    },
+    {
+      "frequency": "often",
+      "action": "help my parents",
+      "time_context": "after dinner"
+    },
+    {
+      "frequency": "sometimes",
+      "action": "watch TV",
+      "time_context": "in the evening"
+    },
+    {
+      "frequency": "often",
+      "action": "listen to music",
+      "time_context": "after school"
+    },
+    {
+      "frequency": "usually",
+      "action": "clean my room",
+      "time_context": "on weekends"
     }
   ],
 
@@ -683,6 +1141,26 @@
     {
       "sentence": "I study English",
       "context": "on weekdays"
+    },
+    {
+      "sentence": "I clean my room",
+      "context": "on weekends"
+    },
+    {
+      "sentence": "I watch TV",
+      "context": "on weekends"
+    },
+    {
+      "sentence": "I pack my bag",
+      "context": "on weekdays"
+    },
+    {
+      "sentence": "I help my parents",
+      "context": "on weekends"
+    },
+    {
+      "sentence": "I listen to music",
+      "context": "after school"
     }
   ],
 
@@ -698,6 +1176,22 @@
     {
       "sentence_start": "I cannot watch TV",
       "reason": "I need to finish my homework"
+    },
+    {
+      "sentence_start": "I cannot watch TV",
+      "reason": "I have homework"
+    },
+    {
+      "sentence_start": "I cannot play outside",
+      "reason": "I have to clean my room"
+    },
+    {
+      "sentence_start": "I cannot use the computer",
+      "reason": "I need to study"
+    },
+    {
+      "sentence_start": "I cannot go to bed late",
+      "reason": "I have school tomorrow"
     }
   ],
 
@@ -717,6 +1211,22 @@
     {
       "task": "finish my homework",
       "deadline": "before I watch TV"
+    },
+    {
+      "task": "clean my room",
+      "deadline": "before dinner"
+    },
+    {
+      "task": "pack my bag",
+      "deadline": "before I go to bed"
+    },
+    {
+      "task": "finish my homework",
+      "deadline": "before I play outside"
+    },
+    {
+      "task": "wash my hands",
+      "deadline": "before dinner"
     }
   ],
 
@@ -736,6 +1246,22 @@
     {
       "subject": "My weekend routine",
       "description": "is relaxed"
+    },
+    {
+      "subject": "My after-school routine",
+      "description": "is busy but helpful"
+    },
+    {
+      "subject": "My morning routine",
+      "description": "is short but busy"
+    },
+    {
+      "subject": "My homework routine",
+      "description": "is hard but useful"
+    },
+    {
+      "subject": "My bedtime routine",
+      "description": "is simple and quiet"
     }
   ]
 }
