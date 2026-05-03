@@ -1,0 +1,688 @@
+{
+  "routine_actions_basic": [
+    {
+      "text": "get up",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "school_age": true
+    },
+    {
+      "text": "go to school",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "school_age": true
+    },
+    {
+      "text": "go home",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "school_age": true
+    },
+    {
+      "text": "eat breakfast",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "meal_action": true
+    },
+    {
+      "text": "eat lunch",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "meal_action": true
+    },
+    {
+      "text": "eat dinner",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "meal_action": true
+    },
+    {
+      "text": "drink water",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "drink_action": true
+    },
+    {
+      "text": "brush my teeth",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "wash my face",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "wash my hands",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "take a shower",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "do my homework",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "read a book",
+      "routine_action": true,
+      "to_infinitive_ok": true,
+      "leisure_action": true
+    },
+    {
+      "text": "go to bed",
+      "routine_action": true,
+      "to_infinitive_ok": true
+    }
+  ],
+
+  "routine_actions_to_infinitive": [
+    {
+      "text": "get up",
+      "routine_action": true
+    },
+    {
+      "text": "go to school",
+      "routine_action": true,
+      "school_age": true
+    },
+    {
+      "text": "go home",
+      "routine_action": true
+    },
+    {
+      "text": "eat breakfast",
+      "routine_action": true,
+      "meal_action": true
+    },
+    {
+      "text": "drink water",
+      "routine_action": true,
+      "drink_action": true
+    },
+    {
+      "text": "brush my teeth",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "wash my face",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "wash my hands",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "take a shower",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "do my homework",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "study English",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "read a book",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "go to bed",
+      "routine_action": true
+    }
+  ],
+
+  "routine_times_simple": [
+    {
+      "text": "today",
+      "time_expression": true
+    },
+    {
+      "text": "every day",
+      "time_expression": true
+    },
+    {
+      "text": "in the morning",
+      "time_expression": true,
+      "part_of_day": "morning"
+    },
+    {
+      "text": "in the afternoon",
+      "time_expression": true,
+      "part_of_day": "afternoon"
+    },
+    {
+      "text": "in the evening",
+      "time_expression": true,
+      "part_of_day": "evening"
+    },
+    {
+      "text": "at night",
+      "time_expression": true,
+      "part_of_day": "night"
+    },
+    {
+      "text": "after school",
+      "time_expression": true,
+      "school_context": true
+    },
+    {
+      "text": "before school",
+      "time_expression": true,
+      "school_context": true
+    }
+  ],
+
+  "routine_action_time_pairs": [
+    {
+      "action": "get up",
+      "time": "in the morning"
+    },
+    {
+      "action": "wash my face",
+      "time": "in the morning"
+    },
+    {
+      "action": "brush my teeth",
+      "time": "in the morning"
+    },
+    {
+      "action": "eat breakfast",
+      "time": "in the morning"
+    },
+    {
+      "action": "go to school",
+      "time": "in the morning"
+    },
+    {
+      "action": "eat lunch",
+      "time": "at school"
+    },
+    {
+      "action": "go home",
+      "time": "after school"
+    },
+    {
+      "action": "do my homework",
+      "time": "after school"
+    },
+    {
+      "action": "study English",
+      "time": "after school"
+    },
+    {
+      "action": "read a book",
+      "time": "in the evening"
+    },
+    {
+      "action": "eat dinner",
+      "time": "in the evening"
+    },
+    {
+      "action": "brush my teeth",
+      "time": "at night"
+    },
+    {
+      "action": "take a shower",
+      "time": "at night"
+    },
+    {
+      "action": "go to bed",
+      "time": "at night"
+    }
+  ],
+
+  "routine_places": [
+    {
+      "text": "at home",
+      "place": true
+    },
+    {
+      "text": "at school",
+      "place": true,
+      "school_context": true
+    },
+    {
+      "text": "in my room",
+      "place": true,
+      "home_context": true
+    },
+    {
+      "text": "in the bathroom",
+      "place": true,
+      "home_context": true,
+      "hygiene_place": true
+    },
+    {
+      "text": "in the kitchen",
+      "place": true,
+      "home_context": true,
+      "meal_place": true
+    },
+    {
+      "text": "in the classroom",
+      "place": true,
+      "school_context": true,
+      "study_place": true
+    },
+    {
+      "text": "at my desk",
+      "place": true,
+      "study_place": true
+    }
+  ],
+
+  "routine_action_place_pairs": [
+    {
+      "action": "brush my teeth",
+      "place": "in the bathroom"
+    },
+    {
+      "action": "wash my face",
+      "place": "in the bathroom"
+    },
+    {
+      "action": "wash my hands",
+      "place": "in the bathroom"
+    },
+    {
+      "action": "take a shower",
+      "place": "in the bathroom"
+    },
+    {
+      "action": "eat breakfast",
+      "place": "in the kitchen"
+    },
+    {
+      "action": "eat dinner",
+      "place": "in the kitchen"
+    },
+    {
+      "action": "do my homework",
+      "place": "in my room"
+    },
+    {
+      "action": "do my homework",
+      "place": "at my desk"
+    },
+    {
+      "action": "study English",
+      "place": "in the classroom"
+    },
+    {
+      "action": "read a book",
+      "place": "in my room"
+    },
+    {
+      "action": "go to bed",
+      "place": "in my room"
+    }
+  ],
+
+  "routine_states": [
+    {
+      "text": "tired",
+      "state": true
+    },
+    {
+      "text": "busy",
+      "state": true
+    },
+    {
+      "text": "sleepy",
+      "state": true
+    },
+    {
+      "text": "hungry",
+      "state": true,
+      "food_overlap": true
+    },
+    {
+      "text": "thirsty",
+      "state": true,
+      "food_overlap": true
+    },
+    {
+      "text": "late",
+      "state": true,
+      "time_state": true
+    },
+    {
+      "text": "early",
+      "state": true,
+      "time_state": true
+    },
+    {
+      "text": "ready",
+      "state": true
+    },
+    {
+      "text": "free",
+      "state": true
+    }
+  ],
+
+  "routine_states_today": [
+    {
+      "text": "tired",
+      "state": true
+    },
+    {
+      "text": "busy",
+      "state": true
+    },
+    {
+      "text": "sleepy",
+      "state": true
+    },
+    {
+      "text": "hungry",
+      "state": true
+    },
+    {
+      "text": "thirsty",
+      "state": true
+    },
+    {
+      "text": "ready",
+      "state": true
+    },
+    {
+      "text": "free",
+      "state": true
+    }
+  ],
+
+  "routine_problem_pairs": [
+    {
+      "subject": "I",
+      "problem": "am too tired"
+    },
+    {
+      "subject": "I",
+      "problem": "am too busy"
+    },
+    {
+      "subject": "I",
+      "problem": "am late for school"
+    },
+    {
+      "subject": "My bag",
+      "problem": "is too heavy"
+    },
+    {
+      "subject": "My homework",
+      "problem": "is too hard"
+    },
+    {
+      "subject": "My room",
+      "problem": "is too messy"
+    }
+  ],
+
+  "routine_reason_pairs": [
+    {
+      "sentence_start": "I go to bed early",
+      "reason": "I am tired"
+    },
+    {
+      "sentence_start": "I drink water",
+      "reason": "I am thirsty"
+    },
+    {
+      "sentence_start": "I eat breakfast",
+      "reason": "I am hungry"
+    },
+    {
+      "sentence_start": "I do my homework after school",
+      "reason": "I have time"
+    },
+    {
+      "sentence_start": "I study English",
+      "reason": "I have a test"
+    },
+    {
+      "sentence_start": "I brush my teeth at night",
+      "reason": "I want clean teeth"
+    },
+    {
+      "sentence_start": "I go to school early",
+      "reason": "I do not want to be late"
+    }
+  ],
+
+  "routine_before_after_pairs": [
+    {
+      "main_clause": "I brush my teeth",
+      "sequence_phrase": "before I go to bed"
+    },
+    {
+      "main_clause": "I wash my face",
+      "sequence_phrase": "after I get up"
+    },
+    {
+      "main_clause": "I eat breakfast",
+      "sequence_phrase": "before I go to school"
+    },
+    {
+      "main_clause": "I do my homework",
+      "sequence_phrase": "after I get home"
+    },
+    {
+      "main_clause": "I take a shower",
+      "sequence_phrase": "before I go to bed"
+    }
+  ],
+
+  "routine_preference_reason_pairs": [
+    {
+      "thing": "my morning routine",
+      "reason": "it is easy"
+    },
+    {
+      "thing": "my evening routine",
+      "reason": "it is quiet"
+    },
+    {
+      "thing": "reading at night",
+      "reason": "it is fun"
+    },
+    {
+      "thing": "studying English",
+      "reason": "it is useful"
+    }
+  ],
+
+  "routine_need_reason_pairs": [
+    {
+      "action": "study English",
+      "reason": "I have a test"
+    },
+    {
+      "action": "do my homework",
+      "reason": "I have homework"
+    },
+    {
+      "action": "go to bed early",
+      "reason": "I am tired"
+    },
+    {
+      "action": "wash my hands",
+      "reason": "my hands are dirty"
+    }
+  ],
+
+  "routine_frequency_adverbs": [
+    {
+      "text": "usually",
+      "frequency_adverb": true
+    },
+    {
+      "text": "sometimes",
+      "frequency_adverb": true
+    },
+    {
+      "text": "often",
+      "frequency_adverb": true
+    }
+  ],
+
+  "routine_clock_time_pairs": [
+    {
+      "action": "get up",
+      "time": "at seven"
+    },
+    {
+      "action": "go to school",
+      "time": "at seven thirty"
+    },
+    {
+      "action": "eat lunch",
+      "time": "at twelve"
+    },
+    {
+      "action": "go home",
+      "time": "at four"
+    },
+    {
+      "action": "eat dinner",
+      "time": "at six thirty"
+    },
+    {
+      "action": "go to bed",
+      "time": "at nine"
+    }
+  ],
+
+  "routine_frequency_time_pairs": [
+    {
+      "frequency": "usually",
+      "action": "get up",
+      "time_context": "at seven"
+    },
+    {
+      "frequency": "usually",
+      "action": "go to school",
+      "time_context": "at seven thirty"
+    },
+    {
+      "frequency": "usually",
+      "action": "do my homework",
+      "time_context": "after school"
+    },
+    {
+      "frequency": "sometimes",
+      "action": "read a book",
+      "time_context": "before bed"
+    },
+    {
+      "frequency": "often",
+      "action": "study English",
+      "time_context": "after school"
+    }
+  ],
+
+  "routine_weekday_weekend_pairs": [
+    {
+      "sentence": "I get up early",
+      "context": "on weekdays"
+    },
+    {
+      "sentence": "I get up late",
+      "context": "on weekends"
+    },
+    {
+      "sentence": "I do my homework",
+      "context": "on weekdays"
+    },
+    {
+      "sentence": "I read a book",
+      "context": "on weekends"
+    },
+    {
+      "sentence": "I study English",
+      "context": "on weekdays"
+    }
+  ],
+
+  "routine_conflict_reason_pairs": [
+    {
+      "sentence_start": "I cannot go out",
+      "reason": "I have homework"
+    },
+    {
+      "sentence_start": "I cannot play now",
+      "reason": "I have to study"
+    },
+    {
+      "sentence_start": "I cannot watch TV",
+      "reason": "I need to finish my homework"
+    }
+  ],
+
+  "routine_finish_before_pairs": [
+    {
+      "task": "finish my homework",
+      "deadline": "before dinner"
+    },
+    {
+      "task": "pack my bag",
+      "deadline": "before school"
+    },
+    {
+      "task": "brush my teeth",
+      "deadline": "before bed"
+    },
+    {
+      "task": "finish my homework",
+      "deadline": "before I watch TV"
+    }
+  ],
+
+  "routine_b1_opinion_pairs": [
+    {
+      "subject": "My morning routine",
+      "description": "is busy but useful"
+    },
+    {
+      "subject": "My evening routine",
+      "description": "is quiet and easy"
+    },
+    {
+      "subject": "My school day",
+      "description": "is busy but fun"
+    },
+    {
+      "subject": "My weekend routine",
+      "description": "is relaxed"
+    }
+  ]
+}
