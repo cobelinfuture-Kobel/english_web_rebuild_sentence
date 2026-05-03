@@ -102,6 +102,34 @@ def create_attempt(
     )
 
 
+def write_attempts_file(tmp_path, attempts):
+    attempts_path = tmp_path / "user_sentence_attempts.json"
+    with attempts_path.open("w", encoding="utf-8") as f:
+        json.dump(attempts, f, indent=4, ensure_ascii=False)
+
+
+def build_attempt_record(
+    attempt_number,
+    user_id,
+    sentence_id,
+    level,
+    pattern,
+    is_correct,
+    created_at,
+):
+    return {
+        "id": f"attempt_{attempt_number:03d}",
+        "user_id": user_id,
+        "sentence_id": sentence_id,
+        "level": level,
+        "pattern": pattern,
+        "user_answer": f"answer {attempt_number}",
+        "correct_answer": f"correct {attempt_number}",
+        "is_correct": is_correct,
+        "created_at": created_at,
+    }
+
+
 def get_next_practice(client, user_id, query_string=None):
     return client.get(f"/api/users/{user_id}/next-practice", query_string=query_string)
 
@@ -300,6 +328,20 @@ def test_get_user_stats_returns_zero_stats_without_attempts(tmp_path):
         "correct_attempts": 0,
         "wrong_attempts": 0,
         "accuracy": 0,
+        "recent": {
+            "last_10": {
+                "total_attempts": 0,
+                "correct_attempts": 0,
+                "wrong_attempts": 0,
+                "accuracy": 0,
+            },
+            "last_20": {
+                "total_attempts": 0,
+                "correct_attempts": 0,
+                "wrong_attempts": 0,
+                "accuracy": 0,
+            },
+        },
         "by_level": {},
         "by_pattern": {},
     }
@@ -324,6 +366,20 @@ def test_get_user_stats_calculates_summary_level_and_pattern_breakdowns(tmp_path
         "correct_attempts": 3,
         "wrong_attempts": 2,
         "accuracy": 0.6,
+        "recent": {
+            "last_10": {
+                "total_attempts": 5,
+                "correct_attempts": 3,
+                "wrong_attempts": 2,
+                "accuracy": 0.6,
+            },
+            "last_20": {
+                "total_attempts": 5,
+                "correct_attempts": 3,
+                "wrong_attempts": 2,
+                "accuracy": 0.6,
+            },
+        },
         "by_level": {
             "A1": {
                 "total_attempts": 3,
@@ -372,6 +428,20 @@ def test_get_user_stats_does_not_include_other_users_attempts(tmp_path):
         "correct_attempts": 1,
         "wrong_attempts": 0,
         "accuracy": 1.0,
+        "recent": {
+            "last_10": {
+                "total_attempts": 1,
+                "correct_attempts": 1,
+                "wrong_attempts": 0,
+                "accuracy": 1.0,
+            },
+            "last_20": {
+                "total_attempts": 1,
+                "correct_attempts": 1,
+                "wrong_attempts": 0,
+                "accuracy": 1.0,
+            },
+        },
         "by_level": {
             "A1": {
                 "total_attempts": 1,
@@ -388,6 +458,163 @@ def test_get_user_stats_does_not_include_other_users_attempts(tmp_path):
                 "accuracy": 1.0,
             }
         },
+    }
+
+
+def test_get_user_stats_recent_uses_all_attempts_when_fewer_than_ten(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    attempts = []
+    for attempt_number in range(1, 6):
+        attempts.append(
+            build_attempt_record(
+                attempt_number=attempt_number,
+                user_id=user["id"],
+                sentence_id=f"SHOP_PAY_A1_{attempt_number:03d}",
+                level="A1",
+                pattern="SHOP_PAY",
+                is_correct=attempt_number <= 3,
+                created_at=f"2026-01-01T00:00:{attempt_number:02d}",
+            )
+        )
+    write_attempts_file(tmp_path, attempts)
+
+    response = client.get(f"/api/users/{user['id']}/stats")
+
+    assert response.status_code == 200
+    assert response.get_json()["recent"] == {
+        "last_10": {
+            "total_attempts": 5,
+            "correct_attempts": 3,
+            "wrong_attempts": 2,
+            "accuracy": 0.6,
+        },
+        "last_20": {
+            "total_attempts": 5,
+            "correct_attempts": 3,
+            "wrong_attempts": 2,
+            "accuracy": 0.6,
+        },
+    }
+
+
+def test_get_user_stats_recent_last_10_and_last_20_use_latest_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    attempts = []
+    for attempt_number in range(1, 26):
+        attempts.append(
+            build_attempt_record(
+                attempt_number=attempt_number,
+                user_id=user["id"],
+                sentence_id=f"SHOP_PAY_A1_{attempt_number:03d}",
+                level="A1" if attempt_number <= 12 else "A2",
+                pattern="SHOP_PAY" if attempt_number <= 12 else "SHOP_TOO",
+                is_correct=attempt_number >= 16,
+                created_at=f"2026-01-01T00:00:{attempt_number:02d}",
+            )
+        )
+    write_attempts_file(tmp_path, attempts)
+
+    response = client.get(f"/api/users/{user['id']}/stats")
+
+    assert response.status_code == 200
+    assert response.get_json()["recent"] == {
+        "last_10": {
+            "total_attempts": 10,
+            "correct_attempts": 10,
+            "wrong_attempts": 0,
+            "accuracy": 1.0,
+        },
+        "last_20": {
+            "total_attempts": 20,
+            "correct_attempts": 10,
+            "wrong_attempts": 10,
+            "accuracy": 0.5,
+        },
+    }
+
+
+def test_get_user_stats_recent_does_not_mix_other_users_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client, "Tom")
+    other_user = create_user(client, "Jane")
+
+    attempts = []
+    for attempt_number in range(1, 9):
+        attempts.append(
+            build_attempt_record(
+                attempt_number=attempt_number,
+                user_id=user["id"],
+                sentence_id=f"SHOP_PAY_A1_{attempt_number:03d}",
+                level="A1",
+                pattern="SHOP_PAY",
+                is_correct=attempt_number <= 6,
+                created_at=f"2026-01-01T00:00:{attempt_number:02d}",
+            )
+        )
+    for attempt_number in range(9, 15):
+        attempts.append(
+            build_attempt_record(
+                attempt_number=attempt_number,
+                user_id=other_user["id"],
+                sentence_id=f"SHOP_TOO_A2_{attempt_number:03d}",
+                level="A2",
+                pattern="SHOP_TOO",
+                is_correct=False,
+                created_at=f"2026-01-01T00:00:{attempt_number:02d}",
+            )
+        )
+    write_attempts_file(tmp_path, attempts)
+
+    response = client.get(f"/api/users/{user['id']}/stats")
+
+    assert response.status_code == 200
+    assert response.get_json()["recent"] == {
+        "last_10": {
+            "total_attempts": 8,
+            "correct_attempts": 6,
+            "wrong_attempts": 2,
+            "accuracy": 0.75,
+        },
+        "last_20": {
+            "total_attempts": 8,
+            "correct_attempts": 6,
+            "wrong_attempts": 2,
+            "accuracy": 0.75,
+        },
+    }
+
+
+def test_get_user_stats_recent_sorts_same_created_at_by_id_desc(tmp_path):
+    client = create_test_client(tmp_path)
+    user = create_user(client)
+
+    attempts = []
+    for attempt_number in range(1, 13):
+        attempts.append(
+            build_attempt_record(
+                attempt_number=attempt_number,
+                user_id=user["id"],
+                sentence_id=f"SHOP_PAY_A1_{attempt_number:03d}",
+                level="A1",
+                pattern="SHOP_PAY",
+                is_correct=attempt_number >= 8,
+                created_at="2026-01-01T00:00:00",
+            )
+        )
+    write_attempts_file(tmp_path, attempts)
+
+    response = client.get(f"/api/users/{user['id']}/stats")
+
+    assert response.status_code == 200
+    assert response.get_json()["recent"]["last_10"] == {
+        "total_attempts": 10,
+        "correct_attempts": 5,
+        "wrong_attempts": 5,
+        "accuracy": 0.5,
     }
 
 
@@ -1937,6 +2164,16 @@ def test_index_page_renders_summary_coverage(tmp_path):
     assert response.status_code == 200
     html = response.get_data(as_text=True)
     assert 'id="summary-coverage"' in html
+
+
+def test_index_page_renders_summary_recent_accuracy(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="summary-recent-accuracy"' in html
 
 
 def test_game_js_formats_summary_coverage_with_one_decimal_place():

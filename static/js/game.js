@@ -85,6 +85,7 @@ const reviewButton = document.getElementById("review-btn");
 const learningSummaryPanel = document.getElementById("learning-summary-panel");
 const summaryTotalAttempts = document.getElementById("summary-total-attempts");
 const summaryAccuracy = document.getElementById("summary-accuracy");
+const summaryRecentAccuracy = document.getElementById("summary-recent-accuracy");
 const summaryCoverage = document.getElementById("summary-coverage");
 const summaryNotAttempted = document.getElementById("summary-not-attempted");
 const weakPatternsPanel = document.getElementById("weak-patterns-panel");
@@ -502,6 +503,7 @@ function getStoredUser() {
 function clearLearningSummary() {
     summaryTotalAttempts.innerText = "--";
     summaryAccuracy.innerText = "--";
+    summaryRecentAccuracy.innerText = "--";
     summaryCoverage.innerText = "--";
     summaryNotAttempted.innerText = "--";
     weakPatternsList.innerHTML = "";
@@ -526,6 +528,11 @@ async function loadStatsSummary(userId, requestToken = learningSummaryRequestTok
 
     summaryTotalAttempts.innerText = String(data.total_attempts ?? 0);
     summaryAccuracy.innerText = formatPercent(data.accuracy ?? 0);
+    if ((data.recent?.last_10?.total_attempts ?? 0) > 0) {
+        summaryRecentAccuracy.innerText = formatPercent(data.recent?.last_10?.accuracy ?? 0);
+    } else {
+        summaryRecentAccuracy.innerText = "--";
+    }
 }
 
 async function loadCoverageSummary(userId, requestToken = learningSummaryRequestToken) {
@@ -597,6 +604,7 @@ function applyLearningSummaryFailure(sectionName) {
     if (sectionName === "stats") {
         summaryTotalAttempts.innerText = "--";
         summaryAccuracy.innerText = "--";
+        summaryRecentAccuracy.innerText = "--";
         return;
     }
 

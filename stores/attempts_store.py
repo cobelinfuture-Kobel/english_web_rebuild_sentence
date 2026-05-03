@@ -41,20 +41,21 @@ class AttemptsStore:
 
     def get_user_attempts(self, user_id):
         attempts = [attempt for attempt in self._load() if attempt["user_id"] == user_id]
-        return sorted(
-            attempts,
-            key=lambda item: (item.get("created_at", ""), item.get("id", "")),
-            reverse=True,
-        )
+        return self._sort_attempts_desc(attempts)
 
     def get_all_attempts(self):
         return self._load()
 
     def get_user_stats(self, user_id):
         attempts = [attempt for attempt in self._load() if attempt["user_id"] == user_id]
+        recent_attempts = self._sort_attempts_desc(attempts)
         return {
             "user_id": user_id,
             **self._build_stats(attempts),
+            "recent": {
+                "last_10": self._build_stats(recent_attempts[:10]),
+                "last_20": self._build_stats(recent_attempts[:20]),
+            },
             "by_level": self._group_stats(attempts, "level"),
             "by_pattern": self._group_stats(attempts, "pattern"),
         }
@@ -156,6 +157,13 @@ class AttemptsStore:
             "correct_answer": attempt.get("correct_answer"),
             "created_at": attempt.get("created_at"),
         }
+
+    def _sort_attempts_desc(self, attempts):
+        return sorted(
+            attempts,
+            key=lambda item: (item.get("created_at", ""), item.get("id", "")),
+            reverse=True,
+        )
 
     def _next_id(self, attempts):
         max_number = 0
