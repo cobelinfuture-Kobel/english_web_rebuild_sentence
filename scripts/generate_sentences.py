@@ -91,6 +91,28 @@ COUNT_BY_PATTERN_LEVEL = {
     ("FOOD_SPLIT_CHECK", "B1"): 1,
     ("FOOD_PAY_SEPARATELY", "B1"): 1,
     ("FOOD_TO_GO", "B1"): 1,
+    ("ROUTINE_DO", "A1"): 20,
+    ("ROUTINE_BE_STATE", "A1"): 12,
+    ("ROUTINE_PLACE", "A1"): 10,
+    ("ROUTINE_DO_TIME", "A1+"): 18,
+    ("ROUTINE_LIKE", "A1+"): 15,
+    ("ROUTINE_WANT", "A1+"): 15,
+    ("ROUTINE_BE_STATE_TODAY", "A1+"): 12,
+    ("ROUTINE_NEED", "A2"): 16,
+    ("ROUTINE_HAVE_TO", "A2"): 16,
+    ("ROUTINE_WOULD_LIKE", "A2"): 14,
+    ("ROUTINE_CAN_PLACE", "A2"): 12,
+    ("ROUTINE_TOO", "A2"): 12,
+    ("ROUTINE_REASON", "A2+"): 15,
+    ("ROUTINE_BEFORE_AFTER", "A2+"): 15,
+    ("ROUTINE_PREFERENCE_REASON", "A2+"): 12,
+    ("ROUTINE_PROBLEM_REASON", "A2+"): 12,
+    ("ROUTINE_USUALLY", "B1"): 16,
+    ("ROUTINE_CLOCK_TIME", "B1"): 16,
+    ("ROUTINE_WEEKDAY_WEEKEND", "B1"): 14,
+    ("ROUTINE_CANNOT_BECAUSE", "B1"): 12,
+    ("ROUTINE_FINISH_BEFORE", "B1"): 12,
+    ("ROUTINE_ROUTINE_OPINION", "B1"): 12,
 }
 
 SCENARIO_CONFIGS = {
@@ -105,6 +127,12 @@ SCENARIO_CONFIGS = {
         "pattern_path": Path("data/pattern_bank/food_drink_patterns.json"),
         "slot_path": Path("data/slot_bank/food_drink_slots.json"),
         "output_path": Path("data/generated/food_drink_sentence_bank.json"),
+    },
+    "daily_routine": {
+        "sentence_prefix": "DAILY_ROUTINE",
+        "pattern_path": Path("data/pattern_bank/daily_routine_patterns.json"),
+        "slot_path": Path("data/slot_bank/daily_routine_slots.json"),
+        "output_path": Path("data/generated/daily_routine_sentence_bank.json"),
     },
 }
 
