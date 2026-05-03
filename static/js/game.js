@@ -577,10 +577,18 @@ async function loadNextPractice(userId, requestToken = learningSummaryRequestTok
     }
 
     clearNextPracticePanel();
-    nextPracticeStatus.innerText =
-        data.message ||
-        NEXT_PRACTICE_STRATEGY_LABELS[data.strategy] ||
-        "Next practice recommendations";
+    if (
+        data.reason_code === "RECENT_ACCURACY_LOW" ||
+        data.strategy === "remediate_recent_wrong"
+    ) {
+        nextPracticeStatus.innerText =
+            "🛠️ 偵測到近期錯誤較多，建議先完成錯題修復，再開啟新挑戰。";
+    } else {
+        nextPracticeStatus.innerText =
+            data.message ||
+            NEXT_PRACTICE_STRATEGY_LABELS[data.strategy] ||
+            "Next practice recommendations";
+    }
 
     const recommendations = data.recommendations || [];
     if (!recommendations.length) {

@@ -2423,6 +2423,16 @@ def test_game_js_uses_next_practice_message_when_available():
     assert "data.message ||" in script
 
 
+def test_game_js_uses_remediation_specific_status_copy():
+    js_path = BASE_DIR / "static" / "js" / "game.js"
+
+    script = js_path.read_text(encoding="utf-8")
+
+    assert 'data.reason_code === "RECENT_ACCURACY_LOW"' in script
+    assert 'data.strategy === "remediate_recent_wrong"' in script
+    assert "偵測到近期錯誤較多，建議先完成錯題修復，再開啟新挑戰。" in script
+
+
 def test_index_page_renders_game_shell(tmp_path):
     client = create_test_client(tmp_path)
 
