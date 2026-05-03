@@ -113,6 +113,34 @@ COUNT_BY_PATTERN_LEVEL = {
     ("ROUTINE_CANNOT_BECAUSE", "B1"): 14,
     ("ROUTINE_FINISH_BEFORE", "B1"): 14,
     ("ROUTINE_ROUTINE_OPINION", "B1"): 12,
+    # Daily Routine Phase 4B A1
+    ("ROUTINE_HAVE_ITEM", "A1"): 8,
+    ("ROUTINE_READY", "A1"): 1,
+    ("ROUTINE_SIMPLE_TIME", "A1"): 4,
+    # Daily Routine Phase 4B A1+
+    ("ROUTINE_PACK", "A1+"): 6,
+    ("ROUTINE_HELP_SIMPLE", "A1+"): 4,
+    ("ROUTINE_CHORE_SIMPLE", "A1+"): 6,
+    ("ROUTINE_PUT_ON", "A1+"): 5,
+    # Daily Routine Phase 4B A2
+    ("ROUTINE_ASK_TIME", "A2"): 6,
+    ("ROUTINE_ASK_WHAT_DO", "A2"): 5,
+    ("ROUTINE_ASK_WHEN_DO", "A2"): 6,
+    ("ROUTINE_READY_FOR", "A2"): 5,
+    ("ROUTINE_LATE_FOR", "A2"): 5,
+    ("ROUTINE_FORGOT", "A2"): 8,
+    ("ROUTINE_PERMISSION", "A2"): 8,
+    # Daily Routine Phase 4B A2+
+    ("ROUTINE_HELP_REASON", "A2+"): 4,
+    ("ROUTINE_CHORE_REASON", "A2+"): 5,
+    ("ROUTINE_REMIND", "A2+"): 7,
+    ("ROUTINE_CANNOT_NOW", "A2+"): 5,
+    # Daily Routine Phase 4B B1
+    ("ROUTINE_TIME_TAKES", "B1"): 6,
+    ("ROUTINE_SHOULD", "B1"): 6,
+    ("ROUTINE_PARENT_RULE", "B1"): 6,
+    ("ROUTINE_BEFORE_LEAVE", "B1"): 6,
+    ("ROUTINE_AFTER_FINISH", "B1"): 6,
 }
 
 SCENARIO_CONFIGS = {
