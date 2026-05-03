@@ -1,0 +1,6464 @@
+[
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_001",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I pack my bag.",
+    "chunks": [
+      "I",
+      "pack my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_002",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I wash my face.",
+    "chunks": [
+      "I",
+      "wash my face"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_003",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I brush my teeth.",
+    "chunks": [
+      "I",
+      "brush my teeth"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_004",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I go to bed.",
+    "chunks": [
+      "I",
+      "go to bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_005",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I read a book.",
+    "chunks": [
+      "I",
+      "read a book"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_006",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I go home.",
+    "chunks": [
+      "I",
+      "go home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_007",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I go to school.",
+    "chunks": [
+      "I",
+      "go to school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_008",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I eat breakfast.",
+    "chunks": [
+      "I",
+      "eat breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_009",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I wash my hands.",
+    "chunks": [
+      "I",
+      "wash my hands"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_010",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I eat lunch.",
+    "chunks": [
+      "I",
+      "eat lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_011",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I clean my room.",
+    "chunks": [
+      "I",
+      "clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_012",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I help my parents.",
+    "chunks": [
+      "I",
+      "help my parents"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_013",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I drink water.",
+    "chunks": [
+      "I",
+      "drink water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_014",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I do my homework.",
+    "chunks": [
+      "I",
+      "do my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_015",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I study English.",
+    "chunks": [
+      "I",
+      "study English"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_016",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I listen to music.",
+    "chunks": [
+      "I",
+      "listen to music"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_017",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I make my bed.",
+    "chunks": [
+      "I",
+      "make my bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_018",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I watch TV.",
+    "chunks": [
+      "I",
+      "watch TV"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_019",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I take a shower.",
+    "chunks": [
+      "I",
+      "take a shower"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_020",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I put on my shoes.",
+    "chunks": [
+      "I",
+      "put on my shoes"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_021",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I eat dinner.",
+    "chunks": [
+      "I",
+      "eat dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_DO_022",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO",
+    "target_sentence": "I get up.",
+    "chunks": [
+      "I",
+      "get up"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_001",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am late.",
+    "chunks": [
+      "I am",
+      "late"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_002",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am ready.",
+    "chunks": [
+      "I am",
+      "ready"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_003",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am early.",
+    "chunks": [
+      "I am",
+      "early"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_004",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am sleepy.",
+    "chunks": [
+      "I am",
+      "sleepy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_005",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am free.",
+    "chunks": [
+      "I am",
+      "free"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_006",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am thirsty.",
+    "chunks": [
+      "I am",
+      "thirsty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_007",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am busy.",
+    "chunks": [
+      "I am",
+      "busy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_008",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am tired.",
+    "chunks": [
+      "I am",
+      "tired"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_BE_STATE_009",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE",
+    "target_sentence": "I am hungry.",
+    "chunks": [
+      "I am",
+      "hungry"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_PLACE_001",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PLACE",
+    "target_sentence": "I am in the classroom.",
+    "chunks": [
+      "I am",
+      "in the classroom"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_PLACE_002",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PLACE",
+    "target_sentence": "I am at home.",
+    "chunks": [
+      "I am",
+      "at home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_PLACE_003",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PLACE",
+    "target_sentence": "I am in the bathroom.",
+    "chunks": [
+      "I am",
+      "in the bathroom"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_PLACE_004",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PLACE",
+    "target_sentence": "I am in my room.",
+    "chunks": [
+      "I am",
+      "in my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_PLACE_005",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PLACE",
+    "target_sentence": "I am in the kitchen.",
+    "chunks": [
+      "I am",
+      "in the kitchen"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_PLACE_006",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PLACE",
+    "target_sentence": "I am at my desk.",
+    "chunks": [
+      "I am",
+      "at my desk"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_PLACE_007",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PLACE",
+    "target_sentence": "I am at school.",
+    "chunks": [
+      "I am",
+      "at school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_001",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my water bottle.",
+    "chunks": [
+      "I have",
+      "my water bottle"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_002",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my shoes.",
+    "chunks": [
+      "I have",
+      "my shoes"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_003",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my book.",
+    "chunks": [
+      "I have",
+      "my book"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_004",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my bag.",
+    "chunks": [
+      "I have",
+      "my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_005",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my school bag.",
+    "chunks": [
+      "I have",
+      "my school bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_006",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my pencil case.",
+    "chunks": [
+      "I have",
+      "my pencil case"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_007",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my homework.",
+    "chunks": [
+      "I have",
+      "my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_HAVE_ITEM_008",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "target_sentence": "I have my lunch.",
+    "chunks": [
+      "I have",
+      "my lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_READY_001",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_READY",
+    "target_sentence": "I am ready now.",
+    "chunks": [
+      "I am",
+      "ready now"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_SIMPLE_TIME_001",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SIMPLE_TIME",
+    "target_sentence": "It is evening.",
+    "chunks": [
+      "It is",
+      "evening"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_SIMPLE_TIME_002",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SIMPLE_TIME",
+    "target_sentence": "It is afternoon.",
+    "chunks": [
+      "It is",
+      "afternoon"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_SIMPLE_TIME_003",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SIMPLE_TIME",
+    "target_sentence": "It is morning.",
+    "chunks": [
+      "It is",
+      "morning"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1_DAILY_ROUTINE_ROUTINE_SIMPLE_TIME_004",
+    "level": "A1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SIMPLE_TIME",
+    "target_sentence": "It is night.",
+    "chunks": [
+      "It is",
+      "night"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I brush my teeth at night.",
+    "chunks": [
+      "I",
+      "brush my teeth",
+      "at night"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I eat lunch at school.",
+    "chunks": [
+      "I",
+      "eat lunch",
+      "at school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I brush my teeth in the morning.",
+    "chunks": [
+      "I",
+      "brush my teeth",
+      "in the morning"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_004",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I watch TV in the evening.",
+    "chunks": [
+      "I",
+      "watch TV",
+      "in the evening"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_005",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I help my parents after school.",
+    "chunks": [
+      "I",
+      "help my parents",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_006",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I get up in the morning.",
+    "chunks": [
+      "I",
+      "get up",
+      "in the morning"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_007",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I listen to music in the evening.",
+    "chunks": [
+      "I",
+      "listen to music",
+      "in the evening"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_008",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I wash my face in the morning.",
+    "chunks": [
+      "I",
+      "wash my face",
+      "in the morning"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_009",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I do my homework after school.",
+    "chunks": [
+      "I",
+      "do my homework",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_010",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I take a shower at night.",
+    "chunks": [
+      "I",
+      "take a shower",
+      "at night"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_011",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I clean my room after school.",
+    "chunks": [
+      "I",
+      "clean my room",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_012",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I study English after school.",
+    "chunks": [
+      "I",
+      "study English",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_013",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I go to school in the morning.",
+    "chunks": [
+      "I",
+      "go to school",
+      "in the morning"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_014",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I eat breakfast in the morning.",
+    "chunks": [
+      "I",
+      "eat breakfast",
+      "in the morning"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_015",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I eat dinner in the evening.",
+    "chunks": [
+      "I",
+      "eat dinner",
+      "in the evening"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_016",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I go home after school.",
+    "chunks": [
+      "I",
+      "go home",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_017",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I make my bed in the morning.",
+    "chunks": [
+      "I",
+      "make my bed",
+      "in the morning"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_018",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I pack my bag before school.",
+    "chunks": [
+      "I",
+      "pack my bag",
+      "before school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_019",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I go to bed at night.",
+    "chunks": [
+      "I",
+      "go to bed",
+      "at night"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_020",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I put on my shoes before school.",
+    "chunks": [
+      "I",
+      "put on my shoes",
+      "before school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_DO_TIME_021",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_DO_TIME",
+    "target_sentence": "I read a book in the evening.",
+    "chunks": [
+      "I",
+      "read a book",
+      "in the evening"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to eat breakfast.",
+    "chunks": [
+      "I like to",
+      "eat breakfast"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to study English.",
+    "chunks": [
+      "I like to",
+      "study English"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to drink water.",
+    "chunks": [
+      "I like to",
+      "drink water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_004",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to take a shower.",
+    "chunks": [
+      "I like to",
+      "take a shower"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_005",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to read a book.",
+    "chunks": [
+      "I like to",
+      "read a book"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_006",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to listen to music.",
+    "chunks": [
+      "I like to",
+      "listen to music"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_007",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to go home.",
+    "chunks": [
+      "I like to",
+      "go home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_008",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to help my parents.",
+    "chunks": [
+      "I like to",
+      "help my parents"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_LIKE_009",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LIKE",
+    "target_sentence": "I like to watch TV.",
+    "chunks": [
+      "I like to",
+      "watch TV"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_WANT_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WANT",
+    "target_sentence": "I want to listen to music today.",
+    "chunks": [
+      "I want to",
+      "listen to music",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "want_to",
+      "to_infinitive",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_WANT_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WANT",
+    "target_sentence": "I want to drink water today.",
+    "chunks": [
+      "I want to",
+      "drink water",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "want_to",
+      "to_infinitive",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_WANT_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WANT",
+    "target_sentence": "I want to study English today.",
+    "chunks": [
+      "I want to",
+      "study English",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "want_to",
+      "to_infinitive",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_WANT_004",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WANT",
+    "target_sentence": "I want to watch TV today.",
+    "chunks": [
+      "I want to",
+      "watch TV",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "want_to",
+      "to_infinitive",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_WANT_005",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WANT",
+    "target_sentence": "I want to read a book today.",
+    "chunks": [
+      "I want to",
+      "read a book",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "want_to",
+      "to_infinitive",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_WANT_006",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WANT",
+    "target_sentence": "I want to go home today.",
+    "chunks": [
+      "I want to",
+      "go home",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "want_to",
+      "to_infinitive",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_WANT_007",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WANT",
+    "target_sentence": "I want to take a shower today.",
+    "chunks": [
+      "I want to",
+      "take a shower",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "want_to",
+      "to_infinitive",
+      "time_expression",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_BE_STATE_TODAY_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "target_sentence": "I am hungry today.",
+    "chunks": [
+      "I am",
+      "hungry",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_BE_STATE_TODAY_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "target_sentence": "I am busy today.",
+    "chunks": [
+      "I am",
+      "busy",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_BE_STATE_TODAY_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "target_sentence": "I am free today.",
+    "chunks": [
+      "I am",
+      "free",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_BE_STATE_TODAY_004",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "target_sentence": "I am tired today.",
+    "chunks": [
+      "I am",
+      "tired",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_BE_STATE_TODAY_005",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "target_sentence": "I am ready today.",
+    "chunks": [
+      "I am",
+      "ready",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_BE_STATE_TODAY_006",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "target_sentence": "I am sleepy today.",
+    "chunks": [
+      "I am",
+      "sleepy",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_BE_STATE_TODAY_007",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "target_sentence": "I am thirsty today.",
+    "chunks": [
+      "I am",
+      "thirsty",
+      "today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "adjectives",
+      "time_expression"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PACK_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PACK",
+    "target_sentence": "I get my books.",
+    "chunks": [
+      "I",
+      "get my books"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "school_preparation"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PACK_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PACK",
+    "target_sentence": "I get my pencil case.",
+    "chunks": [
+      "I",
+      "get my pencil case"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "school_preparation"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PACK_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PACK",
+    "target_sentence": "I check my homework.",
+    "chunks": [
+      "I",
+      "check my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "school_preparation"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PACK_004",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PACK",
+    "target_sentence": "I put my book in my bag.",
+    "chunks": [
+      "I",
+      "put my book in my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "school_preparation"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PACK_005",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PACK",
+    "target_sentence": "I take my lunch.",
+    "chunks": [
+      "I",
+      "take my lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "school_preparation"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_HELP_SIMPLE_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HELP_SIMPLE",
+    "target_sentence": "I help at home.",
+    "chunks": [
+      "I",
+      "help at home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "helping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_HELP_SIMPLE_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HELP_SIMPLE",
+    "target_sentence": "I help my sister.",
+    "chunks": [
+      "I",
+      "help my sister"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "helping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_HELP_SIMPLE_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HELP_SIMPLE",
+    "target_sentence": "I help my brother.",
+    "chunks": [
+      "I",
+      "help my brother"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "helping_actions"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_CHORE_SIMPLE_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_SIMPLE",
+    "target_sentence": "I put away my toys.",
+    "chunks": [
+      "I",
+      "put away my toys"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "chores"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_CHORE_SIMPLE_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_SIMPLE",
+    "target_sentence": "I take out the trash.",
+    "chunks": [
+      "I",
+      "take out the trash"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "chores"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_CHORE_SIMPLE_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_SIMPLE",
+    "target_sentence": "I put away my books.",
+    "chunks": [
+      "I",
+      "put away my books"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "chores"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_CHORE_SIMPLE_004",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_SIMPLE",
+    "target_sentence": "I wash the dishes.",
+    "chunks": [
+      "I",
+      "wash the dishes"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "present_simple",
+      "chores"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PUT_ON_001",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PUT_ON",
+    "target_sentence": "I put on my jacket.",
+    "chunks": [
+      "I put on",
+      "my jacket"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "phrasal_verb",
+      "getting_ready"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PUT_ON_002",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PUT_ON",
+    "target_sentence": "I put on my school uniform.",
+    "chunks": [
+      "I put on",
+      "my school uniform"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "phrasal_verb",
+      "getting_ready"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PUT_ON_003",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PUT_ON",
+    "target_sentence": "I put on my socks.",
+    "chunks": [
+      "I put on",
+      "my socks"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "phrasal_verb",
+      "getting_ready"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A1+_DAILY_ROUTINE_ROUTINE_PUT_ON_004",
+    "level": "A1+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PUT_ON",
+    "target_sentence": "I put on my hat.",
+    "chunks": [
+      "I put on",
+      "my hat"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "phrasal_verb",
+      "getting_ready"
+    ],
+    "difficulty_score": 1,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to clean my room.",
+    "chunks": [
+      "I need to",
+      "clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to study English.",
+    "chunks": [
+      "I need to",
+      "study English"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to go to bed.",
+    "chunks": [
+      "I need to",
+      "go to bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to do my homework.",
+    "chunks": [
+      "I need to",
+      "do my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to pack my bag.",
+    "chunks": [
+      "I need to",
+      "pack my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to brush my teeth.",
+    "chunks": [
+      "I need to",
+      "brush my teeth"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_007",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to take a shower.",
+    "chunks": [
+      "I need to",
+      "take a shower"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_008",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to wash my hands.",
+    "chunks": [
+      "I need to",
+      "wash my hands"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_NEED_009",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_NEED",
+    "target_sentence": "I need to drink water.",
+    "chunks": [
+      "I need to",
+      "drink water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to go to bed.",
+    "chunks": [
+      "I have to",
+      "go to bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to clean my room.",
+    "chunks": [
+      "I have to",
+      "clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to go to school.",
+    "chunks": [
+      "I have to",
+      "go to school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to do my homework.",
+    "chunks": [
+      "I have to",
+      "do my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to wash my hands.",
+    "chunks": [
+      "I have to",
+      "wash my hands"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to study English.",
+    "chunks": [
+      "I have to",
+      "study English"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_007",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to brush my teeth.",
+    "chunks": [
+      "I have to",
+      "brush my teeth"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_008",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to make my bed.",
+    "chunks": [
+      "I have to",
+      "make my bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_HAVE_TO_009",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "target_sentence": "I have to pack my bag.",
+    "chunks": [
+      "I have to",
+      "pack my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to take a shower.",
+    "chunks": [
+      "I would like to",
+      "take a shower"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to read a book.",
+    "chunks": [
+      "I would like to",
+      "read a book"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to watch TV.",
+    "chunks": [
+      "I would like to",
+      "watch TV"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to study English.",
+    "chunks": [
+      "I would like to",
+      "study English"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to drink water.",
+    "chunks": [
+      "I would like to",
+      "drink water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to go to bed early.",
+    "chunks": [
+      "I would like to",
+      "go to bed early"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_007",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to go home.",
+    "chunks": [
+      "I would like to",
+      "go home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_WOULD_LIKE_008",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "target_sentence": "I would like to listen to music.",
+    "chunks": [
+      "I would like to",
+      "listen to music"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "would_like_to",
+      "to_infinitive",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_CAN_PLACE_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CAN_PLACE",
+    "target_sentence": "Can I listen to music here?",
+    "chunks": [
+      "Can I",
+      "listen to music",
+      "here",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_CAN_PLACE_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CAN_PLACE",
+    "target_sentence": "Can I do my homework here?",
+    "chunks": [
+      "Can I",
+      "do my homework",
+      "here",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_CAN_PLACE_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CAN_PLACE",
+    "target_sentence": "Can I read a book here?",
+    "chunks": [
+      "Can I",
+      "read a book",
+      "here",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_CAN_PLACE_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CAN_PLACE",
+    "target_sentence": "Can I wash my hands here?",
+    "chunks": [
+      "Can I",
+      "wash my hands",
+      "here",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_CAN_PLACE_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CAN_PLACE",
+    "target_sentence": "Can I watch TV here?",
+    "chunks": [
+      "Can I",
+      "watch TV",
+      "here",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_CAN_PLACE_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CAN_PLACE",
+    "target_sentence": "Can I study English here?",
+    "chunks": [
+      "Can I",
+      "study English",
+      "here",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_TOO_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TOO",
+    "target_sentence": "I think I am too tired.",
+    "chunks": [
+      "I think",
+      "I",
+      "am too tired"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_TOO_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TOO",
+    "target_sentence": "I think my bag is too heavy.",
+    "chunks": [
+      "I think",
+      "my bag",
+      "is too heavy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_TOO_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TOO",
+    "target_sentence": "I think I am too busy.",
+    "chunks": [
+      "I think",
+      "I",
+      "am too busy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_TOO_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TOO",
+    "target_sentence": "I think I am late for school.",
+    "chunks": [
+      "I think",
+      "I",
+      "am late for school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_TOO_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TOO",
+    "target_sentence": "I think my room is too messy.",
+    "chunks": [
+      "I think",
+      "my room",
+      "is too messy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_TOO_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TOO",
+    "target_sentence": "I think my homework is too hard.",
+    "chunks": [
+      "I think",
+      "my homework",
+      "is too hard"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "too_enough",
+      "adjectives",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_TIME_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_TIME",
+    "target_sentence": "What time do you go home?",
+    "chunks": [
+      "What time do you",
+      "go home",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_TIME_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_TIME",
+    "target_sentence": "What time do you get up?",
+    "chunks": [
+      "What time do you",
+      "get up",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_TIME_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_TIME",
+    "target_sentence": "What time do you go to bed?",
+    "chunks": [
+      "What time do you",
+      "go to bed",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_TIME_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_TIME",
+    "target_sentence": "What time do you eat breakfast?",
+    "chunks": [
+      "What time do you",
+      "eat breakfast",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_TIME_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_TIME",
+    "target_sentence": "What time do you go to school?",
+    "chunks": [
+      "What time do you",
+      "go to school",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_TIME_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_TIME",
+    "target_sentence": "What time do you eat dinner?",
+    "chunks": [
+      "What time do you",
+      "eat dinner",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHAT_DO_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHAT_DO",
+    "target_sentence": "What do you do at night?",
+    "chunks": [
+      "What do you do",
+      "at night",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "time_expression"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHAT_DO_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHAT_DO",
+    "target_sentence": "What do you do in the evening?",
+    "chunks": [
+      "What do you do",
+      "in the evening",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "time_expression"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHAT_DO_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHAT_DO",
+    "target_sentence": "What do you do after school?",
+    "chunks": [
+      "What do you do",
+      "after school",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "time_expression"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHAT_DO_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHAT_DO",
+    "target_sentence": "What do you do on weekends?",
+    "chunks": [
+      "What do you do",
+      "on weekends",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "time_expression"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHAT_DO_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHAT_DO",
+    "target_sentence": "What do you do in the morning?",
+    "chunks": [
+      "What do you do",
+      "in the morning",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "time_expression"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHEN_DO_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHEN_DO",
+    "target_sentence": "When do you clean your room?",
+    "chunks": [
+      "When do you",
+      "clean your room",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHEN_DO_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHEN_DO",
+    "target_sentence": "When do you pack your bag?",
+    "chunks": [
+      "When do you",
+      "pack your bag",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHEN_DO_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHEN_DO",
+    "target_sentence": "When do you brush your teeth?",
+    "chunks": [
+      "When do you",
+      "brush your teeth",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHEN_DO_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHEN_DO",
+    "target_sentence": "When do you read a book?",
+    "chunks": [
+      "When do you",
+      "read a book",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHEN_DO_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHEN_DO",
+    "target_sentence": "When do you watch TV?",
+    "chunks": [
+      "When do you",
+      "watch TV",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_ASK_WHEN_DO_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ASK_WHEN_DO",
+    "target_sentence": "When do you do your homework?",
+    "chunks": [
+      "When do you",
+      "do your homework",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "wh_question",
+      "present_simple",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_READY_FOR_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_READY_FOR",
+    "target_sentence": "I am ready for dinner.",
+    "chunks": [
+      "I am ready for",
+      "dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_READY_FOR_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_READY_FOR",
+    "target_sentence": "I am ready for class.",
+    "chunks": [
+      "I am ready for",
+      "class"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_READY_FOR_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_READY_FOR",
+    "target_sentence": "I am ready for bed.",
+    "chunks": [
+      "I am ready for",
+      "bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_READY_FOR_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_READY_FOR",
+    "target_sentence": "I am ready for the test.",
+    "chunks": [
+      "I am ready for",
+      "the test"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_READY_FOR_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_READY_FOR",
+    "target_sentence": "I am ready for school.",
+    "chunks": [
+      "I am ready for",
+      "school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_LATE_FOR_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LATE_FOR",
+    "target_sentence": "I am late for the bus.",
+    "chunks": [
+      "I am late for",
+      "the bus"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_LATE_FOR_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LATE_FOR",
+    "target_sentence": "I am late for my lesson.",
+    "chunks": [
+      "I am late for",
+      "my lesson"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_LATE_FOR_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LATE_FOR",
+    "target_sentence": "I am late for class.",
+    "chunks": [
+      "I am late for",
+      "class"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_LATE_FOR_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LATE_FOR",
+    "target_sentence": "I am late for school.",
+    "chunks": [
+      "I am late for",
+      "school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_LATE_FOR_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_LATE_FOR",
+    "target_sentence": "I am late for dinner.",
+    "chunks": [
+      "I am late for",
+      "dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "be_verb",
+      "prepositions",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my homework.",
+    "chunks": [
+      "I forgot",
+      "my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my water bottle.",
+    "chunks": [
+      "I forgot",
+      "my water bottle"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my key.",
+    "chunks": [
+      "I forgot",
+      "my key"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my bag.",
+    "chunks": [
+      "I forgot",
+      "my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my lunch.",
+    "chunks": [
+      "I forgot",
+      "my lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my book.",
+    "chunks": [
+      "I forgot",
+      "my book"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_007",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my shoes.",
+    "chunks": [
+      "I forgot",
+      "my shoes"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_FORGOT_008",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FORGOT",
+    "target_sentence": "I forgot my pencil case.",
+    "chunks": [
+      "I forgot",
+      "my pencil case"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "fixed_expression",
+      "school_life"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_001",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I take a break after homework?",
+    "chunks": [
+      "Can I",
+      "take a break",
+      "after homework",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_002",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I go outside after I finish my homework?",
+    "chunks": [
+      "Can I",
+      "go outside",
+      "after I finish my homework",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_003",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I listen to music after homework?",
+    "chunks": [
+      "Can I",
+      "listen to music",
+      "after homework",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_004",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I watch TV after homework?",
+    "chunks": [
+      "Can I",
+      "watch TV",
+      "after homework",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_005",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I watch TV after I clean my room?",
+    "chunks": [
+      "Can I",
+      "watch TV",
+      "after I clean my room",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_006",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I use the computer after dinner?",
+    "chunks": [
+      "Can I",
+      "use the computer",
+      "after dinner",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_007",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I play outside after school?",
+    "chunks": [
+      "Can I",
+      "play outside",
+      "after school",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2_DAILY_ROUTINE_ROUTINE_PERMISSION_008",
+    "level": "A2",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PERMISSION",
+    "target_sentence": "Can I read a book before bed?",
+    "chunks": [
+      "Can I",
+      "read a book",
+      "before bed",
+      "?"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "can_request",
+      "time_condition",
+      "daily_routine"
+    ],
+    "difficulty_score": 2,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I help my parents because they are busy.",
+    "chunks": [
+      "I help my parents",
+      "because",
+      "they are busy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I brush my teeth at night because I want clean teeth.",
+    "chunks": [
+      "I brush my teeth at night",
+      "because",
+      "I want clean teeth"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I watch TV in the evening because I am free.",
+    "chunks": [
+      "I watch TV in the evening",
+      "because",
+      "I am free"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_004",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I clean my room because it is messy.",
+    "chunks": [
+      "I clean my room",
+      "because",
+      "it is messy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_005",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I eat breakfast because I am hungry.",
+    "chunks": [
+      "I eat breakfast",
+      "because",
+      "I am hungry"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_006",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I study English because I have a test.",
+    "chunks": [
+      "I study English",
+      "because",
+      "I have a test"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_007",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I pack my bag before school because I need my books.",
+    "chunks": [
+      "I pack my bag before school",
+      "because",
+      "I need my books"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_008",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I drink water because I am thirsty.",
+    "chunks": [
+      "I drink water",
+      "because",
+      "I am thirsty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_009",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I do my homework after school because I have time.",
+    "chunks": [
+      "I do my homework after school",
+      "because",
+      "I have time"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_010",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I go to bed early because I am tired.",
+    "chunks": [
+      "I go to bed early",
+      "because",
+      "I am tired"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_011",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I listen to music because I am tired.",
+    "chunks": [
+      "I listen to music",
+      "because",
+      "I am tired"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REASON_012",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REASON",
+    "target_sentence": "I go to school early because I do not want to be late.",
+    "chunks": [
+      "I go to school early",
+      "because",
+      "I do not want to be late"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I do my homework after I get home.",
+    "chunks": [
+      "I do my homework",
+      "after I get home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I put on my shoes before I go to school.",
+    "chunks": [
+      "I put on my shoes",
+      "before I go to school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I pack my bag before I go to school.",
+    "chunks": [
+      "I pack my bag",
+      "before I go to school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_004",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I brush my teeth before I go to bed.",
+    "chunks": [
+      "I brush my teeth",
+      "before I go to bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_005",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I eat breakfast before I go to school.",
+    "chunks": [
+      "I eat breakfast",
+      "before I go to school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_006",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I wash my face after I get up.",
+    "chunks": [
+      "I wash my face",
+      "after I get up"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_007",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I clean my room after I get home.",
+    "chunks": [
+      "I clean my room",
+      "after I get home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_008",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I watch TV after I finish my homework.",
+    "chunks": [
+      "I watch TV",
+      "after I finish my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_009",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I listen to music after I finish my homework.",
+    "chunks": [
+      "I listen to music",
+      "after I finish my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_BEFORE_AFTER_010",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "target_sentence": "I take a shower before I go to bed.",
+    "chunks": [
+      "I take a shower",
+      "before I go to bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like helping my parents because it is important.",
+    "chunks": [
+      "I like",
+      "helping my parents",
+      "because",
+      "it is important"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like cleaning my room because it feels good.",
+    "chunks": [
+      "I like",
+      "cleaning my room",
+      "because",
+      "it feels good"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like reading at night because it is fun.",
+    "chunks": [
+      "I like",
+      "reading at night",
+      "because",
+      "it is fun"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_004",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like my evening routine because it is quiet.",
+    "chunks": [
+      "I like",
+      "my evening routine",
+      "because",
+      "it is quiet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_005",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like listening to music because it is relaxing.",
+    "chunks": [
+      "I like",
+      "listening to music",
+      "because",
+      "it is relaxing"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_006",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like my morning routine because it is easy.",
+    "chunks": [
+      "I like",
+      "my morning routine",
+      "because",
+      "it is easy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_007",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like studying English because it is useful.",
+    "chunks": [
+      "I like",
+      "studying English",
+      "because",
+      "it is useful"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PREFERENCE_REASON_008",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "target_sentence": "I like watching TV in the evening because it is fun.",
+    "chunks": [
+      "I like",
+      "watching TV in the evening",
+      "because",
+      "it is fun"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "like_verb",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to wash my hands because my hands are dirty.",
+    "chunks": [
+      "I need to",
+      "wash my hands",
+      "because",
+      "my hands are dirty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to study English because I have a test.",
+    "chunks": [
+      "I need to",
+      "study English",
+      "because",
+      "I have a test"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to finish my homework because it is due tomorrow.",
+    "chunks": [
+      "I need to",
+      "finish my homework",
+      "because",
+      "it is due tomorrow"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_004",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to go to bed early because I have school tomorrow.",
+    "chunks": [
+      "I need to",
+      "go to bed early",
+      "because",
+      "I have school tomorrow"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_005",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to pack my bag because I have school tomorrow.",
+    "chunks": [
+      "I need to",
+      "pack my bag",
+      "because",
+      "I have school tomorrow"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_006",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to clean my room because it is messy.",
+    "chunks": [
+      "I need to",
+      "clean my room",
+      "because",
+      "it is messy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_007",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to do my homework because it is due tomorrow.",
+    "chunks": [
+      "I need to",
+      "do my homework",
+      "because",
+      "it is due tomorrow"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_PROBLEM_REASON_008",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "target_sentence": "I need to go to bed early because I am tired.",
+    "chunks": [
+      "I need to",
+      "go to bed early",
+      "because",
+      "I am tired"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "need_to",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_HELP_REASON_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HELP_REASON",
+    "target_sentence": "I help at home because my parents are busy.",
+    "chunks": [
+      "I",
+      "help at home",
+      "because",
+      "my parents are busy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "helping_actions"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_HELP_REASON_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HELP_REASON",
+    "target_sentence": "I help my sister because she needs help.",
+    "chunks": [
+      "I",
+      "help my sister",
+      "because",
+      "she needs help"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "helping_actions"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_HELP_REASON_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_HELP_REASON",
+    "target_sentence": "I help my brother because he needs help.",
+    "chunks": [
+      "I",
+      "help my brother",
+      "because",
+      "he needs help"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "helping_actions"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CHORE_REASON_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_REASON",
+    "target_sentence": "I put away my books because my room is messy.",
+    "chunks": [
+      "I",
+      "put away my books",
+      "because",
+      "my room is messy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "chores"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CHORE_REASON_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_REASON",
+    "target_sentence": "I put away my toys because my room is messy.",
+    "chunks": [
+      "I",
+      "put away my toys",
+      "because",
+      "my room is messy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "chores"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CHORE_REASON_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_REASON",
+    "target_sentence": "I make my bed because it looks nice.",
+    "chunks": [
+      "I",
+      "make my bed",
+      "because",
+      "it looks nice"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "chores"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CHORE_REASON_004",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CHORE_REASON",
+    "target_sentence": "I wash the dishes because they are dirty.",
+    "chunks": [
+      "I",
+      "wash the dishes",
+      "because",
+      "they are dirty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "because_so",
+      "chores"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REMIND_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REMIND",
+    "target_sentence": "Please remind me to wash my hands.",
+    "chunks": [
+      "Please remind me to",
+      "wash my hands"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "imperative",
+      "to_infinitive",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REMIND_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REMIND",
+    "target_sentence": "Please remind me to bring my book.",
+    "chunks": [
+      "Please remind me to",
+      "bring my book"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "imperative",
+      "to_infinitive",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REMIND_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REMIND",
+    "target_sentence": "Please remind me to do my homework.",
+    "chunks": [
+      "Please remind me to",
+      "do my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "imperative",
+      "to_infinitive",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REMIND_004",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REMIND",
+    "target_sentence": "Please remind me to clean my room.",
+    "chunks": [
+      "Please remind me to",
+      "clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "imperative",
+      "to_infinitive",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REMIND_005",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REMIND",
+    "target_sentence": "Please remind me to pack my bag.",
+    "chunks": [
+      "Please remind me to",
+      "pack my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "imperative",
+      "to_infinitive",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REMIND_006",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REMIND",
+    "target_sentence": "Please remind me to brush my teeth.",
+    "chunks": [
+      "Please remind me to",
+      "brush my teeth"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "imperative",
+      "to_infinitive",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_REMIND_007",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_REMIND",
+    "target_sentence": "Please remind me to go to bed early.",
+    "chunks": [
+      "Please remind me to",
+      "go to bed early"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "imperative",
+      "to_infinitive",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CANNOT_NOW_001",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_NOW",
+    "target_sentence": "I cannot use the computer now because I have to clean my room.",
+    "chunks": [
+      "I cannot",
+      "use the computer",
+      "now because",
+      "I have to clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CANNOT_NOW_002",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_NOW",
+    "target_sentence": "I cannot play now because I have homework.",
+    "chunks": [
+      "I cannot",
+      "play",
+      "now because",
+      "I have homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CANNOT_NOW_003",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_NOW",
+    "target_sentence": "I cannot watch TV now because I have to study.",
+    "chunks": [
+      "I cannot",
+      "watch TV",
+      "now because",
+      "I have to study"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CANNOT_NOW_004",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_NOW",
+    "target_sentence": "I cannot go outside now because I need to finish my homework.",
+    "chunks": [
+      "I cannot",
+      "go outside",
+      "now because",
+      "I need to finish my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "A2+_DAILY_ROUTINE_ROUTINE_CANNOT_NOW_005",
+    "level": "A2+",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_NOW",
+    "target_sentence": "I cannot listen to music now because I need to sleep.",
+    "chunks": [
+      "I cannot",
+      "listen to music",
+      "now because",
+      "I need to sleep"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine"
+    ],
+    "difficulty_score": 2.5,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I often help my parents after dinner.",
+    "chunks": [
+      "I",
+      "often",
+      "help my parents",
+      "after dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I usually pack my bag before school.",
+    "chunks": [
+      "I",
+      "usually",
+      "pack my bag",
+      "before school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I sometimes watch TV in the evening.",
+    "chunks": [
+      "I",
+      "sometimes",
+      "watch TV",
+      "in the evening"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I often study English after school.",
+    "chunks": [
+      "I",
+      "often",
+      "study English",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I sometimes read a book before bed.",
+    "chunks": [
+      "I",
+      "sometimes",
+      "read a book",
+      "before bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I usually get up at seven.",
+    "chunks": [
+      "I",
+      "usually",
+      "get up",
+      "at seven"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_007",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I often listen to music after school.",
+    "chunks": [
+      "I",
+      "often",
+      "listen to music",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_008",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I usually go to school at seven thirty.",
+    "chunks": [
+      "I",
+      "usually",
+      "go to school",
+      "at seven thirty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_009",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I usually do my homework after school.",
+    "chunks": [
+      "I",
+      "usually",
+      "do my homework",
+      "after school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_USUALLY_010",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_USUALLY",
+    "target_sentence": "I usually clean my room on weekends.",
+    "chunks": [
+      "I",
+      "usually",
+      "clean my room",
+      "on weekends"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "frequency_adverbs",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I do my homework at five.",
+    "chunks": [
+      "I",
+      "do my homework",
+      "at five"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I eat lunch at twelve.",
+    "chunks": [
+      "I",
+      "eat lunch",
+      "at twelve"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I read a book at eight thirty.",
+    "chunks": [
+      "I",
+      "read a book",
+      "at eight thirty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I get up at seven.",
+    "chunks": [
+      "I",
+      "get up",
+      "at seven"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I go home at four.",
+    "chunks": [
+      "I",
+      "go home",
+      "at four"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I go to school at seven thirty.",
+    "chunks": [
+      "I",
+      "go to school",
+      "at seven thirty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_007",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I take a shower at eight.",
+    "chunks": [
+      "I",
+      "take a shower",
+      "at eight"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_008",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I eat breakfast at seven fifteen.",
+    "chunks": [
+      "I",
+      "eat breakfast",
+      "at seven fifteen"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_009",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I go to bed at nine.",
+    "chunks": [
+      "I",
+      "go to bed",
+      "at nine"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_010",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I eat dinner at six thirty.",
+    "chunks": [
+      "I",
+      "eat dinner",
+      "at six thirty"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CLOCK_TIME_011",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "target_sentence": "I pack my bag at eight forty-five.",
+    "chunks": [
+      "I",
+      "pack my bag",
+      "at eight forty-five"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "clock_time",
+      "present_simple",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I read a book on weekends.",
+    "chunks": [
+      "I read a book",
+      "on weekends"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I listen to music on weekends.",
+    "chunks": [
+      "I listen to music",
+      "on weekends"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I watch TV on weekends.",
+    "chunks": [
+      "I watch TV",
+      "on weekends"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I do my homework on weekdays.",
+    "chunks": [
+      "I do my homework",
+      "on weekdays"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I help my parents on weekends.",
+    "chunks": [
+      "I help my parents",
+      "on weekends"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I study English on weekdays.",
+    "chunks": [
+      "I study English",
+      "on weekdays"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_007",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I get up late on weekends.",
+    "chunks": [
+      "I get up late",
+      "on weekends"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_008",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I clean my room on weekends.",
+    "chunks": [
+      "I clean my room",
+      "on weekends"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_009",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I get up early on weekdays.",
+    "chunks": [
+      "I get up early",
+      "on weekdays"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_WEEKDAY_WEEKEND_010",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "target_sentence": "I pack my bag on weekdays.",
+    "chunks": [
+      "I pack my bag",
+      "on weekdays"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_expression",
+      "weekday_weekend",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CANNOT_BECAUSE_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "target_sentence": "I cannot go to bed late because I have school tomorrow.",
+    "chunks": [
+      "I cannot go to bed late",
+      "because",
+      "I have school tomorrow"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CANNOT_BECAUSE_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "target_sentence": "I cannot watch TV because I need to finish my homework.",
+    "chunks": [
+      "I cannot watch TV",
+      "because",
+      "I need to finish my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CANNOT_BECAUSE_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "target_sentence": "I cannot play outside because I have to clean my room.",
+    "chunks": [
+      "I cannot play outside",
+      "because",
+      "I have to clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CANNOT_BECAUSE_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "target_sentence": "I cannot play now because I have to study.",
+    "chunks": [
+      "I cannot play now",
+      "because",
+      "I have to study"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CANNOT_BECAUSE_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "target_sentence": "I cannot use the computer because I need to study.",
+    "chunks": [
+      "I cannot use the computer",
+      "because",
+      "I need to study"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CANNOT_BECAUSE_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "target_sentence": "I cannot go out because I have homework.",
+    "chunks": [
+      "I cannot go out",
+      "because",
+      "I have homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_CANNOT_BECAUSE_007",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "target_sentence": "I cannot watch TV because I have homework.",
+    "chunks": [
+      "I cannot watch TV",
+      "because",
+      "I have homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "cannot",
+      "because_so",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to brush my teeth before bed.",
+    "chunks": [
+      "I have to",
+      "brush my teeth",
+      "before bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to finish my homework before I watch TV.",
+    "chunks": [
+      "I have to",
+      "finish my homework",
+      "before I watch TV"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to finish my homework before I play outside.",
+    "chunks": [
+      "I have to",
+      "finish my homework",
+      "before I play outside"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to pack my bag before school.",
+    "chunks": [
+      "I have to",
+      "pack my bag",
+      "before school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to wash my hands before dinner.",
+    "chunks": [
+      "I have to",
+      "wash my hands",
+      "before dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to pack my bag before I go to bed.",
+    "chunks": [
+      "I have to",
+      "pack my bag",
+      "before I go to bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_007",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to finish my homework before dinner.",
+    "chunks": [
+      "I have to",
+      "finish my homework",
+      "before dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_FINISH_BEFORE_008",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "target_sentence": "I have to clean my room before dinner.",
+    "chunks": [
+      "I have to",
+      "clean my room",
+      "before dinner"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "have_to",
+      "before_after",
+      "daily_routine_vocabulary"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My bedtime routine is simple and quiet.",
+    "chunks": [
+      "My bedtime routine",
+      "is simple and quiet"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My morning routine is short but busy.",
+    "chunks": [
+      "My morning routine",
+      "is short but busy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My evening routine is quiet and easy.",
+    "chunks": [
+      "My evening routine",
+      "is quiet and easy"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My morning routine is busy but useful.",
+    "chunks": [
+      "My morning routine",
+      "is busy but useful"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My weekend routine is relaxed.",
+    "chunks": [
+      "My weekend routine",
+      "is relaxed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My school day is busy but fun.",
+    "chunks": [
+      "My school day",
+      "is busy but fun"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_007",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My after-school routine is busy but helpful.",
+    "chunks": [
+      "My after-school routine",
+      "is busy but helpful"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_ROUTINE_OPINION_008",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "target_sentence": "My homework routine is hard but useful.",
+    "chunks": [
+      "My homework routine",
+      "is hard but useful"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "adjectives",
+      "daily_routine_vocabulary",
+      "routine_opinion"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_TIME_TAKES_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TIME_TAKES",
+    "target_sentence": "It takes ten minutes to pack my bag.",
+    "chunks": [
+      "It takes",
+      "ten minutes",
+      "to",
+      "pack my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_duration",
+      "to_infinitive",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_TIME_TAKES_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TIME_TAKES",
+    "target_sentence": "It takes twenty minutes to finish my homework.",
+    "chunks": [
+      "It takes",
+      "twenty minutes",
+      "to",
+      "finish my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_duration",
+      "to_infinitive",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_TIME_TAKES_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TIME_TAKES",
+    "target_sentence": "It takes ten minutes to clean my room.",
+    "chunks": [
+      "It takes",
+      "ten minutes",
+      "to",
+      "clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_duration",
+      "to_infinitive",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_TIME_TAKES_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TIME_TAKES",
+    "target_sentence": "It takes five minutes to brush my teeth.",
+    "chunks": [
+      "It takes",
+      "five minutes",
+      "to",
+      "brush my teeth"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_duration",
+      "to_infinitive",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_TIME_TAKES_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TIME_TAKES",
+    "target_sentence": "It takes five minutes to make my bed.",
+    "chunks": [
+      "It takes",
+      "five minutes",
+      "to",
+      "make my bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_duration",
+      "to_infinitive",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_TIME_TAKES_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_TIME_TAKES",
+    "target_sentence": "It takes fifteen minutes to walk to school.",
+    "chunks": [
+      "It takes",
+      "fifteen minutes",
+      "to",
+      "walk to school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "time_duration",
+      "to_infinitive",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_SHOULD_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SHOULD",
+    "target_sentence": "I should go to bed earlier.",
+    "chunks": [
+      "I should",
+      "go to bed earlier"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "should",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_SHOULD_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SHOULD",
+    "target_sentence": "I should drink more water.",
+    "chunks": [
+      "I should",
+      "drink more water"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "should",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_SHOULD_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SHOULD",
+    "target_sentence": "I should clean my room today.",
+    "chunks": [
+      "I should",
+      "clean my room today"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "should",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_SHOULD_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SHOULD",
+    "target_sentence": "I should pack my bag before school.",
+    "chunks": [
+      "I should",
+      "pack my bag before school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "should",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_SHOULD_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SHOULD",
+    "target_sentence": "I should finish my homework first.",
+    "chunks": [
+      "I should",
+      "finish my homework first"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "should",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_SHOULD_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_SHOULD",
+    "target_sentence": "I should study before the test.",
+    "chunks": [
+      "I should",
+      "study before the test"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "should",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_PARENT_RULE_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PARENT_RULE",
+    "target_sentence": "My parents say I have to pack my bag before school.",
+    "chunks": [
+      "My parents say",
+      "I have to",
+      "pack my bag before school"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "reported_rule",
+      "have_to",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_PARENT_RULE_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PARENT_RULE",
+    "target_sentence": "My parents say I have to go to bed early.",
+    "chunks": [
+      "My parents say",
+      "I have to",
+      "go to bed early"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "reported_rule",
+      "have_to",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_PARENT_RULE_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PARENT_RULE",
+    "target_sentence": "My parents say I have to brush my teeth before bed.",
+    "chunks": [
+      "My parents say",
+      "I have to",
+      "brush my teeth before bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "reported_rule",
+      "have_to",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_PARENT_RULE_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PARENT_RULE",
+    "target_sentence": "My parents say I have to help at home.",
+    "chunks": [
+      "My parents say",
+      "I have to",
+      "help at home"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "reported_rule",
+      "have_to",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_PARENT_RULE_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PARENT_RULE",
+    "target_sentence": "My parents say I have to finish my homework first.",
+    "chunks": [
+      "My parents say",
+      "I have to",
+      "finish my homework first"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "reported_rule",
+      "have_to",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_PARENT_RULE_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_PARENT_RULE",
+    "target_sentence": "My parents say I have to clean my room.",
+    "chunks": [
+      "My parents say",
+      "I have to",
+      "clean my room"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "reported_rule",
+      "have_to",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_BEFORE_LEAVE_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_LEAVE",
+    "target_sentence": "Before I leave home, I put on my shoes.",
+    "chunks": [
+      "Before I leave home, I",
+      "put on my shoes"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_BEFORE_LEAVE_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_LEAVE",
+    "target_sentence": "Before I leave home, I get my lunch.",
+    "chunks": [
+      "Before I leave home, I",
+      "get my lunch"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_BEFORE_LEAVE_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_LEAVE",
+    "target_sentence": "Before I leave home, I take my school bag.",
+    "chunks": [
+      "Before I leave home, I",
+      "take my school bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_BEFORE_LEAVE_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_LEAVE",
+    "target_sentence": "Before I leave home, I say goodbye to my parents.",
+    "chunks": [
+      "Before I leave home, I",
+      "say goodbye to my parents"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_BEFORE_LEAVE_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_LEAVE",
+    "target_sentence": "Before I leave home, I check my bag.",
+    "chunks": [
+      "Before I leave home, I",
+      "check my bag"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_BEFORE_LEAVE_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_BEFORE_LEAVE",
+    "target_sentence": "Before I leave home, I check my homework.",
+    "chunks": [
+      "Before I leave home, I",
+      "check my homework"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_AFTER_FINISH_001",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_AFTER_FINISH",
+    "target_sentence": "After I finish studying English, I go to bed.",
+    "chunks": [
+      "After I finish",
+      "studying English",
+      ", I",
+      "go to bed"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_AFTER_FINISH_002",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_AFTER_FINISH",
+    "target_sentence": "After I finish cleaning my room, I take a break.",
+    "chunks": [
+      "After I finish",
+      "cleaning my room",
+      ", I",
+      "take a break"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_AFTER_FINISH_003",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_AFTER_FINISH",
+    "target_sentence": "After I finish my homework, I read a book.",
+    "chunks": [
+      "After I finish",
+      "my homework",
+      ", I",
+      "read a book"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_AFTER_FINISH_004",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_AFTER_FINISH",
+    "target_sentence": "After I finish my chores, I listen to music.",
+    "chunks": [
+      "After I finish",
+      "my chores",
+      ", I",
+      "listen to music"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_AFTER_FINISH_005",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_AFTER_FINISH",
+    "target_sentence": "After I finish my homework, I play outside.",
+    "chunks": [
+      "After I finish",
+      "my homework",
+      ", I",
+      "play outside"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  },
+  {
+    "sentence_id": "B1_DAILY_ROUTINE_ROUTINE_AFTER_FINISH_006",
+    "level": "B1",
+    "scenario": "daily_routine",
+    "pattern_id": "ROUTINE_AFTER_FINISH",
+    "target_sentence": "After I finish my homework, I watch TV.",
+    "chunks": [
+      "After I finish",
+      "my homework",
+      ", I",
+      "watch TV"
+    ],
+    "translation": "",
+    "grammar_focus": [
+      "before_after",
+      "routine_management"
+    ],
+    "difficulty_score": 3,
+    "fsi_tasks": []
+  }
+]
