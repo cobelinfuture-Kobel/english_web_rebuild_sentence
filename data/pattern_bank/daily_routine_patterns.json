@@ -1,0 +1,417 @@
+{
+  "ROUTINE_DO": {
+    "pattern_id": "ROUTINE_DO",
+    "function": "describe_basic_routine_actions",
+    "variants": {
+      "A1": {
+        "example_template": "I {action}.",
+        "chunks_template": ["I", "{action}"],
+        "grammar_focus": ["present_simple", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_actions_basic"],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_BE_STATE": {
+    "pattern_id": "ROUTINE_BE_STATE",
+    "function": "describe_simple_states",
+    "variants": {
+      "A1": {
+        "example_template": "I am {state}.",
+        "chunks_template": ["I am", "{state}"],
+        "grammar_focus": ["be_verb", "adjectives", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "state": {
+            "category": ["routine_states"],
+            "state": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_PLACE": {
+    "pattern_id": "ROUTINE_PLACE",
+    "function": "describe_simple_locations",
+    "variants": {
+      "A1": {
+        "example_template": "I am {place}.",
+        "chunks_template": ["I am", "{place}"],
+        "grammar_focus": ["be_verb", "prepositions", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "place": {
+            "category": ["routine_places"],
+            "place": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_DO_TIME": {
+    "pattern_id": "ROUTINE_DO_TIME",
+    "function": "describe_routine_actions_with_time",
+    "variants": {
+      "A1+": {
+        "example_template": "I {action} {time}.",
+        "chunks_template": ["I", "{action}", "{time}"],
+        "grammar_focus": ["present_simple", "time_expression", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_action_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_LIKE": {
+    "pattern_id": "ROUTINE_LIKE",
+    "function": "express_likes_about_routine_actions",
+    "variants": {
+      "A1+": {
+        "example_template": "I like to {action}.",
+        "chunks_template": ["I like to", "{action}"],
+        "grammar_focus": ["like_verb", "to_infinitive", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_actions_to_infinitive"],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_WANT": {
+    "pattern_id": "ROUTINE_WANT",
+    "function": "express_wants_about_routine_actions",
+    "variants": {
+      "A1+": {
+        "example_template": "I want to {action} today.",
+        "chunks_template": ["I want to", "{action}", "today"],
+        "grammar_focus": ["want_to", "to_infinitive", "time_expression", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_actions_to_infinitive"],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_BE_STATE_TODAY": {
+    "pattern_id": "ROUTINE_BE_STATE_TODAY",
+    "function": "describe_current_daily_state",
+    "variants": {
+      "A1+": {
+        "example_template": "I am {state} today.",
+        "chunks_template": ["I am", "{state}", "today"],
+        "grammar_focus": ["be_verb", "adjectives", "time_expression"],
+        "slot_constraints": {
+          "state": {
+            "category": ["routine_states_today"],
+            "state": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_NEED": {
+    "pattern_id": "ROUTINE_NEED",
+    "function": "express_routine_needs",
+    "variants": {
+      "A2": {
+        "example_template": "I need to {action}.",
+        "chunks_template": ["I need to", "{action}"],
+        "grammar_focus": ["need_to", "to_infinitive", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_actions_to_infinitive"],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_HAVE_TO": {
+    "pattern_id": "ROUTINE_HAVE_TO",
+    "function": "express_routine_obligations",
+    "variants": {
+      "A2": {
+        "example_template": "I have to {action}.",
+        "chunks_template": ["I have to", "{action}"],
+        "grammar_focus": ["have_to", "to_infinitive", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_actions_to_infinitive"],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_WOULD_LIKE": {
+    "pattern_id": "ROUTINE_WOULD_LIKE",
+    "function": "express_polite_routine_wants",
+    "variants": {
+      "A2": {
+        "example_template": "I would like to {action}.",
+        "chunks_template": ["I would like to", "{action}"],
+        "grammar_focus": ["would_like_to", "to_infinitive", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_actions_to_infinitive"],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_CAN_PLACE": {
+    "pattern_id": "ROUTINE_CAN_PLACE",
+    "function": "ask_permission_or_location_for_routine_actions",
+    "variants": {
+      "A2": {
+        "example_template": "Can I {action} here?",
+        "chunks_template": ["Can I", "{action}", "here", "?"],
+        "grammar_focus": ["can_request", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_actions_to_infinitive"],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_TOO": {
+    "pattern_id": "ROUTINE_TOO",
+    "function": "describe_routine_problems",
+    "variants": {
+      "A2": {
+        "example_template": "I think {subject} {problem}.",
+        "chunks_template": ["I think", "{subject}", "{problem}"],
+        "grammar_focus": ["too_enough", "adjectives", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_problem_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_REASON": {
+    "pattern_id": "ROUTINE_REASON",
+    "function": "give_reasons_for_routine_actions",
+    "variants": {
+      "A2+": {
+        "example_template": "{sentence_start} because {reason}.",
+        "chunks_template": ["{sentence_start}", "because", "{reason}"],
+        "grammar_focus": ["because_so", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_BEFORE_AFTER": {
+    "pattern_id": "ROUTINE_BEFORE_AFTER",
+    "function": "describe_simple_routine_sequences",
+    "variants": {
+      "A2+": {
+        "example_template": "{main_clause} {sequence_phrase}.",
+        "chunks_template": ["{main_clause}", "{sequence_phrase}"],
+        "grammar_focus": ["time_expression", "before_after", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_before_after_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_PREFERENCE_REASON": {
+    "pattern_id": "ROUTINE_PREFERENCE_REASON",
+    "function": "explain_routine_preferences",
+    "variants": {
+      "A2+": {
+        "example_template": "I like {thing} because {reason}.",
+        "chunks_template": ["I like", "{thing}", "because", "{reason}"],
+        "grammar_focus": ["like_verb", "because_so", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_preference_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_PROBLEM_REASON": {
+    "pattern_id": "ROUTINE_PROBLEM_REASON",
+    "function": "explain_routine_needs_with_reasons",
+    "variants": {
+      "A2+": {
+        "example_template": "I need to {action} because {reason}.",
+        "chunks_template": ["I need to", "{action}", "because", "{reason}"],
+        "grammar_focus": ["need_to", "because_so", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_need_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_USUALLY": {
+    "pattern_id": "ROUTINE_USUALLY",
+    "function": "describe_usual_routine_actions",
+    "variants": {
+      "B1": {
+        "example_template": "I {frequency} {action} {time_context}.",
+        "chunks_template": ["I", "{frequency}", "{action}", "{time_context}"],
+        "grammar_focus": ["frequency_adverbs", "present_simple", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_frequency_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_CLOCK_TIME": {
+    "pattern_id": "ROUTINE_CLOCK_TIME",
+    "function": "describe_routine_actions_with_clock_times",
+    "variants": {
+      "B1": {
+        "example_template": "I {action} {time}.",
+        "chunks_template": ["I", "{action}", "{time}"],
+        "grammar_focus": ["clock_time", "present_simple", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_clock_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_WEEKDAY_WEEKEND": {
+    "pattern_id": "ROUTINE_WEEKDAY_WEEKEND",
+    "function": "contrast_weekday_and_weekend_routines",
+    "variants": {
+      "B1": {
+        "example_template": "{sentence} {context}.",
+        "chunks_template": ["{sentence}", "{context}"],
+        "grammar_focus": ["time_expression", "weekday_weekend", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_weekday_weekend_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_CANNOT_BECAUSE": {
+    "pattern_id": "ROUTINE_CANNOT_BECAUSE",
+    "function": "explain_simple_schedule_conflicts",
+    "variants": {
+      "B1": {
+        "example_template": "{sentence_start} because {reason}.",
+        "chunks_template": ["{sentence_start}", "because", "{reason}"],
+        "grammar_focus": ["cannot", "because_so", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_conflict_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_FINISH_BEFORE": {
+    "pattern_id": "ROUTINE_FINISH_BEFORE",
+    "function": "describe_tasks_before_deadlines",
+    "variants": {
+      "B1": {
+        "example_template": "I have to {task} {deadline}.",
+        "chunks_template": ["I have to", "{task}", "{deadline}"],
+        "grammar_focus": ["have_to", "before_after", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_finish_before_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_ROUTINE_OPINION": {
+    "pattern_id": "ROUTINE_ROUTINE_OPINION",
+    "function": "describe_opinions_about_routines",
+    "variants": {
+      "B1": {
+        "example_template": "{subject} {description}.",
+        "chunks_template": ["{subject}", "{description}"],
+        "grammar_focus": ["adjectives", "daily_routine_vocabulary", "routine_opinion"],
+        "paired_slot": {
+          "category": "routine_b1_opinion_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  }
+}
