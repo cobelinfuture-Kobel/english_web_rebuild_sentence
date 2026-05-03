@@ -978,7 +978,7 @@
     },
     {
       "action": "do my homework",
-      "reason": "I have homework"
+      "reason": "it is due tomorrow"
     },
     {
       "action": "go to bed early",
@@ -1160,7 +1160,7 @@
     },
     {
       "sentence": "I listen to music",
-      "context": "after school"
+      "context": "on weekends"
     }
   ],
 

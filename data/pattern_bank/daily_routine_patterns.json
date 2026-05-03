@@ -439,8 +439,8 @@
     "function": "say_readiness",
     "variants": {
       "A1": {
-        "example_template": "I am ready.",
-        "chunks_template": ["I am", "ready"],
+        "example_template": "I am ready now.",
+        "chunks_template": ["I am", "ready now"],
         "grammar_focus": ["be_verb", "daily_routine_vocabulary"],
         "slot_constraints": {},
         "fsi_rules": [],
