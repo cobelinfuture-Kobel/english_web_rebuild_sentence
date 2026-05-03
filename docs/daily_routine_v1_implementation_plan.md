@@ -169,12 +169,14 @@ Do not add these files until the implementation phase begins.
 ## Slot Bank
 
 ```text
-data/slot_bank/daily_routine.json
+data/slot_bank/daily_routine_slots.json
 ```
 
 Purpose:
 
 Define domain-specific slots for Daily Routine.
+
+This file should contain all Daily Routine slots for A1 through B1.
 
 Expected slot groups:
 
@@ -198,64 +200,78 @@ routine_finish_before_pairs
 routine_b1_opinion_pairs
 ```
 
-## Pattern Banks
-
-Recommended pattern bank files:
+## Pattern Bank
 
 ```text
-data/pattern_bank/daily_routine_A1.json
-data/pattern_bank/daily_routine_A1_plus.json
-data/pattern_bank/daily_routine_A2.json
-data/pattern_bank/daily_routine_A2_plus.json
-data/pattern_bank/daily_routine_B1.json
+data/pattern_bank/daily_routine_patterns.json
 ```
 
-Alternative naming may be used only if the current repository already uses a different scenario-level naming convention.
+Purpose:
 
-Before implementation, inspect the existing Shopping and Food & Drink pattern bank naming style and follow it exactly.
+Define all Daily Routine pattern families and variants from A1 through B1.
+
+The repository currently uses one pattern bank file per scenario, not one file per level.
+
+Daily Routine should follow the existing scenario-level file convention.
 
 ## Generated Data
 
-Recommended generated output files:
-
 ```text
-data/generated/daily_routine_A1.json
-data/generated/daily_routine_A1_plus.json
-data/generated/daily_routine_A2.json
-data/generated/daily_routine_A2_plus.json
-data/generated/daily_routine_B1.json
+data/generated/daily_routine_sentence_bank.json
 ```
 
-Alternative naming may be used only if the current repository already uses a different generated-data naming convention.
+Purpose:
 
-Before implementation, inspect the existing generated data naming style and follow it exactly.
+Store generated Daily Routine sentence bank data for A1 through B1.
+
+The repository currently uses one generated sentence bank file per scenario.
+
+## Generator Script
+
+```text
+scripts/generate_sentences.py
+```
+
+Purpose:
+
+Register Daily Routine as a supported scenario and add Daily Routine count overrides.
+
+Required changes:
+
+- add `daily_routine` to `SCENARIO_CONFIGS`
+- set `sentence_prefix` to `DAILY_ROUTINE`
+- set `pattern_path` to `data/pattern_bank/daily_routine_patterns.json`
+- set `slot_path` to `data/slot_bank/daily_routine_slots.json`
+- set `output_path` to `data/generated/daily_routine_sentence_bank.json`
+- add `ROUTINE_*` entries to `COUNT_BY_PATTERN_LEVEL`
+
+Do not create a separate generator or a second count system.
 
 ## Tests
 
-Recommended test file:
+Recommended first target:
+
+```text
+tests/test_content_generator.py
+```
+
+Purpose:
+
+Extend the existing generator tests with Daily Routine coverage and semantic checks.
+
+The current repository already tests Shopping and Food & Drink in `tests/test_content_generator.py`.
+
+Daily Routine should initially follow that style.
+
+If Daily Routine semantic tests become too long, a later cleanup may split them into:
 
 ```text
 tests/test_daily_routine_semantics.py
 ```
 
-Purpose:
+However, do not create a separate test loading system.
 
-Prevent semantic regressions specific to Daily Routine.
-
-This file should test:
-
-- A1 forbidden structures
-- action + time mismatch
-- action + place mismatch
-- reason mismatch
-- too + problem mismatch
-- B1 paragraph avoidance
-- B1 dialogue avoidance
-- bad clock-time pairs
-- bad conflict-reason pairs
-- lowercase sentence starts
-- required scenario and level metadata
-- sentence uniqueness where appropriate
+Use the existing `ContentGenerator` test style.
 
 ## Implementation Phases
 
@@ -294,7 +310,43 @@ Confirm:
 Deliverable:
 
 ```text
-Implementation notes confirming existing conventions.
+Phase 0 confirmed the following repository conventions:
+
+data/pattern_bank/<scenario>_patterns.json
+data/slot_bank/<scenario>_slots.json
+data/generated/<scenario>_sentence_bank.json
+```
+
+Existing scenarios:
+
+```text
+shopping
+food_drink
+```
+
+Daily Routine should be implemented as:
+
+```text
+data/pattern_bank/daily_routine_patterns.json
+data/slot_bank/daily_routine_slots.json
+data/generated/daily_routine_sentence_bank.json
+```
+
+The generator currently registers supported scenarios in:
+
+```text
+scripts/generate_sentences.py
+```
+
+Daily Routine must be added to `SCENARIO_CONFIGS`.
+
+Count overrides are currently centralized in:
+
+```text
+COUNT_BY_PATTERN_LEVEL
+```
+
+Daily Routine must add `ROUTINE_*` count entries there.
 ```
 
 Do not change files in Phase 0.
@@ -304,7 +356,7 @@ Do not change files in Phase 0.
 Add:
 
 ```text
-data/slot_bank/daily_routine.json
+data/slot_bank/daily_routine_slots.json
 ```
 
 The first slot bank should be conservative.
@@ -489,7 +541,7 @@ Slot design rules:
 
 ## Phase 2: A1 Pattern Bank
 
-Add the A1 pattern bank only after the slot bank is drafted.
+Add the A1 variants to `data/pattern_bank/daily_routine_patterns.json`.
 
 A1 should include:
 
@@ -550,6 +602,8 @@ Keep sentences short, direct, concrete, and high-frequency.
 
 ## Phase 3: A1+ Pattern Bank
 
+Add the A1+ variants to `data/pattern_bank/daily_routine_patterns.json`.
+
 A1+ should include:
 
 ```text
@@ -590,6 +644,8 @@ Use `routine_action_time_pairs` for action + time patterns.
 Do not freely combine `routine_actions_basic` with `routine_times_simple`.
 
 ## Phase 4: A2 Pattern Bank
+
+Add the A2 variants to `data/pattern_bank/daily_routine_patterns.json`.
 
 A2 should include:
 
@@ -635,6 +691,8 @@ A2 implementation rules:
 
 ## Phase 5: A2+ Pattern Bank
 
+Add the A2+ variants to `data/pattern_bank/daily_routine_patterns.json`.
+
 A2+ should include:
 
 ```text
@@ -675,6 +733,8 @@ A2+ implementation rules:
 - Do not add paragraph-like outputs.
 
 ## Phase 6: B1 Pattern Bank
+
+Add the B1 variants to `data/pattern_bank/daily_routine_patterns.json`.
 
 B1 should include:
 
@@ -725,13 +785,57 @@ B1 implementation rules:
 - Do not add complex `when` clauses.
 - Do not add multi-sentence writing tasks.
 
-## Phase 7: Count Configuration
+## Phase 7: Generator Registration
+
+Modify:
+
+```text
+scripts/generate_sentences.py
+```
+
+Add Daily Routine to `SCENARIO_CONFIGS`:
+
+```python
+"daily_routine": {
+    "sentence_prefix": "DAILY_ROUTINE",
+    "pattern_path": Path("data/pattern_bank/daily_routine_patterns.json"),
+    "slot_path": Path("data/slot_bank/daily_routine_slots.json"),
+    "output_path": Path("data/generated/daily_routine_sentence_bank.json"),
+}
+```
+
+Implementation rules:
+
+- Do not change existing `shopping` or `food_drink` config.
+- Do not rename existing generated files.
+- Do not create a separate Daily Routine generator.
+- Do not change the `ContentGenerator` schema unless required by tests.
+- Keep generated `sentence_id` format consistent with existing scenarios.
+
+Expected Daily Routine sentence IDs:
+
+```text
+A1_DAILY_ROUTINE_ROUTINE_DO_001
+B1_DAILY_ROUTINE_ROUTINE_USUALLY_001
+```
+
+## Phase 8: Count Configuration
 
 Daily Routine v1 should follow level-specific count guidance.
 
 Do not force every pattern to generate the same number of sentences.
 
 `COUNT_BY_PATTERN_LEVEL` should be treated as a semantic quality cap, not as a full list of every pattern.
+
+Daily Routine count overrides should be added to the existing `COUNT_BY_PATTERN_LEVEL` dictionary in:
+
+```text
+scripts/generate_sentences.py
+```
+
+Do not create a separate count map in another file unless the whole project is later refactored.
+
+Shopping and Food & Drink already use the same centralized count map.
 
 Suggested count guidance:
 
@@ -779,7 +883,15 @@ Use the existing project convention.
 
 Do not create a second incompatible count system.
 
-## Phase 8: Generation
+## Phase 9: Generation
+
+Generate Daily Routine sentences into:
+
+```text
+data/generated/daily_routine_sentence_bank.json
+```
+
+The generated file should contain A1 through B1 sentences in one scenario-level sentence bank.
 
 After slot bank and pattern banks are ready, generate Daily Routine sentences for:
 
@@ -795,13 +907,22 @@ Generated output should be reviewed by level and pattern.
 
 Generation should not be considered complete until both automated tests and manual review pass.
 
-## Phase 9: Automated Tests
+## Phase 10: Automated Tests
 
-Add:
+Modify:
 
 ```text
-tests/test_daily_routine_semantics.py
+tests/test_content_generator.py
 ```
+
+Add Daily Routine coverage using the existing test style.
+
+Recommended additions:
+
+- `DAILY_ROUTINE_PATTERN_BANK_PATH`
+- `DAILY_ROUTINE_SLOT_BANK_PATH`
+- `EXPECTED_DAILY_ROUTINE_PATTERNS`
+- `make_daily_routine_generator()`
 
 Recommended tests:
 
@@ -921,9 +1042,15 @@ Test implementation rule:
 
 Adapt these tests to the existing test fixture style in the repository.
 
-Do not create a separate test loading system if the repository already has one.
+If this makes `tests/test_content_generator.py` too long, a later cleanup may move Daily Routine-specific semantic checks to:
 
-## Phase 10: Manual Review Checklist
+```text
+tests/test_daily_routine_semantics.py
+```
+
+Do not create a separate data loading system.
+
+## Phase 11: Manual Review Checklist
 
 Manual review is required after generation.
 
@@ -992,18 +1119,18 @@ Check that B1 sentences:
 - do not use random conflict + reason combinations
 - do not introduce complex when clauses
 
-## Phase 11: Completion Criteria
+## Phase 12: Completion Criteria
 
 Daily Routine v1 is complete only when:
 
 ```text
-1. data/slot_bank/daily_routine.json exists and is reviewed.
-2. A1 pattern bank exists and is reviewed.
-3. A1+ pattern bank exists and is reviewed.
-4. A2 pattern bank exists and is reviewed.
-5. A2+ pattern bank exists and is reviewed.
-6. B1 pattern bank exists and is reviewed.
-7. Generated sentence files exist for A1 through B1.
+1. data/slot_bank/daily_routine_slots.json exists and is reviewed.
+2. data/pattern_bank/daily_routine_patterns.json exists and includes A1 through B1 variants.
+3. scripts/generate_sentences.py registers daily_routine in SCENARIO_CONFIGS.
+4. ROUTINE_* count overrides exist in COUNT_BY_PATTERN_LEVEL.
+5. data/generated/daily_routine_sentence_bank.json exists.
+6. Generated sentence file contains A1 through B1.
+7. Daily Routine generator tests pass.
 8. Daily Routine semantic tests pass.
 9. Existing Shopping and Food & Drink tests still pass.
 10. Manual review is complete by level and pattern.
@@ -1036,34 +1163,30 @@ Recommended sequence:
 
 ```bash
 git add docs/daily_routine_v1_implementation_plan.md
-git commit -m "docs: add daily routine v1 implementation plan"
+git commit -m "docs: align daily routine implementation plan with repo conventions"
 
-git add data/slot_bank/daily_routine.json
+git add data/slot_bank/daily_routine_slots.json
 git commit -m "data: add daily routine slot bank"
 
-git add data/pattern_bank/<daily-routine-a1-file>
-git commit -m "data: add daily routine A1 patterns"
+git add data/pattern_bank/daily_routine_patterns.json
+git commit -m "data: add daily routine pattern bank"
 
-git add data/pattern_bank/<daily-routine-a1-plus-file>
-git commit -m "data: add daily routine A1+ patterns"
+git add scripts/generate_sentences.py
+git commit -m "scripts: register daily routine generation"
 
-git add data/pattern_bank/<daily-routine-a2-file>
-git commit -m "data: add daily routine A2 patterns"
+git add data/generated/daily_routine_sentence_bank.json
+git commit -m "data: generate daily routine sentence bank"
 
-git add data/pattern_bank/<daily-routine-a2-plus-file>
-git commit -m "data: add daily routine A2+ patterns"
+git add tests/test_content_generator.py
+git commit -m "test: add daily routine generator checks"
+```
 
-git add data/pattern_bank/<daily-routine-b1-file>
-git commit -m "data: add daily routine B1 patterns"
+If later split into a separate semantic test:
 
-git add data/generated/<daily-routine-generated-files>
-git commit -m "data: generate daily routine sentence banks"
-
+```bash
 git add tests/test_daily_routine_semantics.py
 git commit -m "test: add daily routine semantic checks"
 ```
-
-Use actual repository filenames instead of placeholders.
 
 ## Status
 
