@@ -62,11 +62,37 @@
             </div>
         </div>
 
-        <aside id="next-practice-panel" class="next-practice-panel" hidden>
-            <h3 class="next-practice-title">Next Practice</h3>
-            <p id="next-practice-status" class="next-practice-status"></p>
-            <ul id="next-practice-list" class="next-practice-list"></ul>
-        </aside>
+        <section id="learning-summary-panel" class="learning-summary-panel" hidden>
+            <div class="learning-summary-cards">
+                <div class="summary-card">
+                    <span class="summary-card-label">Total Attempts</span>
+                    <strong id="summary-total-attempts">--</strong>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-card-label">Accuracy</span>
+                    <strong id="summary-accuracy">--</strong>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-card-label">Coverage</span>
+                    <strong id="summary-coverage">--</strong>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-card-label">Not Attempted</span>
+                    <strong id="summary-not-attempted">--</strong>
+                </div>
+            </div>
+
+            <div id="weak-patterns-panel" class="weak-patterns-panel">
+                <h3 class="next-practice-title">Weak Patterns</h3>
+                <ul id="weak-patterns-list" class="next-practice-list"></ul>
+            </div>
+
+            <aside id="next-practice-panel" class="next-practice-panel">
+                <h3 class="next-practice-title">Next Practice</h3>
+                <p id="next-practice-status" class="next-practice-status"></p>
+                <ul id="next-practice-list" class="next-practice-list"></ul>
+            </aside>
+        </section>
 
         <div id="game-play-area" hidden>
             <div id="status-bar">

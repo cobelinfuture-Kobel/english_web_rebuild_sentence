@@ -1899,6 +1899,66 @@ def test_index_page_renders_next_practice_panel(tmp_path):
     assert 'id="next-practice-panel"' in html
 
 
+def test_index_page_renders_learning_summary_panel(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="learning-summary-panel"' in html
+
+
+def test_index_page_renders_summary_total_attempts(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="summary-total-attempts"' in html
+
+
+def test_index_page_renders_summary_accuracy(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="summary-accuracy"' in html
+
+
+def test_index_page_renders_summary_coverage(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="summary-coverage"' in html
+
+
+def test_index_page_renders_summary_not_attempted(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="summary-not-attempted"' in html
+
+
+def test_index_page_renders_weak_patterns_list(tmp_path):
+    client = create_test_client(tmp_path)
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.get_data(as_text=True)
+    assert 'id="weak-patterns-list"' in html
+
+
 def test_index_page_renders_next_practice_status(tmp_path):
     client = create_test_client(tmp_path)
 

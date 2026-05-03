@@ -18,7 +18,7 @@ let currentCorrectAnswer = "";
 let questItems = [];
 let sessionGrammar = new Set();
 let sessionMistakes = [];
-let nextPracticeRequestToken = 0;
+let learningSummaryRequestToken = 0;
 
 const MAX_HEARTS = 3;
 const NEXT_PRACTICE_STRATEGY_LABELS = {
@@ -82,6 +82,13 @@ const coachStepsOver = document.getElementById("coach-steps-over");
 const mistakeList = document.getElementById("mistake-list");
 const quitButton = document.getElementById("quit-btn");
 const reviewButton = document.getElementById("review-btn");
+const learningSummaryPanel = document.getElementById("learning-summary-panel");
+const summaryTotalAttempts = document.getElementById("summary-total-attempts");
+const summaryAccuracy = document.getElementById("summary-accuracy");
+const summaryCoverage = document.getElementById("summary-coverage");
+const summaryNotAttempted = document.getElementById("summary-not-attempted");
+const weakPatternsPanel = document.getElementById("weak-patterns-panel");
+const weakPatternsList = document.getElementById("weak-patterns-list");
 const nextPracticePanel = document.getElementById("next-practice-panel");
 const nextPracticeStatus = document.getElementById("next-practice-status");
 const nextPracticeList = document.getElementById("next-practice-list");
@@ -381,6 +388,29 @@ function showLoginError(message) {
     loginError.hidden = !message;
 }
 
+function formatPercent(value) {
+    if (typeof value !== "number" || Number.isNaN(value)) {
+        return "--";
+    }
+
+    return `${Math.round(value * 100)}%`;
+}
+
+function isLearningSummaryRequestCurrent(userId, requestToken) {
+    return (
+        requestToken === learningSummaryRequestToken &&
+        currentUserId === userId &&
+        localStorage.getItem("user_id") === userId
+    );
+}
+
+function renderWeakPatternsEmpty() {
+    weakPatternsList.innerHTML = "";
+    const item = document.createElement("li");
+    item.innerText = "\u76ee\u524d\u6c92\u6709\u660e\u986f\u5f31\u53e5\u578b\u3002";
+    weakPatternsList.appendChild(item);
+}
+
 function clearNextPracticePanel() {
     nextPracticeStatus.innerText = "";
     nextPracticeList.innerHTML = "";
@@ -469,6 +499,157 @@ function getStoredUser() {
     return { userId, username, role: role || "student" };
 }
 
+function clearLearningSummary() {
+    summaryTotalAttempts.innerText = "--";
+    summaryAccuracy.innerText = "--";
+    summaryCoverage.innerText = "--";
+    summaryNotAttempted.innerText = "--";
+    weakPatternsList.innerHTML = "";
+    clearNextPracticePanel();
+}
+
+function hideLearningSummaryPanel() {
+    learningSummaryPanel.hidden = true;
+}
+
+function showLearningSummaryPanel() {
+    learningSummaryPanel.hidden = false;
+    weakPatternsPanel.hidden = false;
+    nextPracticePanel.hidden = false;
+}
+
+async function loadStatsSummary(userId, requestToken = learningSummaryRequestToken) {
+    const data = await fetchJson(`/api/users/${encodeURIComponent(userId)}/stats`);
+    if (!isLearningSummaryRequestCurrent(userId, requestToken)) {
+        return;
+    }
+
+    summaryTotalAttempts.innerText = String(data.total_attempts ?? 0);
+    summaryAccuracy.innerText = formatPercent(data.accuracy ?? 0);
+}
+
+async function loadCoverageSummary(userId, requestToken = learningSummaryRequestToken) {
+    const data = await fetchJson(`/api/users/${encodeURIComponent(userId)}/coverage`);
+    if (!isLearningSummaryRequestCurrent(userId, requestToken)) {
+        return;
+    }
+
+    summaryCoverage.innerText = formatPercent(data.coverage_rate ?? 0);
+    summaryNotAttempted.innerText = String(data.not_attempted_sentences ?? 0);
+}
+
+async function loadWeakPatternsSummary(userId, requestToken = learningSummaryRequestToken) {
+    const data = await fetchJson(`/api/users/${encodeURIComponent(userId)}/weak-patterns`);
+    if (!isLearningSummaryRequestCurrent(userId, requestToken)) {
+        return;
+    }
+
+    weakPatternsList.innerHTML = "";
+    const weakPatterns = (data.weak_patterns || []).slice(0, 3);
+    if (!weakPatterns.length) {
+        renderWeakPatternsEmpty();
+        return;
+    }
+
+    weakPatterns.forEach((pattern) => {
+        const item = document.createElement("li");
+        item.innerText = `${pattern.pattern} (${formatPercent(pattern.accuracy ?? 0)})`;
+        weakPatternsList.appendChild(item);
+    });
+}
+
+async function loadNextPractice(userId, requestToken = learningSummaryRequestToken) {
+    const data = await fetchJson(
+        `/api/users/${encodeURIComponent(userId)}/next-practice?limit=5`
+    );
+    if (!isLearningSummaryRequestCurrent(userId, requestToken)) {
+        return;
+    }
+
+    clearNextPracticePanel();
+    nextPracticeStatus.innerText =
+        NEXT_PRACTICE_STRATEGY_LABELS[data.strategy] || "Next practice recommendations";
+
+    const recommendations = data.recommendations || [];
+    if (!recommendations.length) {
+        nextPracticeStatus.innerText = "No recommended practice items right now.";
+        return;
+    }
+
+    recommendations.forEach((item) => {
+        const row = document.createElement("li");
+        const main = document.createElement("span");
+        const meta = document.createElement("span");
+        const reasonLabel =
+            NEXT_PRACTICE_REASON_LABELS[item.reason] || item.reason || "reason";
+
+        main.className = "next-practice-main";
+        meta.className = "next-practice-meta";
+        main.innerText = `${item.level} / ${item.pattern} / ${reasonLabel}`;
+        meta.innerText = item.sentence_id;
+        row.appendChild(main);
+        row.appendChild(meta);
+        nextPracticeList.appendChild(row);
+    });
+}
+
+function applyLearningSummaryFailure(sectionName) {
+    if (sectionName === "stats") {
+        summaryTotalAttempts.innerText = "--";
+        summaryAccuracy.innerText = "--";
+        return;
+    }
+
+    if (sectionName === "coverage") {
+        summaryCoverage.innerText = "--";
+        summaryNotAttempted.innerText = "--";
+        return;
+    }
+
+    if (sectionName === "weak-patterns") {
+        weakPatternsList.innerHTML = "";
+        const item = document.createElement("li");
+        item.innerText = "\u5f31\u53e5\u578b\u8cc7\u6599\u66ab\u6642\u7121\u6cd5\u8f09\u5165\u3002";
+        weakPatternsList.appendChild(item);
+        return;
+    }
+
+    clearNextPracticePanel();
+    nextPracticeStatus.innerText = "Next practice is temporarily unavailable.";
+}
+
+async function loadLearningSummary() {
+    const userId = currentUserId || localStorage.getItem("user_id");
+    clearLearningSummary();
+
+    if (!userId) {
+        hideLearningSummaryPanel();
+        return;
+    }
+
+    learningSummaryRequestToken += 1;
+    const requestToken = learningSummaryRequestToken;
+    showLearningSummaryPanel();
+
+    const results = await Promise.allSettled([
+        loadStatsSummary(userId, requestToken),
+        loadCoverageSummary(userId, requestToken),
+        loadWeakPatternsSummary(userId, requestToken),
+        loadNextPractice(userId, requestToken),
+    ]);
+
+    if (!isLearningSummaryRequestCurrent(userId, requestToken)) {
+        return;
+    }
+
+    ["stats", "coverage", "weak-patterns", "next-practice"].forEach((sectionName, index) => {
+        if (results[index].status === "rejected") {
+            console.warn(`Failed to load ${sectionName}`, results[index].reason);
+            applyLearningSummaryFailure(sectionName);
+        }
+    });
+}
+
 function applyUserSession(user) {
     currentUserId = user.userId;
     currentUsername = user.username;
@@ -481,9 +662,9 @@ function applyUserSession(user) {
 }
 
 function clearUserSession() {
-    nextPracticeRequestToken += 1;
-    clearNextPracticePanel();
-    hideNextPracticePanel();
+    learningSummaryRequestToken += 1;
+    clearLearningSummary();
+    hideLearningSummaryPanel();
     localStorage.removeItem("user_id");
     localStorage.removeItem("username");
     localStorage.removeItem("role");
@@ -818,7 +999,7 @@ async function submitAnswer() {
                     is_correct: result.is_correct,
                 }),
             });
-            await loadNextPractice();
+            await loadLearningSummary();
         } catch (attemptError) {
             console.warn("Failed to save attempt", attemptError);
         }
@@ -843,8 +1024,8 @@ loginButton.addEventListener("click", async () => {
 
     loginButton.disabled = true;
     try {
-        clearNextPracticePanel();
-        hideNextPracticePanel();
+        clearLearningSummary();
+        hideLearningSummaryPanel();
         const user = await fetchJson("/api/users/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -859,7 +1040,7 @@ loginButton.addEventListener("click", async () => {
             username: user.username,
             role: user.role,
         });
-        await loadNextPractice();
+        await loadLearningSummary();
     } catch (error) {
         showLoginError(error.payload?.error || error.message);
     } finally {
@@ -977,7 +1158,7 @@ if (searchParams.get("demo") === "true") {
     const storedUser = getStoredUser();
     if (storedUser) {
         applyUserSession(storedUser);
-        loadNextPractice();
+        loadLearningSummary();
     } else {
         clearUserSession();
     }

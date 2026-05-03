@@ -41,8 +41,45 @@ body {
     border-radius: 14px;
 }
 
-.next-practice-panel {
+.learning-summary-panel {
     margin: 18px 0 0;
+    display: grid;
+    gap: 14px;
+}
+
+.learning-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.summary-card {
+    padding: 14px 16px;
+    background: #f8f9fa;
+    border: 1px solid rgba(32, 48, 64, 0.08);
+    border-radius: 12px;
+}
+
+.summary-card-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    color: #6b7c8f;
+}
+
+.summary-card strong {
+    font-size: 1.1rem;
+    color: #203040;
+}
+
+.weak-patterns-panel {
+    padding: 14px 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    color: #4b5d73;
+}
+
+.next-practice-panel {
     padding: 14px 16px;
     background: #f8f9fa;
     border-left: 4px solid #1f6feb;
@@ -493,6 +530,10 @@ button:disabled {
 
     #status-bar {
         flex-wrap: wrap;
+    }
+
+    .learning-summary-cards {
+        grid-template-columns: 1fr 1fr;
     }
 
     .scenario-grid {
