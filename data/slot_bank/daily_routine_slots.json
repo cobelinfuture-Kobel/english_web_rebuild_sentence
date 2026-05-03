@@ -1263,5 +1263,609 @@
       "subject": "My bedtime routine",
       "description": "is simple and quiet"
     }
+  ],
+
+  "routine_simple_items": [
+    {
+      "text": "my bag",
+      "school_item": true
+    },
+    {
+      "text": "my book",
+      "school_item": true
+    },
+    {
+      "text": "my lunch",
+      "school_item": true
+    },
+    {
+      "text": "my homework",
+      "school_item": true
+    },
+    {
+      "text": "my pencil case",
+      "school_item": true
+    },
+    {
+      "text": "my shoes",
+      "daily_item": true
+    },
+    {
+      "text": "my water bottle",
+      "school_item": true
+    },
+    {
+      "text": "my school bag",
+      "school_item": true
+    }
+  ],
+
+  "routine_simple_times": [
+    {
+      "text": "morning",
+      "part_of_day": "morning"
+    },
+    {
+      "text": "afternoon",
+      "part_of_day": "afternoon"
+    },
+    {
+      "text": "evening",
+      "part_of_day": "evening"
+    },
+    {
+      "text": "night",
+      "part_of_day": "night"
+    }
+  ],
+
+  "routine_school_preparation_actions": [
+    {
+      "text": "pack my bag",
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "check my homework",
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "get my books",
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "get my pencil case",
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "put my book in my bag",
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "take my lunch",
+      "school_age": true,
+      "preparation_action": true
+    }
+  ],
+
+  "routine_help_actions": [
+    {
+      "text": "help my parents",
+      "help_action": true
+    },
+    {
+      "text": "help my brother",
+      "help_action": true
+    },
+    {
+      "text": "help my sister",
+      "help_action": true
+    },
+    {
+      "text": "help at home",
+      "help_action": true
+    }
+  ],
+
+  "routine_chore_actions": [
+    {
+      "text": "clean my room",
+      "chore_action": true
+    },
+    {
+      "text": "make my bed",
+      "chore_action": true
+    },
+    {
+      "text": "wash the dishes",
+      "chore_action": true
+    },
+    {
+      "text": "take out the trash",
+      "chore_action": true
+    },
+    {
+      "text": "put away my books",
+      "chore_action": true
+    },
+    {
+      "text": "put away my toys",
+      "chore_action": true
+    }
+  ],
+
+  "routine_put_on_items": [
+    {
+      "text": "my shoes",
+      "wearable": true
+    },
+    {
+      "text": "my jacket",
+      "wearable": true
+    },
+    {
+      "text": "my school uniform",
+      "wearable": true,
+      "school_context": true
+    },
+    {
+      "text": "my socks",
+      "wearable": true
+    },
+    {
+      "text": "my hat",
+      "wearable": true
+    }
+  ],
+
+  "routine_ask_time_actions": [
+    {
+      "text": "get up",
+      "routine_action": true
+    },
+    {
+      "text": "go to school",
+      "routine_action": true,
+      "school_age": true
+    },
+    {
+      "text": "eat breakfast",
+      "routine_action": true,
+      "meal_action": true
+    },
+    {
+      "text": "go home",
+      "routine_action": true
+    },
+    {
+      "text": "eat dinner",
+      "routine_action": true,
+      "meal_action": true
+    },
+    {
+      "text": "go to bed",
+      "routine_action": true
+    }
+  ],
+
+  "routine_ask_what_contexts": [
+    {
+      "text": "after school",
+      "time_expression": true,
+      "school_context": true
+    },
+    {
+      "text": "in the morning",
+      "time_expression": true,
+      "part_of_day": "morning"
+    },
+    {
+      "text": "in the evening",
+      "time_expression": true,
+      "part_of_day": "evening"
+    },
+    {
+      "text": "at night",
+      "time_expression": true,
+      "part_of_day": "night"
+    },
+    {
+      "text": "on weekends",
+      "time_expression": true,
+      "weekend_context": true
+    }
+  ],
+
+  "routine_ask_when_actions": [
+    {
+      "text": "do your homework",
+      "routine_action": true,
+      "school_age": true
+    },
+    {
+      "text": "brush your teeth",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "pack your bag",
+      "routine_action": true,
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "clean your room",
+      "routine_action": true,
+      "chore_action": true
+    },
+    {
+      "text": "read a book",
+      "routine_action": true,
+      "leisure_action": true
+    },
+    {
+      "text": "watch TV",
+      "routine_action": true,
+      "leisure_action": true
+    }
+  ],
+
+  "routine_ready_for_contexts": [
+    {
+      "text": "school",
+      "school_context": true
+    },
+    {
+      "text": "bed",
+      "routine_context": true
+    },
+    {
+      "text": "dinner",
+      "meal_context": true
+    },
+    {
+      "text": "class",
+      "school_context": true
+    },
+    {
+      "text": "the test",
+      "school_context": true
+    }
+  ],
+
+  "routine_late_for_contexts": [
+    {
+      "text": "school",
+      "school_context": true
+    },
+    {
+      "text": "class",
+      "school_context": true
+    },
+    {
+      "text": "dinner",
+      "meal_context": true
+    },
+    {
+      "text": "the bus",
+      "transport_context": true
+    },
+    {
+      "text": "my lesson",
+      "school_context": true
+    }
+  ],
+
+  "routine_forgot_items": [
+    {
+      "text": "my homework",
+      "school_item": true
+    },
+    {
+      "text": "my book",
+      "school_item": true
+    },
+    {
+      "text": "my lunch",
+      "school_item": true
+    },
+    {
+      "text": "my bag",
+      "school_item": true
+    },
+    {
+      "text": "my pencil case",
+      "school_item": true
+    },
+    {
+      "text": "my water bottle",
+      "school_item": true
+    },
+    {
+      "text": "my shoes",
+      "daily_item": true
+    },
+    {
+      "text": "my key",
+      "daily_item": true
+    }
+  ],
+
+  "routine_permission_pairs": [
+    {
+      "action": "watch TV",
+      "condition": "after homework"
+    },
+    {
+      "action": "play outside",
+      "condition": "after school"
+    },
+    {
+      "action": "use the computer",
+      "condition": "after dinner"
+    },
+    {
+      "action": "read a book",
+      "condition": "before bed"
+    },
+    {
+      "action": "listen to music",
+      "condition": "after homework"
+    },
+    {
+      "action": "take a break",
+      "condition": "after homework"
+    },
+    {
+      "action": "go outside",
+      "condition": "after I finish my homework"
+    },
+    {
+      "action": "watch TV",
+      "condition": "after I clean my room"
+    }
+  ],
+
+  "routine_help_reason_pairs": [
+    {
+      "action": "help my parents",
+      "reason": "they are busy"
+    },
+    {
+      "action": "help my brother",
+      "reason": "he needs help"
+    },
+    {
+      "action": "help my sister",
+      "reason": "she needs help"
+    },
+    {
+      "action": "help at home",
+      "reason": "my parents are busy"
+    }
+  ],
+
+  "routine_chore_reason_pairs": [
+    {
+      "action": "clean my room",
+      "reason": "it is messy"
+    },
+    {
+      "action": "make my bed",
+      "reason": "it looks nice"
+    },
+    {
+      "action": "wash the dishes",
+      "reason": "they are dirty"
+    },
+    {
+      "action": "put away my books",
+      "reason": "my room is messy"
+    },
+    {
+      "action": "put away my toys",
+      "reason": "my room is messy"
+    }
+  ],
+
+  "routine_reminder_actions": [
+    {
+      "text": "brush my teeth",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "pack my bag",
+      "routine_action": true,
+      "school_age": true,
+      "preparation_action": true
+    },
+    {
+      "text": "do my homework",
+      "routine_action": true,
+      "school_age": true,
+      "study_action": true
+    },
+    {
+      "text": "wash my hands",
+      "routine_action": true,
+      "hygiene_action": true
+    },
+    {
+      "text": "go to bed early",
+      "routine_action": true
+    },
+    {
+      "text": "bring my book",
+      "routine_action": true,
+      "school_age": true
+    },
+    {
+      "text": "clean my room",
+      "routine_action": true,
+      "chore_action": true
+    }
+  ],
+
+  "routine_cannot_now_pairs": [
+    {
+      "action": "play",
+      "reason": "I have homework"
+    },
+    {
+      "action": "watch TV",
+      "reason": "I have to study"
+    },
+    {
+      "action": "go outside",
+      "reason": "I need to finish my homework"
+    },
+    {
+      "action": "use the computer",
+      "reason": "I have to clean my room"
+    },
+    {
+      "action": "listen to music",
+      "reason": "I need to sleep"
+    }
+  ],
+
+  "routine_time_takes_pairs": [
+    {
+      "duration": "ten minutes",
+      "task": "pack my bag"
+    },
+    {
+      "duration": "five minutes",
+      "task": "brush my teeth"
+    },
+    {
+      "duration": "twenty minutes",
+      "task": "finish my homework"
+    },
+    {
+      "duration": "fifteen minutes",
+      "task": "walk to school"
+    },
+    {
+      "duration": "ten minutes",
+      "task": "clean my room"
+    },
+    {
+      "duration": "five minutes",
+      "task": "make my bed"
+    }
+  ],
+
+  "routine_should_actions": [
+    {
+      "text": "go to bed earlier",
+      "routine_management": true
+    },
+    {
+      "text": "finish my homework first",
+      "routine_management": true
+    },
+    {
+      "text": "pack my bag before school",
+      "routine_management": true
+    },
+    {
+      "text": "study before the test",
+      "routine_management": true
+    },
+    {
+      "text": "clean my room today",
+      "routine_management": true
+    },
+    {
+      "text": "drink more water",
+      "routine_management": true
+    }
+  ],
+
+  "routine_parent_rule_actions": [
+    {
+      "text": "go to bed early",
+      "routine_management": true
+    },
+    {
+      "text": "finish my homework first",
+      "routine_management": true
+    },
+    {
+      "text": "clean my room",
+      "routine_management": true
+    },
+    {
+      "text": "brush my teeth before bed",
+      "routine_management": true
+    },
+    {
+      "text": "pack my bag before school",
+      "routine_management": true
+    },
+    {
+      "text": "help at home",
+      "routine_management": true
+    }
+  ],
+
+  "routine_before_leave_actions": [
+    {
+      "text": "check my bag",
+      "preparation_action": true
+    },
+    {
+      "text": "put on my shoes",
+      "preparation_action": true
+    },
+    {
+      "text": "get my lunch",
+      "preparation_action": true
+    },
+    {
+      "text": "say goodbye to my parents",
+      "routine_action": true
+    },
+    {
+      "text": "take my school bag",
+      "preparation_action": true
+    },
+    {
+      "text": "check my homework",
+      "preparation_action": true
+    }
+  ],
+
+  "routine_after_finish_pairs": [
+    {
+      "task": "my homework",
+      "action": "watch TV"
+    },
+    {
+      "task": "my homework",
+      "action": "read a book"
+    },
+    {
+      "task": "my homework",
+      "action": "play outside"
+    },
+    {
+      "task": "my chores",
+      "action": "listen to music"
+    },
+    {
+      "task": "cleaning my room",
+      "action": "take a break"
+    },
+    {
+      "task": "studying English",
+      "action": "go to bed"
+    }
   ]
 }
