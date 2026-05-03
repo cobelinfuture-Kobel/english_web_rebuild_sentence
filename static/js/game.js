@@ -33,6 +33,9 @@ const NEXT_PRACTICE_REASON_LABELS = {
     recent_wrong_attempt: "最近錯題",
 };
 
+NEXT_PRACTICE_STRATEGY_LABELS.remediate_recent_wrong = "先複習最近錯題";
+NEXT_PRACTICE_REASON_LABELS.recent_accuracy_low = "最近表現偏低，先穩固基礎";
+
 const loginView = document.getElementById("login-view");
 const usernameInput = document.getElementById("username-input");
 const loginButton = document.getElementById("login-btn");
@@ -575,7 +578,9 @@ async function loadNextPractice(userId, requestToken = learningSummaryRequestTok
 
     clearNextPracticePanel();
     nextPracticeStatus.innerText =
-        NEXT_PRACTICE_STRATEGY_LABELS[data.strategy] || "Next practice recommendations";
+        data.message ||
+        NEXT_PRACTICE_STRATEGY_LABELS[data.strategy] ||
+        "Next practice recommendations";
 
     const recommendations = data.recommendations || [];
     if (!recommendations.length) {
