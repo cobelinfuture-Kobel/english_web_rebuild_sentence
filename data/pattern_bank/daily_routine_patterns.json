@@ -413,5 +413,432 @@
         "complexity": {"depth": 3}
       }
     }
+  },
+
+  "ROUTINE_HAVE_ITEM": {
+    "pattern_id": "ROUTINE_HAVE_ITEM",
+    "function": "say_daily_items",
+    "variants": {
+      "A1": {
+        "example_template": "I have {item}.",
+        "chunks_template": ["I have", "{item}"],
+        "grammar_focus": ["have_verb", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_simple_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_READY": {
+    "pattern_id": "ROUTINE_READY",
+    "function": "say_readiness",
+    "variants": {
+      "A1": {
+        "example_template": "I am ready.",
+        "chunks_template": ["I am", "ready"],
+        "grammar_focus": ["be_verb", "daily_routine_vocabulary"],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_SIMPLE_TIME": {
+    "pattern_id": "ROUTINE_SIMPLE_TIME",
+    "function": "say_simple_time_of_day",
+    "variants": {
+      "A1": {
+        "example_template": "It is {simple_time}.",
+        "chunks_template": ["It is", "{simple_time}"],
+        "grammar_focus": ["be_verb", "time_expression"],
+        "slot_constraints": {
+          "simple_time": {
+            "category": ["routine_simple_times"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_PACK": {
+    "pattern_id": "ROUTINE_PACK",
+    "function": "describe_school_preparation",
+    "variants": {
+      "A1+": {
+        "example_template": "I {action}.",
+        "chunks_template": ["I", "{action}"],
+        "grammar_focus": ["present_simple", "school_preparation"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_school_preparation_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_HELP_SIMPLE": {
+    "pattern_id": "ROUTINE_HELP_SIMPLE",
+    "function": "describe_simple_helping",
+    "variants": {
+      "A1+": {
+        "example_template": "I {action}.",
+        "chunks_template": ["I", "{action}"],
+        "grammar_focus": ["present_simple", "helping_actions"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_help_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_CHORE_SIMPLE": {
+    "pattern_id": "ROUTINE_CHORE_SIMPLE",
+    "function": "describe_simple_chores",
+    "variants": {
+      "A1+": {
+        "example_template": "I {action}.",
+        "chunks_template": ["I", "{action}"],
+        "grammar_focus": ["present_simple", "chores"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_chore_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_PUT_ON": {
+    "pattern_id": "ROUTINE_PUT_ON",
+    "function": "describe_getting_ready_clothing",
+    "variants": {
+      "A1+": {
+        "example_template": "I put on {item}.",
+        "chunks_template": ["I put on", "{item}"],
+        "grammar_focus": ["phrasal_verb", "getting_ready"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_put_on_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_ASK_TIME": {
+    "pattern_id": "ROUTINE_ASK_TIME",
+    "function": "ask_routine_clock_time",
+    "variants": {
+      "A2": {
+        "example_template": "What time do you {action}?",
+        "chunks_template": ["What time do you", "{action}", "?"],
+        "grammar_focus": ["wh_question", "present_simple", "daily_routine"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_ask_time_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_ASK_WHAT_DO": {
+    "pattern_id": "ROUTINE_ASK_WHAT_DO",
+    "function": "ask_routine_context",
+    "variants": {
+      "A2": {
+        "example_template": "What do you do {context}?",
+        "chunks_template": ["What do you do", "{context}", "?"],
+        "grammar_focus": ["wh_question", "present_simple", "time_expression"],
+        "slot_constraints": {
+          "context": {
+            "category": ["routine_ask_what_contexts"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_ASK_WHEN_DO": {
+    "pattern_id": "ROUTINE_ASK_WHEN_DO",
+    "function": "ask_when_routine_action_happens",
+    "variants": {
+      "A2": {
+        "example_template": "When do you {action}?",
+        "chunks_template": ["When do you", "{action}", "?"],
+        "grammar_focus": ["wh_question", "present_simple", "daily_routine"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_ask_when_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_READY_FOR": {
+    "pattern_id": "ROUTINE_READY_FOR",
+    "function": "say_ready_for_context",
+    "variants": {
+      "A2": {
+        "example_template": "I am ready for {context}.",
+        "chunks_template": ["I am ready for", "{context}"],
+        "grammar_focus": ["be_verb", "prepositions", "daily_routine"],
+        "slot_constraints": {
+          "context": {
+            "category": ["routine_ready_for_contexts"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_LATE_FOR": {
+    "pattern_id": "ROUTINE_LATE_FOR",
+    "function": "say_late_for_context",
+    "variants": {
+      "A2": {
+        "example_template": "I am late for {context}.",
+        "chunks_template": ["I am late for", "{context}"],
+        "grammar_focus": ["be_verb", "prepositions", "daily_routine"],
+        "slot_constraints": {
+          "context": {
+            "category": ["routine_late_for_contexts"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_FORGOT": {
+    "pattern_id": "ROUTINE_FORGOT",
+    "function": "say_forgot_daily_item",
+    "variants": {
+      "A2": {
+        "example_template": "I forgot {item}.",
+        "chunks_template": ["I forgot", "{item}"],
+        "grammar_focus": ["fixed_expression", "school_life"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_forgot_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_PERMISSION": {
+    "pattern_id": "ROUTINE_PERMISSION",
+    "function": "ask_permission_for_routine_activity",
+    "variants": {
+      "A2": {
+        "example_template": "Can I {action} {condition}?",
+        "chunks_template": ["Can I", "{action}", "{condition}", "?"],
+        "grammar_focus": ["can_request", "time_condition", "daily_routine"],
+        "paired_slot": {
+          "category": "routine_permission_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_HELP_REASON": {
+    "pattern_id": "ROUTINE_HELP_REASON",
+    "function": "explain_helping_reason",
+    "variants": {
+      "A2+": {
+        "example_template": "I {action} because {reason}.",
+        "chunks_template": ["I", "{action}", "because", "{reason}"],
+        "grammar_focus": ["because_so", "helping_actions"],
+        "paired_slot": {
+          "category": "routine_help_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_CHORE_REASON": {
+    "pattern_id": "ROUTINE_CHORE_REASON",
+    "function": "explain_chore_reason",
+    "variants": {
+      "A2+": {
+        "example_template": "I {action} because {reason}.",
+        "chunks_template": ["I", "{action}", "because", "{reason}"],
+        "grammar_focus": ["because_so", "chores"],
+        "paired_slot": {
+          "category": "routine_chore_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_REMIND": {
+    "pattern_id": "ROUTINE_REMIND",
+    "function": "ask_for_reminder",
+    "variants": {
+      "A2+": {
+        "example_template": "Please remind me to {action}.",
+        "chunks_template": ["Please remind me to", "{action}"],
+        "grammar_focus": ["imperative", "to_infinitive", "daily_routine"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_reminder_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_CANNOT_NOW": {
+    "pattern_id": "ROUTINE_CANNOT_NOW",
+    "function": "explain_cannot_do_now",
+    "variants": {
+      "A2+": {
+        "example_template": "I cannot {action} now because {reason}.",
+        "chunks_template": ["I cannot", "{action}", "now because", "{reason}"],
+        "grammar_focus": ["cannot", "because_so", "daily_routine"],
+        "paired_slot": {
+          "category": "routine_cannot_now_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_TIME_TAKES": {
+    "pattern_id": "ROUTINE_TIME_TAKES",
+    "function": "describe_time_needed_for_task",
+    "variants": {
+      "B1": {
+        "example_template": "It takes {duration} to {task}.",
+        "chunks_template": ["It takes", "{duration}", "to", "{task}"],
+        "grammar_focus": ["time_duration", "to_infinitive", "routine_management"],
+        "paired_slot": {
+          "category": "routine_time_takes_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_SHOULD": {
+    "pattern_id": "ROUTINE_SHOULD",
+    "function": "give_simple_routine_advice",
+    "variants": {
+      "B1": {
+        "example_template": "I should {action}.",
+        "chunks_template": ["I should", "{action}"],
+        "grammar_focus": ["should", "routine_management"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_should_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_PARENT_RULE": {
+    "pattern_id": "ROUTINE_PARENT_RULE",
+    "function": "describe_parent_rules",
+    "variants": {
+      "B1": {
+        "example_template": "My parents say I have to {action}.",
+        "chunks_template": ["My parents say", "I have to", "{action}"],
+        "grammar_focus": ["reported_rule", "have_to", "routine_management"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_parent_rule_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_BEFORE_LEAVE": {
+    "pattern_id": "ROUTINE_BEFORE_LEAVE",
+    "function": "describe_before_leaving_home",
+    "variants": {
+      "B1": {
+        "example_template": "Before I leave home, I {action}.",
+        "chunks_template": ["Before I leave home, I", "{action}"],
+        "grammar_focus": ["before_after", "routine_management"],
+        "slot_constraints": {
+          "action": {
+            "category": ["routine_before_leave_actions"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_AFTER_FINISH": {
+    "pattern_id": "ROUTINE_AFTER_FINISH",
+    "function": "describe_after_finishing_task",
+    "variants": {
+      "B1": {
+        "example_template": "After I finish {task}, I {action}.",
+        "chunks_template": ["After I finish", "{task}", ", I", "{action}"],
+        "grammar_focus": ["before_after", "routine_management"],
+        "paired_slot": {
+          "category": "routine_after_finish_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
   }
 }
