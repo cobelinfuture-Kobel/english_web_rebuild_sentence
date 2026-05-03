@@ -384,6 +384,412 @@ When implementing this API later, add tests for:
 19. Recommendation metadata uses the sentence bank, not attempt metadata.
 20. Recommendation sorting is deterministic.
 
+## Next Practice v2: Remediation Mode
+
+## Status
+
+Planned.
+
+This section defines the next version of the rule-based recommendation API. It is not implemented yet.
+
+The purpose of v2 is to prevent the system from pushing new material when a learner is currently struggling.
+
+## Teaching Principle
+
+When recent performance is too low, the system should reduce cognitive load.
+
+Instead of recommending new sentences, it should recommend recent wrong attempts first.
+
+This turns the system from a simple practice recommender into a basic remediation coach.
+
+## Priority Model
+
+| Priority | Mode | Trigger | Recommendation |
+|---|---|---|---|
+| P0 | Remediation | `total_attempts > 5` and `recent.last_10.accuracy < 0.5` | Recent wrong attempts, max 5 |
+| P1 | Reinforce | Weak pattern exists and `accuracy < 0.7` | Unattempted sentences in weak patterns |
+| P2 | Progress | Stable performance or no weak pattern | General unattempted sentences |
+| P3 | Review | No unattempted sentences, but wrong attempts exist | Recent wrong attempts |
+| P4 | None | No available recommendation | Empty recommendations |
+
+## P0 Remediation Mode
+
+### Trigger
+
+P0 should trigger when:
+
+```text
+total_attempts > 5
+recent.last_10.accuracy < 0.5
+```
+
+Notes:
+
+* `recent.last_10.total_attempts` may be fewer than 10.
+* `total_attempts` must be greater than 5 to avoid overreacting to the first few attempts.
+* This mode protects struggling learners from receiving too much new material.
+
+Example:
+
+```text
+total_attempts = 12
+recent.last_10.accuracy = 0.3
+```
+
+Expected strategy:
+
+```text
+remediate_recent_wrong
+```
+
+### Recommendation Content
+
+P0 recommends recent wrong attempts.
+
+Rules:
+
+* Return at most 5 recommendations.
+* Sort by `created_at DESC`, then `id DESC`.
+* If the same `sentence_id` has multiple wrong attempts, return only the latest one.
+* Respect `level` and `pattern` filters.
+* If no recent wrong attempts are available inside the filter, fall back to the next valid strategy.
+
+### Strategy and Reason
+
+Strategy:
+
+```text
+remediate_recent_wrong
+```
+
+Reason:
+
+```text
+recent_accuracy_low
+```
+
+Reason code:
+
+```text
+RECENT_ACCURACY_LOW
+```
+
+Recommended message:
+
+```text
+先複習最近錯題，穩固基礎後再前進。
+```
+
+## Response Additions
+
+v2 should add these fields to the existing next-practice response:
+
+```json
+{
+  "reason_code": "RECENT_ACCURACY_LOW",
+  "message": "先複習最近錯題，穩固基礎後再前進。"
+}
+```
+
+The existing response shape should remain compatible:
+
+```json
+{
+  "user_id": "user_001",
+  "strategy": "remediate_recent_wrong",
+  "reason_code": "RECENT_ACCURACY_LOW",
+  "is_exhausted": false,
+  "limit": 5,
+  "filters": {
+    "level": null,
+    "pattern": null
+  },
+  "message": "先複習最近錯題，穩固基礎後再前進。",
+  "recommendations": [
+    {
+      "sentence_id": "A1_SHOPPING_SHOP_TRY_004",
+      "level": "A1",
+      "pattern": "SHOP_TRY",
+      "reason": "recent_accuracy_low"
+    }
+  ]
+}
+```
+
+## Reason Codes
+
+v2 should use stable machine-readable reason codes:
+
+```text
+RECENT_ACCURACY_LOW
+WEAK_PATTERN_NEEDS_REINFORCEMENT
+PROGRESS_NEW_CONTENT
+REVIEW_RECENT_WRONG
+NO_RECOMMENDATION
+```
+
+Frontend text should rely on `reason_code` or `message`, not on guessing from `strategy`.
+
+## P1 Reinforce Mode
+
+P1 is mostly the same as the current v1 weak-pattern strategy.
+
+Trigger:
+
+```text
+weak pattern exists
+pattern total_attempts >= 5
+pattern accuracy < 0.7
+weak pattern has unattempted sentences
+```
+
+Strategy:
+
+```text
+weak_pattern_not_attempted
+```
+
+Reason code:
+
+```text
+WEAK_PATTERN_NEEDS_REINFORCEMENT
+```
+
+Recommended message:
+
+```text
+優先補弱句型的新題。
+```
+
+### Deferred Mixed Review
+
+A possible future enhancement is:
+
+```text
+weak-pattern new sentences + one old wrong attempt from the same weak pattern
+```
+
+Do not implement this in v2.
+
+Reason:
+
+* It would mix strategies in one response.
+* It would complicate deterministic testing.
+* The current frontend does not yet support selecting specific recommended sentences for practice.
+* It is better deferred to v2.1 or a dedicated review mode.
+
+## P2 Progress Mode
+
+Trigger:
+
+```text
+No P0 remediation needed
+No P1 weak-pattern recommendation available
+```
+
+Optional interpretation:
+
+```text
+recent.last_10.accuracy >= 0.8
+```
+
+Recommendation:
+
+```text
+general unattempted sentences
+```
+
+Strategy:
+
+```text
+not_attempted
+```
+
+Reason code:
+
+```text
+PROGRESS_NEW_CONTENT
+```
+
+Recommended message:
+
+```text
+繼續練習還沒做過的新題。
+```
+
+## P3 Review Mode
+
+Trigger:
+
+```text
+No unattempted sentences are available
+Wrong attempts exist
+```
+
+Recommendation:
+
+```text
+recent wrong attempts
+```
+
+Strategy:
+
+```text
+recent_wrong_attempt
+```
+
+Reason code:
+
+```text
+REVIEW_RECENT_WRONG
+```
+
+Recommended message:
+
+```text
+目前沒有新題建議，先複習最近錯題。
+```
+
+## P4 None Mode
+
+Trigger:
+
+```text
+No recommendation is available
+```
+
+Strategy:
+
+```text
+none
+```
+
+Reason code:
+
+```text
+NO_RECOMMENDATION
+```
+
+Recommended message:
+
+```text
+目前沒有推薦題目。
+```
+
+`is_exhausted` should be `true`.
+
+## Filter Priority
+
+The existing v1 rule remains:
+
+```text
+level and pattern filters take priority over recommendation logic
+```
+
+Example:
+
+```text
+Request: level=A2
+A2 has no wrong attempts.
+A1 has recent wrong attempts.
+recent.last_10.accuracy < 0.5
+```
+
+Expected result:
+
+```json
+{
+  "strategy": "none",
+  "is_exhausted": true,
+  "recommendations": []
+}
+```
+
+The API must not ignore the filter and recommend A1 sentences.
+
+## Expected Behavior Examples
+
+### Example A: Struggling Learner
+
+Input state:
+
+```text
+total_attempts = 12
+overall accuracy = 42%
+recent.last_10.accuracy = 30%
+weak pattern = SHOP_TRY
+```
+
+Expected behavior:
+
+```text
+P0 Remediation
+Recommend recent wrong attempts.
+Do not recommend new SHOP_TRY sentences yet.
+```
+
+### Example B: Strong Learner with Local Weakness
+
+Input state:
+
+```text
+total_attempts = 60
+overall accuracy = 93%
+recent.last_10.accuracy = 70%
+weak pattern = FOOD_PRICE
+```
+
+Expected behavior:
+
+```text
+P1 Reinforce
+Recommend unattempted FOOD_PRICE sentences.
+Do not enter remediation mode.
+```
+
+## Test Plan for v2 Implementation
+
+When implementing v2 later, add tests for:
+
+1. `total_attempts > 5` and `recent.last_10.accuracy < 0.5` triggers `remediate_recent_wrong`.
+2. Remediation returns at most 5 recommendations.
+3. Remediation uses recent wrong attempts.
+4. Remediation deduplicates repeated wrong attempts by `sentence_id`, keeping the latest.
+5. Remediation respects `level` filter.
+6. Remediation respects `pattern` filter.
+7. Remediation falls back when no wrong attempts exist inside the filter.
+8. Learner with `recent.last_10.accuracy >= 0.5` and weak pattern still uses `weak_pattern_not_attempted`.
+9. Response includes `reason_code`.
+10. Response includes `message`.
+11. `reason_code` is stable and machine-readable.
+12. Existing v1 fallback behavior remains valid.
+13. Existing next-practice tests remain deterministic.
+
+## Implementation Scope for v2
+
+When implemented later, v2 should modify only:
+
+* `stores/recommendation_store.py`
+* `app.py` only if route response wiring is needed
+* `static/js/game.js` only to display `message`
+* tests
+
+Do not modify:
+
+* attempts schema
+* stats API
+* weak-patterns API
+* wrong-attempts API
+* coverage API
+* sentence generation
+* answer checking
+
+## Suggested Implementation Commit
+
+```text
+feat: add remediation mode to next practice
+```
+
 ## Suggested Implementation Commit
 
 When this spec is implemented later, use:
