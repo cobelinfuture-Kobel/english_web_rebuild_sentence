@@ -1867,5 +1867,584 @@
       "task": "studying English",
       "action": "go to bed"
     }
+  ],
+
+  "routine_have_items_fsi": [
+    {
+      "text": "my book"
+    },
+    {
+      "text": "my bag"
+    },
+    {
+      "text": "my lunch"
+    },
+    {
+      "text": "my homework"
+    },
+    {
+      "text": "my pencil case"
+    },
+    {
+      "text": "my water bottle"
+    },
+    {
+      "text": "my notebook"
+    },
+    {
+      "text": "my English book"
+    },
+    {
+      "text": "my jacket"
+    },
+    {
+      "text": "my shoes"
+    },
+    {
+      "text": "my school uniform"
+    },
+    {
+      "text": "my key"
+    },
+    {
+      "text": "my umbrella"
+    },
+    {
+      "text": "my folder"
+    }
+  ],
+
+  "routine_bring_items": [
+    {
+      "text": "my book"
+    },
+    {
+      "text": "my homework"
+    },
+    {
+      "text": "my lunch"
+    },
+    {
+      "text": "my water bottle"
+    },
+    {
+      "text": "my notebook"
+    },
+    {
+      "text": "my pencil case"
+    },
+    {
+      "text": "my English book"
+    },
+    {
+      "text": "my folder"
+    },
+    {
+      "text": "my jacket"
+    },
+    {
+      "text": "my umbrella"
+    }
+  ],
+
+  "routine_forgot_items_fsi": [
+    {
+      "text": "my book"
+    },
+    {
+      "text": "my homework"
+    },
+    {
+      "text": "my lunch"
+    },
+    {
+      "text": "my water bottle"
+    },
+    {
+      "text": "my notebook"
+    },
+    {
+      "text": "my pencil case"
+    },
+    {
+      "text": "my English book"
+    },
+    {
+      "text": "my key"
+    },
+    {
+      "text": "my folder"
+    },
+    {
+      "text": "my umbrella"
+    }
+  ],
+
+  "routine_check_items": [
+    {
+      "text": "my bag"
+    },
+    {
+      "text": "my homework"
+    },
+    {
+      "text": "my lunch"
+    },
+    {
+      "text": "my water bottle"
+    },
+    {
+      "text": "my notebook"
+    },
+    {
+      "text": "my pencil case"
+    },
+    {
+      "text": "my English book"
+    },
+    {
+      "text": "my key"
+    },
+    {
+      "text": "my folder"
+    },
+    {
+      "text": "my shoes"
+    }
+  ],
+
+  "routine_usable_items": [
+    {
+      "text": "my pencil"
+    },
+    {
+      "text": "my book"
+    },
+    {
+      "text": "my notebook"
+    },
+    {
+      "text": "my eraser"
+    },
+    {
+      "text": "my ruler"
+    },
+    {
+      "text": "the computer"
+    },
+    {
+      "text": "the desk"
+    },
+    {
+      "text": "the chair"
+    }
+  ],
+
+  "routine_get_items": [
+    {
+      "text": "my books"
+    },
+    {
+      "text": "my lunch"
+    },
+    {
+      "text": "my pencil case"
+    },
+    {
+      "text": "my water bottle"
+    },
+    {
+      "text": "my notebook"
+    },
+    {
+      "text": "my English book"
+    },
+    {
+      "text": "my jacket"
+    },
+    {
+      "text": "my shoes"
+    },
+    {
+      "text": "my umbrella"
+    },
+    {
+      "text": "my folder"
+    }
+  ],
+
+  "routine_clean_objects": [
+    {
+      "text": "my room"
+    },
+    {
+      "text": "my desk"
+    },
+    {
+      "text": "the table"
+    },
+    {
+      "text": "the kitchen"
+    },
+    {
+      "text": "the bathroom"
+    },
+    {
+      "text": "my bag"
+    },
+    {
+      "text": "the floor"
+    },
+    {
+      "text": "my study space"
+    }
+  ],
+
+  "routine_brush_objects": [
+    {
+      "text": "my teeth"
+    },
+    {
+      "text": "my hair"
+    }
+  ],
+
+  "routine_wash_objects": [
+    {
+      "text": "my hands"
+    },
+    {
+      "text": "my face"
+    },
+    {
+      "text": "the dishes"
+    },
+    {
+      "text": "my cup"
+    },
+    {
+      "text": "my lunch box"
+    }
+  ],
+
+  "routine_pack_items": [
+    {
+      "text": "my bag"
+    },
+    {
+      "text": "my books"
+    },
+    {
+      "text": "my lunch"
+    },
+    {
+      "text": "my pencil case"
+    },
+    {
+      "text": "my homework"
+    },
+    {
+      "text": "my water bottle"
+    },
+    {
+      "text": "my notebook"
+    },
+    {
+      "text": "my English book"
+    },
+    {
+      "text": "my folder"
+    }
+  ],
+
+  "routine_clean_object_time_pairs": [
+    {
+      "object": "my room",
+      "time": "after school"
+    },
+    {
+      "object": "my desk",
+      "time": "after school"
+    },
+    {
+      "object": "the table",
+      "time": "after dinner"
+    },
+    {
+      "object": "the kitchen",
+      "time": "after dinner"
+    },
+    {
+      "object": "the bathroom",
+      "time": "on weekends"
+    },
+    {
+      "object": "the floor",
+      "time": "on weekends"
+    },
+    {
+      "object": "my study space",
+      "time": "after homework"
+    },
+    {
+      "object": "my bag",
+      "time": "on weekends"
+    }
+  ],
+
+  "routine_pack_item_time_pairs": [
+    {
+      "item": "my bag",
+      "time": "before school"
+    },
+    {
+      "item": "my books",
+      "time": "before school"
+    },
+    {
+      "item": "my lunch",
+      "time": "in the morning"
+    },
+    {
+      "item": "my pencil case",
+      "time": "before school"
+    },
+    {
+      "item": "my homework",
+      "time": "before school"
+    },
+    {
+      "item": "my water bottle",
+      "time": "in the morning"
+    },
+    {
+      "item": "my notebook",
+      "time": "before school"
+    },
+    {
+      "item": "my English book",
+      "time": "before school"
+    }
+  ],
+
+  "routine_put_on_item_time_pairs": [
+    {
+      "item": "my shoes",
+      "time": "before school"
+    },
+    {
+      "item": "my jacket",
+      "time": "in the morning"
+    },
+    {
+      "item": "my school uniform",
+      "time": "in the morning"
+    },
+    {
+      "item": "my hat",
+      "time": "in the morning"
+    },
+    {
+      "item": "my backpack",
+      "time": "before school"
+    },
+    {
+      "item": "my coat",
+      "time": "in the morning"
+    }
+  ],
+
+  "routine_wash_object_time_pairs": [
+    {
+      "object": "my face",
+      "time": "in the morning"
+    },
+    {
+      "object": "my hands",
+      "time": "before dinner"
+    },
+    {
+      "object": "my hands",
+      "time": "after school"
+    },
+    {
+      "object": "the dishes",
+      "time": "after dinner"
+    },
+    {
+      "object": "my cup",
+      "time": "after breakfast"
+    },
+    {
+      "object": "my lunch box",
+      "time": "after school"
+    }
+  ],
+
+  "routine_clean_object_reason_pairs": [
+    {
+      "object": "my room",
+      "reason": "it is messy"
+    },
+    {
+      "object": "my desk",
+      "reason": "it is messy"
+    },
+    {
+      "object": "the table",
+      "reason": "it is dirty"
+    },
+    {
+      "object": "the kitchen",
+      "reason": "it is dirty"
+    },
+    {
+      "object": "the bathroom",
+      "reason": "it is dirty"
+    },
+    {
+      "object": "the floor",
+      "reason": "it is dirty"
+    },
+    {
+      "object": "my study space",
+      "reason": "I need a clean place to study"
+    },
+    {
+      "object": "my bag",
+      "reason": "it is dirty"
+    }
+  ],
+
+  "routine_pack_item_reason_pairs": [
+    {
+      "item": "my bag",
+      "reason": "I need my books"
+    },
+    {
+      "item": "my books",
+      "reason": "I need them at school"
+    },
+    {
+      "item": "my lunch",
+      "reason": "I eat at school"
+    },
+    {
+      "item": "my pencil case",
+      "reason": "I need my pencils"
+    },
+    {
+      "item": "my homework",
+      "reason": "I need to give it to my teacher"
+    },
+    {
+      "item": "my water bottle",
+      "reason": "I need water at school"
+    },
+    {
+      "item": "my notebook",
+      "reason": "I need it in class"
+    },
+    {
+      "item": "my English book",
+      "reason": "I have English class"
+    }
+  ],
+
+  "routine_cannot_use_item_reason_pairs": [
+    {
+      "item": "the computer",
+      "reason": "I have to study"
+    },
+    {
+      "item": "my phone",
+      "reason": "I have homework"
+    },
+    {
+      "item": "the tablet",
+      "reason": "I need to finish my homework"
+    },
+    {
+      "item": "the TV",
+      "reason": "I have to clean my room"
+    },
+    {
+      "item": "my game",
+      "reason": "I need to go to bed"
+    },
+    {
+      "item": "the computer",
+      "reason": "my parents are using it"
+    }
+  ],
+
+  "routine_time_takes_clean_object_pairs": [
+    {
+      "duration": "five minutes",
+      "object": "my desk"
+    },
+    {
+      "duration": "ten minutes",
+      "object": "my room"
+    },
+    {
+      "duration": "ten minutes",
+      "object": "the table"
+    },
+    {
+      "duration": "fifteen minutes",
+      "object": "the kitchen"
+    },
+    {
+      "duration": "fifteen minutes",
+      "object": "the bathroom"
+    },
+    {
+      "duration": "twenty minutes",
+      "object": "the floor"
+    },
+    {
+      "duration": "ten minutes",
+      "object": "my study space"
+    },
+    {
+      "duration": "five minutes",
+      "object": "my bag"
+    }
+  ],
+
+  "routine_after_finish_activity_pairs_fsi": [
+    {
+      "task": "my homework",
+      "activity": "watch TV"
+    },
+    {
+      "task": "my homework",
+      "activity": "read a book"
+    },
+    {
+      "task": "my homework",
+      "activity": "listen to music"
+    },
+    {
+      "task": "my chores",
+      "activity": "take a break"
+    },
+    {
+      "task": "cleaning my room",
+      "activity": "read a book"
+    },
+    {
+      "task": "packing my bag",
+      "activity": "go to bed"
+    },
+    {
+      "task": "dinner",
+      "activity": "wash the dishes"
+    },
+    {
+      "task": "English practice",
+      "activity": "take a break"
+    }
   ]
 }
