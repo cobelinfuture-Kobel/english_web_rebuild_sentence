@@ -117,11 +117,23 @@ COUNT_BY_PATTERN_LEVEL = {
     ("ROUTINE_HAVE_ITEM", "A1"): 8,
     ("ROUTINE_READY", "A1"): 1,
     ("ROUTINE_SIMPLE_TIME", "A1"): 4,
+    # Daily Routine Phase 4C A1
+    ("ROUTINE_HAVE_ITEM_FSI", "A1"): 14,
+    ("ROUTINE_CLEAN_OBJECT", "A1"): 8,
+    ("ROUTINE_BRUSH_OBJECT", "A1"): 3,
+    ("ROUTINE_WASH_OBJECT", "A1"): 5,
+    ("ROUTINE_PACK_ITEM_FSI", "A1"): 8,
+    ("ROUTINE_GET_ITEM", "A1"): 8,
     # Daily Routine Phase 4B A1+
     ("ROUTINE_PACK", "A1+"): 6,
     ("ROUTINE_HELP_SIMPLE", "A1+"): 4,
     ("ROUTINE_CHORE_SIMPLE", "A1+"): 6,
     ("ROUTINE_PUT_ON", "A1+"): 5,
+    # Daily Routine Phase 4C A1+
+    ("ROUTINE_CLEAN_OBJECT_TIME", "A1+"): 8,
+    ("ROUTINE_PACK_ITEM_TIME", "A1+"): 8,
+    ("ROUTINE_PUT_ON_ITEM_TIME", "A1+"): 6,
+    ("ROUTINE_WASH_OBJECT_TIME", "A1+"): 6,
     # Daily Routine Phase 4B A2
     ("ROUTINE_ASK_TIME", "A2"): 6,
     ("ROUTINE_ASK_WHAT_DO", "A2"): 5,
@@ -130,17 +142,33 @@ COUNT_BY_PATTERN_LEVEL = {
     ("ROUTINE_LATE_FOR", "A2"): 5,
     ("ROUTINE_FORGOT", "A2"): 8,
     ("ROUTINE_PERMISSION", "A2"): 8,
+    # Daily Routine Phase 4C A2
+    ("ROUTINE_NEED_BRING_ITEM", "A2"): 10,
+    ("ROUTINE_FORGOT_ITEM_FSI", "A2"): 10,
+    ("ROUTINE_CAN_USE_ITEM_HERE", "A2"): 8,
+    ("ROUTINE_HAVE_TO_PACK_ITEM", "A2"): 8,
+    ("ROUTINE_NEED_CLEAN_OBJECT", "A2"): 8,
     # Daily Routine Phase 4B A2+
     ("ROUTINE_HELP_REASON", "A2+"): 4,
     ("ROUTINE_CHORE_REASON", "A2+"): 5,
     ("ROUTINE_REMIND", "A2+"): 7,
     ("ROUTINE_CANNOT_NOW", "A2+"): 5,
+    # Daily Routine Phase 4C A2+
+    ("ROUTINE_CLEAN_OBJECT_REASON", "A2+"): 8,
+    ("ROUTINE_PACK_ITEM_REASON", "A2+"): 8,
+    ("ROUTINE_REMIND_BRING_ITEM", "A2+"): 10,
+    ("ROUTINE_CANNOT_USE_ITEM_REASON", "A2+"): 6,
     # Daily Routine Phase 4B B1
     ("ROUTINE_TIME_TAKES", "B1"): 6,
     ("ROUTINE_SHOULD", "B1"): 6,
     ("ROUTINE_PARENT_RULE", "B1"): 6,
     ("ROUTINE_BEFORE_LEAVE", "B1"): 6,
     ("ROUTINE_AFTER_FINISH", "B1"): 6,
+    # Daily Routine Phase 4C B1
+    ("ROUTINE_TIME_TAKES_CLEAN_OBJECT", "B1"): 8,
+    ("ROUTINE_BEFORE_LEAVE_CHECK_ITEM", "B1"): 10,
+    ("ROUTINE_PARENT_RULE_CLEAN_OBJECT", "B1"): 8,
+    ("ROUTINE_AFTER_FINISH_ACTIVITY_FSI", "B1"): 8,
 }
 
 SCENARIO_CONFIGS = {
