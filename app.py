@@ -18,6 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_BANK_PATHS = [
     BASE_DIR / "data" / "generated" / "shopping_sentence_bank.json",
     BASE_DIR / "data" / "generated" / "food_drink_sentence_bank.json",
+    BASE_DIR / "data" / "generated" / "daily_routine_sentence_bank.json",
 ]
 DEFAULT_PROGRESS_PATH = BASE_DIR / "data" / "user_progress.json"
 DEFAULT_USERS_PATH = BASE_DIR / "data" / "users.json"
