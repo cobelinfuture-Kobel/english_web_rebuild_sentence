@@ -136,6 +136,208 @@ Yesterday, I cleaned my room.
 
 These belong to Phase 5 or later tense expansion.
 
+## Relationship to Global Chunks Bank Design
+
+Phase 4C is compatible with the future global chunks_bank design described in:
+
+```text
+docs/global_chunks_bank_design.md
+```
+
+However, Phase 4C should not implement a real `data/chunk_bank/` yet.
+
+For this phase, Daily Routine FSI chunks are represented through existing slot groups.
+
+Short-term representation:
+
+```text
+slot group = chunk carrier
+pattern = frame carrier
+generated sentence = output
+```
+
+Examples:
+
+```text
+routine_have_items_fsi = item chunk group
+routine_clean_objects = object chunk group
+routine_brush_objects = low-density object chunk group
+routine_clean_object_reason_pairs = paired reason chunk group
+routine_pack_item_time_pairs = paired time chunk group
+```
+
+This allows Phase 4C to increase FSI drill density without changing generator architecture.
+
+The future chunks_bank may later extract these teachable chunks into:
+
+```text
+data/chunk_bank/daily_routine_chunks.json
+```
+
+or another global chunk-bank structure.
+
+Phase 4C should therefore avoid naming or schema choices that would block a later chunk-bank migration.
+
+## FSI Chunk Inventory for Phase 4C
+
+Phase 4C uses the following chunk categories.
+
+### Item Chunks
+
+Used in:
+
+```text
+I have {item}.
+I forgot {item}.
+I need to bring {item}.
+Please remind me to bring {item}.
+Before I leave home, I check {item}.
+```
+
+Current carrier:
+
+```text
+routine_have_items_fsi
+routine_bring_items
+routine_forgot_items_fsi
+routine_check_items
+routine_pack_items
+routine_get_items
+```
+
+Teaching value:
+
+```text
+high repetition
+high transfer
+clear school-life item substitution
+```
+
+### Object Chunks
+
+Used in:
+
+```text
+I clean {object}.
+I brush {object}.
+I wash {object}.
+I need to clean {object}.
+```
+
+Current carrier:
+
+```text
+routine_clean_objects
+routine_brush_objects
+routine_wash_objects
+```
+
+Teaching value:
+
+```text
+verb-object compatibility
+error prevention
+medium or low density substitution
+```
+
+### Time Chunks
+
+Used in:
+
+```text
+I clean {object} {time}.
+I pack {item} {time}.
+I put on {item} {time}.
+I wash {object} {time}.
+```
+
+Current carrier:
+
+```text
+routine_clean_object_time_pairs
+routine_pack_item_time_pairs
+routine_put_on_item_time_pairs
+routine_wash_object_time_pairs
+```
+
+Teaching value:
+
+```text
+action-time compatibility
+spiral learning from A1 to A1+
+```
+
+### Reason Chunks
+
+Used in:
+
+```text
+I clean {object} because {reason}.
+I pack {item} because {reason}.
+I cannot use {item} now because {reason}.
+```
+
+Current carrier:
+
+```text
+routine_clean_object_reason_pairs
+routine_pack_item_reason_pairs
+routine_cannot_use_item_reason_pairs
+```
+
+Teaching value:
+
+```text
+semantic pairing
+reason clause control
+A2+ sentence expansion
+```
+
+### Condition / Sequence Chunks
+
+Used in:
+
+```text
+After I finish {task}, I {activity}.
+It takes {duration} to clean {object}.
+```
+
+Current carrier:
+
+```text
+routine_after_finish_activity_pairs_fsi
+routine_time_takes_clean_object_pairs
+```
+
+Teaching value:
+
+```text
+B1 routine-management frames
+controlled multi-chunk substitution
+```
+
+## Why Phase 4C Does Not Add data/chunk_bank Yet
+
+A real chunk bank would be useful, but it requires a separate architecture phase.
+
+It may affect:
+
+```text
+generator loading
+pattern schema
+slot schema
+tests
+UI drill grouping
+Shopping compatibility
+Food & Drink compatibility
+```
+
+Therefore Phase 4C should first use slot groups as chunk carriers.
+
+A later chunk-bank implementation can map or migrate these slot groups into an explicit chunk-bank schema.
+
+This keeps Phase 4C teachable now and architecture-compatible later.
+
 ## FSI Layers
 
 Phase 4C should distinguish three FSI layers.
