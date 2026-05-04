@@ -167,6 +167,645 @@ They clean their rooms.
 
 This is the required model for grammar-safe FSI.
 
+## Required Grammar by Level and Current Coverage
+
+This section compares the project's level grammar target with current documentation and implementation coverage.
+
+The goal is not to force every grammar point into the currently implemented scenarios.
+
+The current active scenarios are:
+
+- Shopping
+- Food & Drink
+- Daily Routine
+
+Future scenarios should also carry part of the grammar load.
+
+Therefore, a grammar point may be:
+
+```text
+covered now
+partially covered now
+planned but not implemented
+deferred to future scenarios
+deferred to a later grammar expansion phase
+```
+
+Important distinction:
+
+```text
+Documented coverage is not the same as generated sentence coverage.
+```
+
+A grammar point may be described in this document or in scenario design notes but still not be implemented in slot banks, pattern banks, generated data, or tests.
+
+## Coverage Interpretation Rules
+
+Use the following labels when evaluating grammar coverage.
+
+```text
+Covered:
+The grammar point appears in generated sentence banks or stable scenario documentation with clear examples and semantic rules.
+
+Partially covered:
+The grammar point appears in limited fixed chunks, one scenario only, or planning documentation, but is not yet systematic.
+
+Planned:
+The grammar point is explicitly listed as a future expansion target.
+
+Deferred:
+The grammar point should not be implemented yet because it requires additional morphology, tense, agreement, dialogue, or semantic-control infrastructure.
+
+Not in current scope:
+The grammar point is useful, but should be handled by later scenarios or a later course level.
+```
+
+## A1 Required Grammar and Coverage
+
+A1 should cover concrete, survival-level grammar.
+
+### A1 Target Grammar
+
+```text
+I / you
+my / your
+be: I am / you are / it is
+have: I have / you have
+present simple first-person
+basic singular nouns
+basic plural nouns only in fixed chunks
+this / that
+a / an / the
+basic prepositions of place: in / on / at
+basic question words: what / where / who
+basic yes/no questions
+simple negatives: am not / do not / don't
+simple imperatives
+```
+
+### A1 Currently Covered
+
+Currently covered or strongly represented:
+
+```text
+I + present simple
+I am + state
+I am + place
+I have + item
+It is + simple time
+basic in / at place phrases
+high-frequency concrete vocabulary
+```
+
+Examples already represented in active scenario data include:
+
+```text
+I have my book.
+I am at school.
+It is morning.
+I brush my teeth.
+I drink water.
+```
+
+### A1 Partially Covered
+
+```text
+this / that
+a / an / the
+What / Where / Who
+basic yes/no questions
+you / your in statements
+```
+
+These appear in some scenario directions or may exist in Shopping / Food & Drink, but they are not yet treated as a global grammar-safe FSI dimension.
+
+### A1 Missing or Deferred
+
+```text
+systematic you / your statement substitution
+systematic article control
+systematic this / that item control
+A1 negative sentence family
+A1 wh-question family across scenarios
+A1 yes/no question family across scenarios
+```
+
+### A1 Notes
+
+Do not claim that A1 currently has full grammar coverage.
+
+A1 generated data is strong for first-person learner-centered sentence frames, but not yet complete for pronoun, article, demonstrative, question, or negative coverage.
+
+Recommended future carriers:
+
+```text
+School objects: this / that / my / your
+Home objects: in / on / at
+Classroom language: What / Where / Who
+Simple instructions: imperatives
+```
+
+## A1+ Required Grammar and Coverage
+
+A1+ should extend A1 with light interaction, small modifiers, and controlled routine/time language.
+
+### A1+ Target Grammar
+
+```text
+like to + base verb
+want to + base verb
+basic time phrases
+today / please / in stock / for school
+Can I ...? requests
+Can I have ...? requests
+basic frequency adverbs: always / never
+degree adverbs: very / really / quite
+controlled he / she / it in be frames
+controlled he / she in have frames
+present continuous fixed chunks
+simple plural nouns in fixed chunks
+```
+
+### A1+ Currently Covered
+
+Currently covered or strongly represented:
+
+```text
+like to + base verb
+want to + base verb
+simple time phrases
+today
+some polite request language in active scenarios
+for school in Shopping-style context
+```
+
+Examples:
+
+```text
+I like to read a book.
+I want to study English today.
+I pack my bag before school.
+Can I have a coffee, please?
+```
+
+### A1+ Partially Covered
+
+```text
+Can I ...? requests
+Can I have ...? requests
+always / never
+very / really / quite
+controlled he / she be
+controlled he / she have
+present continuous fixed chunks
+```
+
+Some of these are documented as allowed directions, but they should not be considered systematic generated coverage unless tests and pattern banks confirm it.
+
+### A1+ Missing or Deferred
+
+```text
+systematic always / never drills
+degree adverb drills
+controlled he/she be-have drills
+present continuous fixed patterns such as I am looking for ...
+```
+
+### A1+ Notes
+
+Do not freely introduce third-person present simple at A1+.
+
+If `he/she` is used at A1+, prefer tightly controlled `be` or `have` frames first:
+
+```text
+He is ready.
+She is busy.
+He has his bag.
+She has her book.
+```
+
+Avoid unpaired forms such as:
+
+```text
+He clean his room.
+She brush her teeth.
+```
+
+Recommended future carriers:
+
+```text
+Shopping: Can I have ...?
+Food & Drink: Can I have ... please?
+Daily Routine: always / never
+Classroom: very / really / quite
+```
+
+## A2 Required Grammar and Coverage
+
+A2 is the first level where grammar expansion becomes structurally important.
+
+### A2 Target Grammar
+
+```text
+need to + base verb
+have to + base verb
+would like to + base verb
+can / could requests
+what time / when / what do you questions
+do / does questions
+he / she / we / they
+his / her / our / their
+present simple subject-verb agreement
+plural nouns
+countable / uncountable nouns
+some / any / much / many
+simple connectors: and / but / or
+basic comparatives in controlled frames
+controlled future with be going to
+fixed past expressions such as I forgot ...
+```
+
+### A2 Currently Covered
+
+Currently covered or strongly represented:
+
+```text
+need to + base verb
+have to + base verb
+would like to + base verb
+Can I ...? requests
+What time do you ...?
+When do you ...?
+What do you do ...?
+I forgot ... as a fixed expression
+too + adjective in controlled contexts
+```
+
+Examples:
+
+```text
+I need to pack my bag.
+I have to brush my teeth.
+I would like to read a book.
+What time do you get up?
+When do you brush your teeth?
+I forgot my homework.
+```
+
+### A2 Partially Covered
+
+```text
+countable / uncountable nouns
+some / any / much / many
+and / but / or
+comparatives
+do / does with he/she
+plural agreement
+his / her / our / their
+```
+
+Food & Drink should carry much of the countability and quantifier load.
+
+Shopping should carry much of the demonstrative, singular/plural, and comparison load.
+
+Daily Routine should carry much of the subject-verb and possessive agreement load in a later grammar-aware FSI phase.
+
+### A2 Missing or Deferred
+
+```text
+systematic do/does question families
+systematic he/she/we/they statement families
+systematic present simple agreement drills
+systematic possessive agreement drills
+controlled be going to future
+general past simple
+```
+
+### A2 Notes
+
+`I forgot ...` is allowed only as a fixed expression.
+
+Allowed:
+
+```text
+I forgot my homework.
+I forgot my book.
+```
+
+Do not expand from this into general past tense:
+
+```text
+I went to school yesterday.
+I bought a shirt.
+I cleaned my room.
+```
+
+Recommended future carriers:
+
+```text
+Food & Drink: countable / uncountable, some / any / much / many
+Shopping: this / these, that / those, comparatives
+Daily Routine: he/she/we/they + present simple agreement
+Plans/Future scenario: be going to
+```
+
+## A2+ Required Grammar and Coverage
+
+A2+ should combine controlled grammar with reasons, sequence, and early comparison/adverbial language.
+
+### A2+ Target Grammar
+
+```text
+because clauses
+before / after clauses
+cannot because
+permission with condition
+remind me to + base verb
+adverbs of manner: slowly / carefully / well
+comparatives in controlled frames
+should / must as early advice or obligation
+indefinite pronouns: something / anything / nothing
+controlled subject variation with paired slots
+```
+
+### A2+ Currently Covered
+
+Currently covered or strongly represented:
+
+```text
+because clauses
+before / after clauses
+cannot because
+permission with condition
+remind me to + base verb
+preference reason clauses
+problem reason clauses
+```
+
+Examples:
+
+```text
+I clean my room because it is messy.
+I brush my teeth before I go to bed.
+I cannot watch TV now because I have to study.
+Please remind me to pack my bag.
+```
+
+### A2+ Partially Covered
+
+```text
+comparatives
+should / must
+adverbs of manner
+something / anything / nothing
+controlled subject variation
+```
+
+Comparatives are important for Shopping and Food & Drink, but should use controlled item pairs.
+
+Adverbs of manner are a natural fit for Daily Routine and school/work action scenarios.
+
+### A2+ Missing or Deferred
+
+```text
+systematic adverb-of-manner drills
+systematic comparative drills
+systematic something / anything / nothing
+must vs have to distinction
+controlled subject variation across because clauses
+```
+
+### A2+ Notes
+
+Reasons must remain semantically paired.
+
+Bad:
+
+```text
+I drink water because I am sleepy.
+I brush my teeth because I am hungry.
+```
+
+Good:
+
+```text
+I drink water because I am thirsty.
+I brush my teeth because I want clean teeth.
+I clean my room because it is messy.
+```
+
+Recommended future carriers:
+
+```text
+Shopping: cheaper than / bigger than / more expensive than
+Food & Drink: sweeter than / better than / too spicy
+Daily Routine: carefully / slowly / well
+Health: should / must
+School: something / anything / nothing
+```
+
+## B1 Required Grammar and Coverage
+
+B1 should move toward controlled connected grammar and practical problem-solving.
+
+### B1 Target Grammar
+
+```text
+frequency adverbs
+clock time and schedule expressions
+before / after subordinate clauses
+It takes ... to ...
+should / must / have to
+reported rules
+comparatives and superlatives
+first conditional
+relative clauses: who / which / that
+passive voice in controlled frames
+present perfect basic
+past simple system if intentionally supported
+complex time expressions: during / until / from ... to
+controlled contrast and result language
+```
+
+### B1 Currently Covered
+
+Currently covered or strongly represented:
+
+```text
+frequency adverbs
+clock time
+weekday / weekend contexts
+cannot because
+before / after subordinate clauses
+It takes ... to ...
+should
+have to
+reported rule with My parents say ...
+routine opinion with but
+```
+
+Examples:
+
+```text
+I usually get up at seven.
+It takes ten minutes to pack my bag.
+I should go to bed earlier.
+Before I leave home, I check my bag.
+After I finish my homework, I watch TV.
+My parents say I have to clean my room.
+```
+
+Shopping B1 planning also includes:
+
+```text
+recommendations
+comparisons
+returns
+exchanges
+refunds
+warranties
+materials
+quality
+gift suitability
+condition/result language
+```
+
+### B1 Partially Covered
+
+```text
+comparatives
+superlatives
+must
+reported rules beyond fixed parent-rule frames
+condition/result language
+complex time prepositions
+```
+
+### B1 Missing or Deferred
+
+```text
+relative clauses
+passive voice
+first conditional
+present perfect
+general past simple system
+present perfect continuous
+multi-sentence paragraphs
+multi-turn dialogues
+```
+
+### B1 Notes
+
+Do not automatically add all advanced B1 grammar to the current three scenarios.
+
+Some B1 grammar is better handled by later scenarios:
+
+```text
+relative clauses: people, places, school, travel, hobbies
+passive voice: food preparation, school rules, public services
+first conditional: health, safety, travel, weather
+present perfect: experiences, hobbies, travel
+past simple: weekend, holidays, past events
+superlatives: shopping, food reviews, travel
+```
+
+B1 should expand in a controlled way.
+
+Do not introduce broad tense mixing until the tense expansion phase exists.
+
+## Cross-Scenario Grammar Load Distribution
+
+The current three active scenarios should not be forced to cover every grammar point.
+
+Recommended distribution:
+
+```text
+Shopping:
+- this / that / these / those
+- singular / plural item agreement
+- comparatives
+- superlatives
+- recommendations
+- returns / exchanges / refund language
+- condition/result language
+
+Food & Drink:
+- a / an / some
+- countable / uncountable
+- some / any / much / many
+- eat vs drink
+- it is / they are
+- taste adjectives
+- substitutions
+- restaurant requests
+- allergy and ingredient language
+
+Daily Routine:
+- present simple
+- frequency adverbs
+- time expressions
+- before / after
+- because
+- should / have to
+- subject-verb agreement
+- possessive agreement
+- routine management
+
+Future scenarios:
+- past simple
+- present continuous
+- be going to / will
+- present perfect
+- relative clauses
+- passive voice
+- first conditional
+- broader adverbs of manner
+- classroom imperatives
+- location prepositions
+```
+
+## Planning Conclusion
+
+The current documentation is strongest for:
+
+```text
+scenario semantics
+first-person present simple
+controlled requests
+reason clauses
+before/after sequence
+semantic pairing
+```
+
+The largest remaining grammar gaps are:
+
+```text
+pronoun expansion
+possessive expansion
+number agreement
+article control
+question system
+negative system
+countability and quantifiers
+comparatives and superlatives
+tense expansion
+relative clauses
+passive voice
+conditionals
+```
+
+These should not be solved by free substitution.
+
+They require:
+
+```text
+paired grammar slots
+scenario-specific semantic constraints
+level-specific count controls
+tests for bad agreement
+manual review
+```
+
 ## Global Level Grammar Scope
 
 This section defines the broad grammar scope for A1 through B1.
@@ -592,6 +1231,381 @@ It takes ten minutes to pack my bag.
 ## Tense Roadmap
 
 Tense must be handled separately from ordinary chunk substitution.
+
+## Cambridge-Oriented Tense Coverage to B1
+
+This project does not treat tense expansion as free substitution.
+
+By Cambridge / CEFR B1, learners are normally expected to have encountered or started using the following tense and verb-form areas:
+
+```text
+Present Simple
+Present Continuous
+Past Simple
+Past Continuous
+Future with going to
+Future with will
+Present Perfect basic
+Imperatives
+Modal verb forms:
+- can
+- could
+- should
+- must
+- have to
+- need to
+- would like to
+First Conditional:
+- if + present simple, will + base verb
+Basic Passive Voice:
+- present passive
+- past passive
+```
+
+However, this does not mean every current scenario must implement all of these immediately.
+
+The current sentence-bank system must separate:
+
+```text
+Cambridge target coverage
+current generated sentence coverage
+future grammar roadmap
+deferred tense implementation
+```
+
+## Tense Coverage by Level
+
+### A1 Tense Coverage
+
+A1 target:
+
+```text
+Present Be:
+- I am
+- you are
+- it is
+
+Present Simple:
+- I have
+- I want
+- I like
+- I go
+- I eat
+- I drink
+
+Basic imperatives:
+- Look.
+- Listen.
+- Try again.
+```
+
+Current implementation status:
+
+```text
+Strong:
+- Present Be
+- first-person Present Simple
+
+Partial:
+- you are / you have
+- imperatives
+
+Deferred:
+- broad he/she present simple
+- past tense
+- future tense
+```
+
+### A1+ Tense Coverage
+
+A1+ target:
+
+```text
+Present Simple extension
+like to / want to + base verb
+Can I ...? request forms
+Present Continuous fixed chunks
+```
+
+Possible controlled examples:
+
+```text
+I am looking for a gift.
+I am eating an apple.
+I am doing my homework.
+```
+
+Current implementation status:
+
+```text
+Strong:
+- like to + base verb
+- want to + base verb
+- Can I ...? in some scenario contexts
+
+Partial:
+- Present Continuous fixed chunks
+
+Deferred:
+- full Present Continuous generation
+- be agreement across all subjects
+- verb-ing morphology generation
+```
+
+### A2 Tense Coverage
+
+A2 target:
+
+```text
+Present Simple questions
+do / does questions
+need to / have to / would like to
+Past Simple basic:
+- regular verbs
+- common irregular verbs
+Future with going to
+Future with will in simple decisions or offers
+Present Continuous for current actions and near-future arrangements
+Fixed classroom/daily-life past expressions
+```
+
+Current implementation status:
+
+```text
+Strong:
+- need to + base verb
+- have to + base verb
+- would like to + base verb
+- What time do you ...?
+- When do you ...?
+- Can I ...?
+
+Fixed only:
+- I forgot ...
+
+Partial / planned:
+- going to future
+- will future
+- do / does with he/she
+
+Deferred:
+- general Past Simple
+- systematic irregular verb handling
+- broad Present Continuous
+```
+
+Important rule:
+
+```text
+I forgot ... is allowed as a fixed expression.
+It must not automatically open general Past Simple generation.
+```
+
+### A2+ Tense Coverage
+
+A2+ target:
+
+```text
+Present Simple with because clauses
+Present Simple with before / after clauses
+cannot because
+permission with condition
+should / must / have to as advice or obligation
+Future forms with simple reasons or plans
+Past Simple with time markers in controlled contexts
+```
+
+Current implementation status:
+
+```text
+Strong:
+- because clauses
+- before / after clauses
+- cannot because
+- remind me to + base verb
+
+Partial / planned:
+- should / must
+- controlled future
+- controlled past with time markers
+
+Deferred:
+- free tense mixing
+- broad past/future alternation inside FSI substitution
+```
+
+### B1 Tense Coverage
+
+B1 target:
+
+```text
+Present Simple with frequency and schedule language
+Present Continuous review
+Past Simple system
+Past Continuous basic
+Future with going to / will
+Present Perfect basic
+Present Perfect vs Past Simple contrast, basic level
+First Conditional:
+- if + present simple, will + base verb
+Basic Passive Voice:
+- present passive
+- past passive
+Modal verb forms:
+- should
+- must
+- have to
+- need to
+- can / could
+```
+
+Current implementation status:
+
+```text
+Strong:
+- Present Simple with frequency
+- clock time and schedule expressions
+- should
+- have to
+- It takes ... to ...
+- before / after subordinate clauses
+- fixed reported rules such as My parents say I have to ...
+
+Partial / planned:
+- must
+- future forms
+- comparatives / superlatives
+- condition/result language
+
+Deferred:
+- general Past Simple system
+- Past Continuous
+- Present Perfect
+- Present Perfect vs Past Simple contrast
+- First Conditional
+- Basic Passive Voice
+- broad tense mixing
+```
+
+B1 implementation rule:
+
+```text
+By B1, these tense areas belong in the roadmap.
+They should not be added to generated data until the generator can safely control verb forms, subject agreement, time markers, and semantic compatibility.
+```
+
+## Tense Implementation Safety Rules
+
+Do not implement tense expansion through free slot replacement.
+
+Bad:
+
+```text
+I clean my room.
+He clean his room.
+I cleaned my room every day.
+I have studied English yesterday.
+```
+
+Good controlled design:
+
+```json
+[
+  {
+    "subject": "I",
+    "present": "clean",
+    "past": "cleaned",
+    "object": "my room",
+    "time_present": "every day",
+    "time_past": "yesterday"
+  },
+  {
+    "subject": "he",
+    "present": "cleans",
+    "past": "cleaned",
+    "object": "his room",
+    "time_present": "every day",
+    "time_past": "yesterday"
+  }
+]
+```
+
+Future tense expansion requires dedicated paired or morphology-aware slots such as:
+
+```text
+subject_present_simple_pairs
+subject_present_continuous_pairs
+subject_past_simple_pairs
+subject_future_going_to_pairs
+subject_future_will_pairs
+subject_present_perfect_pairs
+passive_voice_pairs
+conditional_pairs
+```
+
+## Tense Roadmap Summary
+
+The current project should use this order:
+
+```text
+Phase T1:
+Present Simple + be agreement + have agreement
+
+Phase T2:
+Present Continuous fixed chunks
+
+Phase T3:
+Future with going to / will in controlled patterns
+
+Phase T4:
+Past Simple fixed and then controlled regular/irregular verbs
+
+Phase T5:
+Past Continuous basic
+
+Phase T6:
+Present Perfect basic
+
+Phase T7:
+First Conditional
+
+Phase T8:
+Basic Passive Voice
+
+Phase T9:
+Mixed tense review and contrast
+```
+
+This roadmap should be global.
+
+It does not require Shopping, Food & Drink, or Daily Routine to cover every tense point immediately.
+
+Future scenarios may carry part of the tense load:
+
+```text
+Weekend / Past Events:
+- Past Simple
+
+Plans / Future Activities:
+- going to
+- will
+
+Travel:
+- Present Perfect experience
+- Past Simple travel events
+
+Health / Safety:
+- should
+- must
+- first conditional
+
+Food Preparation / Public Services:
+- passive voice
+
+School / Work:
+- present perfect
+- past continuous
+```
 
 Current project state:
 
