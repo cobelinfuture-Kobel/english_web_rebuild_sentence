@@ -20,6 +20,12 @@ FOOD_SLOT_BANK_PATH = BASE_DIR / "data" / "slot_bank" / "food_drink_slots.json"
 DAILY_ROUTINE_SENTENCE_BANK_PATH = (
     BASE_DIR / "data" / "generated" / "daily_routine_sentence_bank.json"
 )
+DAILY_ROUTINE_PHASE4C_A_NOTES_PATH = (
+    BASE_DIR / "docs" / "daily_routine_phase4c_a_completion_notes.md"
+)
+DAILY_ROUTINE_PHASE4C_B_NOTES_PATH = (
+    BASE_DIR / "docs" / "daily_routine_phase4c_b_metadata_cleanup_notes.md"
+)
 
 EXPECTED_PATTERNS = {
     "SHOP_WANT",
@@ -1359,6 +1365,17 @@ def test_daily_routine_phase4c_density_counts_for_core_frames():
     assert len(have_item_targets) >= 8
     assert len(clean_object_targets) >= 4
     assert len(brush_object_targets) >= 2
+
+
+def test_daily_routine_phase4c_a_and_b_docs_exist():
+    assert DAILY_ROUTINE_PHASE4C_A_NOTES_PATH.exists()
+    assert DAILY_ROUTINE_PHASE4C_B_NOTES_PATH.exists()
+
+
+def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
+    sentences = load_daily_routine_sentences()
+
+    assert len(sentences) == 464
 
 
 def test_daily_routine_phase4b_level_and_count_coverage():
