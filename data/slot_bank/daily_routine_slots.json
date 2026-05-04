@@ -43,24 +43,6 @@
       "drink_action": true
     },
     {
-      "text": "brush my teeth",
-      "routine_action": true,
-      "to_infinitive_ok": true,
-      "hygiene_action": true
-    },
-    {
-      "text": "wash my face",
-      "routine_action": true,
-      "to_infinitive_ok": true,
-      "hygiene_action": true
-    },
-    {
-      "text": "wash my hands",
-      "routine_action": true,
-      "to_infinitive_ok": true,
-      "hygiene_action": true
-    },
-    {
       "text": "take a shower",
       "routine_action": true,
       "to_infinitive_ok": true,
@@ -92,12 +74,6 @@
       "to_infinitive_ok": true,
       "school_age": true,
       "preparation_action": true
-    },
-    {
-      "text": "clean my room",
-      "routine_action": true,
-      "to_infinitive_ok": true,
-      "chore_action": true
     },
     {
       "text": "make my bed",
@@ -1267,36 +1243,36 @@
 
   "routine_simple_items": [
     {
-      "text": "my bag",
+      "text": "my school bag",
       "school_item": true
     },
     {
-      "text": "my book",
-      "school_item": true
-    },
-    {
-      "text": "my lunch",
-      "school_item": true
-    },
-    {
-      "text": "my homework",
-      "school_item": true
-    },
-    {
-      "text": "my pencil case",
-      "school_item": true
-    },
-    {
-      "text": "my shoes",
+      "text": "my umbrella",
       "daily_item": true
     },
     {
-      "text": "my water bottle",
+      "text": "my folder",
       "school_item": true
     },
     {
-      "text": "my school bag",
+      "text": "my jacket",
+      "daily_item": true
+    },
+    {
+      "text": "my key",
+      "daily_item": true
+    },
+    {
+      "text": "my hat",
+      "daily_item": true
+    },
+    {
+      "text": "my lunch box",
       "school_item": true
+    },
+    {
+      "text": "my cup",
+      "daily_item": true
     }
   ],
 
@@ -1949,6 +1925,9 @@
 
   "routine_forgot_items_fsi": [
     {
+      "text": "my bag"
+    },
+    {
       "text": "my book"
     },
     {
@@ -2082,12 +2061,6 @@
     },
     {
       "text": "my bag"
-    },
-    {
-      "text": "the floor"
-    },
-    {
-      "text": "my study space"
     }
   ],
 
@@ -2106,15 +2079,6 @@
     },
     {
       "text": "my face"
-    },
-    {
-      "text": "the dishes"
-    },
-    {
-      "text": "my cup"
-    },
-    {
-      "text": "my lunch box"
     }
   ],
 
@@ -2168,14 +2132,6 @@
     {
       "object": "the bathroom",
       "time": "on weekends"
-    },
-    {
-      "object": "the floor",
-      "time": "on weekends"
-    },
-    {
-      "object": "my desk",
-      "time": "after homework"
     },
     {
       "object": "my bag",
@@ -2253,18 +2209,6 @@
     {
       "object": "my hands",
       "time": "after school"
-    },
-    {
-      "object": "the dishes",
-      "time": "after dinner"
-    },
-    {
-      "object": "my cup",
-      "time": "after breakfast"
-    },
-    {
-      "object": "my lunch box",
-      "time": "after school"
     }
   ],
 
@@ -2288,14 +2232,6 @@
     {
       "object": "the bathroom",
       "reason": "it is dirty"
-    },
-    {
-      "object": "the floor",
-      "reason": "it is dirty"
-    },
-    {
-      "object": "my study space",
-      "reason": "I need a clean place to study"
     },
     {
       "object": "my bag",
@@ -2381,14 +2317,6 @@
     {
       "duration": "fifteen minutes",
       "object": "the bathroom"
-    },
-    {
-      "duration": "twenty minutes",
-      "object": "the floor"
-    },
-    {
-      "duration": "ten minutes",
-      "object": "my study space"
     },
     {
       "duration": "five minutes",

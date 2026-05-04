@@ -202,28 +202,28 @@ EXPECTED_DAILY_ROUTINE_PHASE4C_PATTERN_LEVELS = {
     ("ROUTINE_AFTER_FINISH_ACTIVITY_FSI", "B1"),
 }
 DAILY_ROUTINE_PHASE4C_MINIMUM_COUNTS = {
-    "ROUTINE_HAVE_ITEM_FSI": 7,
-    "ROUTINE_CLEAN_OBJECT": 7,
-    "ROUTINE_BRUSH_OBJECT": 1,
-    "ROUTINE_WASH_OBJECT": 3,
+    "ROUTINE_HAVE_ITEM_FSI": 8,
+    "ROUTINE_CLEAN_OBJECT": 4,
+    "ROUTINE_BRUSH_OBJECT": 2,
+    "ROUTINE_WASH_OBJECT": 2,
     "ROUTINE_PACK_ITEM_FSI": 8,
     "ROUTINE_GET_ITEM": 8,
-    "ROUTINE_CLEAN_OBJECT_TIME": 7,
+    "ROUTINE_CLEAN_OBJECT_TIME": 5,
     "ROUTINE_PACK_ITEM_TIME": 7,
     "ROUTINE_PUT_ON_ITEM_TIME": 4,
-    "ROUTINE_WASH_OBJECT_TIME": 5,
+    "ROUTINE_WASH_OBJECT_TIME": 2,
     "ROUTINE_NEED_BRING_ITEM": 10,
     "ROUTINE_FORGOT_ITEM_FSI": 4,
     "ROUTINE_CAN_USE_ITEM_HERE": 6,
     "ROUTINE_HAVE_TO_PACK_ITEM": 8,
-    "ROUTINE_NEED_CLEAN_OBJECT": 7,
-    "ROUTINE_CLEAN_OBJECT_REASON": 7,
+    "ROUTINE_NEED_CLEAN_OBJECT": 5,
+    "ROUTINE_CLEAN_OBJECT_REASON": 5,
     "ROUTINE_PACK_ITEM_REASON": 8,
     "ROUTINE_REMIND_BRING_ITEM": 9,
     "ROUTINE_CANNOT_USE_ITEM_REASON": 5,
-    "ROUTINE_TIME_TAKES_CLEAN_OBJECT": 7,
+    "ROUTINE_TIME_TAKES_CLEAN_OBJECT": 5,
     "ROUTINE_BEFORE_LEAVE_CHECK_ITEM": 7,
-    "ROUTINE_PARENT_RULE_CLEAN_OBJECT": 7,
+    "ROUTINE_PARENT_RULE_CLEAN_OBJECT": 5,
     "ROUTINE_AFTER_FINISH_ACTIVITY_FSI": 6,
 }
 
@@ -1085,15 +1085,25 @@ def test_daily_routine_phase4c_fsi_density_examples():
     texts = {sentence["target_sentence"] for sentence in sentences}
 
     expected_examples = {
-        "I pack my lunch.",
-        "I pack my homework.",
-        "I pack my notebook.",
+        "I have my book.",
+        "I have my bag.",
+        "I have my lunch.",
+        "I have my homework.",
+        "I clean my room.",
+        "I clean my desk.",
+        "I clean the table.",
+        "I brush my teeth.",
+        "I brush my hair.",
+        "I wash my hands.",
+        "I wash my face.",
         "I need to bring my homework.",
-        "I need to bring my water bottle.",
-        "I forgot my notebook.",
+        "I need to bring my book.",
+        "I forgot my book.",
         "Can I use the computer here?",
-        "Please remind me to bring my homework.",
-        "Before I leave home, I check my water bottle.",
+        "Please remind me to bring my book.",
+        "Before I leave home, I check my bag.",
+        "I clean my room because it is messy.",
+        "It takes ten minutes to clean my room.",
     }
 
     missing = expected_examples - texts
@@ -1236,6 +1246,119 @@ def test_daily_routine_no_third_person_subject_expansion():
     for sentence in sentences:
         target = sentence["target_sentence"]
         assert not any(target.startswith(start) for start in bad_starts), target
+
+
+def test_daily_routine_phase4c_has_no_dr_pattern_ids():
+    sentences = load_daily_routine_sentences()
+    dr_pattern_ids = sorted(
+        {
+            sentence["pattern_id"]
+            for sentence in sentences
+            if sentence["pattern_id"].startswith("DR_")
+        }
+    )
+
+    assert not dr_pattern_ids, f"Unexpected DR_* pattern IDs: {dr_pattern_ids}"
+
+
+def test_daily_routine_phase4c_core_patterns_keep_routine_names():
+    sentences = load_daily_routine_sentences()
+    pattern_ids = {sentence["pattern_id"] for sentence in sentences}
+
+    required_pattern_ids = {
+        "ROUTINE_HAVE_ITEM_FSI",
+        "ROUTINE_CLEAN_OBJECT",
+        "ROUTINE_BRUSH_OBJECT",
+        "ROUTINE_WASH_OBJECT",
+        "ROUTINE_NEED_BRING_ITEM",
+        "ROUTINE_FORGOT_ITEM_FSI",
+        "ROUTINE_REMIND_BRING_ITEM",
+        "ROUTINE_BEFORE_LEAVE_CHECK_ITEM",
+        "ROUTINE_CLEAN_OBJECT_REASON",
+        "ROUTINE_PACK_ITEM_REASON",
+        "ROUTINE_CANNOT_USE_ITEM_REASON",
+        "ROUTINE_TIME_TAKES_CLEAN_OBJECT",
+        "ROUTINE_AFTER_FINISH_ACTIVITY_FSI",
+    }
+
+    missing = required_pattern_ids - pattern_ids
+    assert not missing, f"Missing required ROUTINE_* pattern IDs: {sorted(missing)}"
+
+
+def test_daily_routine_phase4c_a1_scope_stays_strict():
+    sentences = load_daily_routine_sentences()
+    a1_targets = [
+        sentence["target_sentence"]
+        for sentence in sentences
+        if sentence["level"] == "A1"
+    ]
+
+    blocked_fragments = (
+        "because",
+        "Before I leave home",
+        "After I finish",
+        "It takes",
+        "Yesterday",
+        "He ",
+        "She ",
+        "They ",
+        "We ",
+    )
+
+    assert all(
+        fragment not in target
+        for target in a1_targets
+        for fragment in blocked_fragments
+    )
+
+
+def test_daily_routine_phase4c_semantic_safety_examples_are_absent():
+    sentences = load_daily_routine_sentences()
+    texts = {sentence["target_sentence"] for sentence in sentences}
+
+    forbidden_sentences = {
+        "I clean my homework.",
+        "I clean my teeth.",
+        "I brush my room.",
+        "I brush the table.",
+        "I wash my homework.",
+        "I brush my teeth because I am hungry.",
+        "I drink water because I am sleepy.",
+        "I pack my lunch because it is messy.",
+        "He clean his room.",
+        "She brush her teeth.",
+        "He cleans his room.",
+        "She brushes her teeth.",
+        "They pack their bags.",
+        "Yesterday, I cleaned my room.",
+        "I cleaned my room yesterday.",
+    }
+
+    assert texts.isdisjoint(forbidden_sentences)
+
+
+def test_daily_routine_phase4c_density_counts_for_core_frames():
+    sentences = load_daily_routine_sentences()
+
+    have_item_targets = {
+        sentence["target_sentence"]
+        for sentence in sentences
+        if sentence["pattern_id"] == "ROUTINE_HAVE_ITEM_FSI"
+    }
+    clean_object_targets = {
+        sentence["target_sentence"]
+        for sentence in sentences
+        if sentence["pattern_id"] == "ROUTINE_CLEAN_OBJECT"
+    }
+    brush_object_targets = {
+        sentence["target_sentence"]
+        for sentence in sentences
+        if sentence["pattern_id"] == "ROUTINE_BRUSH_OBJECT"
+    }
+
+    assert len(have_item_targets) >= 8
+    assert len(clean_object_targets) >= 4
+    assert len(brush_object_targets) >= 2
 
 
 def test_daily_routine_phase4b_level_and_count_coverage():
