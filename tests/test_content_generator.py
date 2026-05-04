@@ -151,6 +151,81 @@ EXPECTED_DAILY_ROUTINE_PHASE4B_PATTERNS = {
     "ROUTINE_BEFORE_LEAVE",
     "ROUTINE_AFTER_FINISH",
 }
+EXPECTED_DAILY_ROUTINE_PHASE4C_PATTERNS = {
+    "ROUTINE_HAVE_ITEM_FSI",
+    "ROUTINE_CLEAN_OBJECT",
+    "ROUTINE_BRUSH_OBJECT",
+    "ROUTINE_WASH_OBJECT",
+    "ROUTINE_PACK_ITEM_FSI",
+    "ROUTINE_GET_ITEM",
+    "ROUTINE_CLEAN_OBJECT_TIME",
+    "ROUTINE_PACK_ITEM_TIME",
+    "ROUTINE_PUT_ON_ITEM_TIME",
+    "ROUTINE_WASH_OBJECT_TIME",
+    "ROUTINE_NEED_BRING_ITEM",
+    "ROUTINE_FORGOT_ITEM_FSI",
+    "ROUTINE_CAN_USE_ITEM_HERE",
+    "ROUTINE_HAVE_TO_PACK_ITEM",
+    "ROUTINE_NEED_CLEAN_OBJECT",
+    "ROUTINE_CLEAN_OBJECT_REASON",
+    "ROUTINE_PACK_ITEM_REASON",
+    "ROUTINE_REMIND_BRING_ITEM",
+    "ROUTINE_CANNOT_USE_ITEM_REASON",
+    "ROUTINE_TIME_TAKES_CLEAN_OBJECT",
+    "ROUTINE_BEFORE_LEAVE_CHECK_ITEM",
+    "ROUTINE_PARENT_RULE_CLEAN_OBJECT",
+    "ROUTINE_AFTER_FINISH_ACTIVITY_FSI",
+}
+EXPECTED_DAILY_ROUTINE_PHASE4C_PATTERN_LEVELS = {
+    ("ROUTINE_HAVE_ITEM_FSI", "A1"),
+    ("ROUTINE_CLEAN_OBJECT", "A1"),
+    ("ROUTINE_BRUSH_OBJECT", "A1"),
+    ("ROUTINE_WASH_OBJECT", "A1"),
+    ("ROUTINE_PACK_ITEM_FSI", "A1"),
+    ("ROUTINE_GET_ITEM", "A1"),
+    ("ROUTINE_CLEAN_OBJECT_TIME", "A1+"),
+    ("ROUTINE_PACK_ITEM_TIME", "A1+"),
+    ("ROUTINE_PUT_ON_ITEM_TIME", "A1+"),
+    ("ROUTINE_WASH_OBJECT_TIME", "A1+"),
+    ("ROUTINE_NEED_BRING_ITEM", "A2"),
+    ("ROUTINE_FORGOT_ITEM_FSI", "A2"),
+    ("ROUTINE_CAN_USE_ITEM_HERE", "A2"),
+    ("ROUTINE_HAVE_TO_PACK_ITEM", "A2"),
+    ("ROUTINE_NEED_CLEAN_OBJECT", "A2"),
+    ("ROUTINE_CLEAN_OBJECT_REASON", "A2+"),
+    ("ROUTINE_PACK_ITEM_REASON", "A2+"),
+    ("ROUTINE_REMIND_BRING_ITEM", "A2+"),
+    ("ROUTINE_CANNOT_USE_ITEM_REASON", "A2+"),
+    ("ROUTINE_TIME_TAKES_CLEAN_OBJECT", "B1"),
+    ("ROUTINE_BEFORE_LEAVE_CHECK_ITEM", "B1"),
+    ("ROUTINE_PARENT_RULE_CLEAN_OBJECT", "B1"),
+    ("ROUTINE_AFTER_FINISH_ACTIVITY_FSI", "B1"),
+}
+DAILY_ROUTINE_PHASE4C_MINIMUM_COUNTS = {
+    "ROUTINE_HAVE_ITEM_FSI": 7,
+    "ROUTINE_CLEAN_OBJECT": 7,
+    "ROUTINE_BRUSH_OBJECT": 1,
+    "ROUTINE_WASH_OBJECT": 3,
+    "ROUTINE_PACK_ITEM_FSI": 8,
+    "ROUTINE_GET_ITEM": 8,
+    "ROUTINE_CLEAN_OBJECT_TIME": 7,
+    "ROUTINE_PACK_ITEM_TIME": 7,
+    "ROUTINE_PUT_ON_ITEM_TIME": 4,
+    "ROUTINE_WASH_OBJECT_TIME": 5,
+    "ROUTINE_NEED_BRING_ITEM": 10,
+    "ROUTINE_FORGOT_ITEM_FSI": 4,
+    "ROUTINE_CAN_USE_ITEM_HERE": 6,
+    "ROUTINE_HAVE_TO_PACK_ITEM": 8,
+    "ROUTINE_NEED_CLEAN_OBJECT": 7,
+    "ROUTINE_CLEAN_OBJECT_REASON": 7,
+    "ROUTINE_PACK_ITEM_REASON": 8,
+    "ROUTINE_REMIND_BRING_ITEM": 9,
+    "ROUTINE_CANNOT_USE_ITEM_REASON": 5,
+    "ROUTINE_TIME_TAKES_CLEAN_OBJECT": 7,
+    "ROUTINE_BEFORE_LEAVE_CHECK_ITEM": 7,
+    "ROUTINE_PARENT_RULE_CLEAN_OBJECT": 7,
+    "ROUTINE_AFTER_FINISH_ACTIVITY_FSI": 6,
+}
 
 
 def load_banks():
@@ -924,6 +999,150 @@ def test_daily_routine_phase4b_expected_patterns_exist():
 
     missing = EXPECTED_DAILY_ROUTINE_PHASE4B_PATTERNS - actual_patterns
     assert not missing, f"Missing Daily Routine Phase 4B patterns: {sorted(missing)}"
+
+
+def test_daily_routine_phase4c_expected_patterns_exist():
+    sentences = load_daily_routine_sentences()
+    pattern_ids = {sentence["pattern_id"] for sentence in sentences}
+
+    missing = EXPECTED_DAILY_ROUTINE_PHASE4C_PATTERNS - pattern_ids
+    assert not missing, f"Missing Daily Routine Phase 4C patterns: {sorted(missing)}"
+
+
+def test_daily_routine_phase4c_level_coverage():
+    sentences = load_daily_routine_sentences()
+    pattern_levels = {
+        (sentence["pattern_id"], sentence["level"])
+        for sentence in sentences
+    }
+
+    missing = EXPECTED_DAILY_ROUTINE_PHASE4C_PATTERN_LEVELS - pattern_levels
+    assert not missing, f"Missing Daily Routine Phase 4C pattern levels: {sorted(missing)}"
+
+
+def test_daily_routine_phase4c_count_floor():
+    sentences = load_daily_routine_sentences()
+    counts = {}
+
+    for sentence in sentences:
+        pattern_id = sentence["pattern_id"]
+        counts[pattern_id] = counts.get(pattern_id, 0) + 1
+
+    too_low = {
+        pattern_id: (counts.get(pattern_id, 0), minimum)
+        for pattern_id, minimum in DAILY_ROUTINE_PHASE4C_MINIMUM_COUNTS.items()
+        if counts.get(pattern_id, 0) < minimum
+    }
+
+    assert not too_low, f"Daily Routine Phase 4C counts below floor: {too_low}"
+
+
+def test_daily_routine_phase4c_semantic_cleanup_regressions():
+    sentences = load_daily_routine_sentences()
+    texts = {sentence["target_sentence"] for sentence in sentences}
+
+    forbidden_sentences = {
+        "Can I use the chair here?",
+        "Can I use the desk here?",
+        "I cannot use my game now because I need to go to bed.",
+        "Before I leave home, I check my shoes.",
+        "I clean my study space after homework.",
+        "I put on my backpack before school.",
+    }
+
+    assert texts.isdisjoint(forbidden_sentences)
+
+
+def test_daily_routine_phase4c_no_unsafe_verb_object_combinations():
+    sentences = load_daily_routine_sentences()
+    texts = {sentence["target_sentence"] for sentence in sentences}
+
+    forbidden_fragments = {
+        "I brush my room",
+        "I brush my bag",
+        "I brush the table",
+        "I clean my homework",
+        "I clean my lunch",
+        "I clean my teeth",
+        "I wash my book",
+        "I wash my homework",
+        "I wash my pencil case",
+        "I use my game",
+    }
+
+    offenders = [
+        text
+        for text in texts
+        for fragment in forbidden_fragments
+        if fragment in text
+    ]
+
+    assert not offenders, f"Unsafe verb-object combinations found: {offenders}"
+
+
+def test_daily_routine_phase4c_fsi_density_examples():
+    sentences = load_daily_routine_sentences()
+    texts = {sentence["target_sentence"] for sentence in sentences}
+
+    expected_examples = {
+        "I pack my lunch.",
+        "I pack my homework.",
+        "I pack my notebook.",
+        "I need to bring my homework.",
+        "I need to bring my water bottle.",
+        "I forgot my notebook.",
+        "Can I use the computer here?",
+        "Please remind me to bring my homework.",
+        "Before I leave home, I check my water bottle.",
+    }
+
+    missing = expected_examples - texts
+    assert not missing, f"Missing Daily Routine Phase 4C density examples: {sorted(missing)}"
+
+
+def test_daily_routine_phase4c_no_unsupported_grammar_expansion():
+    sentences = load_daily_routine_sentences()
+    texts = {sentence["target_sentence"] for sentence in sentences}
+
+    forbidden_starts = {
+        "He ",
+        "She ",
+        "They ",
+        "We ",
+    }
+    offenders = [
+        text
+        for text in texts
+        if any(text.startswith(start) for start in forbidden_starts)
+    ]
+
+    assert not offenders, f"Unsupported subject expansions found: {offenders}"
+
+    forbidden_fragments = {
+        " has ",
+        " does ",
+        " did ",
+        " was ",
+        " were ",
+        " has been ",
+        " have been ",
+        " will have ",
+    }
+    tense_offenders = [
+        text
+        for text in texts
+        for fragment in forbidden_fragments
+        if fragment in text
+    ]
+
+    assert not tense_offenders, f"Unsupported grammar expansions found: {tense_offenders}"
+
+
+def test_daily_routine_phase4c_generated_bank_has_all_levels():
+    sentences = load_daily_routine_sentences()
+    levels = {sentence["level"] for sentence in sentences}
+
+    assert {"A1", "A1+", "A2", "A2+", "B1"}.issubset(levels)
 
 
 def test_daily_routine_ready_pattern_uses_unique_sentence():
