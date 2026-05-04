@@ -1607,6 +1607,227 @@ School / Work:
 - past continuous
 ```
 
+## Tense Matrix by CEFR Level
+
+This matrix is a project-level teaching roadmap.
+
+It is Cambridge / CEFR-oriented, but it is not a claim that every tense area is already implemented in generated data.
+
+The matrix separates:
+
+```text
+Core:
+Expected to be central at this level.
+
+Controlled:
+Can appear in restricted patterns or fixed chunks.
+
+Review:
+Previously introduced and recycled at this level.
+
+Planned:
+Should be added in a future grammar expansion phase.
+
+Deferred:
+Do not implement yet.
+
+Out of current scope:
+Belongs beyond the current A1-B1 implementation scope.
+```
+
+| Tense / Verb Form | A1 | A1+ | A2 | A2+ | B1 | Project Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Present Be: am / are / is | Core | Core | Review | Review | Review | Implemented partially; expand with agreement later |
+| Present Simple | Core | Core | Core | Core | Core | Implemented mainly in first-person frames |
+| Basic imperatives | Controlled | Controlled | Review | Review | Review | Planned / partial |
+| Can for simple ability / request | Controlled | Core | Review | Review | Review | Implemented in scenario-specific requests |
+| like to / want to + base verb | Controlled | Core | Review | Review | Review | Implemented in active scenarios |
+| Present Continuous | Deferred | Controlled fixed chunks | Controlled | Review | Review | Planned; not broadly generated |
+| Past Simple | Deferred | Deferred | Controlled basic | Controlled | Core review | Deferred except fixed chunks such as `I forgot ...` |
+| Future with going to | Deferred | Deferred | Controlled basic | Controlled | Review | Planned |
+| Future with will | Deferred | Deferred | Controlled basic | Controlled | Review | Planned |
+| should / must / have to / need to | Deferred | Controlled chunks | Core | Core | Review | Partially implemented; must not be free-substituted |
+| Past Continuous | Deferred | Deferred | Deferred | Deferred | Controlled basic | Deferred |
+| Present Perfect basic | Deferred | Deferred | Deferred | Deferred | Controlled basic | Deferred |
+| Present Perfect vs Past Simple | Deferred | Deferred | Deferred | Deferred | Controlled basic | Deferred |
+| First Conditional | Deferred | Deferred | Deferred | Planned | Controlled basic | Deferred |
+| Present Passive | Deferred | Deferred | Deferred | Deferred | Controlled basic | Deferred |
+| Past Passive | Deferred | Deferred | Deferred | Deferred | Controlled basic | Deferred |
+| Past Perfect | Out of current scope | Out of current scope | Out of current scope | Out of current scope | Out of current scope | B1+ / B2 roadmap |
+| Present Perfect Continuous | Out of current scope | Out of current scope | Out of current scope | Out of current scope | Out of current scope | B1+ / B2 roadmap |
+| Future Continuous | Out of current scope | Out of current scope | Out of current scope | Out of current scope | Out of current scope | B1+ / B2 roadmap |
+| Future Perfect | Out of current scope | Out of current scope | Out of current scope | Out of current scope | Out of current scope | B2 / B2+ roadmap |
+| Past Perfect Continuous | Out of current scope | Out of current scope | Out of current scope | Out of current scope | Out of current scope | B2 / C1 roadmap |
+| Future Perfect Continuous | Out of current scope | Out of current scope | Out of current scope | Out of current scope | Out of current scope | C1 roadmap |
+
+## Interpretation of the Tense Matrix
+
+The table above should not be read as a generator implementation checklist for the current phase.
+
+For example:
+
+```text
+Past Simple is a Cambridge-oriented A2/B1 target.
+Current generated data does not yet implement a general Past Simple system.
+
+Present Perfect is a Cambridge-oriented B1 target.
+Current generated data should treat it as deferred until a safe tense expansion exists.
+
+Passive Voice is a Cambridge-oriented B1 target in basic form.
+Current generated data should not add it through free transformation.
+
+First Conditional is a Cambridge-oriented B1 target.
+It requires controlled condition/result pairs.
+```
+
+Therefore, generated data should not claim full B1 tense coverage until the project has:
+
+```text
+verb-form controls
+subject agreement controls
+time-marker controls
+semantic compatibility controls
+negative and question form controls
+tests for tense mismatch
+manual review by level
+```
+
+## Beyond B1 Roadmap
+
+The current implementation scope is:
+
+```text
+A1
+A1+
+A2
+A2+
+B1
+```
+
+Do not add B1+, B2, or B2+ to data files, generated banks, UI level filters, or generator configuration yet.
+
+However, the global grammar plan may record a future roadmap beyond B1.
+
+## B1+ Roadmap
+
+B1+ may eventually introduce:
+
+```text
+Past Perfect introduction
+Present Perfect Continuous introduction
+broader conditionals
+more complex reported speech
+longer connected responses
+more explicit tense contrast
+```
+
+Possible future examples:
+
+```text
+I had finished my homework before dinner.
+I have been studying English for two years.
+If I had more time, I would study more.
+She said that she had finished her work.
+```
+
+Implementation note:
+
+B1+ should probably require a new phase and possibly a new task type.
+
+It should not be added to the current single-sentence A1-B1 generator without a separate design document.
+
+## B2 Roadmap
+
+B2 may eventually introduce:
+
+```text
+Past Perfect system
+Future Continuous
+advanced passive forms
+second conditional
+relative clauses with more complexity
+discourse connectors
+multi-sentence responses
+argument and explanation structures
+```
+
+Possible future examples:
+
+```text
+I was studying when my friend called.
+This product was made in Japan.
+If I had more money, I would buy the better one.
+The book that I bought yesterday is useful.
+I will be studying at eight tonight.
+```
+
+Implementation note:
+
+B2 content likely needs more than sentence substitution.
+
+It may require:
+
+```text
+paragraph-level generation
+dialogue-level generation
+discourse connector control
+tense contrast tests
+longer-answer scoring
+```
+
+## B2+ Roadmap
+
+B2+ may eventually introduce:
+
+```text
+Future Perfect
+Future Perfect Continuous
+mixed conditionals
+advanced tense contrast
+advanced passive forms
+advanced relative clauses
+hedging and nuance
+extended explanation and opinion writing
+```
+
+Possible future examples:
+
+```text
+I will have finished my homework by eight.
+By next year, I will have been studying English for five years.
+If I had studied harder, I would have passed the test.
+The meal, which was prepared by the chef, was excellent.
+```
+
+Implementation note:
+
+B2+ should not be forced into the current sentence-bank model.
+
+It should be treated as a future system expansion.
+
+## Scope Boundary
+
+The current A1-B1 system should continue to prioritize:
+
+```text
+short sentence frames
+grammar-safe FSI substitution
+semantic pairing
+scenario-controlled vocabulary
+manual review
+automated regression tests
+```
+
+Beyond-B1 content should remain documentation-only until the project intentionally creates:
+
+```text
+new level definitions
+new generator support
+new task types
+new tests
+new review criteria
+```
+
 Current project state:
 
 ```text
