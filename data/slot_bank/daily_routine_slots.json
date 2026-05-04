@@ -2007,9 +2007,6 @@
     },
     {
       "text": "my folder"
-    },
-    {
-      "text": "my shoes"
     }
   ],
 
@@ -2031,12 +2028,6 @@
     },
     {
       "text": "the computer"
-    },
-    {
-      "text": "the desk"
-    },
-    {
-      "text": "the chair"
     }
   ],
 
@@ -2183,7 +2174,7 @@
       "time": "on weekends"
     },
     {
-      "object": "my study space",
+      "object": "my desk",
       "time": "after homework"
     },
     {
@@ -2367,10 +2358,6 @@
     {
       "item": "the TV",
       "reason": "I have to clean my room"
-    },
-    {
-      "item": "my game",
-      "reason": "I need to go to bed"
     },
     {
       "item": "the computer",
