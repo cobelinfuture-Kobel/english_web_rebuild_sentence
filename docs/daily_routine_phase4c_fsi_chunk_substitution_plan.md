@@ -610,6 +610,646 @@ I have my notebook.
 
 This is more valuable than a scattered set of unrelated sentences.
 
+## Verb Core FSI Grid
+
+Phase 4C should not be understood as only adding more individual sentences.
+
+It should also not be understood as only adding clause expansion.
+
+The target model is:
+
+```text
+FSI = horizontal substitution density + vertical expansion ladder
+```
+
+A Daily Routine verb core should support two dimensions.
+
+## 1. Horizontal Substitution Density
+
+Horizontal substitution means many safe replacements inside the same stable frame.
+
+Example:
+
+```text
+I eat breakfast.
+I eat lunch.
+I eat dinner.
+I eat rice.
+I eat noodles.
+I eat bread.
+I eat fruit.
+```
+
+The frame remains stable:
+
+```text
+I eat {food}.
+```
+
+Only the chunk changes.
+
+This is the core of FSI.
+
+The learner repeats the same rhythm and grammar while changing one controlled meaning unit.
+
+## 2. Vertical Expansion Ladder
+
+Vertical expansion means the same verb core appears in more complex frames as the level increases.
+
+Example with `eat`:
+
+```text
+A1:
+I eat breakfast.
+
+A1+:
+I eat breakfast in the morning.
+
+A2:
+I need to eat breakfast.
+
+A2+:
+I eat breakfast because I am hungry.
+
+B1:
+Before I go to school, I eat breakfast.
+```
+
+This supports spiral learning.
+
+The learner sees the same verb core in increasingly complex grammar.
+
+## Combined Model
+
+The correct Phase 4C model is not:
+
+```text
+one verb
+one sentence
+one level
+```
+
+The correct model is:
+
+```text
+one verb core
+many safe substitutions per level
+controlled expansion across levels
+```
+
+Example with `clean`:
+
+```text
+A1:
+I clean my room.
+I clean my desk.
+I clean the table.
+
+A1+:
+I clean my room after school.
+I clean my desk after school.
+I clean the table after dinner.
+
+A2:
+I need to clean my room.
+I need to clean my desk.
+I have to clean the table.
+
+A2+:
+I clean my room because it is messy.
+I clean my desk because it is messy.
+I clean the table because it is dirty.
+
+B1:
+It takes ten minutes to clean my room.
+My parents say I have to clean my room.
+Before dinner, I clean the table.
+```
+
+This is stronger than only adding unrelated new sentences.
+
+## Core Daily Routine Verbs
+
+Daily Routine Phase 4C should gradually build FSI grids for high-frequency verb cores.
+
+Priority verb cores:
+
+```text
+eat
+drink
+pack
+take
+read
+help
+make
+do
+clean
+brush
+wash
+study
+watch
+listen to
+go
+get
+put on
+bring
+check
+use
+```
+
+Not every verb core has the same substitution density.
+
+Some are high-density:
+
+```text
+have
+pack
+bring
+check
+eat
+drink
+read
+study
+```
+
+Some are medium-density:
+
+```text
+clean
+wash
+go
+get
+put on
+help
+make
+do
+```
+
+Some are naturally low-density:
+
+```text
+brush
+```
+
+Low-density verbs are still useful, but they should not be artificially inflated.
+
+## Verb Core Grid Fields
+
+Each verb core should eventually define:
+
+```text
+verb core
+base frame
+allowed levels
+safe object / item / food / drink chunks
+safe time chunks
+safe place chunks
+safe reason pairs
+safe condition pairs
+unsafe combinations
+density target
+pattern families
+slot groups
+```
+
+Example:
+
+```text
+verb core: clean
+
+A1 base frame:
+I clean {object}.
+
+A1 object chunks:
+my room
+my desk
+the table
+
+A1+ time pairs:
+my room + after school
+my desk + after school
+the table + after dinner
+
+A2 modal frames:
+I need to clean {object}.
+I have to clean {object}.
+
+A2+ reason pairs:
+my room + it is messy
+my desk + it is messy
+the table + it is dirty
+
+B1 management frames:
+It takes {duration} to clean {object}.
+My parents say I have to clean {object}.
+```
+
+## Level-Based Expansion Rules
+
+Do not unlock every expansion type at A1.
+
+The level progression should be:
+
+```text
+A1:
+base frame + horizontal object/item substitution
+
+A1+:
+base frame + time/place phrase substitution
+
+A2:
+modal/request/question frame substitution
+
+A2+:
+because / before / after / condition expansion with paired chunks
+
+B1:
+routine-management and multi-slot controlled frames
+```
+
+This means clauses can appear later, but substitution density should exist at every level where the verb core is active.
+
+## Density Targets by Level
+
+Approximate targets:
+
+```text
+A1:
+3-8 safe substitutions per active verb core
+
+A1+:
+3-6 safe time/place paired substitutions per active verb core
+
+A2:
+3-6 modal/request/question substitutions per active verb core
+
+A2+:
+3-5 reason/sequence paired substitutions per active verb core
+
+B1:
+2-4 routine-management substitutions per active verb core
+```
+
+These are targets, not hard rules.
+
+Semantic quality is more important than raw count.
+
+## Example: eat FSI Grid
+
+The `eat` verb core should not only appear as one sentence.
+
+It can support horizontal and vertical FSI.
+
+A1:
+
+```text
+I eat breakfast.
+I eat lunch.
+I eat dinner.
+I eat rice.
+I eat noodles.
+I eat bread.
+I eat fruit.
+```
+
+A1+:
+
+```text
+I eat breakfast in the morning.
+I eat lunch at school.
+I eat dinner in the evening.
+I eat fruit after school.
+```
+
+A2:
+
+```text
+I need to eat breakfast.
+I want to eat lunch.
+Can I eat lunch here?
+What time do you eat dinner?
+```
+
+A2+:
+
+```text
+I eat breakfast because I am hungry.
+I eat lunch because I need energy.
+I eat dinner after I finish my homework.
+I eat fruit because it is healthy.
+```
+
+B1:
+
+```text
+I usually eat breakfast at seven.
+It takes ten minutes to eat breakfast.
+Before I go to school, I eat breakfast.
+After I finish my homework, I eat dinner.
+```
+
+Implementation note:
+
+`eat` may overlap with Food & Drink.
+
+Daily Routine should only use routine-safe eat frames.
+
+Food & Drink may later own broader food-specific chunk density.
+
+## Example: drink FSI Grid
+
+A1:
+
+```text
+I drink water.
+I drink milk.
+I drink juice.
+```
+
+A1+:
+
+```text
+I drink water in the morning.
+I drink milk at breakfast.
+I drink juice after school.
+```
+
+A2:
+
+```text
+I need to drink water.
+Can I drink water here?
+I would like to drink water.
+```
+
+A2+:
+
+```text
+I drink water because I am thirsty.
+I drink water after I exercise.
+```
+
+B1:
+
+```text
+I should drink more water.
+I usually drink water after school.
+```
+
+Implementation note:
+
+Food & Drink may later own broader drink-specific item density.
+
+Daily Routine should focus on routine-safe hydration frames.
+
+## Example: read FSI Grid
+
+A1:
+
+```text
+I read a book.
+I read my English book.
+I read my notebook.
+```
+
+A1+:
+
+```text
+I read a book in the evening.
+I read my English book after school.
+```
+
+A2:
+
+```text
+I would like to read a book.
+Can I read a book here?
+When do you read a book?
+```
+
+A2+:
+
+```text
+I read a book because it is fun.
+I read my English book because I have English class.
+```
+
+B1:
+
+```text
+After I finish my homework, I read a book.
+I sometimes read a book before bed.
+```
+
+## Example: pack FSI Grid
+
+A1:
+
+```text
+I pack my bag.
+I pack my books.
+I pack my lunch.
+I pack my pencil case.
+```
+
+A1+:
+
+```text
+I pack my bag before school.
+I pack my lunch in the morning.
+```
+
+A2:
+
+```text
+I need to pack my bag.
+I have to pack my lunch.
+```
+
+A2+:
+
+```text
+I pack my bag because I need my books.
+I pack my lunch because I eat at school.
+```
+
+B1:
+
+```text
+It takes ten minutes to pack my bag.
+My parents say I have to pack my bag before school.
+```
+
+## Example: help FSI Grid
+
+A1:
+
+```text
+I help my parents.
+I help my brother.
+I help my sister.
+```
+
+A1+:
+
+```text
+I help my parents after school.
+I help at home after dinner.
+```
+
+A2:
+
+```text
+I need to help my parents.
+I have to help at home.
+```
+
+A2+:
+
+```text
+I help my brother because he needs help.
+I help my sister because she needs help.
+I help my parents because they are busy.
+```
+
+B1:
+
+```text
+I often help my parents after dinner.
+My parents say I have to help at home.
+```
+
+## Cleanup Principle
+
+When a sentence feels too difficult for a lower level, do not automatically delete the chunk.
+
+Prefer one of these actions:
+
+```text
+move it to a higher level
+use it in a more appropriate frame
+split it into a separate slot group
+pair it with a safer time/reason chunk
+reduce its count
+```
+
+Example:
+
+```text
+I clean the kitchen.
+```
+
+This may be heavy for A1, but it can work in A1+ or B1:
+
+```text
+I clean the kitchen after dinner.
+It takes fifteen minutes to clean the kitchen.
+```
+
+Therefore, Phase 4C cleanup should not be only deletion.
+
+It should use:
+
+```text
+move
+split
+level-control
+frame-control
+pairing
+```
+
+## Implementation Implication
+
+The current Phase 4C Step 1 and Step 2 implemented only the first wave of FSI chunk substitution.
+
+That is acceptable.
+
+However, later Phase 4C work may add more verb-core grids, especially for:
+
+```text
+eat
+drink
+read
+help
+make
+do
+study
+watch
+listen to
+go
+take
+```
+
+These should be added in small increments with semantic review after each group.
+
+Do not add all verb grids at once.
+
+## Relationship to Food & Drink
+
+Some verb cores overlap with Food & Drink.
+
+Examples:
+
+```text
+eat
+drink
+want
+would like
+have
+```
+
+Daily Routine should only include routine-safe uses.
+
+Food & Drink should later carry broader food-specific FSI density, such as:
+
+```text
+I want {food}.
+Can I have {drink}, please?
+I would like {food}.
+Do you have {food}?
+```
+
+Avoid duplicating full Food & Drink scope inside Daily Routine.
+
+## Relationship to Shopping
+
+Some verb cores overlap with Shopping.
+
+Examples:
+
+```text
+want
+take
+get
+have
+use
+check
+```
+
+Daily Routine should only include daily-life or school-life meanings.
+
+Shopping should own consumer-interaction meanings such as:
+
+```text
+I want this shirt.
+Can I try this on?
+Can I pay by card?
+Do you have this in blue?
+```
+
+## Completion Criteria Addendum
+
+Phase 4C should be considered stronger when:
+
+```text
+1. Core verbs have visible substitution density.
+2. The same verb core appears across multiple levels where appropriate.
+3. Each level has safe horizontal substitutions.
+4. Later levels add controlled expansion rather than random complexity.
+5. Semantic cleanup moves or splits chunks instead of deleting useful material blindly.
+6. Food & Drink and Shopping overlaps are kept scenario-safe.
+```
+
 ## Current Limitation
 
 Many current Daily Routine slots are full action chunks:
