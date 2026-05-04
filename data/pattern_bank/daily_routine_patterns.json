@@ -840,5 +840,433 @@
         "complexity": {"depth": 3}
       }
     }
+  },
+
+  "ROUTINE_HAVE_ITEM_FSI": {
+    "pattern_id": "ROUTINE_HAVE_ITEM_FSI",
+    "function": "have_item_fsi",
+    "variants": {
+      "A1": {
+        "example_template": "I have {item}.",
+        "chunks_template": ["I have", "{item}"],
+        "grammar_focus": ["have_verb", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_have_items_fsi"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_CLEAN_OBJECT": {
+    "pattern_id": "ROUTINE_CLEAN_OBJECT",
+    "function": "clean_object",
+    "variants": {
+      "A1": {
+        "example_template": "I clean {object}.",
+        "chunks_template": ["I clean", "{object}"],
+        "grammar_focus": ["present_simple", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["routine_clean_objects"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_BRUSH_OBJECT": {
+    "pattern_id": "ROUTINE_BRUSH_OBJECT",
+    "function": "brush_object",
+    "variants": {
+      "A1": {
+        "example_template": "I brush {object}.",
+        "chunks_template": ["I brush", "{object}"],
+        "grammar_focus": ["present_simple", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["routine_brush_objects"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_WASH_OBJECT": {
+    "pattern_id": "ROUTINE_WASH_OBJECT",
+    "function": "wash_object",
+    "variants": {
+      "A1": {
+        "example_template": "I wash {object}.",
+        "chunks_template": ["I wash", "{object}"],
+        "grammar_focus": ["present_simple", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["routine_wash_objects"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_PACK_ITEM_FSI": {
+    "pattern_id": "ROUTINE_PACK_ITEM_FSI",
+    "function": "pack_item_fsi",
+    "variants": {
+      "A1": {
+        "example_template": "I pack {item}.",
+        "chunks_template": ["I pack", "{item}"],
+        "grammar_focus": ["present_simple", "school_preparation"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_pack_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_GET_ITEM": {
+    "pattern_id": "ROUTINE_GET_ITEM",
+    "function": "get_item",
+    "variants": {
+      "A1": {
+        "example_template": "I get {item}.",
+        "chunks_template": ["I get", "{item}"],
+        "grammar_focus": ["present_simple", "school_preparation"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_get_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_CLEAN_OBJECT_TIME": {
+    "pattern_id": "ROUTINE_CLEAN_OBJECT_TIME",
+    "function": "clean_object_time",
+    "variants": {
+      "A1+": {
+        "example_template": "I clean {object} {time}.",
+        "chunks_template": ["I clean", "{object}", "{time}"],
+        "grammar_focus": ["present_simple", "time_expression", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_clean_object_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_PACK_ITEM_TIME": {
+    "pattern_id": "ROUTINE_PACK_ITEM_TIME",
+    "function": "pack_item_time",
+    "variants": {
+      "A1+": {
+        "example_template": "I pack {item} {time}.",
+        "chunks_template": ["I pack", "{item}", "{time}"],
+        "grammar_focus": ["present_simple", "time_expression", "school_preparation"],
+        "paired_slot": {
+          "category": "routine_pack_item_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_PUT_ON_ITEM_TIME": {
+    "pattern_id": "ROUTINE_PUT_ON_ITEM_TIME",
+    "function": "put_on_item_time",
+    "variants": {
+      "A1+": {
+        "example_template": "I put on {item} {time}.",
+        "chunks_template": ["I put on", "{item}", "{time}"],
+        "grammar_focus": ["phrasal_verb", "time_expression", "getting_ready"],
+        "paired_slot": {
+          "category": "routine_put_on_item_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_WASH_OBJECT_TIME": {
+    "pattern_id": "ROUTINE_WASH_OBJECT_TIME",
+    "function": "wash_object_time",
+    "variants": {
+      "A1+": {
+        "example_template": "I wash {object} {time}.",
+        "chunks_template": ["I wash", "{object}", "{time}"],
+        "grammar_focus": ["present_simple", "time_expression", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_wash_object_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 1}
+      }
+    }
+  },
+
+  "ROUTINE_NEED_BRING_ITEM": {
+    "pattern_id": "ROUTINE_NEED_BRING_ITEM",
+    "function": "need_bring_item",
+    "variants": {
+      "A2": {
+        "example_template": "I need to bring {item}.",
+        "chunks_template": ["I need to bring", "{item}"],
+        "grammar_focus": ["need_to", "to_infinitive", "school_life"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_bring_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_FORGOT_ITEM_FSI": {
+    "pattern_id": "ROUTINE_FORGOT_ITEM_FSI",
+    "function": "forgot_item_fsi",
+    "variants": {
+      "A2": {
+        "example_template": "I forgot {item}.",
+        "chunks_template": ["I forgot", "{item}"],
+        "grammar_focus": ["fixed_expression", "school_life"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_forgot_items_fsi"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_CAN_USE_ITEM_HERE": {
+    "pattern_id": "ROUTINE_CAN_USE_ITEM_HERE",
+    "function": "can_use_item_here",
+    "variants": {
+      "A2": {
+        "example_template": "Can I use {item} here?",
+        "chunks_template": ["Can I use", "{item}", "here"],
+        "grammar_focus": ["can_request", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_usable_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_HAVE_TO_PACK_ITEM": {
+    "pattern_id": "ROUTINE_HAVE_TO_PACK_ITEM",
+    "function": "have_to_pack_item",
+    "variants": {
+      "A2": {
+        "example_template": "I have to pack {item}.",
+        "chunks_template": ["I have to pack", "{item}"],
+        "grammar_focus": ["have_to", "to_infinitive", "school_preparation"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_pack_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_NEED_CLEAN_OBJECT": {
+    "pattern_id": "ROUTINE_NEED_CLEAN_OBJECT",
+    "function": "need_clean_object",
+    "variants": {
+      "A2": {
+        "example_template": "I need to clean {object}.",
+        "chunks_template": ["I need to clean", "{object}"],
+        "grammar_focus": ["need_to", "to_infinitive", "daily_routine_vocabulary"],
+        "slot_constraints": {
+          "object": {
+            "category": ["routine_clean_objects"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
+  "ROUTINE_CLEAN_OBJECT_REASON": {
+    "pattern_id": "ROUTINE_CLEAN_OBJECT_REASON",
+    "function": "clean_object_reason",
+    "variants": {
+      "A2+": {
+        "example_template": "I clean {object} because {reason}.",
+        "chunks_template": ["I clean", "{object}", "because", "{reason}"],
+        "grammar_focus": ["because_so", "daily_routine_vocabulary"],
+        "paired_slot": {
+          "category": "routine_clean_object_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_PACK_ITEM_REASON": {
+    "pattern_id": "ROUTINE_PACK_ITEM_REASON",
+    "function": "pack_item_reason",
+    "variants": {
+      "A2+": {
+        "example_template": "I pack {item} because {reason}.",
+        "chunks_template": ["I pack", "{item}", "because", "{reason}"],
+        "grammar_focus": ["because_so", "school_preparation"],
+        "paired_slot": {
+          "category": "routine_pack_item_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_REMIND_BRING_ITEM": {
+    "pattern_id": "ROUTINE_REMIND_BRING_ITEM",
+    "function": "remind_bring_item",
+    "variants": {
+      "A2+": {
+        "example_template": "Please remind me to bring {item}.",
+        "chunks_template": ["Please remind me to bring", "{item}"],
+        "grammar_focus": ["imperative", "to_infinitive", "school_life"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_bring_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_CANNOT_USE_ITEM_REASON": {
+    "pattern_id": "ROUTINE_CANNOT_USE_ITEM_REASON",
+    "function": "cannot_use_item_reason",
+    "variants": {
+      "A2+": {
+        "example_template": "I cannot use {item} now because {reason}.",
+        "chunks_template": ["I cannot use", "{item}", "now because", "{reason}"],
+        "grammar_focus": ["cannot", "because_so", "daily_routine"],
+        "paired_slot": {
+          "category": "routine_cannot_use_item_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2.5}
+      }
+    }
+  },
+
+  "ROUTINE_TIME_TAKES_CLEAN_OBJECT": {
+    "pattern_id": "ROUTINE_TIME_TAKES_CLEAN_OBJECT",
+    "function": "time_takes_clean_object",
+    "variants": {
+      "B1": {
+        "example_template": "It takes {duration} to clean {object}.",
+        "chunks_template": ["It takes", "{duration}", "to clean", "{object}"],
+        "grammar_focus": ["time_duration", "to_infinitive", "routine_management"],
+        "paired_slot": {
+          "category": "routine_time_takes_clean_object_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_BEFORE_LEAVE_CHECK_ITEM": {
+    "pattern_id": "ROUTINE_BEFORE_LEAVE_CHECK_ITEM",
+    "function": "before_leave_check_item",
+    "variants": {
+      "B1": {
+        "example_template": "Before I leave home, I check {item}.",
+        "chunks_template": ["Before I leave home,", "I check", "{item}"],
+        "grammar_focus": ["before_after", "routine_management"],
+        "slot_constraints": {
+          "item": {
+            "category": ["routine_check_items"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_PARENT_RULE_CLEAN_OBJECT": {
+    "pattern_id": "ROUTINE_PARENT_RULE_CLEAN_OBJECT",
+    "function": "parent_rule_clean_object",
+    "variants": {
+      "B1": {
+        "example_template": "My parents say I have to clean {object}.",
+        "chunks_template": ["My parents say", "I have to clean", "{object}"],
+        "grammar_focus": ["reported_rule", "have_to", "routine_management"],
+        "slot_constraints": {
+          "object": {
+            "category": ["routine_clean_objects"]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
+  },
+
+  "ROUTINE_AFTER_FINISH_ACTIVITY_FSI": {
+    "pattern_id": "ROUTINE_AFTER_FINISH_ACTIVITY_FSI",
+    "function": "after_finish_activity_fsi",
+    "variants": {
+      "B1": {
+        "example_template": "After I finish {task}, I {activity}.",
+        "chunks_template": ["After I finish", "{task}", "I", "{activity}"],
+        "grammar_focus": ["before_after", "routine_management"],
+        "paired_slot": {
+          "category": "routine_after_finish_activity_pairs_fsi"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 3}
+      }
+    }
   }
 }
