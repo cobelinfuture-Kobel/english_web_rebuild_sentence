@@ -6,6 +6,13 @@ from pathlib import Path
 
 
 DEFAULT_COUNT_PER_VARIANT = 30
+LEVEL_ORDER = {
+    "A1": 0,
+    "A1+": 1,
+    "A2": 2,
+    "A2+": 3,
+    "B1": 4,
+}
 COUNT_BY_PATTERN_LEVEL = {
     ("SHOP_TOO", "A1"): 24,
     ("SHOP_PAY", "A1"): 16,
@@ -227,7 +234,7 @@ class ContentGenerator:
         if n is not None:
             count = n
         variant = self._get_variant(pattern_id, level)
-        sentence_parts = self._build_sentence_parts(variant, count)
+        sentence_parts = self._build_sentence_parts(variant, level, count)
         sentences = []
 
         for slot_values, target_sentence in sentence_parts:
@@ -294,23 +301,39 @@ class ContentGenerator:
         self._sentence_counters[key] = current
         return current
 
-    def _resolve_slot_values(self, variant):
-        slot_constraints = variant.get("slot_constraints", {})
+    def _resolve_slot_values(self, variant, level):
+        slot_constraints = self._get_slot_constraints(variant)
+        frame = variant.get("frame")
         slot_values = dict(self._resolve_paired_slot_values(variant))
         for slot_name, constraints in slot_constraints.items():
             if slot_name in slot_values:
                 continue
-            candidates = self._filter_slot_candidates(constraints)
+            candidates = self._filter_slot_candidates(
+                constraints,
+                level=level,
+                frame=frame,
+            )
             if not candidates:
+                if self._is_frame_aware(variant):
+                    raise ValueError(f"No frame-aware slot candidates found for {slot_name}")
                 raise ValueError(f"No slot candidates found for {slot_name}: {constraints}")
             slot_values[slot_name] = self.rng.choice(candidates)["text"]
         return slot_values
 
-    def _build_sentence_parts(self, variant, count):
+    def _build_sentence_parts(self, variant, level, count):
         if not self.ensure_unique_targets:
-            return [self._build_random_sentence_parts(variant) for _ in range(count)]
+            sentence_parts = []
+            attempts = 0
+            max_attempts = max(count * 20, 50)
+            while len(sentence_parts) < count and attempts < max_attempts:
+                candidate = self._build_random_sentence_parts(variant, level)
+                attempts += 1
+                if candidate is None:
+                    continue
+                sentence_parts.append(candidate)
+            return sentence_parts
 
-        candidates = self._enumerate_unique_candidates(variant)
+        candidates = self._enumerate_unique_candidates(variant, level)
         available = [
             candidate
             for candidate in candidates
@@ -319,14 +342,22 @@ class ContentGenerator:
         self.rng.shuffle(available)
         return available[: min(count, len(available))]
 
-    def _build_random_sentence_parts(self, variant):
-        slot_values = self._resolve_slot_values(variant)
+    def _build_random_sentence_parts(self, variant, level):
+        try:
+            slot_values = self._resolve_slot_values(variant, level)
+        except ValueError:
+            if self._is_frame_aware(variant):
+                return None
+            raise
         template = variant.get("example_template", variant.get("template"))
         target_sentence = template.format(**slot_values)
+        if self._is_blacklisted(target_sentence):
+            return None
         return slot_values, target_sentence
 
-    def _enumerate_unique_candidates(self, variant):
-        slot_constraints = variant.get("slot_constraints", {})
+    def _enumerate_unique_candidates(self, variant, level):
+        slot_constraints = self._get_slot_constraints(variant)
+        frame = variant.get("frame")
         template = variant.get("example_template", variant.get("template"))
         paired_candidates = self._enumerate_paired_candidates(variant, template)
         slot_names = [slot_name for slot_name in slot_constraints.keys() if not self._slot_is_paired(slot_constraints[slot_name])]
@@ -334,8 +365,14 @@ class ContentGenerator:
         seed_candidates = paired_candidates or [({}, None)]
 
         for slot_name in slot_names:
-            candidates = self._filter_slot_candidates(slot_constraints[slot_name])
+            candidates = self._filter_slot_candidates(
+                slot_constraints[slot_name],
+                level=level,
+                frame=frame,
+            )
             if not candidates:
+                if self._is_frame_aware(variant):
+                    return []
                 raise ValueError(f"No slot candidates found for {slot_name}: {slot_constraints[slot_name]}")
             slot_candidate_lists.append(candidates)
 
@@ -343,6 +380,8 @@ class ContentGenerator:
         if not slot_candidate_lists:
             for seed_values, _ in seed_candidates:
                 target_sentence = template.format(**seed_values)
+                if self._is_blacklisted(target_sentence):
+                    continue
                 unique_candidates.setdefault(target_sentence, (seed_values, target_sentence))
             return list(unique_candidates.values())
 
@@ -356,6 +395,8 @@ class ContentGenerator:
                     }
                 )
                 target_sentence = template.format(**slot_values)
+                if self._is_blacklisted(target_sentence):
+                    continue
                 unique_candidates.setdefault(target_sentence, (slot_values, target_sentence))
 
         return list(unique_candidates.values())
@@ -376,7 +417,7 @@ class ContentGenerator:
         if pair_category is None:
             return None
 
-        slot_constraints = variant.get("slot_constraints", {})
+        slot_constraints = self._get_slot_constraints(variant)
         paired_slot_names = [
             slot_name
             for slot_name, constraints in slot_constraints.items()
@@ -416,7 +457,7 @@ class ContentGenerator:
                 raise ValueError("paired_slot requires a category")
             return category
 
-        slot_constraints = variant.get("slot_constraints", {})
+        slot_constraints = self._get_slot_constraints(variant)
         paired_groups = {
             constraints.get("pair_category")
             for constraints in slot_constraints.values()
@@ -431,7 +472,34 @@ class ContentGenerator:
     def _slot_is_paired(self, constraints):
         return bool(constraints.get("pair_category"))
 
-    def _filter_slot_candidates(self, constraints):
+    def _is_frame_aware(self, variant):
+        return bool(variant.get("frame") or variant.get("slot_bindings"))
+
+    def _get_slot_constraints(self, variant):
+        slot_constraints = {
+            slot_name: dict(constraints)
+            for slot_name, constraints in variant.get("slot_constraints", {}).items()
+        }
+        for slot_name, binding in variant.get("slot_bindings", {}).items():
+            existing = slot_constraints.setdefault(slot_name, {})
+            if "category" in existing:
+                continue
+            if isinstance(binding, str):
+                existing["category"] = [binding]
+            elif isinstance(binding, list):
+                existing["category"] = binding
+            elif isinstance(binding, dict) and "category" in binding:
+                category = binding["category"]
+                existing["category"] = category if isinstance(category, list) else [category]
+                for key, value in binding.items():
+                    if key == "category":
+                        continue
+                    existing.setdefault(key, value)
+            else:
+                raise ValueError(f"Unsupported slot binding for {slot_name}: {binding}")
+        return slot_constraints
+
+    def _filter_slot_candidates(self, constraints, level=None, frame=None):
         groups = constraints.get("category", [])
         candidates = []
 
@@ -446,19 +514,56 @@ class ContentGenerator:
             text = item["text"]
             if text in seen:
                 continue
-            if self._matches_constraints(item, constraints):
+            if self._matches_constraints(item, constraints, level=level, frame=frame):
                 filtered.append(item)
                 seen.add(text)
 
         return filtered
 
-    def _matches_constraints(self, item, constraints):
+    def _matches_constraints(self, item, constraints, level=None, frame=None):
+        if not self._scenario_matches(item):
+            return False
+        if not self._level_matches(item, level):
+            return False
+        if not self._frame_matches(item, frame):
+            return False
         for key, expected in constraints.items():
             if key == "category":
                 continue
             if item.get(key) != expected:
                 return False
         return True
+
+    def _scenario_matches(self, item):
+        item_scenario = item.get("scenario")
+        if not item_scenario or item_scenario == "shared":
+            return True
+        return item_scenario == self.scenario
+
+    def _level_matches(self, item, level):
+        if level is None:
+            return True
+        item_level = item.get("level")
+        if not item_level:
+            return True
+        if level not in LEVEL_ORDER or item_level not in LEVEL_ORDER:
+            return item_level == level
+        return LEVEL_ORDER[item_level] <= LEVEL_ORDER[level]
+
+    def _frame_matches(self, item, frame):
+        if not frame:
+            return True
+        allowed_frames = item.get("allowed_frames")
+        if not allowed_frames:
+            return True
+        return frame in allowed_frames
+
+    def _is_blacklisted(self, target_sentence):
+        blacklist = self.slot_bank.get(f"{self.scenario}_bad_phrase_blacklist", [])
+        if not blacklist:
+            return False
+        target_lower = target_sentence.lower()
+        return any(phrase.lower() in target_lower for phrase in blacklist)
 
     def _render_chunks(self, chunks_template, slot_values):
         return [chunk.format(**slot_values) for chunk in chunks_template]

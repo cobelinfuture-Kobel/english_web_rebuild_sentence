@@ -428,6 +428,232 @@ def make_food_generator(seed=7, ensure_unique_targets=False):
     )
 
 
+def make_frame_aware_generator(pattern_bank, slot_bank, seed=7, ensure_unique_targets=True):
+    return ContentGenerator(
+        pattern_bank=pattern_bank,
+        slot_bank=slot_bank,
+        rng=random.Random(seed),
+        ensure_unique_targets=ensure_unique_targets,
+        scenario="daily_routine",
+        sentence_prefix="DAILY_ROUTINE",
+    )
+
+
+def make_minimal_frame_aware_banks():
+    pattern_bank = {
+        "TEST_EAT_FRAME": {
+            "pattern_id": "TEST_EAT_FRAME",
+            "variants": {
+                "A1": {
+                    "example_template": "I eat {object}.",
+                    "chunks_template": ["I eat", "{object}"],
+                    "grammar_focus": ["simple_present_affirmative"],
+                    "frame": "eat",
+                    "slot_bindings": {"object": "frame_test_food_objects"},
+                    "fsi_rules": [],
+                    "complexity": {"depth": 1},
+                }
+            },
+        },
+        "TEST_DO_FRAME": {
+            "pattern_id": "TEST_DO_FRAME",
+            "variants": {
+                "A1": {
+                    "example_template": "I do {task}.",
+                    "chunks_template": ["I do", "{task}"],
+                    "grammar_focus": ["simple_present_affirmative"],
+                    "frame": "do",
+                    "slot_bindings": {"task": "frame_test_task_objects"},
+                    "fsi_rules": [],
+                    "complexity": {"depth": 1},
+                }
+            },
+        },
+        "TEST_READ_FRAME": {
+            "pattern_id": "TEST_READ_FRAME",
+            "variants": {
+                "A1": {
+                    "example_template": "I read {object}.",
+                    "chunks_template": ["I read", "{object}"],
+                    "grammar_focus": ["simple_present_affirmative"],
+                    "frame": "read",
+                    "slot_bindings": {"object": "frame_test_read_objects"},
+                    "fsi_rules": [],
+                    "complexity": {"depth": 1},
+                }
+            },
+        },
+        "TEST_WATCH_FRAME": {
+            "pattern_id": "TEST_WATCH_FRAME",
+            "variants": {
+                "A1": {
+                    "example_template": "I watch {object}.",
+                    "chunks_template": ["I watch", "{object}"],
+                    "grammar_focus": ["simple_present_affirmative"],
+                    "frame": "watch",
+                    "slot_bindings": {"object": "frame_test_watch_objects"},
+                    "fsi_rules": [],
+                    "complexity": {"depth": 1},
+                }
+            },
+        },
+        "TEST_TAKE_FRAME": {
+            "pattern_id": "TEST_TAKE_FRAME",
+            "variants": {
+                "A1": {
+                    "example_template": "I take {object}.",
+                    "chunks_template": ["I take", "{object}"],
+                    "grammar_focus": ["simple_present_affirmative"],
+                    "frame": "take",
+                    "slot_bindings": {"object": "frame_test_take_objects"},
+                    "fsi_rules": [],
+                    "complexity": {"depth": 1},
+                }
+            },
+        },
+        "TEST_SCENARIO_FRAME": {
+            "pattern_id": "TEST_SCENARIO_FRAME",
+            "variants": {
+                "A1": {
+                    "example_template": "I eat {object}.",
+                    "chunks_template": ["I eat", "{object}"],
+                    "grammar_focus": ["simple_present_affirmative"],
+                    "frame": "eat",
+                    "slot_bindings": {"object": "frame_test_scenario_objects"},
+                    "fsi_rules": [],
+                    "complexity": {"depth": 1},
+                }
+            },
+        },
+        "TEST_BLACKLIST_FRAME": {
+            "pattern_id": "TEST_BLACKLIST_FRAME",
+            "variants": {
+                "A1": {
+                    "example_template": "I watch {object}.",
+                    "chunks_template": ["I watch", "{object}"],
+                    "grammar_focus": ["simple_present_affirmative"],
+                    "frame": "watch",
+                    "slot_bindings": {"object": "frame_test_blacklist_objects"},
+                    "fsi_rules": [],
+                    "complexity": {"depth": 1},
+                }
+            },
+        },
+    }
+    slot_bank = {
+        "frame_test_food_objects": [
+            {
+                "text": "breakfast",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "food",
+                "allowed_frames": ["eat", "have"],
+            },
+            {
+                "text": "lunch",
+                "level": "A2",
+                "scenario": "daily_routine",
+                "semantic_group": "food",
+                "allowed_frames": ["eat", "have"],
+            },
+            {
+                "text": "homework",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "task",
+                "allowed_frames": ["do"],
+            },
+        ],
+        "frame_test_task_objects": [
+            {
+                "text": "homework",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "task",
+                "allowed_frames": ["do"],
+            }
+        ],
+        "frame_test_read_objects": [
+            {
+                "text": "a book",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "reading_object",
+                "allowed_frames": ["read"],
+            },
+            {
+                "text": "dinner",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "food",
+                "allowed_frames": ["eat", "have"],
+            },
+        ],
+        "frame_test_watch_objects": [
+            {
+                "text": "TV",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "media_object",
+                "allowed_frames": ["watch"],
+            },
+            {
+                "text": "breakfast",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "food",
+                "allowed_frames": ["eat", "have"],
+            },
+        ],
+        "frame_test_take_objects": [
+            {
+                "text": "breakfast",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "food",
+                "allowed_frames": ["eat", "have"],
+            }
+        ],
+        "frame_test_scenario_objects": [
+            {
+                "text": "breakfast",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "food",
+                "allowed_frames": ["eat"],
+            },
+            {
+                "text": "shared snack",
+                "level": "A1",
+                "scenario": "shared",
+                "semantic_group": "food",
+                "allowed_frames": ["eat"],
+            },
+            {
+                "text": "restaurant lunch",
+                "level": "A1",
+                "scenario": "food_drink",
+                "semantic_group": "food",
+                "allowed_frames": ["eat"],
+            },
+        ],
+        "frame_test_blacklist_objects": [
+            {
+                "text": "breakfast",
+                "level": "A1",
+                "scenario": "daily_routine",
+                "semantic_group": "food",
+                "allowed_frames": ["watch"],
+            }
+        ],
+        "daily_routine_bad_phrase_blacklist": [
+            "watch breakfast",
+            "take breakfast",
+        ],
+    }
+    return pattern_bank, slot_bank
+
+
 def make_unsupported_fsi_bank():
     return {
         "SHOP_TRY": {
@@ -625,6 +851,75 @@ def test_unique_generation_returns_available_sentences_when_count_exceeds_supply
     assert sentences[0]["target_sentence"] == "Can I try on this shirt?"
 
 
+def test_frame_aware_generation_allows_valid_allowed_frames():
+    pattern_bank, slot_bank = make_minimal_frame_aware_banks()
+    generator = make_frame_aware_generator(pattern_bank, slot_bank)
+
+    eat_sentences = generator.generate_for_pattern("TEST_EAT_FRAME", "A1", count=10)
+    do_sentences = generator.generate_for_pattern("TEST_DO_FRAME", "A1", count=10)
+    read_sentences = generator.generate_for_pattern("TEST_READ_FRAME", "A1", count=10)
+    watch_sentences = generator.generate_for_pattern("TEST_WATCH_FRAME", "A1", count=10)
+
+    assert {sentence["target_sentence"] for sentence in eat_sentences} == {
+        "I eat breakfast."
+    }
+    assert {sentence["target_sentence"] for sentence in do_sentences} == {
+        "I do homework."
+    }
+    assert {sentence["target_sentence"] for sentence in read_sentences} == {
+        "I read a book."
+    }
+    assert {sentence["target_sentence"] for sentence in watch_sentences} == {
+        "I watch TV."
+    }
+
+
+def test_frame_aware_generation_blocks_invalid_allowed_frames():
+    pattern_bank, slot_bank = make_minimal_frame_aware_banks()
+    generator = make_frame_aware_generator(pattern_bank, slot_bank)
+
+    eat_sentences = generator.generate_for_pattern("TEST_EAT_FRAME", "A1", count=10)
+    read_sentences = generator.generate_for_pattern("TEST_READ_FRAME", "A1", count=10)
+    watch_sentences = generator.generate_for_pattern("TEST_WATCH_FRAME", "A1", count=10)
+    take_sentences = generator.generate_for_pattern("TEST_TAKE_FRAME", "A1", count=10)
+
+    eat_targets = {sentence["target_sentence"] for sentence in eat_sentences}
+    read_targets = {sentence["target_sentence"] for sentence in read_sentences}
+    watch_targets = {sentence["target_sentence"] for sentence in watch_sentences}
+
+    assert "I eat homework." not in eat_targets
+    assert "I read dinner." not in read_targets
+    assert "I watch breakfast." not in watch_targets
+    assert take_sentences == []
+
+
+def test_frame_aware_generation_applies_level_and_scenario_filters():
+    pattern_bank, slot_bank = make_minimal_frame_aware_banks()
+    eat_generator = make_frame_aware_generator(pattern_bank, slot_bank)
+    scenario_generator = make_frame_aware_generator(pattern_bank, slot_bank)
+
+    eat_sentences = eat_generator.generate_for_pattern("TEST_EAT_FRAME", "A1", count=10)
+    scenario_sentences = scenario_generator.generate_for_pattern(
+        "TEST_SCENARIO_FRAME", "A1", count=10
+    )
+
+    eat_targets = {sentence["target_sentence"] for sentence in eat_sentences}
+    scenario_targets = {sentence["target_sentence"] for sentence in scenario_sentences}
+
+    assert "I eat lunch." not in eat_targets
+    assert scenario_targets == {"I eat breakfast.", "I eat shared snack."}
+    assert "I eat restaurant lunch." not in scenario_targets
+
+
+def test_frame_aware_generation_applies_daily_routine_blacklist():
+    pattern_bank, slot_bank = make_minimal_frame_aware_banks()
+    generator = make_frame_aware_generator(pattern_bank, slot_bank)
+
+    sentences = generator.generate_for_pattern("TEST_BLACKLIST_FRAME", "A1", count=10)
+
+    assert sentences == []
+
+
 def test_injected_rng_makes_generation_predictable():
     generator_one = make_generator(seed=19)
     generator_two = make_generator(seed=19)
@@ -664,7 +959,7 @@ def test_generate_all_supports_30_unique_sentences_per_variant():
             requested_count = COUNT_BY_PATTERN_LEVEL.get(
                 (pattern_id, level), DEFAULT_COUNT_PER_VARIANT
             )
-            available_count = len(generator._enumerate_unique_candidates(variant))
+            available_count = len(generator._enumerate_unique_candidates(variant, level))
             expected_total += min(requested_count, available_count)
 
     assert len(sentences) == expected_total
@@ -1498,12 +1793,13 @@ def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
     level_counts = Counter(sentence["level"] for sentence in sentences)
 
-    # Phase 2 baseline after grammar balancing and slot architecture expansion.
-    assert len(sentences) == 799
-    assert level_counts["A1"] == 129
+    # This baseline includes the first production verb-frame pattern and the
+    # resulting deterministic unique-target ownership reshuffle.
+    assert len(sentences) == 804
+    assert level_counts["A1"] == 132
     assert level_counts["A1+"] == 240
     assert level_counts["A2"] == 209
-    assert level_counts["A2+"] == 125
+    assert level_counts["A2+"] == 127
     assert level_counts["B1"] == 96
 
 
