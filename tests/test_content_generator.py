@@ -1795,11 +1795,11 @@ def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
 
     # This baseline removes the unnatural frame output "I go to home",
     # keeps "I go home" through existing routine coverage, and includes
-    # the production read-object and watch-object frame trials with
-    # deterministic unique-target reshuffle.
+    # the production read-object, watch-object, and listen-to-object
+    # frame trials with deterministic unique-target reshuffle.
     assert len(sentences) == 811
-    assert level_counts["A1"] == 137
-    assert level_counts["A1+"] == 242
+    assert level_counts["A1"] == 139
+    assert level_counts["A1+"] == 240
     assert level_counts["A2"] == 209
     assert level_counts["A2+"] == 127
     assert level_counts["B1"] == 96
