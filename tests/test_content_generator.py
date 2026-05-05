@@ -1793,11 +1793,12 @@ def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
     level_counts = Counter(sentence["level"] for sentence in sentences)
 
-    # The 805 baseline removes the unnatural frame output "I go to home"
-    # while keeping "I go home" through existing routine coverage.
-    assert len(sentences) == 805
-    assert level_counts["A1"] == 133
-    assert level_counts["A1+"] == 240
+    # This baseline removes the unnatural frame output "I go to home",
+    # keeps "I go home" through existing routine coverage, and includes
+    # the production read-object frame trial with deterministic reshuffle.
+    assert len(sentences) == 808
+    assert level_counts["A1"] == 135
+    assert level_counts["A1+"] == 241
     assert level_counts["A2"] == 209
     assert level_counts["A2+"] == 127
     assert level_counts["B1"] == 96

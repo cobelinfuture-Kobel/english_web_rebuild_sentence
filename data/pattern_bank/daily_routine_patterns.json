@@ -83,6 +83,33 @@
       }
     }
   },
+  "ROUTINE_FRAME_READ_OBJECT_A1": {
+    "pattern_id": "ROUTINE_FRAME_READ_OBJECT_A1",
+    "function": "describe_basic_reading_with_frame_slot",
+    "variants": {
+      "A1": {
+        "example_template": "I read {object}.",
+        "chunks_template": [
+          "I read",
+          "{object}"
+        ],
+        "grammar_focus": [
+          "simple_present_affirmative"
+        ],
+        "frame": "read",
+        "slots_used": [
+          "daily_routine_read_object_A1"
+        ],
+        "slot_bindings": {
+          "object": "daily_routine_read_object_A1"
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1
+        }
+      }
+    }
+  },
   "ROUTINE_BE_STATE": {
     "pattern_id": "ROUTINE_BE_STATE",
     "function": "describe_simple_states",
