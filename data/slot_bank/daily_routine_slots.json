@@ -2064,6 +2064,69 @@
     }
   ],
 
+  "routine_clean_agreement_pairs": [
+    {
+      "subject": "I",
+      "verb": "clean",
+      "possessive": "my",
+      "object": "room",
+      "full_object": "my room",
+      "person": "first",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "You",
+      "verb": "clean",
+      "possessive": "your",
+      "object": "room",
+      "full_object": "your room",
+      "person": "second",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "He",
+      "verb": "cleans",
+      "possessive": "his",
+      "object": "room",
+      "full_object": "his room",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "She",
+      "verb": "cleans",
+      "possessive": "her",
+      "object": "room",
+      "full_object": "her room",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "We",
+      "verb": "clean",
+      "possessive": "our",
+      "object": "rooms",
+      "full_object": "our rooms",
+      "person": "first_plural",
+      "number": "plural",
+      "level_min": "B1"
+    },
+    {
+      "subject": "They",
+      "verb": "clean",
+      "possessive": "their",
+      "object": "rooms",
+      "full_object": "their rooms",
+      "person": "third_plural",
+      "number": "plural",
+      "level_min": "B1"
+    }
+  ],
+
   "routine_brush_objects": [
     {
       "text": "my teeth"

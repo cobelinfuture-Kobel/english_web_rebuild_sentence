@@ -880,6 +880,29 @@
     }
   },
 
+  "ROUTINE_CLEAN_OBJECT_AGREEMENT": {
+    "pattern_id": "ROUTINE_CLEAN_OBJECT_AGREEMENT",
+    "function": "clean_object_agreement",
+    "variants": {
+      "A2": {
+        "example_template": "{subject} {verb} {full_object}.",
+        "chunks_template": ["{subject}", "{verb}", "{full_object}"],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "subject_verb_agreement",
+          "possessive_agreement"
+        ],
+        "paired_slot": {
+          "category": "routine_clean_agreement_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
   "ROUTINE_BRUSH_OBJECT": {
     "pattern_id": "ROUTINE_BRUSH_OBJECT",
     "function": "brush_object",

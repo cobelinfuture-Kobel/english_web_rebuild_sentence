@@ -235,43 +235,48 @@ DAILY_ROUTINE_PHASE4C_MINIMUM_COUNTS = {
     "ROUTINE_PARENT_RULE_CLEAN_OBJECT": 5,
     "ROUTINE_AFTER_FINISH_ACTIVITY_FSI": 6,
 }
-DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES = {
+EXPECTED_DAILY_ROUTINE_PHASE5_PATTERNS = {
+    "ROUTINE_CLEAN_OBJECT_AGREEMENT",
+}
+DAILY_ROUTINE_PHASE5_CLEAN_AGREEMENT_POSITIVE_SENTENCES = {
+    "You clean your room.",
     "He cleans his room.",
+    "She cleans her room.",
+    "We clean our rooms.",
+    "They clean their rooms.",
+}
+DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES = {
     "She brushes her teeth.",
     "They pack their bags.",
     "We have our books.",
-    "You clean your room.",
     "He has his book.",
     "She has her book.",
     "They have their books.",
     "Does he clean his room?",
-    "Does she brush her teeth?",
-    "Do they pack their bags?",
+    "Does she clean her room?",
+    "Do they clean their rooms?",
+    "Do you clean your room?",
     "He does not clean his room.",
-    "She does not brush her teeth.",
-    "They do not pack their bags.",
+    "She does not clean her room.",
+    "They do not clean their rooms.",
 }
 DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES = {
     "He clean his room.",
-    "She brush her teeth.",
+    "She clean her room.",
+    "She cleans his room.",
+    "He cleans her room.",
     "They cleans their rooms.",
     "They cleans their room.",
+    "We cleans our rooms.",
     "We has our books.",
-    "We has our book.",
     "He have his book.",
-    "She have her book.",
-    "They has their bags.",
-    "They has their bag.",
+    "They has their books.",
     "Does he cleans his room?",
-    "Does she brushes her teeth?",
-    "Do she brush her teeth?",
-    "Do he clean his room?",
-    "Does they pack their bags?",
-    "Does they pack their bag.",
+    "Do she clean her room?",
+    "Does they clean their rooms?",
 }
 DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES = {
     "I do not clean my room.",
-    "I do not brush my teeth.",
     "Do I clean my room?",
     "Do you clean your room?",
     "Did I clean my room?",
@@ -282,9 +287,10 @@ DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES = {
 }
 DAILY_ROUTINE_A1_PHASE5_BLOCKED_FRAGMENTS = {
     "He cleans",
-    "She brushes",
-    "They pack",
-    "We have",
+    "She cleans",
+    "They clean",
+    "We clean",
+    "You clean",
     "Does he",
     "Does she",
     "Do they",
@@ -296,7 +302,6 @@ DAILY_ROUTINE_A1_PHASE5_BLOCKED_FRAGMENTS = {
     "has her",
 }
 DAILY_ROUTINE_FORBIDDEN_PHASE5_PATTERN_IDS = {
-    "ROUTINE_CLEAN_OBJECT_AGREEMENT",
     "ROUTINE_HAVE_ITEM_AGREEMENT",
     "ROUTINE_PACK_ITEM_AGREEMENT",
     "ROUTINE_BRUSH_OBJECT_AGREEMENT",
@@ -1214,6 +1219,16 @@ def test_daily_routine_phase5_not_implemented_yet():
     assert texts.isdisjoint(DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES)
 
 
+def test_daily_routine_phase5_clean_agreement_outputs_exist():
+    texts = get_daily_routine_targets()
+
+    missing = DAILY_ROUTINE_PHASE5_CLEAN_AGREEMENT_POSITIVE_SENTENCES - texts
+    assert not missing, (
+        "Missing Daily Routine Phase 5 clean agreement outputs: "
+        f"{sorted(missing)}"
+    )
+
+
 def test_daily_routine_phase4c_generated_bank_has_all_levels():
     sentences = load_daily_routine_sentences()
     levels = {sentence["level"] for sentence in sentences}
@@ -1291,8 +1306,13 @@ def test_daily_routine_has_no_free_transformation_outputs():
     assert texts.isdisjoint(DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES)
 
 
-def test_daily_routine_has_no_phase5_pattern_ids_yet():
+def test_daily_routine_phase5_pattern_id_boundary():
     pattern_ids = get_daily_routine_pattern_ids()
+
+    missing_phase5 = EXPECTED_DAILY_ROUTINE_PHASE5_PATTERNS - pattern_ids
+    assert not missing_phase5, (
+        f"Missing expected Phase 5 pattern IDs: {sorted(missing_phase5)}"
+    )
 
     dr_pattern_ids = sorted(
         pattern_id for pattern_id in pattern_ids if pattern_id.startswith("DR_")
@@ -1351,9 +1371,9 @@ def test_daily_routine_phase4c_semantic_safety_examples_are_absent():
         "I drink water because I am sleepy.",
         "I pack my lunch because it is messy.",
         "He clean his room.",
-        "She brush her teeth.",
-        "He cleans his room.",
-        "She brushes her teeth.",
+        "She clean her room.",
+        "She cleans his room.",
+        "He cleans her room.",
         "They pack their bags.",
         "Yesterday, I cleaned my room.",
         "I cleaned my room yesterday.",
@@ -1395,7 +1415,7 @@ def test_daily_routine_phase5_plan_doc_exists():
 def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
 
-    assert len(sentences) == 464
+    assert len(sentences) == 470
 
 
 def test_daily_routine_phase4b_level_and_count_coverage():
