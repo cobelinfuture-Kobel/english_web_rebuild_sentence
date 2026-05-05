@@ -1890,6 +1890,69 @@
     }
   ],
 
+  "routine_have_agreement_pairs": [
+    {
+      "subject": "I",
+      "have_verb": "have",
+      "possessive": "my",
+      "item": "book",
+      "full_item": "my book",
+      "person": "first",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "You",
+      "have_verb": "have",
+      "possessive": "your",
+      "item": "book",
+      "full_item": "your book",
+      "person": "second",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "He",
+      "have_verb": "has",
+      "possessive": "his",
+      "item": "book",
+      "full_item": "his book",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "She",
+      "have_verb": "has",
+      "possessive": "her",
+      "item": "book",
+      "full_item": "her book",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "We",
+      "have_verb": "have",
+      "possessive": "our",
+      "item": "books",
+      "full_item": "our books",
+      "person": "first_plural",
+      "number": "plural",
+      "level_min": "B1"
+    },
+    {
+      "subject": "They",
+      "have_verb": "have",
+      "possessive": "their",
+      "item": "books",
+      "full_item": "their books",
+      "person": "third_plural",
+      "number": "plural",
+      "level_min": "B1"
+    }
+  ],
+
   "routine_bring_items": [
     {
       "text": "my book"

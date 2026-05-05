@@ -237,6 +237,7 @@ DAILY_ROUTINE_PHASE4C_MINIMUM_COUNTS = {
 }
 EXPECTED_DAILY_ROUTINE_PHASE5_PATTERNS = {
     "ROUTINE_CLEAN_OBJECT_AGREEMENT",
+    "ROUTINE_HAVE_ITEM_AGREEMENT",
 }
 DAILY_ROUTINE_PHASE5_CLEAN_AGREEMENT_POSITIVE_SENTENCES = {
     "You clean your room.",
@@ -245,20 +246,29 @@ DAILY_ROUTINE_PHASE5_CLEAN_AGREEMENT_POSITIVE_SENTENCES = {
     "We clean our rooms.",
     "They clean their rooms.",
 }
+DAILY_ROUTINE_PHASE5_HAVE_AGREEMENT_POSITIVE_SENTENCES = {
+    "You have your book.",
+    "He has his book.",
+    "She has her book.",
+    "We have our books.",
+    "They have their books.",
+}
 DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES = {
     "She brushes her teeth.",
     "They pack their bags.",
-    "We have our books.",
-    "He has his book.",
-    "She has her book.",
-    "They have their books.",
     "Does he clean his room?",
     "Does she clean her room?",
     "Do they clean their rooms?",
     "Do you clean your room?",
+    "Does he have his book?",
+    "Does she have her book?",
+    "Do they have their books?",
     "He does not clean his room.",
     "She does not clean her room.",
     "They do not clean their rooms.",
+    "He does not have his book.",
+    "She does not have her book.",
+    "They do not have their books.",
 }
 DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES = {
     "He clean his room.",
@@ -269,11 +279,21 @@ DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES = {
     "They cleans their room.",
     "We cleans our rooms.",
     "We has our books.",
+    "We has our book.",
     "He have his book.",
+    "She have her book.",
     "They has their books.",
+    "They has their book.",
+    "He has her book.",
+    "She has his book.",
+    "They have his book.",
+    "We have their books.",
     "Does he cleans his room?",
     "Do she clean her room?",
     "Does they clean their rooms?",
+    "Does he has his book?",
+    "Do she have her book?",
+    "Does they have their books?",
 }
 DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES = {
     "I do not clean my room.",
@@ -291,6 +311,11 @@ DAILY_ROUTINE_A1_PHASE5_BLOCKED_FRAGMENTS = {
     "They clean",
     "We clean",
     "You clean",
+    "You have",
+    "He has",
+    "She has",
+    "We have",
+    "They have",
     "Does he",
     "Does she",
     "Do they",
@@ -302,7 +327,6 @@ DAILY_ROUTINE_A1_PHASE5_BLOCKED_FRAGMENTS = {
     "has her",
 }
 DAILY_ROUTINE_FORBIDDEN_PHASE5_PATTERN_IDS = {
-    "ROUTINE_HAVE_ITEM_AGREEMENT",
     "ROUTINE_PACK_ITEM_AGREEMENT",
     "ROUTINE_BRUSH_OBJECT_AGREEMENT",
     "ROUTINE_WASH_OBJECT_AGREEMENT",
@@ -1229,6 +1253,16 @@ def test_daily_routine_phase5_clean_agreement_outputs_exist():
     )
 
 
+def test_daily_routine_phase5_have_agreement_outputs_exist():
+    texts = get_daily_routine_targets()
+
+    missing = DAILY_ROUTINE_PHASE5_HAVE_AGREEMENT_POSITIVE_SENTENCES - texts
+    assert not missing, (
+        "Missing Daily Routine Phase 5 have agreement outputs: "
+        f"{sorted(missing)}"
+    )
+
+
 def test_daily_routine_phase4c_generated_bank_has_all_levels():
     sentences = load_daily_routine_sentences()
     levels = {sentence["level"] for sentence in sentences}
@@ -1415,7 +1449,7 @@ def test_daily_routine_phase5_plan_doc_exists():
 def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
 
-    assert len(sentences) == 470
+    assert len(sentences) == 474
 
 
 def test_daily_routine_phase4b_level_and_count_coverage():

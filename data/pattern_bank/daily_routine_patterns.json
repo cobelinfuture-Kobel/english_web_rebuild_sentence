@@ -861,6 +861,29 @@
     }
   },
 
+  "ROUTINE_HAVE_ITEM_AGREEMENT": {
+    "pattern_id": "ROUTINE_HAVE_ITEM_AGREEMENT",
+    "function": "have_item_agreement",
+    "variants": {
+      "A2": {
+        "example_template": "{subject} {have_verb} {full_item}.",
+        "chunks_template": ["{subject}", "{have_verb}", "{full_item}"],
+        "grammar_focus": [
+          "have_verb",
+          "daily_routine_vocabulary",
+          "subject_verb_agreement",
+          "possessive_agreement"
+        ],
+        "paired_slot": {
+          "category": "routine_have_agreement_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
   "ROUTINE_CLEAN_OBJECT": {
     "pattern_id": "ROUTINE_CLEAN_OBJECT",
     "function": "clean_object",
