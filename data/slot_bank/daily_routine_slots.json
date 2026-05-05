@@ -2988,17 +2988,6 @@
       "source_note": "Cambridge-style A1 daily routine vocabulary"
     },
     {
-      "text": "home",
-      "level": "A1",
-      "scenario": "daily_routine",
-      "part_of_speech": "place_phrase",
-      "semantic_group": "place",
-      "allowed_frames": [
-        "go_to"
-      ],
-      "source_note": "Cambridge-style A1 daily routine vocabulary"
-    },
-    {
       "text": "the park",
       "level": "A1",
       "scenario": "daily_routine",
@@ -3008,6 +2997,23 @@
         "go_to"
       ],
       "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_go_place_exception_A1": [
+    {
+      "text": "home",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place_exception",
+      "allowed_frames": [
+        "go_home"
+      ],
+      "blocked_frames": [
+        "go_to"
+      ],
+      "surface_pattern": "go home",
+      "source_note": "Exception: no preposition after go."
     }
   ],
   "daily_routine_go_to_place_A2": [

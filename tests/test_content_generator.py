@@ -1793,10 +1793,10 @@ def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
     level_counts = Counter(sentence["level"] for sentence in sentences)
 
-    # This baseline includes the first production verb-frame pattern and the
-    # resulting deterministic unique-target ownership reshuffle.
-    assert len(sentences) == 804
-    assert level_counts["A1"] == 132
+    # The 805 baseline removes the unnatural frame output "I go to home"
+    # while keeping "I go home" through existing routine coverage.
+    assert len(sentences) == 805
+    assert level_counts["A1"] == 133
     assert level_counts["A1+"] == 240
     assert level_counts["A2"] == 209
     assert level_counts["A2+"] == 127
