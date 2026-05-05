@@ -239,6 +239,7 @@ EXPECTED_DAILY_ROUTINE_PHASE5_PATTERNS = {
     "ROUTINE_CLEAN_OBJECT_AGREEMENT",
     "ROUTINE_HAVE_ITEM_AGREEMENT",
     "ROUTINE_DO_DOES_QUESTION_AGREEMENT",
+    "ROUTINE_NEGATIVE_AGREEMENT",
 }
 DAILY_ROUTINE_PHASE5_CLEAN_AGREEMENT_POSITIVE_SENTENCES = {
     "You clean your room.",
@@ -260,17 +261,25 @@ DAILY_ROUTINE_PHASE5_QUESTION_AGREEMENT_POSITIVE_SENTENCES = {
     "Does she clean her room?",
     "Do they clean their rooms?",
 }
+DAILY_ROUTINE_PHASE5_NEGATIVE_AGREEMENT_POSITIVE_SENTENCES = {
+    "I do not clean my room.",
+    "You do not clean your room.",
+    "He does not clean his room.",
+    "She does not clean her room.",
+    "We do not clean our rooms.",
+    "They do not clean their rooms.",
+}
 DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES = {
     "She brushes her teeth.",
     "They pack their bags.",
     "Does he have his book?",
     "Does she have her book?",
     "Do they have their books?",
-    "He does not clean his room.",
-    "She does not clean her room.",
-    "They do not clean their rooms.",
+    "I do not have my book.",
+    "You do not have your book.",
     "He does not have his book.",
     "She does not have her book.",
+    "We do not have our books.",
     "They do not have their books.",
 }
 DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES = {
@@ -297,9 +306,26 @@ DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES = {
     "Does he has his book?",
     "Do she have her book?",
     "Does they have their books?",
+    "He do not clean his room.",
+    "She do not clean her room.",
+    "They does not clean their rooms.",
+    "We does not clean our rooms.",
+    "He does not cleans his room.",
+    "She does not cleans her room.",
+    "They do not cleans their rooms.",
+    "We do not cleans our rooms.",
+    "He does not clean her room.",
+    "She does not clean his room.",
+    "They do not clean his room.",
+    "We do not clean their rooms.",
+    "I don't clean my room.",
+    "You don't clean your room.",
+    "He doesn't clean his room.",
+    "She doesn't clean her room.",
+    "They don't clean their rooms.",
+    "We don't clean our rooms.",
 }
 DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES = {
-    "I do not clean my room.",
     "Do I clean my room?",
     "Did I clean my room?",
     "I cleaned my room yesterday.",
@@ -333,7 +359,6 @@ DAILY_ROUTINE_FORBIDDEN_PHASE5_PATTERN_IDS = {
     "ROUTINE_PACK_ITEM_AGREEMENT",
     "ROUTINE_BRUSH_OBJECT_AGREEMENT",
     "ROUTINE_WASH_OBJECT_AGREEMENT",
-    "ROUTINE_NEGATIVE_AGREEMENT",
 }
 
 
@@ -1275,6 +1300,16 @@ def test_daily_routine_phase5_question_agreement_outputs_exist():
     )
 
 
+def test_daily_routine_phase5_negative_agreement_outputs_exist():
+    texts = get_daily_routine_targets()
+
+    missing = DAILY_ROUTINE_PHASE5_NEGATIVE_AGREEMENT_POSITIVE_SENTENCES - texts
+    assert not missing, (
+        "Missing Daily Routine Phase 5 negative agreement outputs: "
+        f"{sorted(missing)}"
+    )
+
+
 def test_daily_routine_phase4c_generated_bank_has_all_levels():
     sentences = load_daily_routine_sentences()
     levels = {sentence["level"] for sentence in sentences}
@@ -1461,7 +1496,7 @@ def test_daily_routine_phase5_plan_doc_exists():
 def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
 
-    assert len(sentences) == 478
+    assert len(sentences) == 485
 
 
 def test_daily_routine_phase4b_level_and_count_coverage():

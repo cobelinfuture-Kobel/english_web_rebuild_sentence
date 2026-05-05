@@ -2000,6 +2000,81 @@
     }
   ],
 
+  "routine_negative_agreement_pairs": [
+    {
+      "subject": "I",
+      "auxiliary": "do",
+      "negative_marker": "not",
+      "base_verb": "clean",
+      "possessive": "my",
+      "object": "room",
+      "full_object": "my room",
+      "person": "first",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "You",
+      "auxiliary": "do",
+      "negative_marker": "not",
+      "base_verb": "clean",
+      "possessive": "your",
+      "object": "room",
+      "full_object": "your room",
+      "person": "second",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "He",
+      "auxiliary": "does",
+      "negative_marker": "not",
+      "base_verb": "clean",
+      "possessive": "his",
+      "object": "room",
+      "full_object": "his room",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "She",
+      "auxiliary": "does",
+      "negative_marker": "not",
+      "base_verb": "clean",
+      "possessive": "her",
+      "object": "room",
+      "full_object": "her room",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "subject": "We",
+      "auxiliary": "do",
+      "negative_marker": "not",
+      "base_verb": "clean",
+      "possessive": "our",
+      "object": "rooms",
+      "full_object": "our rooms",
+      "person": "first_plural",
+      "number": "plural",
+      "level_min": "B1"
+    },
+    {
+      "subject": "They",
+      "auxiliary": "do",
+      "negative_marker": "not",
+      "base_verb": "clean",
+      "possessive": "their",
+      "object": "rooms",
+      "full_object": "their rooms",
+      "person": "third_plural",
+      "number": "plural",
+      "level_min": "B1"
+    }
+  ],
+
   "routine_bring_items": [
     {
       "text": "my book"
