@@ -20,6 +20,9 @@ FOOD_SLOT_BANK_PATH = BASE_DIR / "data" / "slot_bank" / "food_drink_slots.json"
 DAILY_ROUTINE_SENTENCE_BANK_PATH = (
     BASE_DIR / "data" / "generated" / "daily_routine_sentence_bank.json"
 )
+DAILY_ROUTINE_PHASE5_PLAN_PATH = (
+    BASE_DIR / "docs" / "daily_routine_phase5_grammar_aware_agreement_plan.md"
+)
 DAILY_ROUTINE_PHASE4C_A_NOTES_PATH = (
     BASE_DIR / "docs" / "daily_routine_phase4c_a_completion_notes.md"
 )
@@ -232,6 +235,75 @@ DAILY_ROUTINE_PHASE4C_MINIMUM_COUNTS = {
     "ROUTINE_PARENT_RULE_CLEAN_OBJECT": 5,
     "ROUTINE_AFTER_FINISH_ACTIVITY_FSI": 6,
 }
+DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES = {
+    "He cleans his room.",
+    "She brushes her teeth.",
+    "They pack their bags.",
+    "We have our books.",
+    "You clean your room.",
+    "He has his book.",
+    "She has her book.",
+    "They have their books.",
+    "Does he clean his room?",
+    "Does she brush her teeth?",
+    "Do they pack their bags?",
+    "He does not clean his room.",
+    "She does not brush her teeth.",
+    "They do not pack their bags.",
+}
+DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES = {
+    "He clean his room.",
+    "She brush her teeth.",
+    "They cleans their rooms.",
+    "They cleans their room.",
+    "We has our books.",
+    "We has our book.",
+    "He have his book.",
+    "She have her book.",
+    "They has their bags.",
+    "They has their bag.",
+    "Does he cleans his room?",
+    "Does she brushes her teeth?",
+    "Do she brush her teeth?",
+    "Do he clean his room?",
+    "Does they pack their bags?",
+    "Does they pack their bag.",
+}
+DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES = {
+    "I do not clean my room.",
+    "I do not brush my teeth.",
+    "Do I clean my room?",
+    "Do you clean your room?",
+    "Did I clean my room?",
+    "I cleaned my room yesterday.",
+    "Yesterday, I cleaned my room.",
+    "I have cleaned my room.",
+    "I am cleaning my room.",
+}
+DAILY_ROUTINE_A1_PHASE5_BLOCKED_FRAGMENTS = {
+    "He cleans",
+    "She brushes",
+    "They pack",
+    "We have",
+    "Does he",
+    "Does she",
+    "Do they",
+    "do not",
+    "does not",
+    "yesterday",
+    "cleaned",
+    "has his",
+    "has her",
+}
+DAILY_ROUTINE_FORBIDDEN_PHASE5_PATTERN_IDS = {
+    "ROUTINE_CLEAN_OBJECT_AGREEMENT",
+    "ROUTINE_HAVE_ITEM_AGREEMENT",
+    "ROUTINE_PACK_ITEM_AGREEMENT",
+    "ROUTINE_BRUSH_OBJECT_AGREEMENT",
+    "ROUTINE_WASH_OBJECT_AGREEMENT",
+    "ROUTINE_DO_DOES_QUESTION_AGREEMENT",
+    "ROUTINE_NEGATIVE_AGREEMENT",
+}
 
 
 def load_banks():
@@ -255,6 +327,26 @@ def load_daily_routine_sentences():
     data = json.loads(DAILY_ROUTINE_SENTENCE_BANK_PATH.read_text(encoding="utf-8"))
     assert isinstance(data, list)
     return data
+
+
+def get_daily_routine_targets(sentences=None):
+    if sentences is None:
+        sentences = load_daily_routine_sentences()
+    return {sentence["target_sentence"] for sentence in sentences}
+
+
+def get_daily_routine_pattern_ids(sentences=None):
+    if sentences is None:
+        sentences = load_daily_routine_sentences()
+    return {sentence["pattern_id"] for sentence in sentences}
+
+
+def get_daily_routine_targets_for_level(level):
+    return {
+        sentence["target_sentence"]
+        for sentence in load_daily_routine_sentences()
+        if sentence["level"] == level
+    }
 
 
 def make_generator(seed=7, ensure_unique_targets=False):
@@ -1116,42 +1208,10 @@ def test_daily_routine_phase4c_fsi_density_examples():
     assert not missing, f"Missing Daily Routine Phase 4C density examples: {sorted(missing)}"
 
 
-def test_daily_routine_phase4c_no_unsupported_grammar_expansion():
-    sentences = load_daily_routine_sentences()
-    texts = {sentence["target_sentence"] for sentence in sentences}
+def test_daily_routine_phase5_not_implemented_yet():
+    texts = get_daily_routine_targets()
 
-    forbidden_starts = {
-        "He ",
-        "She ",
-        "They ",
-        "We ",
-    }
-    offenders = [
-        text
-        for text in texts
-        if any(text.startswith(start) for start in forbidden_starts)
-    ]
-
-    assert not offenders, f"Unsupported subject expansions found: {offenders}"
-
-    forbidden_fragments = {
-        " has ",
-        " does ",
-        " did ",
-        " was ",
-        " were ",
-        " has been ",
-        " have been ",
-        " will have ",
-    }
-    tense_offenders = [
-        text
-        for text in texts
-        for fragment in forbidden_fragments
-        if fragment in text
-    ]
-
-    assert not tense_offenders, f"Unsupported grammar expansions found: {tense_offenders}"
+    assert texts.isdisjoint(DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES)
 
 
 def test_daily_routine_phase4c_generated_bank_has_all_levels():
@@ -1206,21 +1266,10 @@ def test_daily_routine_no_bad_permission_pairs():
         assert not any(bad in target for bad in bad_phrases), target
 
 
-def test_daily_routine_no_general_past_tense_expansion():
-    sentences = load_daily_routine_sentences()
-    bad_phrases = [
-        "Yesterday",
-        "last night",
-        "went to",
-        "got up late",
-        "bought",
-        "cleaned",
-        "ate breakfast yesterday",
-    ]
+def test_daily_routine_invalid_agreement_outputs_are_forbidden():
+    texts = get_daily_routine_targets()
 
-    for sentence in sentences:
-        target = sentence["target_sentence"]
-        assert not any(bad in target for bad in bad_phrases), target
+    assert texts.isdisjoint(DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES)
 
 
 def test_daily_routine_forgot_allowed_as_fixed_expression():
@@ -1236,42 +1285,28 @@ def test_daily_routine_forgot_allowed_as_fixed_expression():
     )
 
 
-def test_daily_routine_no_third_person_subject_expansion():
-    sentences = load_daily_routine_sentences()
-    bad_starts = [
-        "He ",
-        "She ",
-        "They ",
-        "We ",
-        "My brother ",
-        "My sister ",
-        "My mom ",
-        "My dad ",
-    ]
+def test_daily_routine_has_no_free_transformation_outputs():
+    texts = get_daily_routine_targets()
 
-    for sentence in sentences:
-        target = sentence["target_sentence"]
-        assert not any(target.startswith(start) for start in bad_starts), target
+    assert texts.isdisjoint(DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES)
 
 
-def test_daily_routine_phase4c_has_no_dr_pattern_ids():
-    sentences = load_daily_routine_sentences()
+def test_daily_routine_has_no_phase5_pattern_ids_yet():
+    pattern_ids = get_daily_routine_pattern_ids()
+
     dr_pattern_ids = sorted(
-        {
-            sentence["pattern_id"]
-            for sentence in sentences
-            if sentence["pattern_id"].startswith("DR_")
-        }
+        pattern_id for pattern_id in pattern_ids if pattern_id.startswith("DR_")
     )
-
     assert not dr_pattern_ids, f"Unexpected DR_* pattern IDs: {dr_pattern_ids}"
 
+    non_routine_pattern_ids = sorted(
+        pattern_id for pattern_id in pattern_ids if not pattern_id.startswith("ROUTINE_")
+    )
+    assert not non_routine_pattern_ids, (
+        f"Unexpected non-ROUTINE_* pattern IDs: {non_routine_pattern_ids}"
+    )
 
-def test_daily_routine_phase4c_core_patterns_keep_routine_names():
-    sentences = load_daily_routine_sentences()
-    pattern_ids = {sentence["pattern_id"] for sentence in sentences}
-
-    required_pattern_ids = {
+    missing = {
         "ROUTINE_HAVE_ITEM_FSI",
         "ROUTINE_CLEAN_OBJECT",
         "ROUTINE_BRUSH_OBJECT",
@@ -1285,36 +1320,20 @@ def test_daily_routine_phase4c_core_patterns_keep_routine_names():
         "ROUTINE_CANNOT_USE_ITEM_REASON",
         "ROUTINE_TIME_TAKES_CLEAN_OBJECT",
         "ROUTINE_AFTER_FINISH_ACTIVITY_FSI",
-    }
-
-    missing = required_pattern_ids - pattern_ids
+    } - pattern_ids
     assert not missing, f"Missing required ROUTINE_* pattern IDs: {sorted(missing)}"
 
+    assert pattern_ids.isdisjoint(DAILY_ROUTINE_FORBIDDEN_PHASE5_PATTERN_IDS)
 
-def test_daily_routine_phase4c_a1_scope_stays_strict():
-    sentences = load_daily_routine_sentences()
-    a1_targets = [
-        sentence["target_sentence"]
-        for sentence in sentences
-        if sentence["level"] == "A1"
-    ]
 
-    blocked_fragments = (
-        "because",
-        "Before I leave home",
-        "After I finish",
-        "It takes",
-        "Yesterday",
-        "He ",
-        "She ",
-        "They ",
-        "We ",
-    )
+def test_daily_routine_a1_has_no_phase5_agreement_expansion():
+    a1_targets = get_daily_routine_targets_for_level("A1")
 
+    assert a1_targets
     assert all(
-        fragment not in target
+        fragment.lower() not in target.lower()
         for target in a1_targets
-        for fragment in blocked_fragments
+        for fragment in DAILY_ROUTINE_A1_PHASE5_BLOCKED_FRAGMENTS
     )
 
 
@@ -1367,7 +1386,8 @@ def test_daily_routine_phase4c_density_counts_for_core_frames():
     assert len(brush_object_targets) >= 2
 
 
-def test_daily_routine_phase4c_a_and_b_docs_exist():
+def test_daily_routine_phase5_plan_doc_exists():
+    assert DAILY_ROUTINE_PHASE5_PLAN_PATH.exists()
     assert DAILY_ROUTINE_PHASE4C_A_NOTES_PATH.exists()
     assert DAILY_ROUTINE_PHASE4C_B_NOTES_PATH.exists()
 
