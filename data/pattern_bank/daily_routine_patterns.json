@@ -12,8 +12,7 @@
         "grammar_focus": [
           "present_simple",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "action": {
@@ -107,8 +106,7 @@
           "present_simple",
           "time_expression",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "paired_slot": {
           "category": "routine_action_time_pairs"
@@ -135,8 +133,7 @@
           "like_verb",
           "to_infinitive",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "action": {
@@ -530,8 +527,7 @@
           "present_simple",
           "daily_routine_vocabulary",
           "simple_present_affirmative",
-          "time_expression",
-          "habit_description"
+          "time_expression"
         ],
         "paired_slot": {
           "category": "routine_clock_time_pairs"
@@ -559,7 +555,8 @@
           "weekday_weekend",
           "daily_routine_vocabulary",
           "weekday_weekend_contrast",
-          "habit_description"
+          "habit_description",
+          "frequency_adverb"
         ],
         "paired_slot": {
           "category": "routine_weekday_weekend_pairs"
@@ -752,8 +749,7 @@
         "grammar_focus": [
           "present_simple",
           "school_preparation",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "action": {
@@ -782,8 +778,7 @@
         "grammar_focus": [
           "present_simple",
           "helping_actions",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "action": {
@@ -812,8 +807,7 @@
         "grammar_focus": [
           "present_simple",
           "chores",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "action": {
@@ -842,8 +836,7 @@
         "grammar_focus": [
           "phrasal_verb",
           "getting_ready",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "item": {
@@ -1200,8 +1193,7 @@
         "grammar_focus": [
           "time_duration",
           "to_infinitive",
-          "routine_management",
-          "habit_description"
+          "routine_management"
         ],
         "paired_slot": {
           "category": "routine_time_takes_pairs"
@@ -1227,8 +1219,7 @@
         "grammar_focus": [
           "should",
           "routine_management",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "action": {
@@ -1260,7 +1251,6 @@
           "have_to",
           "routine_management",
           "simple_present_affirmative",
-          "habit_description",
           "multi_clause_sentence"
         ],
         "slot_constraints": {
@@ -1291,7 +1281,6 @@
           "before_after",
           "routine_management",
           "before_after_sequence",
-          "habit_description",
           "multi_clause_sentence"
         ],
         "slot_constraints": {
@@ -1324,7 +1313,6 @@
           "before_after",
           "routine_management",
           "before_after_sequence",
-          "habit_description",
           "multi_clause_sentence"
         ],
         "paired_slot": {
@@ -1383,8 +1371,8 @@
           "daily_routine_vocabulary",
           "subject_verb_agreement",
           "possessive_agreement",
-          "third_person_singular",
-          "simple_present_affirmative"
+          "simple_present_affirmative",
+          "third_person_singular"
         ],
         "paired_slot": {
           "category": "routine_have_agreement_pairs"
@@ -1474,8 +1462,7 @@
         "grammar_focus": [
           "present_simple",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "object": {
@@ -1507,8 +1494,8 @@
           "daily_routine_vocabulary",
           "subject_verb_agreement",
           "possessive_agreement",
-          "third_person_singular",
-          "simple_present_affirmative"
+          "simple_present_affirmative",
+          "third_person_singular"
         ],
         "paired_slot": {
           "category": "routine_clean_agreement_pairs"
@@ -1534,8 +1521,7 @@
         "grammar_focus": [
           "present_simple",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "object": {
@@ -1564,8 +1550,7 @@
         "grammar_focus": [
           "present_simple",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "object": {
@@ -1594,8 +1579,7 @@
         "grammar_focus": [
           "present_simple",
           "school_preparation",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "item": {
@@ -1624,8 +1608,7 @@
         "grammar_focus": [
           "present_simple",
           "school_preparation",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "slot_constraints": {
           "item": {
@@ -1656,8 +1639,7 @@
           "present_simple",
           "time_expression",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "paired_slot": {
           "category": "routine_clean_object_time_pairs"
@@ -1685,8 +1667,7 @@
           "present_simple",
           "time_expression",
           "school_preparation",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "paired_slot": {
           "category": "routine_pack_item_time_pairs"
@@ -1714,8 +1695,7 @@
           "phrasal_verb",
           "time_expression",
           "getting_ready",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "paired_slot": {
           "category": "routine_put_on_item_time_pairs"
@@ -1743,8 +1723,7 @@
           "present_simple",
           "time_expression",
           "daily_routine_vocabulary",
-          "simple_present_affirmative",
-          "habit_description"
+          "simple_present_affirmative"
         ],
         "paired_slot": {
           "category": "routine_wash_object_time_pairs"
@@ -2036,8 +2015,7 @@
         "grammar_focus": [
           "time_duration",
           "to_infinitive",
-          "routine_management",
-          "habit_description"
+          "routine_management"
         ],
         "paired_slot": {
           "category": "routine_time_takes_clean_object_pairs"
@@ -2065,7 +2043,6 @@
           "before_after",
           "routine_management",
           "before_after_sequence",
-          "habit_description",
           "multi_clause_sentence"
         ],
         "slot_constraints": {
@@ -2098,7 +2075,6 @@
           "have_to",
           "routine_management",
           "simple_present_affirmative",
-          "habit_description",
           "multi_clause_sentence"
         ],
         "slot_constraints": {
@@ -2131,7 +2107,6 @@
           "before_after",
           "routine_management",
           "before_after_sequence",
-          "habit_description",
           "multi_clause_sentence"
         ],
         "paired_slot": {
@@ -2141,6 +2116,1154 @@
         "fsi_rules": [],
         "complexity": {
           "depth": 3
+        }
+      }
+    }
+  },
+  "ROUTINE_FREQUENCY_ACTION": {
+    "pattern_id": "ROUTINE_FREQUENCY_ACTION",
+    "function": "describe_routine_frequency_actions",
+    "variants": {
+      "A1+": {
+        "example_template": "I {frequency} {action}.",
+        "chunks_template": [
+          "I",
+          "{frequency}",
+          "{action}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "frequency_adverbs",
+          "simple_present_affirmative",
+          "frequency_adverb"
+        ],
+        "slot_constraints": {
+          "frequency": {
+            "category": [
+              "routine_frequency_adverbs"
+            ]
+          },
+          "action": {
+            "category": [
+              "routine_actions_basic"
+            ],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_EVERY_DAY_ACTION": {
+    "pattern_id": "ROUTINE_EVERY_DAY_ACTION",
+    "function": "describe_everyday_actions",
+    "variants": {
+      "A1+": {
+        "example_template": "I {action} every day.",
+        "chunks_template": [
+          "I",
+          "{action}",
+          "every day"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "frequency_adverb",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_school_preparation_actions",
+              "routine_chore_actions",
+              "routine_help_actions"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_ALWAYS_CARE": {
+    "pattern_id": "ROUTINE_ALWAYS_CARE",
+    "function": "describe_always_personal_care",
+    "variants": {
+      "A1+": {
+        "example_template": "I always {action}.",
+        "chunks_template": [
+          "I always",
+          "{action}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "frequency_adverb"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_actions_to_infinitive"
+            ],
+            "hygiene_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_SOMETIMES_LEISURE": {
+    "pattern_id": "ROUTINE_SOMETIMES_LEISURE",
+    "function": "describe_sometimes_leisure",
+    "variants": {
+      "A1+": {
+        "example_template": "I sometimes {action}.",
+        "chunks_template": [
+          "I sometimes",
+          "{action}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "frequency_adverb"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_actions_to_infinitive"
+            ],
+            "leisure_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_USUALLY_CLEAN_TIME": {
+    "pattern_id": "ROUTINE_USUALLY_CLEAN_TIME",
+    "function": "describe_usual_cleaning_times",
+    "variants": {
+      "A2": {
+        "example_template": "I usually clean {object} {time}.",
+        "chunks_template": [
+          "I usually clean",
+          "{object}",
+          "{time}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "frequency_adverb",
+          "time_expression"
+        ],
+        "paired_slot": {
+          "category": "routine_clean_object_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2
+        }
+      }
+    }
+  },
+  "ROUTINE_NEGATIVE_TIME_A1PLUS": {
+    "pattern_id": "ROUTINE_NEGATIVE_TIME_A1PLUS",
+    "function": "describe_negative_routine_times",
+    "variants": {
+      "A1+": {
+        "example_template": "I do not {action} {time}.",
+        "chunks_template": [
+          "I do not",
+          "{action}",
+          "{time}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_negative",
+          "time_expression"
+        ],
+        "paired_slot": {
+          "category": "routine_action_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_NEGATIVE_ACTION_A1PLUS": {
+    "pattern_id": "ROUTINE_NEGATIVE_ACTION_A1PLUS",
+    "function": "describe_negative_simple_actions",
+    "variants": {
+      "A1+": {
+        "example_template": "I do not {action}.",
+        "chunks_template": [
+          "I do not",
+          "{action}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_negative"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_chore_actions",
+              "routine_help_actions",
+              "routine_school_preparation_actions"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_NEGATIVE_PACK_TIME": {
+    "pattern_id": "ROUTINE_NEGATIVE_PACK_TIME",
+    "function": "describe_negative_packing_times",
+    "variants": {
+      "A1+": {
+        "example_template": "I do not pack {item} {time}.",
+        "chunks_template": [
+          "I do not pack",
+          "{item}",
+          "{time}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "school_preparation",
+          "simple_present_negative",
+          "time_expression"
+        ],
+        "paired_slot": {
+          "category": "routine_pack_item_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_NEGATIVE_LEISURE_A1PLUS": {
+    "pattern_id": "ROUTINE_NEGATIVE_LEISURE_A1PLUS",
+    "function": "describe_negative_leisure_actions",
+    "variants": {
+      "A1+": {
+        "example_template": "I do not {action} at night.",
+        "chunks_template": [
+          "I do not",
+          "{action}",
+          "at night"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_negative",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_actions_to_infinitive"
+            ],
+            "leisure_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_QUESTION_ACTION_A1PLUS": {
+    "pattern_id": "ROUTINE_QUESTION_ACTION_A1PLUS",
+    "function": "ask_yes_no_about_actions",
+    "variants": {
+      "A1+": {
+        "example_template": "Do you {action}?",
+        "chunks_template": [
+          "Do you",
+          "{action}",
+          "?"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "do_does_yes_no_question"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_actions_basic"
+            ],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_QUESTION_TIME_A1PLUS": {
+    "pattern_id": "ROUTINE_QUESTION_TIME_A1PLUS",
+    "function": "ask_yes_no_about_action_times",
+    "variants": {
+      "A1+": {
+        "example_template": "Do you {action} {time}?",
+        "chunks_template": [
+          "Do you",
+          "{action}",
+          "{time}",
+          "?"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "do_does_yes_no_question",
+          "time_expression"
+        ],
+        "paired_slot": {
+          "category": "routine_action_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_QUESTION_PACK_TIME_A1PLUS": {
+    "pattern_id": "ROUTINE_QUESTION_PACK_TIME_A1PLUS",
+    "function": "ask_yes_no_about_packing_times",
+    "variants": {
+      "A1+": {
+        "example_template": "Do you pack {item} {time}?",
+        "chunks_template": [
+          "Do you pack",
+          "{item}",
+          "{time}",
+          "?"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "school_preparation",
+          "do_does_yes_no_question",
+          "time_expression"
+        ],
+        "paired_slot": {
+          "category": "routine_pack_item_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_QUESTION_BRING_ITEM_A1PLUS": {
+    "pattern_id": "ROUTINE_QUESTION_BRING_ITEM_A1PLUS",
+    "function": "ask_yes_no_about_bringing_items",
+    "variants": {
+      "A1+": {
+        "example_template": "Do you bring {item} to school?",
+        "chunks_template": [
+          "Do you bring",
+          "{item}",
+          "to school",
+          "?"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "school_life",
+          "do_does_yes_no_question"
+        ],
+        "slot_constraints": {
+          "item": {
+            "category": [
+              "routine_bring_items"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_GET_UP_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_GET_UP_A1PLUS",
+    "function": "describe_fixed_third_person_get_up",
+    "variants": {
+      "A1+": {
+        "example_template": "He gets up at seven.",
+        "chunks_template": [
+          "He gets up",
+          "at seven"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_HOMEWORK_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_HOMEWORK_A1PLUS",
+    "function": "describe_fixed_third_person_homework",
+    "variants": {
+      "A1+": {
+        "example_template": "My brother does {task} after school.",
+        "chunks_template": [
+          "My brother does {task}",
+          "after school"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "task": {
+            "category": [
+              "daily_routine_do_task_A1"
+            ],
+            "text": "homework",
+            "allowed_frames": [
+              "do"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_AND_CHORE_HELP": {
+    "pattern_id": "ROUTINE_AND_CHORE_HELP",
+    "function": "connect_chores_and_helping",
+    "variants": {
+      "A2": {
+        "example_template": "I {first_action} and {second_action}.",
+        "chunks_template": [
+          "I",
+          "{first_action}",
+          "and",
+          "{second_action}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "and_but_connector"
+        ],
+        "slot_constraints": {
+          "first_action": {
+            "category": [
+              "routine_chore_actions"
+            ]
+          },
+          "second_action": {
+            "category": [
+              "routine_help_actions"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2
+        }
+      }
+    }
+  },
+  "ROUTINE_AND_STUDY_LEISURE": {
+    "pattern_id": "ROUTINE_AND_STUDY_LEISURE",
+    "function": "connect_study_and_leisure",
+    "variants": {
+      "A2": {
+        "example_template": "I {first_action} and {second_action}.",
+        "chunks_template": [
+          "I",
+          "{first_action}",
+          "and",
+          "{second_action}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "and_but_connector"
+        ],
+        "slot_constraints": {
+          "first_action": {
+            "category": [
+              "routine_actions_basic"
+            ],
+            "study_action": true
+          },
+          "second_action": {
+            "category": [
+              "routine_actions_basic"
+            ],
+            "leisure_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2
+        }
+      }
+    }
+  },
+  "ROUTINE_AND_PERSONAL_CARE": {
+    "pattern_id": "ROUTINE_AND_PERSONAL_CARE",
+    "function": "connect_personal_care_actions",
+    "variants": {
+      "A2": {
+        "example_template": "I brush {brush_object} and wash {wash_object}.",
+        "chunks_template": [
+          "I brush",
+          "{brush_object}",
+          "and wash",
+          "{wash_object}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "and_but_connector"
+        ],
+        "slot_constraints": {
+          "brush_object": {
+            "category": [
+              "routine_brush_objects"
+            ]
+          },
+          "wash_object": {
+            "category": [
+              "routine_wash_objects"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2
+        }
+      }
+    }
+  },
+  "ROUTINE_BUT_TIRED_ACTION": {
+    "pattern_id": "ROUTINE_BUT_TIRED_ACTION",
+    "function": "contrast_tiredness_with_actions",
+    "variants": {
+      "A2": {
+        "example_template": "I am tired, but I {action}.",
+        "chunks_template": [
+          "I am tired, but I",
+          "{action}"
+        ],
+        "grammar_focus": [
+          "be_verb",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "and_but_connector"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_need_actions"
+            ],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2
+        }
+      }
+    }
+  },
+  "ROUTINE_BUT_PREFERENCE": {
+    "pattern_id": "ROUTINE_BUT_PREFERENCE",
+    "function": "contrast_preferences_and_negatives",
+    "variants": {
+      "A2": {
+        "example_template": "I like to {preferred_action}, but I do not {other_action} at night.",
+        "chunks_template": [
+          "I like to",
+          "{preferred_action},",
+          "but I do not",
+          "{other_action}",
+          "at night"
+        ],
+        "grammar_focus": [
+          "like_verb",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "simple_present_negative",
+          "and_but_connector",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "preferred_action": {
+            "category": [
+              "routine_like_actions"
+            ],
+            "routine_action": true
+          },
+          "other_action": {
+            "category": [
+              "routine_actions_to_infinitive"
+            ],
+            "leisure_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2
+        }
+      }
+    }
+  },
+  "ROUTINE_OFTEN_LEISURE_AT_NIGHT": {
+    "pattern_id": "ROUTINE_OFTEN_LEISURE_AT_NIGHT",
+    "function": "describe_often_leisure_at_night",
+    "variants": {
+      "A1+": {
+        "example_template": "I often {action} at night.",
+        "chunks_template": [
+          "I often",
+          "{action}",
+          "at night"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "frequency_adverb",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_actions_to_infinitive"
+            ],
+            "leisure_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_BREAKFAST_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_BREAKFAST_A1PLUS",
+    "function": "describe_fixed_third_person_breakfast",
+    "variants": {
+      "A1+": {
+        "example_template": "She eats {food} at home.",
+        "chunks_template": [
+          "She eats {food}",
+          "at home"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "food": {
+            "category": [
+              "daily_routine_eat_food_A1"
+            ],
+            "text": "breakfast",
+            "allowed_frames": [
+              "eat",
+              "have"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_READ_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_READ_A1PLUS",
+    "function": "describe_fixed_third_person_reading",
+    "variants": {
+      "A1+": {
+        "example_template": "My sister reads {object} at night.",
+        "chunks_template": [
+          "My sister reads {object}",
+          "at night"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "object": {
+            "category": [
+              "daily_routine_read_object_A1"
+            ],
+            "text": "a book",
+            "allowed_frames": [
+              "read"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_WATCH_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_WATCH_A1PLUS",
+    "function": "describe_fixed_third_person_watching",
+    "variants": {
+      "A1+": {
+        "example_template": "My father watches {object} in the evening.",
+        "chunks_template": [
+          "My father watches {object}",
+          "in the evening"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "object": {
+            "category": [
+              "daily_routine_watch_object_A1"
+            ],
+            "text": "TV",
+            "allowed_frames": [
+              "watch"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_WORK_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_WORK_A1PLUS",
+    "function": "describe_fixed_third_person_work",
+    "variants": {
+      "A1+": {
+        "example_template": "My mother goes to work in the morning.",
+        "chunks_template": [
+          "My mother goes to work",
+          "in the morning"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_BRUSH_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_BRUSH_A1PLUS",
+    "function": "describe_fixed_third_person_brushing",
+    "variants": {
+      "A1+": {
+        "example_template": "He brushes his teeth at night.",
+        "chunks_template": [
+          "He brushes his teeth",
+          "at night"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_THIRD_PERSON_PACK_A1PLUS": {
+    "pattern_id": "ROUTINE_THIRD_PERSON_PACK_A1PLUS",
+    "function": "describe_fixed_third_person_packing",
+    "variants": {
+      "A1+": {
+        "example_template": "She packs her bag before school.",
+        "chunks_template": [
+          "She packs her bag",
+          "before school"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "simple_present_affirmative",
+          "third_person_singular",
+          "time_expression",
+          "before_after_sequence"
+        ],
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_DOES_BROTHER_HOMEWORK_A1PLUS": {
+    "pattern_id": "ROUTINE_DOES_BROTHER_HOMEWORK_A1PLUS",
+    "function": "ask_fixed_third_person_homework_question",
+    "variants": {
+      "A1+": {
+        "example_template": "Does your brother do {task} after school?",
+        "chunks_template": [
+          "Does your brother do {task}",
+          "after school",
+          "?"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "do_does_yes_no_question",
+          "third_person_singular",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "task": {
+            "category": [
+              "daily_routine_do_task_A1"
+            ],
+            "text": "homework",
+            "allowed_frames": [
+              "do"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_DOES_SHE_GO_TO_SCHOOL_A1PLUS": {
+    "pattern_id": "ROUTINE_DOES_SHE_GO_TO_SCHOOL_A1PLUS",
+    "function": "ask_fixed_third_person_school_question",
+    "variants": {
+      "A1+": {
+        "example_template": "Does she go to {place} by bus?",
+        "chunks_template": [
+          "Does she go to {place}",
+          "by bus",
+          "?"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "do_does_yes_no_question",
+          "third_person_singular"
+        ],
+        "slot_constraints": {
+          "place": {
+            "category": [
+              "daily_routine_go_to_place_A1"
+            ],
+            "text": "school",
+            "allowed_frames": [
+              "go_to"
+            ]
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1.5
+        }
+      }
+    }
+  },
+  "ROUTINE_ACTION_PLACE_A1": {
+    "pattern_id": "ROUTINE_ACTION_PLACE_A1",
+    "function": "describe_basic_routine_actions_with_places",
+    "variants": {
+      "A1": {
+        "example_template": "I {action} {place}.",
+        "chunks_template": [
+          "I",
+          "{action}",
+          "{place}"
+        ],
+        "grammar_focus": [
+          "daily_routine_vocabulary",
+          "simple_present_affirmative"
+        ],
+        "paired_slot": {
+          "category": "routine_action_place_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1
+        }
+      }
+    }
+  },
+  "ROUTINE_CLOCK_TIME_A1": {
+    "pattern_id": "ROUTINE_CLOCK_TIME_A1",
+    "function": "describe_basic_routine_actions_with_clock_times",
+    "variants": {
+      "A1": {
+        "example_template": "I {action} {time}.",
+        "chunks_template": [
+          "I",
+          "{action}",
+          "{time}"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "time_expression"
+        ],
+        "paired_slot": {
+          "category": "routine_clock_time_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1
+        }
+      }
+    }
+  },
+  "ROUTINE_EVERY_DAY_A1": {
+    "pattern_id": "ROUTINE_EVERY_DAY_A1",
+    "function": "describe_basic_routine_actions_every_day",
+    "variants": {
+      "A1": {
+        "example_template": "I {action} every day.",
+        "chunks_template": [
+          "I",
+          "{action}",
+          "every day"
+        ],
+        "grammar_focus": [
+          "present_simple",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "time_expression"
+        ],
+        "slot_constraints": {
+          "action": {
+            "category": [
+              "routine_actions_basic"
+            ],
+            "routine_action": true
+          }
+        },
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 1
+        }
+      }
+    }
+  },
+  "ROUTINE_BECAUSE_FRONTED_A2PLUS": {
+    "pattern_id": "ROUTINE_BECAUSE_FRONTED_A2PLUS",
+    "function": "front_reason_clause_for_routine_actions",
+    "variants": {
+      "A2+": {
+        "example_template": "Because {reason}, {sentence_start}.",
+        "chunks_template": [
+          "Because",
+          "{reason},",
+          "{sentence_start}"
+        ],
+        "grammar_focus": [
+          "because_so",
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "because_reason_clause"
+        ],
+        "paired_slot": {
+          "category": "routine_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2.5
+        }
+      }
+    }
+  },
+  "ROUTINE_SEQUENCE_FRONTED_A2PLUS": {
+    "pattern_id": "ROUTINE_SEQUENCE_FRONTED_A2PLUS",
+    "function": "front_sequence_clause_for_routine_actions",
+    "variants": {
+      "A2+": {
+        "example_template": "{sequence_phrase}, {main_clause}.",
+        "chunks_template": [
+          "{sequence_phrase},",
+          "{main_clause}"
+        ],
+        "grammar_focus": [
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "before_after_sequence"
+        ],
+        "paired_slot": {
+          "category": "routine_before_after_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2.5
+        }
+      }
+    }
+  },
+  "ROUTINE_CLEAN_BECAUSE_FRONTED_A2PLUS": {
+    "pattern_id": "ROUTINE_CLEAN_BECAUSE_FRONTED_A2PLUS",
+    "function": "front_reason_clause_for_cleaning_actions",
+    "variants": {
+      "A2+": {
+        "example_template": "Because {reason}, I clean {object}.",
+        "chunks_template": [
+          "Because",
+          "{reason},",
+          "I clean",
+          "{object}"
+        ],
+        "grammar_focus": [
+          "daily_routine_vocabulary",
+          "simple_present_affirmative",
+          "because_reason_clause"
+        ],
+        "paired_slot": {
+          "category": "routine_clean_object_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2.5
+        }
+      }
+    }
+  },
+  "ROUTINE_PACK_BECAUSE_FRONTED_A2PLUS": {
+    "pattern_id": "ROUTINE_PACK_BECAUSE_FRONTED_A2PLUS",
+    "function": "front_reason_clause_for_packing_actions",
+    "variants": {
+      "A2+": {
+        "example_template": "Because {reason}, I pack {item}.",
+        "chunks_template": [
+          "Because",
+          "{reason},",
+          "I pack",
+          "{item}"
+        ],
+        "grammar_focus": [
+          "school_preparation",
+          "simple_present_affirmative",
+          "because_reason_clause"
+        ],
+        "paired_slot": {
+          "category": "routine_pack_item_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2.5
+        }
+      }
+    }
+  },
+  "ROUTINE_NEED_BECAUSE_FRONTED_A2PLUS": {
+    "pattern_id": "ROUTINE_NEED_BECAUSE_FRONTED_A2PLUS",
+    "function": "front_reason_clause_for_need_actions",
+    "variants": {
+      "A2+": {
+        "example_template": "Because {reason}, I need to {action}.",
+        "chunks_template": [
+          "Because",
+          "{reason},",
+          "I need to",
+          "{action}"
+        ],
+        "grammar_focus": [
+          "need_to",
+          "simple_present_affirmative",
+          "because_reason_clause"
+        ],
+        "paired_slot": {
+          "category": "routine_need_reason_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {
+          "depth": 2.5
         }
       }
     }

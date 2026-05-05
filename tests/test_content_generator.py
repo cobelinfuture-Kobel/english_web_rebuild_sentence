@@ -1,5 +1,6 @@
 import json
 import random
+from collections import Counter
 from pathlib import Path
 
 import pytest
@@ -1495,8 +1496,15 @@ def test_daily_routine_phase5_plan_doc_exists():
 
 def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
+    level_counts = Counter(sentence["level"] for sentence in sentences)
 
-    assert len(sentences) == 485
+    # Phase 2 baseline after grammar balancing and slot architecture expansion.
+    assert len(sentences) == 799
+    assert level_counts["A1"] == 129
+    assert level_counts["A1+"] == 240
+    assert level_counts["A2"] == 209
+    assert level_counts["A2+"] == 125
+    assert level_counts["B1"] == 96
 
 
 def test_daily_routine_phase4b_level_and_count_coverage():

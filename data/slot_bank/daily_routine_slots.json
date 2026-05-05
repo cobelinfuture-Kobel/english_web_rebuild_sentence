@@ -111,7 +111,6 @@
       "to_infinitive_ok": true
     }
   ],
-
   "routine_actions_to_infinitive": [
     {
       "text": "get up",
@@ -214,7 +213,6 @@
       "routine_action": true
     }
   ],
-
   "routine_like_actions": [
     {
       "text": "read a book",
@@ -262,7 +260,6 @@
       "help_action": true
     }
   ],
-
   "routine_want_actions": [
     {
       "text": "go home",
@@ -300,7 +297,6 @@
       "leisure_action": true
     }
   ],
-
   "routine_need_actions": [
     {
       "text": "wash my hands",
@@ -350,7 +346,6 @@
       "preparation_action": true
     }
   ],
-
   "routine_have_to_actions": [
     {
       "text": "go to school",
@@ -400,7 +395,6 @@
       "chore_action": true
     }
   ],
-
   "routine_would_like_actions": [
     {
       "text": "go home",
@@ -442,7 +436,6 @@
       "leisure_action": true
     }
   ],
-
   "routine_here_actions": [
     {
       "text": "wash my hands",
@@ -477,7 +470,6 @@
       "leisure_action": true
     }
   ],
-
   "routine_times_simple": [
     {
       "text": "today",
@@ -518,7 +510,6 @@
       "school_context": true
     }
   ],
-
   "routine_action_time_pairs": [
     {
       "action": "get up",
@@ -605,7 +596,6 @@
       "time": "at night"
     }
   ],
-
   "routine_places": [
     {
       "text": "at home",
@@ -645,7 +635,6 @@
       "study_place": true
     }
   ],
-
   "routine_action_place_pairs": [
     {
       "action": "brush my teeth",
@@ -716,7 +705,6 @@
       "place": "in my room"
     }
   ],
-
   "routine_states": [
     {
       "text": "tired",
@@ -759,7 +747,6 @@
       "state": true
     }
   ],
-
   "routine_states_today": [
     {
       "text": "tired",
@@ -790,7 +777,6 @@
       "state": true
     }
   ],
-
   "routine_problem_pairs": [
     {
       "subject": "I",
@@ -817,7 +803,6 @@
       "problem": "is too messy"
     }
   ],
-
   "routine_reason_pairs": [
     {
       "sentence_start": "I go to bed early",
@@ -868,7 +853,6 @@
       "reason": "I am free"
     }
   ],
-
   "routine_before_after_pairs": [
     {
       "main_clause": "I brush my teeth",
@@ -911,7 +895,6 @@
       "sequence_phrase": "after I finish my homework"
     }
   ],
-
   "routine_preference_reason_pairs": [
     {
       "thing": "my morning routine",
@@ -946,7 +929,6 @@
       "reason": "it feels good"
     }
   ],
-
   "routine_need_reason_pairs": [
     {
       "action": "study English",
@@ -981,7 +963,6 @@
       "reason": "it is due tomorrow"
     }
   ],
-
   "routine_frequency_adverbs": [
     {
       "text": "usually",
@@ -996,7 +977,6 @@
       "frequency_adverb": true
     }
   ],
-
   "routine_clock_time_pairs": [
     {
       "action": "get up",
@@ -1043,7 +1023,6 @@
       "time": "at nine"
     }
   ],
-
   "routine_frequency_time_pairs": [
     {
       "frequency": "usually",
@@ -1096,7 +1075,6 @@
       "time_context": "on weekends"
     }
   ],
-
   "routine_weekday_weekend_pairs": [
     {
       "sentence": "I get up early",
@@ -1139,7 +1117,6 @@
       "context": "on weekends"
     }
   ],
-
   "routine_conflict_reason_pairs": [
     {
       "sentence_start": "I cannot go out",
@@ -1170,7 +1147,6 @@
       "reason": "I have school tomorrow"
     }
   ],
-
   "routine_finish_before_pairs": [
     {
       "task": "finish my homework",
@@ -1205,7 +1181,6 @@
       "deadline": "before dinner"
     }
   ],
-
   "routine_b1_opinion_pairs": [
     {
       "subject": "My morning routine",
@@ -1240,7 +1215,6 @@
       "description": "is simple and quiet"
     }
   ],
-
   "routine_simple_items": [
     {
       "text": "my school bag",
@@ -1275,7 +1249,6 @@
       "daily_item": true
     }
   ],
-
   "routine_simple_times": [
     {
       "text": "morning",
@@ -1294,7 +1267,6 @@
       "part_of_day": "night"
     }
   ],
-
   "routine_school_preparation_actions": [
     {
       "text": "pack my bag",
@@ -1327,7 +1299,6 @@
       "preparation_action": true
     }
   ],
-
   "routine_help_actions": [
     {
       "text": "help my parents",
@@ -1346,7 +1317,6 @@
       "help_action": true
     }
   ],
-
   "routine_chore_actions": [
     {
       "text": "clean my room",
@@ -1373,7 +1343,6 @@
       "chore_action": true
     }
   ],
-
   "routine_put_on_items": [
     {
       "text": "my shoes",
@@ -1397,7 +1366,6 @@
       "wearable": true
     }
   ],
-
   "routine_ask_time_actions": [
     {
       "text": "get up",
@@ -1427,7 +1395,6 @@
       "routine_action": true
     }
   ],
-
   "routine_ask_what_contexts": [
     {
       "text": "after school",
@@ -1455,7 +1422,6 @@
       "weekend_context": true
     }
   ],
-
   "routine_ask_when_actions": [
     {
       "text": "do your homework",
@@ -1489,7 +1455,6 @@
       "leisure_action": true
     }
   ],
-
   "routine_ready_for_contexts": [
     {
       "text": "school",
@@ -1512,7 +1477,6 @@
       "school_context": true
     }
   ],
-
   "routine_late_for_contexts": [
     {
       "text": "school",
@@ -1535,7 +1499,6 @@
       "school_context": true
     }
   ],
-
   "routine_forgot_items": [
     {
       "text": "my homework",
@@ -1570,7 +1533,6 @@
       "daily_item": true
     }
   ],
-
   "routine_permission_pairs": [
     {
       "action": "watch TV",
@@ -1605,7 +1567,6 @@
       "condition": "after I clean my room"
     }
   ],
-
   "routine_help_reason_pairs": [
     {
       "action": "help my parents",
@@ -1624,7 +1585,6 @@
       "reason": "my parents are busy"
     }
   ],
-
   "routine_chore_reason_pairs": [
     {
       "action": "clean my room",
@@ -1647,7 +1607,6 @@
       "reason": "my room is messy"
     }
   ],
-
   "routine_reminder_actions": [
     {
       "text": "brush my teeth",
@@ -1686,7 +1645,6 @@
       "chore_action": true
     }
   ],
-
   "routine_cannot_now_pairs": [
     {
       "action": "play",
@@ -1709,7 +1667,6 @@
       "reason": "I need to sleep"
     }
   ],
-
   "routine_time_takes_pairs": [
     {
       "duration": "ten minutes",
@@ -1736,7 +1693,6 @@
       "task": "make my bed"
     }
   ],
-
   "routine_should_actions": [
     {
       "text": "go to bed earlier",
@@ -1763,7 +1719,6 @@
       "routine_management": true
     }
   ],
-
   "routine_parent_rule_actions": [
     {
       "text": "go to bed early",
@@ -1790,7 +1745,6 @@
       "routine_management": true
     }
   ],
-
   "routine_before_leave_actions": [
     {
       "text": "check my bag",
@@ -1817,7 +1771,6 @@
       "preparation_action": true
     }
   ],
-
   "routine_after_finish_pairs": [
     {
       "task": "my homework",
@@ -1844,7 +1797,6 @@
       "action": "go to bed"
     }
   ],
-
   "routine_have_items_fsi": [
     {
       "text": "my book"
@@ -1889,7 +1841,6 @@
       "text": "my folder"
     }
   ],
-
   "routine_have_agreement_pairs": [
     {
       "subject": "I",
@@ -1952,7 +1903,6 @@
       "level_min": "B1"
     }
   ],
-
   "routine_do_does_question_agreement_pairs": [
     {
       "auxiliary": "Do",
@@ -1999,7 +1949,6 @@
       "level_min": "A2"
     }
   ],
-
   "routine_negative_agreement_pairs": [
     {
       "subject": "I",
@@ -2074,7 +2023,6 @@
       "level_min": "B1"
     }
   ],
-
   "routine_bring_items": [
     {
       "text": "my book"
@@ -2107,7 +2055,6 @@
       "text": "my umbrella"
     }
   ],
-
   "routine_forgot_items_fsi": [
     {
       "text": "my bag"
@@ -2143,7 +2090,6 @@
       "text": "my umbrella"
     }
   ],
-
   "routine_check_items": [
     {
       "text": "my bag"
@@ -2173,7 +2119,6 @@
       "text": "my folder"
     }
   ],
-
   "routine_usable_items": [
     {
       "text": "my pencil"
@@ -2194,7 +2139,6 @@
       "text": "the computer"
     }
   ],
-
   "routine_get_items": [
     {
       "text": "my books"
@@ -2227,7 +2171,6 @@
       "text": "my folder"
     }
   ],
-
   "routine_clean_objects": [
     {
       "text": "my room"
@@ -2248,7 +2191,6 @@
       "text": "my bag"
     }
   ],
-
   "routine_clean_agreement_pairs": [
     {
       "subject": "I",
@@ -2311,7 +2253,6 @@
       "level_min": "B1"
     }
   ],
-
   "routine_brush_objects": [
     {
       "text": "my teeth"
@@ -2320,7 +2261,6 @@
       "text": "my hair"
     }
   ],
-
   "routine_wash_objects": [
     {
       "text": "my hands"
@@ -2329,7 +2269,6 @@
       "text": "my face"
     }
   ],
-
   "routine_pack_items": [
     {
       "text": "my bag"
@@ -2359,7 +2298,6 @@
       "text": "my folder"
     }
   ],
-
   "routine_clean_object_time_pairs": [
     {
       "object": "my room",
@@ -2386,7 +2324,6 @@
       "time": "on weekends"
     }
   ],
-
   "routine_pack_item_time_pairs": [
     {
       "item": "my bag",
@@ -2421,7 +2358,6 @@
       "time": "before school"
     }
   ],
-
   "routine_put_on_item_time_pairs": [
     {
       "item": "my shoes",
@@ -2444,7 +2380,6 @@
       "time": "in the morning"
     }
   ],
-
   "routine_wash_object_time_pairs": [
     {
       "object": "my face",
@@ -2459,7 +2394,6 @@
       "time": "after school"
     }
   ],
-
   "routine_clean_object_reason_pairs": [
     {
       "object": "my room",
@@ -2486,7 +2420,6 @@
       "reason": "it is dirty"
     }
   ],
-
   "routine_pack_item_reason_pairs": [
     {
       "item": "my bag",
@@ -2521,7 +2454,6 @@
       "reason": "I have English class"
     }
   ],
-
   "routine_cannot_use_item_reason_pairs": [
     {
       "item": "the computer",
@@ -2544,7 +2476,6 @@
       "reason": "my parents are using it"
     }
   ],
-
   "routine_time_takes_clean_object_pairs": [
     {
       "duration": "five minutes",
@@ -2571,7 +2502,6 @@
       "object": "my bag"
     }
   ],
-
   "routine_after_finish_activity_pairs_fsi": [
     {
       "task": "my homework",
@@ -2604,6 +2534,1211 @@
     {
       "task": "English practice",
       "activity": "take a break"
+    }
+  ],
+  "daily_routine_eat_food_A1": [
+    {
+      "text": "breakfast",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "lunch",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "dinner",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "rice",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "noodles",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "an apple",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_eat_food_A2": [
+    {
+      "text": "a sandwich",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a snack",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "salad",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "soup",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "bread",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_eat_food_B1": [
+    {
+      "text": "a healthy breakfast",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a quick lunch",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "something light",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "eat",
+        "have"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_have_object_A1": [
+    {
+      "text": "breakfast",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "lunch",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "dinner",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "my book",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "school_item",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "my bag",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "school_item",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_have_object_A2": [
+    {
+      "text": "a class",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "school_event",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a test",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "school_event",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a break",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "routine_event",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a sandwich",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a snack",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_have_object_B1": [
+    {
+      "text": "a busy day",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "routine_event",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a short break",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "routine_event",
+      "allowed_frames": [
+        "have",
+        "take"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "something light for lunch",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "food",
+      "allowed_frames": [
+        "have"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_take_object_A1": [
+    {
+      "text": "a shower",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "take",
+        "have"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "a bath",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "take"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "the bus",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "transport",
+      "allowed_frames": [
+        "take"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_take_object_A2": [
+    {
+      "text": "a break",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "routine_event",
+      "allowed_frames": [
+        "take",
+        "have"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a walk",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "take"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "the school bus",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "transport",
+      "allowed_frames": [
+        "take"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_take_object_B1": [
+    {
+      "text": "a short break",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "routine_event",
+      "allowed_frames": [
+        "take",
+        "have"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a quick shower",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "take",
+        "have"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a short walk",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "take"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_go_to_place_A1": [
+    {
+      "text": "school",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "bed",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "home",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "the park",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_go_to_place_A2": [
+    {
+      "text": "the library",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "the bus stop",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "my friend's house",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "the classroom",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_go_to_place_B1": [
+    {
+      "text": "school early in the morning",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "bed before ten",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "the library after school",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "place_phrase",
+      "semantic_group": "place",
+      "allowed_frames": [
+        "go_to"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_do_task_A1": [
+    {
+      "text": "homework",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "my homework",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "exercise",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_do_task_A2": [
+    {
+      "text": "math homework",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "housework",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "my chores",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "extra practice",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_do_task_B1": [
+    {
+      "text": "extra English practice",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "some extra practice",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a little exercise after school",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "task",
+      "allowed_frames": [
+        "do"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_read_object_A1": [
+    {
+      "text": "a book",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "a story",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "a comic",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_read_object_A2": [
+    {
+      "text": "an email",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a message",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "a short article",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_read_object_B1": [
+    {
+      "text": "an English article",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a longer message",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a short online post",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "reading_object",
+      "allowed_frames": [
+        "read"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_watch_object_A1": [
+    {
+      "text": "TV",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "cartoons",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "a video",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_watch_object_A2": [
+    {
+      "text": "a movie",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "the news",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "an English video",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_watch_object_B1": [
+    {
+      "text": "a short documentary",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "an online lesson",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a long movie",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "media_object",
+      "allowed_frames": [
+        "watch"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_listen_to_object_A1": [
+    {
+      "text": "music",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "a song",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "the teacher",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_listen_to_object_A2": [
+    {
+      "text": "an audio lesson",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "an English podcast",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "the morning news",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_listen_to_object_B1": [
+    {
+      "text": "a short English podcast",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "an online lecture",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a recorded lesson",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "audio_object",
+      "allowed_frames": [
+        "listen_to"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_play_object_A1": [
+    {
+      "text": "soccer",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "basketball",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    },
+    {
+      "text": "a game",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style A1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_play_object_A2": [
+    {
+      "text": "video games",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "the piano",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    },
+    {
+      "text": "tennis",
+      "level": "A2",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style A2 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_play_object_B1": [
+    {
+      "text": "with my friends",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "complement_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "a team sport after school",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    },
+    {
+      "text": "the guitar for a short time",
+      "level": "B1",
+      "scenario": "daily_routine",
+      "part_of_speech": "noun_phrase",
+      "semantic_group": "activity",
+      "allowed_frames": [
+        "play"
+      ],
+      "source_note": "Cambridge-style B1 daily routine vocabulary"
+    }
+  ],
+  "daily_routine_bad_phrase_blacklist": [
+    "eat homework",
+    "eat my teeth",
+    "take breakfast",
+    "go to homework",
+    "go to a shower",
+    "read dinner",
+    "watch breakfast",
+    "brush lunch",
+    "wash homework",
+    "I do book",
+    "I play homework",
+    "Does he gets",
+    "Does she goes",
+    "Does your brother does",
+    "He get up",
+    "She go to school",
+    "My brother do homework",
+    "does not goes",
+    "does not watches"
+  ],
+  "daily_routine_personal_care_pairs": [
+    {
+      "verb": "brush",
+      "object": "my teeth",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "brush"
+      ]
+    },
+    {
+      "verb": "wash",
+      "object": "my face",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "wash"
+      ]
+    },
+    {
+      "verb": "wash",
+      "object": "my hands",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "wash"
+      ]
+    },
+    {
+      "verb": "take",
+      "object": "a shower",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "take",
+        "have"
+      ]
+    },
+    {
+      "verb": "take",
+      "object": "a bath",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "take"
+      ]
+    },
+    {
+      "verb": "get",
+      "object": "dressed",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "get"
+      ]
+    },
+    {
+      "verb": "comb",
+      "object": "my hair",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "comb"
+      ]
+    },
+    {
+      "verb": "pack",
+      "object": "my bag",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "pack"
+      ]
+    },
+    {
+      "verb": "wear",
+      "object": "my uniform",
+      "level": "A1",
+      "scenario": "daily_routine",
+      "semantic_group": "personal_care",
+      "allowed_frames": [
+        "wear"
+      ]
     }
   ]
 }
