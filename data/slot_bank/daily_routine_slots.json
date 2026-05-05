@@ -1953,6 +1953,53 @@
     }
   ],
 
+  "routine_do_does_question_agreement_pairs": [
+    {
+      "auxiliary": "Do",
+      "subject": "you",
+      "base_verb": "clean",
+      "possessive": "your",
+      "object": "room",
+      "full_object": "your room",
+      "person": "second",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "auxiliary": "Does",
+      "subject": "he",
+      "base_verb": "clean",
+      "possessive": "his",
+      "object": "room",
+      "full_object": "his room",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "auxiliary": "Does",
+      "subject": "she",
+      "base_verb": "clean",
+      "possessive": "her",
+      "object": "room",
+      "full_object": "her room",
+      "person": "third_singular",
+      "number": "singular",
+      "level_min": "A2"
+    },
+    {
+      "auxiliary": "Do",
+      "subject": "they",
+      "base_verb": "clean",
+      "possessive": "their",
+      "object": "rooms",
+      "full_object": "their rooms",
+      "person": "third_plural",
+      "number": "plural",
+      "level_min": "A2"
+    }
+  ],
+
   "routine_bring_items": [
     {
       "text": "my book"

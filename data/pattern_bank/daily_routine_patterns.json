@@ -884,6 +884,29 @@
     }
   },
 
+  "ROUTINE_DO_DOES_QUESTION_AGREEMENT": {
+    "pattern_id": "ROUTINE_DO_DOES_QUESTION_AGREEMENT",
+    "function": "do_does_question_agreement",
+    "variants": {
+      "A2": {
+        "example_template": "{auxiliary} {subject} {base_verb} {full_object}?",
+        "chunks_template": ["{auxiliary}", "{subject}", "{base_verb}", "{full_object}", "?"],
+        "grammar_focus": [
+          "present_simple",
+          "wh_question",
+          "subject_verb_agreement",
+          "daily_routine_vocabulary"
+        ],
+        "paired_slot": {
+          "category": "routine_do_does_question_agreement_pairs"
+        },
+        "slot_constraints": {},
+        "fsi_rules": [],
+        "complexity": {"depth": 2}
+      }
+    }
+  },
+
   "ROUTINE_CLEAN_OBJECT": {
     "pattern_id": "ROUTINE_CLEAN_OBJECT",
     "function": "clean_object",

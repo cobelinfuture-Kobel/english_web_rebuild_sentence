@@ -238,6 +238,7 @@ DAILY_ROUTINE_PHASE4C_MINIMUM_COUNTS = {
 EXPECTED_DAILY_ROUTINE_PHASE5_PATTERNS = {
     "ROUTINE_CLEAN_OBJECT_AGREEMENT",
     "ROUTINE_HAVE_ITEM_AGREEMENT",
+    "ROUTINE_DO_DOES_QUESTION_AGREEMENT",
 }
 DAILY_ROUTINE_PHASE5_CLEAN_AGREEMENT_POSITIVE_SENTENCES = {
     "You clean your room.",
@@ -253,13 +254,15 @@ DAILY_ROUTINE_PHASE5_HAVE_AGREEMENT_POSITIVE_SENTENCES = {
     "We have our books.",
     "They have their books.",
 }
-DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES = {
-    "She brushes her teeth.",
-    "They pack their bags.",
+DAILY_ROUTINE_PHASE5_QUESTION_AGREEMENT_POSITIVE_SENTENCES = {
+    "Do you clean your room?",
     "Does he clean his room?",
     "Does she clean her room?",
     "Do they clean their rooms?",
-    "Do you clean your room?",
+}
+DAILY_ROUTINE_PHASE5_FORBIDDEN_POSITIVE_SENTENCES = {
+    "She brushes her teeth.",
+    "They pack their bags.",
     "Does he have his book?",
     "Does she have her book?",
     "Do they have their books?",
@@ -298,7 +301,6 @@ DAILY_ROUTINE_INVALID_AGREEMENT_SENTENCES = {
 DAILY_ROUTINE_FREE_TRANSFORMATION_SENTENCES = {
     "I do not clean my room.",
     "Do I clean my room?",
-    "Do you clean your room?",
     "Did I clean my room?",
     "I cleaned my room yesterday.",
     "Yesterday, I cleaned my room.",
@@ -319,6 +321,7 @@ DAILY_ROUTINE_A1_PHASE5_BLOCKED_FRAGMENTS = {
     "Does he",
     "Does she",
     "Do they",
+    "Do you",
     "do not",
     "does not",
     "yesterday",
@@ -330,7 +333,6 @@ DAILY_ROUTINE_FORBIDDEN_PHASE5_PATTERN_IDS = {
     "ROUTINE_PACK_ITEM_AGREEMENT",
     "ROUTINE_BRUSH_OBJECT_AGREEMENT",
     "ROUTINE_WASH_OBJECT_AGREEMENT",
-    "ROUTINE_DO_DOES_QUESTION_AGREEMENT",
     "ROUTINE_NEGATIVE_AGREEMENT",
 }
 
@@ -1263,6 +1265,16 @@ def test_daily_routine_phase5_have_agreement_outputs_exist():
     )
 
 
+def test_daily_routine_phase5_question_agreement_outputs_exist():
+    texts = get_daily_routine_targets()
+
+    missing = DAILY_ROUTINE_PHASE5_QUESTION_AGREEMENT_POSITIVE_SENTENCES - texts
+    assert not missing, (
+        "Missing Daily Routine Phase 5 question agreement outputs: "
+        f"{sorted(missing)}"
+    )
+
+
 def test_daily_routine_phase4c_generated_bank_has_all_levels():
     sentences = load_daily_routine_sentences()
     levels = {sentence["level"] for sentence in sentences}
@@ -1449,7 +1461,7 @@ def test_daily_routine_phase5_plan_doc_exists():
 def test_daily_routine_phase4c_generated_sentence_count_remains_stable():
     sentences = load_daily_routine_sentences()
 
-    assert len(sentences) == 474
+    assert len(sentences) == 478
 
 
 def test_daily_routine_phase4b_level_and_count_coverage():
